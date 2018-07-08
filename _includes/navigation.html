@@ -1,0 +1,226 @@
+<!-- Using font awesome -->
+<style>
+
+/* NAVIGATION BAR
+ -------------------------------------------------- */
+ #navigation,
+ #navigation ul,
+ #navigation ul li,
+ #navigation ul li a {
+   margin: 0;
+   padding: 3px;
+   border: 0;
+   list-style: none;
+   line-height: 1;
+   display: block;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+
+#navigation {
+		border : 1px solid lightgray;
+    min-height: 70px !important;
+    padding-top: 10px;
+  	position: fixed;
+	  display: inline-block !important;
+	  top: 30%;
+	  right: 30px;
+}
+#navigation .navbar-brand {
+    padding-right: 28px;
+    width: 280px;
+    border-right: 3px solid rgba(255, 255, 255, 0.1);
+    font-family: "hobo-std", sans-serif;
+    font-style: italic;
+    font-size: 26px !important;
+    color: #5fcf80 !important;
+}
+#navigation .navbar-brand .site-logo {
+    float: left;
+    margin-top: -10px;
+    margin-right: 1rem;
+    width: 250px;
+}
+#navigation #navbar {
+    float: right !important;
+    font-family: 'Helvetica Rounded', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 38px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5) !important;
+}
+#navigation #navbar .navbar-nav li a {
+	  font-family: 'Jeju Gothic', serif;
+    color: #25bcba !important;
+    text-decoration: none !important;
+}
+#navigation #navbar .navbar-nav li {
+    list-style: none !important;
+}
+
+
+#navigation #navbar .navbar-nav li a:hover,
+#navigation #navbar .navbar-nav li a:focus {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+#navigation #navbar .navbar-nav .active a {
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+#navigation #navbar .navbar-nav .dropdown-menu li a {
+    color: #515151 !important;
+    text-shadow: none !important;
+}
+
+#navigation #navbar .navbar-nav {
+	margin: 0 !important;
+	padding: 10px !important;
+}
+
+/* Mobile Device */
+@media all and (max-width:1024px){
+	#navigation {
+		display: none !important;
+		visibility: hidden !important;
+	}
+	#my_remote{
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+@media all and (max-height:500px){
+	#my_remote{
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+@media all and (max-height:300px){
+	#navigation {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+@media (min-width: 700px)  all and (max-width:1024px) and (orientation: landscape){
+
+}
+
+/* Desktop Device */
+@media all and (min-width:1025px) {
+
+}
+
+#my_remote {
+    display: none; position: fixed; right: 5%; bottom: 5%;
+    color: #25b3bc;
+    text-decoration: none;
+    transition: border .5s;
+}
+
+#my_remote:hover {
+    	color: #1F99A1;
+}
+
+</style>
+
+<script>
+var scrollUpDelay = 1;
+var scrollUpSpeed = 30;
+
+
+
+function scrollUp()
+{
+  //var scrollTop = (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  var control;
+
+  if(document.documentElement.scrollTop == 0){
+    control = 0;
+  }else{
+    control = 1;
+  }
+
+  if(control == 1){
+	   if(document.documentElement.scrollTop<1)
+	   {
+		     return;
+	   }
+     document.documentElement.scrollTop = document.documentElement.scrollTop-scrollUpSpeed;
+  }else {
+    if(document.body.scrollTop<1)
+    {
+        return;
+    }
+    document.body.scrollTop = document.body.scrollTop-scrollUpSpeed;
+  }
+
+	setTimeout('scrollUp()',scrollUpDelay);
+}
+
+jQuery(document).ready(function() {
+	jQuery(window).scroll(function() {
+		if(jQuery(document).scrollTop() > 300) {
+			jQuery('#my_remote').fadeIn();
+		} else {
+			jQuery('#my_remote').fadeOut();
+		};
+	});
+});
+</script>
+
+
+<!-- Belongs at: /_includes/navigation.html -->
+
+<!-- This finds the current page so it can be highlighted. -->
+{% for entry in site.data.navigation %}
+{% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+    {% if fullurl == page.url %}
+        {% assign current_page = fullurl %}
+        {% break %}
+    {% elsif page.url contains fullurl %}
+        {% assign current_page = fullurl %}
+    {% endif %}
+{% endfor %}
+
+<div id="navigation">
+<nav id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+        {% assign links = site.data.navigation %}
+        {% for link in links %}
+            {% assign class = nil %}
+            {% if page.url == link.url %}
+                {% assign class = 'active' %}
+            {% endif %}
+            {% if link.sublinks %}
+                <li class="dropdown {{ class }}">
+                    <a href="{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {% for sublink in link.sublinks %}
+                            {% if sublink.title == 'separator' %}
+                                <li role="separator" class="divider"></li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li class="{{ class }}">
+                    <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+</div>
+
+<span id ="my_remote" class="fa-stack fa-lg" onclick="javascript:scrollUp();">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+</span>
