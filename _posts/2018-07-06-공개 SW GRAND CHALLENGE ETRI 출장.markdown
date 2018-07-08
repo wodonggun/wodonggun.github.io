@@ -11,8 +11,8 @@ finished: true
 
 ## 일정 및 장소
 
-<span class="evidence">2018년 7월 6일(금) 14:00~18:00 </span><br>
-![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/포스터.png "")
+<span class="evidence">2018년 7월 6일(금) 14:00~18:00<br></span>
+![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/포스터.png)
 >전자통신연구원(ETRI) 인턴으로 생활하면서 이번 공개 SW 컨퍼런스 참가를 권유 받아 대전에서 서울 코엑스로 출장을 가게 되었습니다.
 
 
