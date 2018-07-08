@@ -2,7 +2,7 @@
 layout: post
 title: "阿Q正傳 (Traditional Chinese)"
 subtitle: "所以我竟將我的短篇小說結集起來，而且付印了，又因爲上面所說的緣由，便稱之爲《吶喊》。"
-date: 1921-12-01
+date: 2001-12-01
 author: "魯迅"
 category: books
 tags: chinese luxun nahan
