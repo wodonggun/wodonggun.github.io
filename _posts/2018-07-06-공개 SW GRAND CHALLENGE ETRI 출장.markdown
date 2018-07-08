@@ -72,6 +72,7 @@ finished: true
 -삼성전자 리서치센터<br>
 -Tizen 프로젝트<br>
 ![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/4.jpg)
+
 ![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/5.jpg)
 > -타이젠 RT=가장 가벼운 플랫폼<br>
 -Tizen=안드로이드,iot 등 다양한 분야에 사용<br>
