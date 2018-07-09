@@ -32,7 +32,7 @@ finished: true
 > 수많은 개발자들과 교수,실장급 분들이 이번 컨퍼런스에 참가하였습니다.
 
 ## 강연자
-### David S. Miller
+### ```David S. Miller```
 -Red Hat Inc.<br>
 -Primary maintainer of networking and the SPARC implementation<br>
 -Founding member of the GNU Compiler Collection streering commitee<br>
@@ -42,7 +42,7 @@ finished: true
 강조하였습니다.<br>
 <span class="evidence">새로운 프로젝트가 주어지면 머리속은 "삐용-삐용" 이라면서 두려워하지말고, 비상상황이자 자신이 발전할 수 있는 기회라고 말씀하셨다.</span>
 
-### 노경원 과학기술정보통신부 국장
+### ```노경원 과학기술정보통신부 국장```
 -서울대학교 전자공학과 학사,행정대학원 석사<br>
 -캘리포티아대학교 경제학 석,박사<br>
 -교육과학기술부 전략기술개발관<br>
@@ -52,23 +52,23 @@ finished: true
 -GIS MOBILE TIZEN WEB INFRA<br>
 
 
-'''### 서울대학교 전병곤 교수'''
+### ```서울대학교 전병곤 교수```
 -서울대학교 전자공학 학사, 석사<br>
 -캘리포니아대학교 버클리 컴퓨터 공학 박사<br>
-'''-야후 리서치,마이크로소프트<br>'''
+-야후 리서치,마이크로소프트<br>
 -(현)서울대학교 컴퓨터공학부교수<br>
 
-### 아파치 소프트웨어재단 윤진석 이사
+### ```아파치 소프트웨어재단 윤진석 이사```
 -아파치 하마 프로젝트 설립자<br>
 -Oracle 수석 엔지니어 KT, 네이버, 삼성전자<br>
 
-### 오픈스택 코리아 최영락 대표
+### ```오픈스택 코리아 최영락 대표```
 -오픈스택 한국 커뮤니티 대표<br>
 -공개SW개발자 Lab오프소스 프론티어<br>
 -Facebook Developer Circle seoul lead<br>
 -퓨즈툴스코리아 역임<br>
 
-### 삼성전자 손기성 수석(Tizen)
+### ```삼성전자 손기성 수석(Tizen)```
 -삼성전자 리서치센터<br>
 -Tizen 프로젝트<br>
 ![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/4.jpg)
@@ -86,5 +86,7 @@ finished: true
 -타이젠은 artik + raspberry pi3 지원<br>
 
 ## 마무리...
-이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
+ *이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
+타이젠에 대해서 알게되어서 좋은 계기가 되었다.*
+ * 이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.
