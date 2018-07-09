@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "공개 SW GRAND CHALLENGE ETRI 출장"
-subtitle: "국내외 최신 공개 SW 기술공유 및 개방.공유.협업의 SW개발 문화와 오픈소스 기반의 가치。"
+subtitle: "'''국내외 최신 공개 SW 기술공유 및 개방.공유.협업의 SW개발 문화와 오픈소스 기반의 가치。'''"
 date: 2018-07-06
 author: NoonGam
 category: Conference
