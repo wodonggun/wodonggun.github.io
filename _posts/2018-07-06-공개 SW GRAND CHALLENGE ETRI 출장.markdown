@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "공개 SW GRAND CHALLENGE ETRI 출장"
-subtitle: "'''국내외 최신 공개 SW 기술공유 및 개방.공유.협업의 SW개발 문화와 오픈소스 기반의 가치。'''"
+subtitle: "국내외 최신 공개 SW 기술공유 및 개방.협업의 SW개발 문화와 가치。"
 date: 2018-07-06
 author: NoonGam
 category: Conference
@@ -52,10 +52,10 @@ finished: true
 -GIS MOBILE TIZEN WEB INFRA<br>
 
 
-### 서울대학교 전병곤 교수
+'''### 서울대학교 전병곤 교수'''
 -서울대학교 전자공학 학사, 석사<br>
 -캘리포니아대학교 버클리 컴퓨터 공학 박사<br>
--야후 리서치,마이크로소프트<br>
+'''-야후 리서치,마이크로소프트<br>'''
 -(현)서울대학교 컴퓨터공학부교수<br>
 
 ### 아파치 소프트웨어재단 윤진석 이사
