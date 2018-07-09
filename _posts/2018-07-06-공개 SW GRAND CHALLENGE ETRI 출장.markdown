@@ -92,7 +92,7 @@ finished: true
  * 이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.
 
-<script id="dsq-count-scr" src="//https-wodonggun-github-io.disqus.com/count.js" async></script>
+
 
 <div id="disqus_thread"></div>
 <script>
