@@ -199,8 +199,7 @@ Add the link description behind the link address like this:
 
 `![Codes](/img/code.png)`
 
-![Codes](/img/code.png)![Codes](/img/code.png)
-![Codes](/img/code.png)![Codes](/img/code.png)
+![Codes](/img/code.png)
 How to write the images' descriptions are the same way as how you do it in links:
 
 `![Codes](/img/code.png "Codes")`

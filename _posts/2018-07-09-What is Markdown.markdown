@@ -37,7 +37,7 @@ finished: true
 * Stack Overflow
 * Discord
 
-<script id="dsq-count-scr" src="//https-wodonggun-github-io.disqus.com/count.js" async></script>
+
 
 <div id="disqus_thread"></div>
 <script>

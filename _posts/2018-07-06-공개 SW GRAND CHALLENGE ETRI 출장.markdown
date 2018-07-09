@@ -94,6 +94,11 @@ finished: true
 
 
 
+
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+
 <div id="disqus_thread"></div>
 <script>
 
