@@ -1,19 +1,20 @@
 ---
 layout: post
-title: "내 첫번째 게시글"
+title: "테스트 글 입니다."
 subtitle: "A simple Jekyll blog theme."
 date: 2016-03-30
 author: Gabriel
 category: Jekyll
-tags: jekyll github blog
+tags:  blog
 finished: true
 ---
 
 ## Welcome
 
-ㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹ
+알흠놈들
 
-## Nice Blog
+## 알흠
+### 알흠다훈
 
 A Simple Jekyll Blog Theme.
 
