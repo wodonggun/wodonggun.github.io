@@ -2,7 +2,7 @@
 layout: post
 title: "테스트 글 입니다."
 subtitle: "A simple Jekyll blog theme."
-date: 2016-03-30
+date: 2010-03-30
 author: Gabriel
 category: Jekyll
 tags:  blog
