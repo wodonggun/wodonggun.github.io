@@ -11,7 +11,7 @@ finished: true
 
 ## Welcome
 
-I think many blog themes are over designed, so I created this one. 
+I think many blog themes are over designed, so I created this one.
 
 Just for using, not showing off.
 
