@@ -6,6 +6,7 @@ date: 2018-07-06
 author: NoonGam
 category: Conference
 tags: Confereence Exhibition OpenSource
+comments : true
 finished: true
 ---
 
@@ -91,7 +92,25 @@ finished: true
  * 이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.
 
-date_to_string
-==============
-date_to_string
--------------
+<script id="dsq-count-scr" src="//https-wodonggun-github-io.disqus.com/count.js" async></script>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-wodonggun-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
