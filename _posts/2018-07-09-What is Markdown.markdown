@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Markdown(마크다운)이란? "
-subtitle: "마크다운"
+subtitle: "마크업은 들어봤어도 마크다운은 무엇일까?"
 date: 2018-07-09
 author: NoonGam
 category: Markdown
