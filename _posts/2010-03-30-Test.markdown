@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "테스트 글 입니다."
+title: "Title 제목을 입력하세요.."
 subtitle: "A simple Jekyll blog theme."
 date: 2010-03-30
 author: Gabriel
@@ -14,11 +14,16 @@ finished: true
 + 알흠플
 * 알흠별
 - 알흠마
----------------------------------------
+---
+---
+***
+___
 ## 알흠
 ### 알흠다훈
 
 A Simple Jekyll Blog Theme.
+------------------------------
+
 
 [Demo](http://gabriel-chen.github.io/Nice_Blog)
 
