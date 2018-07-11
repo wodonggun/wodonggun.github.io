@@ -6,6 +6,7 @@ date: 2016-03-29
 author: Gabriel
 category: Study
 tags: Markdown
+comments: false
 finished: true
 ---
 

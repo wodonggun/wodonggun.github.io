@@ -9,7 +9,10 @@ url: "https://wodonggun.github.io" # the base hostname & protocol for your site
 twitter_username: Woodonggun # your Twitter username
 facebook_username: wodonggun #your facebook username
 github_username: wodonggun # your Github username
-disqus_username: NoonGam   # your disqus username
+
+
+disqus_username: NoonGamd   # your disqus username
+shortname: noongams-it-blog # your disqus shortname 
 
 google-analytics: UA-121952650-1 # add it if you have one
 
