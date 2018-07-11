@@ -4,60 +4,60 @@ title: "Markdown Gramma"
 subtitle: "A brief introduction about Markdown Grammar. "
 date: 2016-03-29
 author: Gabriel
-category: coding
-tags: code markdown github
+category: study
+tags: Markdown
 finished: true
 ---
 
-## Heading
+# 단어란?
 
-Heading is really simple in Markdown, you can use `#` or `=` or `-`.
+> 단어랑 word의 줄임말로 정말 좋은 단어이다.  
+니들이 단어를 알긴 알어?  
+단어란 word란 말이다.
 
-Like this:
 
-`# H1. Heading`
++ 알흠플
+* 알흠별
+- 알흠마
 
-# H1. Heading
 
-`## H2. Heading`
 
-## H2. Heading
+---
+***
+___
 
-`### H3. Heading`
 
-### H3. Heading
+A Simple Jekyll Blog Theme.
+------------------------------
 
-`#### H4. Heading`
+## 코드를 써보자
 
-#### H4. Heading
+```
+#include <stdio.h>
+void main(){
 
-`##### H5. Heading`
+  printf("hello world");
 
-##### H5. Heading
+}
+```
 
-`###### H6. Heading`
 
-###### H6. Heading
+```java
+#include <stdio.h>
+void main(){
 
-And like this:
+  printf("hello world");
 
-{% highlight md %}
-Heading
-======
-{% endhighlight %}
+}
+```
 
-Heading
-======
+`코드는 code일뿐 code이다.`
 
-{% highlight md %}
-Heading
--------
-{% endhighlight %}
+[Demo](http://gabriel-chen.github.io/Nice_Blog) <!-- Demo 글자만 표시하고 링크-->
 
-Heading
-----------
+![index-page](https://i.imgur.com/BrmOMmv.png) <!-- 사진을 표시  -->
 
-See? Really easy.
+<br><br>
 
 ## Font
 
