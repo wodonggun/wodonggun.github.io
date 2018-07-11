@@ -19,7 +19,7 @@ finished: true
 <br>
 
 - 확장자는 .md를 사용한다
-- 마크다운문서를 HTML로 변환하는 펄 스크립드가 있다.
+- 마크다운문서를 HTML로 변환하는 펄 스크립트가 있다.
 - 읽기 쉬우며, 사용하기도 쉽고, 재사용성이 높다.
 <br>
 <br>
@@ -49,7 +49,7 @@ finished: true
 
 ---
  |       | C/C++ | Java | Python | Linux | Network |<br>
- |||||||<br>
+ | | | | | | |<br>
  | 홍길동 | A+    | B+   | A0     | B0    | A-      |<br>
  | 이순신 | A+    | A+   | A+     | A+    | A+      |<br><br>
 
