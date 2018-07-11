@@ -49,10 +49,10 @@ finished: true
 
 ---
 
- | 이름  | C/C++ | Java | Python | Linux | Network |<br>
- |------------|------------|------------|------------|------------|------------|<br>
- | 홍길동 | A+    | B+   | A0     | B0    | A-      |<br>
- | 이순신 | A+    | A+   | A+     | A+    | A+      |<br><br>
+ | 이름  | C/C++ | Java | Python | Linux | Network |
+ |------------|------------|------------|------------|------------|------------|
+ | 홍길동 | A+    | B+   | A0     | B0    | A-      |
+ | 이순신 | A+    | A+   | A+     | A+    | A+      |
 
 <span class="evidence">이 밖에도 여러 편리한 문법들이 존재합니다.</span>
 
@@ -76,5 +76,5 @@ finished: true
 * Discord
 
 | Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
+| :-------- | :------: | -------- | -------- |
 | No span  | Span across three columns    |||
