@@ -5,7 +5,7 @@ subtitle: "국내외 최신 공개 SW 기술공유 및 개방.협업의 SW개발
 date: 2018-07-06
 author: NoonGam
 category: Conference
-tags: Confereence Exhibition OpenSource
+tags: Confereence OpenSource
 comments : true
 finished: true
 ---
@@ -13,9 +13,11 @@ finished: true
 ## 일정 및 장소
 
 <span class="evidence">2018년 7월 6일(금) 14:00~18:00<br></span>
-![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/포스터.jpg)
+![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/1_1.jpg)
+![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/1_2.jpg)
 >전자통신연구원(ETRI) 인턴으로 생활하면서 이번 공개 SW 컨퍼런스 참가를 권유 받아 대전에서 서울 코엑스로 출장을 가게 되었습니다.
 
+<br><br><br>
 
 ## 현장 분위기
 ![Codes](/img/공개 SW GRAND CHALLENGE ETRI 출장/2.jpg)
@@ -31,6 +33,8 @@ finished: true
 
 
 > 수많은 개발자들과 교수,실장급 분들이 이번 컨퍼런스에 참가하였습니다.
+
+<br><br><br>
 
 ## 강연자
 ### ```David S. Miller```
@@ -86,6 +90,8 @@ finished: true
 -craftroom.tizen.org<br>
 -타이젠은 artik + raspberry pi3 지원<br>
 
+<br><br><br>
+
 ## 마무리...
  *이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.*
@@ -93,9 +99,5 @@ finished: true
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.
     이번 오픈SW 컨퍼런스 참가를 통해 여러 오픈소스 기반의 소프트웨어를 알게 되었고,
 타이젠에 대해서 알게되어서 좋은 계기가 되었다.
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
+<br><br><br>
