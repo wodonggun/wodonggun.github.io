@@ -75,11 +75,3 @@ finished: true
 * gitHub
 * Stack Overflow
 * Discord
-
-
-<pre>
- | 이름  | C/C++ | Java | Python | Linux | Network |
- |-------|-------|-------|-------|-------|-------|
- | 홍길동 | A+    | B+   | A0     | B0    | A-      |
- | 이순신 | A+    | A+   | A+     | A+    | A+      |
- </pre>
