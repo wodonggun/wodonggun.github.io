@@ -27,7 +27,7 @@ finished: true
 
 ## 예시
 - \#목차<br>
-&bnsp;&bnsp;&bnsp;&bnsp;&bnsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ####목차
 - \_기울인 글씨를 쓰고싶어요\_ <br>
  _기울인 글씨를 쓰고싶어요_ <br><br>
