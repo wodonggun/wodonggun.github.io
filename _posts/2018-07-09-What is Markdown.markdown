@@ -6,6 +6,7 @@ date: 2018-07-09
 author: NoonGam
 category: Study
 tags: Markdown Language
+comments: true
 finished: true
 ---
 
