@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Markdown(마크다운)이란? "
-subtitle: "마크다운"
-date: 2018-07-09
+title: "Test "
+subtitle: "마크다운?"
+date: 2018-01-01
 author: NoonGam
 category: Study
 tags: Markdown Language
