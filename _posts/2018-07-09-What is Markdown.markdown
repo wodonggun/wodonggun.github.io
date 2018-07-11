@@ -48,9 +48,6 @@ finished: true
 \| 이순신 \| A+    \| A+  \| A+     \| A+    \| A+      \|   <br>
 
 ---
-
-------
-
  |       | C/C++ | Java | Python | Linux | Network |<br>
  |||||||<br>
  | 홍길동 | A+    | B+   | A0     | B0    | A-      |<br>
@@ -76,8 +73,3 @@ finished: true
 * gitHub
 * Stack Overflow
 * Discord
-
-
->block blockquote
-
-    code ( 4 spaces indent)
