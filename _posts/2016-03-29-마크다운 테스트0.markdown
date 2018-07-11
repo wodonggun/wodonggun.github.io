@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Markdown Gramma"
+title: "Markdown Gramma0"
 subtitle: "A brief introduction about Markdown Grammar. "
-date: 2016-03-29
+date: 2016-03-30
 author: Gabriel
 category: Study
 tags: Markdown
