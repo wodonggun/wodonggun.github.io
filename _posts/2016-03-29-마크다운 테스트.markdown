@@ -4,8 +4,8 @@ title: "Markdown Gramma"
 subtitle: "A brief introduction about Markdown Grammar. "
 date: 2016-03-29
 author: Gabriel
-category: Study
-tags: Markdown
+category: 1
+tags: 2
 comments: true
 finished: true
 ---
