@@ -40,15 +40,15 @@ finished: true
 
 <br><br>
 
-- \|        \| C/C++ \| Java \| Python \| Linux \| Network \| <br>
+- \|"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"\| C/C++ \| Java \| Python \| Linux \| Network \| <br>
 \|\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\|\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\|\-\-\-\-\-\-\-\-\-\|  <br>
 \| 홍길동 \| A+    \| B+   \| A0     \| B0    \| A-      \|   <br>
 \| 이순신 \| A+    \| A+  \| A+     \| A+    \| A+      \|   <br>
 
- |        | C/C++ | Java | Python | Linux | Network |<br>
- |--------|-------|------|--------|-------|---------|<br>
+ |       | C/C++ | Java | Python | Linux | Network |<br>
+ |-------|-------|-------|-------|-------| ------- |<br>
  | 홍길동 | A+    | B+   | A0     | B0    | A-      |<br>
- | 이순신 | A+    | A+   | A+     | A+    | A+      | <br><br>
+ | 이순신 | A+    | A+   | A+     | A+    | A+      |<br><br>
 
 <span class="evidence">이 밖에도 여러 편리한 문법들이 존재합니다.</span>
 
@@ -70,3 +70,8 @@ finished: true
 * gitHub
 * Stack Overflow
 * Discord
+
+
+>block blockquote
+
+    code ( 4 spaces indent)
