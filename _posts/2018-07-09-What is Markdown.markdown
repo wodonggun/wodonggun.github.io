@@ -37,7 +37,7 @@ finished: true
 <br>```코드나 중요한 블럭을 번역을 사용해도 안통하게 하고 싶어요```<br><br>
 - \<a>강조하고싶어요\</a>  
    <a>강조하고싶어요</a><br><br>
-- \> 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세!
+- \> 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세! 이 기상과 이 맘으로 충성을 다하여 괴로우나 즐거우나
 >동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라만세!
 
 <br>
@@ -54,7 +54,7 @@ finished: true
  | 홍길동 | A+    | B+   | A0     | B0    | A-      |
  | 이순신 | A+    | A+   | A+     | A+    | A+      |
 
-<br>
+
 <span class="evidence">이 밖에도 여러 편리한 문법들이 존재합니다.</span>
 
 <br>
@@ -75,7 +75,3 @@ finished: true
 * gitHub
 * Stack Overflow
 * Discord
-
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| :-------- | :------: | :-------- | --------: |
-| No span  | Span across three columns    | Hello Every bb| come to my home and me |
