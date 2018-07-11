@@ -40,13 +40,13 @@ finished: true
 
 <br><br>
 
-- \|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\| C/C++ \| Java \| Python \| Linux \| Network \| <br>
-\|\-\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\-\-\|  <br>
-\| 홍길동 \| A+    \| B+   \| A0     \| B0    \| A-      \|   <br>
+- \|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\| C/C++ \| Java \| Python \| Linux \| Network \| <br>
+\|\-\-\-\-\-\-\-\-&nbsp;\|&nbsp;\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\|&nbsp;\-\-\-\-\-\-\-\-\-\|  <br>
+\| 홍길동 \| A+    \| B+   \| A0     \| B0 &nbsp;   \| A-   &nbsp;   \|   <br>
 \| 이순신 \| A+    \| A+  \| A+     \| A+    \| A+      \|   <br>
 
  |       | C/C++ | Java | Python | Linux | Network |<br>
- |-------|-------|-------|-------|-------| ------- |<br>
+ |---|---|---|---|---|---|<br>
  | 홍길동 | A+    | B+   | A0     | B0    | A-      |<br>
  | 이순신 | A+    | A+   | A+     | A+    | A+      |<br><br>
 
