@@ -2,7 +2,7 @@
 layout: post
 title: "AWS EC2 서버 생성하기. "
 subtitle: <span class="evidence">SDN기반의 클라우드 컴퓨팅 시스템 EC2</span>
-date: 2018-07-12
+date: 2017-09-11
 author: NoonGam
 category: AWS
 tags: EC2
@@ -13,7 +13,7 @@ finished: true
 ## EC2 ?
 
 - 아마존 웹 서비스(AWS) EC2는 무엇인가? <br>
-![icon](/img/2018-06-11-AWS EC2 생성하기/1.jpg)
+![icon](/img/2017-09-11-AWS EC2 생성하기/1.jpg)
 >Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
 많은 비용이 발생하였지만, 현재는 이러한 Paas(Platform as a Service)의 형태로 사용자에게 제공합니다.
 
@@ -29,7 +29,7 @@ finished: true
 
 ## AWS EC2 인스턴스 생성하기
 - 지역과 서비스 방식 구분하기
-![icon](/img/2018-06-11-AWS EC2 생성하기/2.jpg)
+![icon](/img/2017-09-11-AWS EC2 생성하기/2.jpg)
 
 > 1번의 지역이 꼭 자신의 지역이거나 근처 지역이여야 합니다. EC2서버를 할당받을 물리적 위치를 찾는것이기 때문에
 가까울수록 속도가 빠릅니다.
@@ -40,14 +40,14 @@ finished: true
 <br>
 
 
-![icon](/img/2018-06-11-AWS EC2 생성하기/3.png)
+![icon](/img/2017-09-11-AWS EC2 생성하기/3.png)
 > 왼쪽 중간쯤의 '1.인스턴스'를 클릭하고, '2.인스턴스 시작'을 누릅니다.
 
 <br>
 <br>
 <br>
 - 서버 운영체제(OS) 선택하기
-![icon](/img/2018-06-11-AWS EC2 생성하기/4.PNG)
+![icon](/img/2017-09-11-AWS EC2 생성하기/4.PNG)
 >프리티어에서 가장 보편적인 14.04버전의 우분투를 선택합니다.(서버에 설치될 OS 및 OS 버전 결정)
 
 <span class="evidence">서버는 리눅스를 기반으로 해야하며, 우분투는 편리성이 좋은 OS라고 생각합니다.</span>
@@ -55,34 +55,34 @@ finished: true
 <br>
 <br>
 
- ![icon](/img/2018-06-11-AWS EC2 생성하기/5.PNG)
+ ![icon](/img/2017-09-11-AWS EC2 생성하기/5.PNG)
 > 무료인 General purpose(일반적인 사용자) Free Tier전용을 선택하고 다음~
  vCPUs(가상화 CPU 갯수=많을수록 빠름) , 메모리(우리가 아는 Ram)
 
  <br>
  <br>
 
-  ![icon](/img/2018-06-11-AWS EC2 생성하기/6.PNG)
+  ![icon](/img/2017-09-11-AWS EC2 생성하기/6.PNG)
 > 나중에 AWS를 세부하게 다뤄야할때 고쳐야하지만 현재는 필요 없습니다. 다음~
 
 <br>
 <br>
 
-  ![icon](/img/2018-06-11-AWS EC2 생성하기/7.PNG)
+  ![icon](/img/2017-09-11-AWS EC2 생성하기/7.PNG)
 > 우리가 아는 HDD, SDD 개념의 스토리지 입니다. 프리티어는 최대 30기가까지 가능하므로 자신의 목적에 맞게
 용량을 할당 합니다.
 
 <br>
 <br>
 
-  ![icon](/img/2018-06-11-AWS EC2 생성하기/8.PNG)
+  ![icon](/img/2017-09-11-AWS EC2 생성하기/8.PNG)
 > 지금은 필요없지만 추후에 대규모 작업이나 기업에서는 업무 세분화 및 구분을 위해 TAG를 사용합니다.
 (추후 변경 가능합니다)
 
 <br>
 <br>
 
-  ![icon](/img/2018-06-11-AWS EC2 생성하기/9.PNG)
+  ![icon](/img/2017-09-11-AWS EC2 생성하기/9.PNG)
 > 위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다.
 (사용 안하려면 설정을 안하셔도 됩니다. 추후에 사용할때 변경 가능)
 
@@ -91,14 +91,14 @@ finished: true
  <br>
  <br>
 
-   ![icon](/img/2018-06-11-AWS EC2 생성하기/10.PNG)
+   ![icon](/img/2017-09-11-AWS EC2 생성하기/10.PNG)
 > 이는 AWS EC2 서버에 중요한 private key 이므로 잃어버리거나 지우시면 안됩니다.
 (새 키 페어 생성을 누르고, 키 페어 이름을 적절히 짓습니다)
 
 <br>
 <br>
 
- ![icon](/img/2018-06-11-AWS EC2 생성하기/11.png)
+ ![icon](/img/2017-09-11-AWS EC2 생성하기/11.png)
  > 처음에는 pending중인데 running상태가 될때까지 기다려주세요.
 
  <br>
