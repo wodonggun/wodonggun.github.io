@@ -6,9 +6,7 @@
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-      background: #383838;
-      font-weight: bold;
-      font-family: 'Jeju Gothic', serif;
+      background: #f8f8f8;
     }
 
     .c     { color: #998; font-style: italic } // Comment

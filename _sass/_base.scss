@@ -88,6 +88,9 @@ h6 {
     font-size: 16px;
 }
 
+h3, h4 {
+    font-family: 'Jeju Gothic', serif;
+}
 
 /**
  * Links
@@ -109,6 +112,23 @@ a:hover {
     margin-right: 20px;
     color: #25bcba;
 }
+
+
+/*
+// h3은 ### 제목  을 썻을때 색깔,특수기호,왼쪽 마진값 설정가능.
+.post-content h3:before {  // 수정 ?
+    content: "¶ ";
+    margin-right: 20px;
+    color: #466FC4;
+}
+
+.post-content h4:before {  // 수정 ?
+    content: "¶ ";
+    margin-right: 20px;
+    margin-left: 20px;
+    color: skyblue;
+}
+*/
 
 .link {
     padding: 2px;
@@ -180,6 +200,7 @@ hr {
  */
 pre,
 code {
+    font-family: 'Jeju Gothic', serif;
     font-size: 15px;
     border: 1px solid #f8f8f8;
     border-radius: 3px;
