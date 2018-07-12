@@ -5,7 +5,7 @@ subtitle: <span class="evidence">IoT 분야에서 떠오르고 있는 로라</sp
 date: 2018-07-12
 author: NoonGam
 category: Study
-tags: LoRa IoT Network
+tags: IoT Network
 comments: true
 finished: true
 ---
