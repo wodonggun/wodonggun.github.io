@@ -12,6 +12,12 @@ finished: true
 
 ## EC2 ?
 
+adsf```hihihi```
+asdf``hi``
+asdf`hi`
+asdf<a>hi</a>
+asdf<code class="highlighter-rouge">hi</code>
+
 - 아마존 웹 서비스(AWS) EC2는 무엇인가? <br>
 ![icon](/img/2017-09-11-AWS EC2 생성하기/1.jpg)
 >Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
