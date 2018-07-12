@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LoRa(로라) 란? "
-subtitle: <span class="evidence">IoT 분야에서 떠오르는 로라</span>
+subtitle: <span class="evidence">IoT 분야에서 떠오르고 있는 로라</span>
 date: 2018-07-12
 author: NoonGam
 category: Study
@@ -54,7 +54,9 @@ finished: true
 - Google
 - SK Telecom
 
-
+<br>
+<br>
+<br>
 ## 참고자료
 
 - https://www.lora-alliance.org/
