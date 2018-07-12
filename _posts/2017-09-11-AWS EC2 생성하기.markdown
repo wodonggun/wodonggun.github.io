@@ -92,9 +92,9 @@ finished: true
 
  <span class="evidence">검토 및 시작을 누르고 인스턴스(서버) 설정을 확인후 시작!</span>
 
- <br>
- <br>
-  <br>
+<br>
+<br>
+<br>
 
    ![icon](/img/2017-09-11-AWS EC2 생성하기/10.PNG)
 > 이는 AWS EC2 서버에 중요한 private key 이므로 잃어버리거나 지우시면 안됩니다.
@@ -102,21 +102,21 @@ finished: true
 
 <br>
 <br>
- <br>
+<br>
 
  ![icon](/img/2017-09-11-AWS EC2 생성하기/11.png)
  > 처음에는 pending중인데 running상태가 될때까지 기다려주세요.
 
- <br>
- <br>
-  <br>
+<br>
+<br>
+<br>
 
      이렇게 AWS EC2 인스턴스 생성을 해 보았습니다. 이러한 서버를 만들고 응용할
       수 있는 방법들은 다음 포스팅에서 올리겠습니다.
 
-      <br>
-      <br>
-       <br>
+<br>
+<br>
+<br>
 
 ## 마무리
 AWS쓰기 전까지 저렴하게 사용할 수 있었던 우비 업체에 감사합니다.
