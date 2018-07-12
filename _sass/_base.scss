@@ -199,10 +199,11 @@ hr {
 /**
  * Code formatting
  */
+ //``` 또는`` 또는 `로 감싸는 문장이나 단어 효과 highlighter-rouge 효과임.
 pre,
 code {
     font-family: 'Jeju Gothic', serif;
-    font-size: 15px;
+    font-size: 30px;
     border: 1px solid #f8f8f8;
     border-radius: 3px;
     background-color: #f8f8f8;
