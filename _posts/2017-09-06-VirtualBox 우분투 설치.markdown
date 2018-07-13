@@ -10,10 +10,10 @@ comments: true
 finished: true
 ---
 
-'''
+```
 이전에 [VirtualBox 설치하기](https://wodonggun.github.io/wodonggun.github.io/linux/VirtualBox-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html)
 를 통해서 기본 세팅을 하였습니다.
-'''
+```
 
 ## VirtualBox 우분투 16.04 LTS 설치
 
@@ -21,11 +21,12 @@ finished: true
 윈도우를 설치하려면 윈도우 CD나 USB가 있어야 하듯이,
 우분투를 설치하려면 우분투 ISO파일이 있어야 합니다.
 <span class="evidence">우분투 16.04버전을 사용하였으며,
+
 https://www.ubuntu.com/download
 
  일반적으로 우분투 공식홈페이지에서 다운받으면 해외사이트라서 1~2시간이 넘게 소요됩니다.
 그래서 우리는 더 빠른방법으로 다운로드 받습니다.
-한국서버에 있는 카카오를 통해서 ubuntu 16.04 LTS를 다운받습니다.
+한국서버에 있는 카카오를 통해서 ubuntu 16.04 LTS를 다운받습니다.<br>
 [ubuntu 초고속 다운로드](http://mirror.kakao.com/ubuntu-releases/)
 
 
@@ -114,13 +115,17 @@ https://www.ubuntu.com/download
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/16.png)
 
+- ```1번을 클릭한 후, 2번을 클릭합니다.```
+- ```또는 ctrl+alt+t 단축키를 통해 터미널창을 엽니다.```
+
 <br>
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/17.png)
 
-<br>
-
-- ```su 입력후에 암호를 입력```합니다.
+- ```su 를 입력합니다.```
+- ```ubuntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.```
+- ```root 계정의 새로운 비밀번호를 입력합니다. ```
+- ```root 계정의 새로운 비밀번호를 다시 한번 더 입력합니다. ```
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/18.png)
 
