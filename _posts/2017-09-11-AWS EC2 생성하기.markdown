@@ -36,6 +36,7 @@ asdf<code class="highlighter-rouge">hello my name is</code>
 
 ## AWS EC2 인스턴스 생성하기
 - 지역과 서비스 방식 구분하기
+
 ![icon](/img/2017-09-11-AWS EC2 생성하기/2.jpg)
 
 > 1번의 지역이 꼭 자신의 지역이거나 근처 지역이여야 합니다. EC2서버를 할당받을 물리적 위치를 찾는것이기 때문에
@@ -48,13 +49,16 @@ asdf<code class="highlighter-rouge">hello my name is</code>
 
 
 ![icon](/img/2017-09-11-AWS EC2 생성하기/3.png)
+
 > 왼쪽 중간쯤의 '1.인스턴스'를 클릭하고, '2.인스턴스 시작'을 누릅니다.
 
 <br>
 <br>
 <br>
 - 서버 운영체제(OS) 선택하기
+
 ![icon](/img/2017-09-11-AWS EC2 생성하기/4.PNG)
+
 >프리티어에서 가장 보편적인 <a>우분투 14.04 LTS</a>를 선택합니다.(서버에 설치될 OS 및 OS 버전 결정)
 
 <span class="evidence">서버는 리눅스를 기반으로 해야하며, 우분투는 편리성이 좋은 OS라고 생각합니다.</span>
@@ -64,6 +68,7 @@ asdf<code class="highlighter-rouge">hello my name is</code>
  <br>
 
  ![icon](/img/2017-09-11-AWS EC2 생성하기/5.PNG)
+
 > 무료인 General purpose(일반적인 사용자) Free Tier전용을 선택하고 다음~
  vCPUs(가상화 CPU 갯수=많을수록 빠름) , 메모리(우리가 아는 Ram)
 
@@ -72,6 +77,7 @@ asdf<code class="highlighter-rouge">hello my name is</code>
   <br>
 
   ![icon](/img/2017-09-11-AWS EC2 생성하기/6.PNG)
+
 > 나중에 AWS를 세부적으로 다뤄야할때 고쳐야하지만 현재는 필요 없습니다. 다음~
 
 <br>
@@ -94,7 +100,9 @@ asdf<code class="highlighter-rouge">hello my name is</code>
 <br>
 
 - 보안 그룹 구성(인바운드)
-  ![icon](/img/2017-09-11-AWS EC2 생성하기/9.PNG)
+
+![icon](/img/2017-09-11-AWS EC2 생성하기/9.PNG)
+
 > 위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다.
 (사용 안하려면 설정을 안하셔도 됩니다. 추후에 사용할때 변경 가능)
 
