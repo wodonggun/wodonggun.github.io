@@ -93,7 +93,8 @@ asdf<code class="highlighter-rouge">hi</code>
 
 <br>
 <br>
- <br>
+<br>
+
 - 보안 그룹 구성(인바운드)
   ![icon](/img/2017-09-11-AWS EC2 생성하기/9.PNG)
 > 위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다.
