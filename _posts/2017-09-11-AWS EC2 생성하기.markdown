@@ -9,11 +9,7 @@ tags: EC2
 comments: true
 finished: true
 ---
-## EC222
-
-# EC222 ?
-## EC222
-# EC222
+## AWS EC2
 
 adsf```hihihi3333```
 asdf``hi``
@@ -21,9 +17,11 @@ asdf`hi`
 asdf<a>hi</a>
 asdf<code class="highlighter-rouge">hi</code>
 
+
 - 아마존 웹 서비스(AWS) EC2는 무엇인가? <br>
 ![icon](/img/2017-09-11-AWS EC2 생성하기/1.jpg)
->Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
+
+> Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
 많은 비용이 발생하였지만, 현재는 이러한 Paas(Platform as a Service)의 형태로 사용자에게 제공합니다.
 
     예전에는 서버를 만들어야 한다면서 카페24,가비아 등 서버호스팅 업체를 찾으면서 적게는
