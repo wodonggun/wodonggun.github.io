@@ -10,10 +10,10 @@ comments: true
 finished: true
 ---
 
-```
-이전에 [VirtualBox 설치하기](https://wodonggun.github.io/wodonggun.github.io/linux/VirtualBox-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html)
+
+이전에 포스팅에서 [VirtualBox 설치하기](https://wodonggun.github.io/wodonggun.github.io/linux/VirtualBox-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html)
 를 통해서 기본 세팅을 하였습니다.
-```
+
 
 ## VirtualBox 우분투 16.04 LTS 설치
 
@@ -111,7 +111,10 @@ https://www.ubuntu.com/download
 
 > 이런 화면이 뜬다면 정상적으로 Ubuntu 설치가 완료되었습니다.
 
+
 <br>
+
+## Ubuntu root 비밀번호 설정
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/16.png)
 
