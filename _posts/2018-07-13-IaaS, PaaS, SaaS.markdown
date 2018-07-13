@@ -5,7 +5,7 @@ subtitle: <span class="evidence">클라우드 컴퓨팅 시대의 탄생</span>
 date: 2018-07-12
 author: NoonGam
 category: Study
-tags: IoT Network
+tags: IoT AWS
 comments: true
 finished: true
 ---
