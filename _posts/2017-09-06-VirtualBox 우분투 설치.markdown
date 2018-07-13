@@ -15,8 +15,8 @@ finished: true
 를 통해서 기본 세팅을 하였습니다.
 
 
-## VirtualBox 우분투 16.04 LTS 설치
 
+## Ubuntu ISO 다운로드 받기
 
 윈도우를 설치하려면 윈도우 CD나 USB가 있어야 하듯이,
 우분투를 설치하려면 우분투 ISO파일이 있어야 합니다.
@@ -26,11 +26,11 @@ https://www.ubuntu.com/download
 
  일반적으로 우분투 공식홈페이지에서 다운받으면 해외사이트라서 1~2시간이 넘게 소요됩니다.
 그래서 우리는 더 빠른방법으로 다운로드 받습니다.
-한국서버에 있는 카카오를 통해서 ubuntu 16.04 LTS를 다운받습니다.<br>
+한국서버에 있는 카카오를 통해서 ubuntu 16.04 LTS를 다운받습니다.<br><br>
 [ubuntu 초고속 다운로드](http://mirror.kakao.com/ubuntu-releases/)
 
 
-
+## VirtualBox 우분투 16.04 LTS 설치
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/0.png)
 
