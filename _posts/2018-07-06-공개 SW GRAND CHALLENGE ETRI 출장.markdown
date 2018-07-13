@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "공개 SW GRAND CHALLENGE ETRI 출장"
+title: "공개 SW GRAND CHALLENGE"
 subtitle: <span class="evidence">국내외 최신 공개 SW 기술공유 및 개방.협업의 SW개발 문화와 가치。</span>
 date: 2018-07-06
 author: NoonGam
