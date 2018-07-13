@@ -125,7 +125,7 @@ https://www.ubuntu.com/download
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/17.png)
 
-- ```su 를 입력합니다.```
+- ```sudo passwd root 를 입력합니다.```
 - ```ubuntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.```
 - ```root 계정의 새로운 비밀번호를 입력합니다. ```
 - ```root 계정의 새로운 비밀번호를 다시 한번 더 입력합니다. ```
