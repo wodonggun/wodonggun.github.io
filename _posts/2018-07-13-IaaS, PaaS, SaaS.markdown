@@ -115,8 +115,8 @@ on-premise
 
 ## 마무리
 
-![icon](/img/2018-07-13-IaaS, PaaS, SaaS/7.jpg)
->지금까지 공부했던 내용을 그림을 보고 떠올려보세요.
+![icon](/img/2018-07-13-IaaS, PaaS, SaaS/1.png)
+>지금까지 공부했던 내용을 그림을 보고 정리해 보세요.
 
 <br>
 <br>
