@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AWS EC2 서버 생성하기. "
+title: "AWS EC2 Ubuntu 서버 생성하기. "
 subtitle: <span class="evidence">SDN기반의 클라우드 컴퓨팅 시스템 EC2</span>
 date: 2017-09-11
 author: NoonGam
@@ -11,20 +11,13 @@ finished: true
 ---
 ## AWS EC2
 
-adsf```hello my name is```
-asdf``hello my name is``
-asdf`hello my name is`  
-asdf<a title="서버+클라우드">AWS EC2란?</a>
-asdf<code class="highlighter-rouge">hello my name is</code>
-
-
 - 아마존 웹 서비스(AWS) EC2는 무엇인가? <br>
 ![icon](/img/2017-09-11-AWS EC2 생성하기/1.jpg)
 
 > Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
 많은 비용이 발생하였지만, 현재는 이러한 Paas(Platform as a Service)의 형태로 사용자에게 제공합니다.
 
-<a title="조까">예전에는 서버를 만들어야 한다면서 카페24,가비아 등 서버호스팅 업체를 찾으면서 적게는 십만원~수백만원의
+<a title="설명충">예전에는 서버를 만들어야 한다면서 카페24,가비아 등 서버호스팅 업체를 찾으면서 적게는 십만원~수백만원의
     비용이 발생하였지만, 그 이후에 가상서버와 SDN NFV라는 개념이 생기고 가격이 저렴해졌다. 이전까지만해도
     Woobi라는 가상서버호스팅 업체를 통해서 월 3500원이라는 저렴한 가격으로 프로젝트에 사용하였지만 정말로
     학교에서 프로젝트정도로 할만한 수준만 제공해줬다. 그러나 아마존 웹 서비스가 나오면서 이러한 비용이
@@ -103,8 +96,9 @@ asdf<code class="highlighter-rouge">hello my name is</code>
 
 ![icon](/img/2017-09-11-AWS EC2 생성하기/9.PNG)
 
-> 위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다.
-(사용 안하려면 설정을 안하셔도 됩니다. 추후에 사용할때 변경 가능)
+> 위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다. FTP 관련 파일 전송이나 원격 등 필요한 ssh 보안 포트 22번을 설정합니다. 사용 안하려면 설정을 안하셔도 됩니다. 추후에 사용할때 변경 가능합니다.
+(꼭 위치 무관을 확인해주세요. 위치를 고정하면 해당 아이피에서만 접속이 가능하며, 위치 무관일 시에는 다른 장소에서 로그인해도 접속 가능합니다.)
+
 
  <span class="evidence">검토 및 시작을 누르고 인스턴스(서버) 설정을 확인후 시작!</span>
 
@@ -113,8 +107,9 @@ asdf<code class="highlighter-rouge">hello my name is</code>
 <br>
 
    ![icon](/img/2017-09-11-AWS EC2 생성하기/10.PNG)
-> 이는 AWS EC2 서버에 중요한 private key 이므로 잃어버리거나 지우시면 안됩니다.
-(새 키 페어 생성을 누르고, 키 페어 이름을 적절히 짓습니다)
+> 새 키 페어 생성을 누르고, 적절한 키 페어 이름을 짓습니다. 키 페어 다운로드를 합니다.
+이 키는 AWS EC2 서버에 접속하기위한 중요한 private key 이므로 잃어버리거나 지우시면 안됩니다.
+(복사해서 usb나 클라우드에 저장하는게 좋아요!)
 
 <br>
 <br>
