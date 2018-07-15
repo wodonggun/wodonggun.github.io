@@ -13,7 +13,7 @@ finished: true
 
 https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%84%9C-MySQL,phpMyAdmin-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0(2).html
 
-## 필요한 프로그램 설치
+## mysql phpmyadmin 연동 및 설치하기
 
 
 
@@ -193,15 +193,7 @@ collation-server = utf8_unicode_ci
 
 <br>
 
-## puttygen 실행
 
-
-
-
-<br>
-<br>
-
-     이렇게 Putty(푸티)를 통한  AWS EC2 원격 접속을 성공해 보았습니다.
 
 <br>
 <br>
@@ -210,3 +202,8 @@ collation-server = utf8_unicode_ci
 ## 다음 주제....
 
 python을 통해서 간단히 데이터베이스 연결 확인 및 데이터 읽고 쓰기를 진행하겠습니다.
+
+## 참고 자료
+
+- http://hyeonstorage.tistory.com/
+- https://stackoverflow.com/questions
