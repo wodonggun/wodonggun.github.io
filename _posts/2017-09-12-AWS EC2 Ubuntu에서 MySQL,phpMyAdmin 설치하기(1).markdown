@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기"
+title: "AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기(1)"
 subtitle: <span class="evidence">아마존 웹서비스(AWS) EC2 Ubuntu에 기본적인 데이터베이스인 MySQL과 phpMyAdmin을 설치해보자</span>
 date: 2017-09-12
 author: NoonGam
