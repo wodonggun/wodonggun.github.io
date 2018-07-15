@@ -5,13 +5,13 @@ subtitle: <span class="evidence">아마존 웹서비스(AWS) EC2 Ubuntu에 기�
 date: 2017-09-13
 author: NoonGam
 category: AWS
-tags: EC2
+tags: EC2 MySQL phpmyadmin linux
 comments: true
 finished: true
 ---
 ## 이전 포스팅 참고하기
 
-https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%84%9C-MySQL,phpMyAdmin-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0(2).html
+https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%84%9C-MySQL,phpMyAdmin-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0(1).html
 
 ## mysql phpmyadmin 연동 및 설치하기
 
