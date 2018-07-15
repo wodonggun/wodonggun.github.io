@@ -15,11 +15,8 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%8
 
 ## 필요한 프로그램 설치
 
-- putty.exe 와 puttygen.exe 다운받기 <br>
-[putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-
-![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기(2)/1(1).png)
+![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기(2)/1 (1).png)
 
 > 자신의 운영체제와 맞는 버전 putty와 puttygen을 다운받습니다.  
 
