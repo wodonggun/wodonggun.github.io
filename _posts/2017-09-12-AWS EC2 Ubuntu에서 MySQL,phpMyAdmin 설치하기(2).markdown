@@ -131,13 +131,16 @@ ServerName localhost
 
 - \[mysqld\]부분에 아래와 같이 코드 입력
 
-```
+```c
 init_connect = 'SET collation_connection = utf8_unicode_ci'
 init_connect = 'SET NAMES utf8'
 character-set-server = utf8
 collation-server = utf8_unicode_ci
 ```
 
+``여담``
+
+utf8_unicode_ci 방식과 utf8_general_ci 방식이 있는데 general방식은 unicode방식에 비해 속도가 5~10% 빠르지만 언어간 비교 및 정렬 방식에 차이가 생길 수 있다. unicode방식은 거의 모든 언어에 대해서 정렬과 검색 등 지원 폭이 넓다.
 
 
 <br>
