@@ -11,11 +11,12 @@ finished: true
 ---
 ## 이전 AWS EC2 인스턴스 생성하기 참고하기
 
-https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html
+https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html
+
 
 ## AWS EC2 서버에 putty를 통한 원격 접속
 
-- putty.exe 와 puttygen.exe 다운받기
+- putty.exe 와 puttygen.exe 다운받기 <br>
 [putty 다운로드](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 
@@ -57,15 +58,21 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-%EC%83%9D%EC%84%B1%E
 ## putty 실행
 
 
+![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/7.png)
+
+>  SSH -> Auth를 클릭후에 puttygen으로 생성한 pem키를 가져옵니다.
+
+
+<br>
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/8.png)
 
->  
+>  서버의 IP주소, SSH 포트번호 22, 즐겨찾기처럼 설정을 저장하고 불러올 수 있게 Saved Sessions를 결정합니다. 
 
 <br>
 
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/9.png)
 <br>
-![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/7.png)<br>
+
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/10.png)
 <br>
 
@@ -81,12 +88,10 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-%EC%83%9D%EC%84%B1%E
 <br>
 <br>
 
-     이렇게 AWS EC2 접속을 성공해 보았습니다. 하이
+     이렇게 Putty(푸티)를 통한  AWS EC2 원격 접속을 성공해 보았습니다.
 
 <br>
 <br>
 <br>
 
 ## 마무리
-
-[우비 가상서버 홈페이지 링크](https://woobi.co.kr "저렴한 가상 서버"){: target-"_blank"}
