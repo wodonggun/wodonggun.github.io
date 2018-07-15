@@ -5,7 +5,7 @@ subtitle: <span class="evidence">가상머신에 Ubuntu 우분투 설치하기.<
 date: 2017-09-06
 author: NoonGam
 category: Linux
-tags: Linux
+tags: Linux VirtualBoX
 comments: true
 finished: true
 ---
