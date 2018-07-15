@@ -103,4 +103,8 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%
 <br>
 <br>
 
-## 마무리
+## 다음 글
+
+<span class="evidence">MySQL phpMyAdmin 설치하기(2) 바로가기<span>
+
+https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%84%9C-MySQL,phpMyAdmin-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0(2).html

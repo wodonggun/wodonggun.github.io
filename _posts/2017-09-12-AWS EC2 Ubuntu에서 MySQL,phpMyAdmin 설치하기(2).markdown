@@ -123,7 +123,7 @@ ServerName localhost
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기2/17.png)
 
 > bind-address 앞에 #을 붙여 주석처리 또는 지워줍니다.
-( 로컬(루프백 아이피) 주석을 통해 퍼블릭 접근을 가능하게 합니다. )
+( 로컬=루프백 아이피는 주석을 통해 퍼블릭 접근을 가능하게 합니다. )
 
 <br>
 
@@ -199,9 +199,13 @@ collation-server = utf8_unicode_ci
 <br>
 <br>
 
-## 다음 주제....
+## 다음 포스팅에서는...
 
 python을 통해서 간단히 데이터베이스 연결 확인 및 데이터 읽고 쓰기를 진행하겠습니다.
+
+<br>
+<br>
+<br>
 
 ## 참고 자료
 
