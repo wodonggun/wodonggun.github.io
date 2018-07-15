@@ -66,21 +66,30 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%
 <br>
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/8.png)
 
->  서버의 IP주소, SSH 포트번호 22, 즐겨찾기처럼 설정을 저장하고 불러올 수 있게 Saved Sessions를 결정합니다. 
+>  서버의 IP주소, SSH 포트번호 22, 즐겨찾기처럼 설정을 저장하고 불러올 수 있게 Saved Sessions를 결정합니다.
 
 <br>
 
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/9.png)
+
+> AWS EC2 서버의 IP 주소는 위와 같이 확인할 수 있습니다.
+
 <br>
 
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/10.png)
+
+
 <br>
 
-![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/11.png)<br>
+![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/11.png)
+
+>  login 아이디는 디폴트값으로 ubuntu로 되어있습니다.
+
+<br>
 
 ![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치/12.png)<br>
 
-
+> 위와 같은 화면이 뜨면 원격 접속 성공입니다.
 
 
 
