@@ -5,7 +5,7 @@ subtitle: <span class="evidence">국내외 최신 공개 SW 기술공유 및 개
 date: 2018-07-06
 author: NoonGam
 category: Conference
-tags: Confereence OpenSource
+tags: Conference OpenSource
 comments: true
 finished: true
 ---

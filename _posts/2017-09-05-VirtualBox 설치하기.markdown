@@ -5,7 +5,7 @@ subtitle: <span class="evidence">윈도우에서 가상머신으로 리눅스를
 date: 2017-09-05
 author: NoonGam
 category: Linux
-tags: Linux
+tags: Linux VirtualBoX
 comments: true
 finished: true
 ---

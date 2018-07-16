@@ -5,7 +5,7 @@ subtitle: <span class="evidence">SDN기반의 클라우드 컴퓨팅 시스템 E
 date: 2017-09-11
 author: NoonGam
 category: AWS
-tags: EC2
+tags: EC2 Linux
 comments: true
 finished: true
 ---

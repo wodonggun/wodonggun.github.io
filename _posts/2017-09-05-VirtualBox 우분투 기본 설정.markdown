@@ -5,7 +5,7 @@ subtitle: <span class="evidence">VM VirtualBox 기본 설정 세팅 하기.</spa
 date: 2017-09-05
 author: NoonGam
 category: Linux
-tags: Linux
+tags: Linux VirtualBoX
 comments: true
 finished: true
 ---

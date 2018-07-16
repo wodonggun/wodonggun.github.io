@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "TIZEN(타이젠) 이란? "
-subtitle: <span class="evidence">삼성전자와 연관된 타이젠이란 무엇일까? </span>
+title: "Markdown(마크다운)이란? "
+subtitle: <span class="evidence">마크업은 들어봤어도 마크다운은 무엇일까?</span>
 date: 2018-07-09
 author: NoonGam
 category: Study
