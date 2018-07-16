@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TIZEN(타이젠)이란? "
-subtitle: <span class="evidence">삼성전자와 타이젠 자세히 알아보자.</span>
+subtitle: <span class="evidence">삼성전자와 타이젠 둘의 관계를 자세히 알아보자.</span>
 date: 2018-07-16
 author: NoonGam
 category: Study
