@@ -1,0 +1,147 @@
+---
+layout: post
+title: "백준 14888번 연산자 끼워넣기 "
+subtitle: <span class="evidence">DFS 깊이우선탐색을 이용한 연산자 끼워넣기 백준 14888번</span>
+date: 2018-07-18
+author: NoonGam
+category: Algorithm
+tags: 백준
+comments: true
+finished: true
+---
+
+## 백준 14888 연산자 끼워넣기
+
+- https://www.acmicpc.net/problem/14888 링크 바로가기
+
+제일 고려해야할 부분은 이 모든 연산작업에 대해서 for문이나 while문을 통해서 남은 +,-,×,÷를 모두 체크하면서 연산작업을 수행하는 방법이 있지만 DFS에 조금만 알고 응용 가능하다면 훨씬 쉬운방법으로 풀 수 있습니다.
+
+> C언어를 이용한 DFS방식의 코딩이므로, DFS에 대한 기본 지식을 베이스로 코드를 작성하였습니다. 푸는 방식은 여러가지가 존재하며 제가 푼 방식이 꼭 최적화된 정답은 아닙니다.
+
+
+<br>
+<br>
+<br>
+
+## DFS
+
+![img](/img/0-Algorithm/2018-07-18-백준 14888 연산자 끼워넣기/1.png)
+
+<a>
+DFS(Depth First Search; 깊이 우선 탐색)는 현재 정점에서 연결된 정점을 하나 골라 파고들수 있는 최대한 깊게 파고들어가며 탐색하는 방법이다.
+탐색 순서가 약간 난해하게 느껴질 수도 있는데 쉽게 생각해서 "갈 수 있는 길을 찾아 쭉 내려감 -> 더 이상 못가면 1번 되돌아 간 뒤 -> 또 갈 수 있는 길을 찾아 쭉 내려감 -> .... " 을 반복한다고 보면 된다.
+이 원리를 응용한 알고리즘이 '백 트래킹(역추적)'이다.
+스택(Stack)을 이용해서 구현하며, 직접 스택을 구현해도 되고, 시스템 스택(재귀 호출)을 사용할 수도 있다.
+옆으로 넓은 그래프에 대해서 준수한 성능을 보이나 아래로 깊은 그래프의 경우 좋은 성능을 기대하기는 힘들다.
+예를들어 C 정점을 방문하려 할 때, BFS에선 3번만에 방문할 수 있으나, DFS로는 12번만에 방문이 가능하다.
+트리에서 DFS는 Inorder와 동일하다.
+</a>
+
+## 코드
+
+```c
+//c언어 백준 14888번
+
+#include <stdio.h>
+int N;                      
+int num[101];                //N개의 숫자를 저장할 변수
+int giho[4];                //+,-,*,/ 순서대로 연산자 갯수를 저장
+int INT_MIN = 987654321;    //최소값은 언제나 가장큰값보다 작아야
+int INT_MAX = -987654321;   //최대값은 언제나 가장 작은값보단 커야
+
+int sol(int plus, int minus, int mul, int div, int count, int result)
+{
+	if (count >= N)  //종료조건
+	{
+		if (result < INT_MIN)
+			INT_MIN = result;
+		if (result > INT_MAX)
+			INT_MAX = result;
+
+		return 0;
+	}
+
+
+	//plus
+	if (plus > 0)           
+	{
+		int tmp_result = 0;
+		tmp_result = result + num[count];
+
+		sol(plus - 1, minus, mul, div, count + 1, tmp_result);
+	}
+
+	//minus
+	if (minus > 0)
+	{
+		int tmp_result = 0;
+		tmp_result = result - num[count];
+
+		sol(plus, minus - 1, mul, div, count + 1, tmp_result);
+
+	}
+
+	//mul
+	if (mul > 0)
+	{
+		int tmp_result = 0;
+		tmp_result = result * num[count];
+
+		sol(plus, minus, mul - 1, div, count + 1, tmp_result);
+	}
+
+	//div
+	if (div > 0)
+	{
+		int tmp_result = 0;
+		tmp_result = result / num[count];
+
+		sol(plus, minus, mul, div - 1, count + 1, tmp_result);
+	}
+
+
+}
+
+
+int main()
+{
+
+	scanf("%d", &N);
+	for (int i = 0; i < N; i++)
+		scanf("%d", &num[i]);
+
+	for (int i = 0; i < 4; i++)
+		scanf("%d", &giho[i]);
+
+	sol(giho[0], giho[1], giho[2], giho[3], 1, num[0]);
+
+	printf("%d\n", INT_MAX);
+	printf("%d\n", INT_MIN);
+
+	return 0;
+}
+
+
+```
+
+<br>
+<br>
+<br>
+
+## 문제 적용 방식
+
+![img](/img/0-Algorithm/2018-07-18-백준 14888 연산자 끼워넣기/2.png)
+
+- 재귀함수를 통한 함수호출
+- DFS를 이용한 모든 연산작업 실행
+- N개의 숫자를 다 사용(=count갯수) 수행후 종료조건
+- 함수를 호출할때는 현재상태에서 +,-,×,÷ 남은 연산자 갯수를 매개변수로 넘겨줌.
+- 현재까지 변수를 count로 넘겨줌.
+- 현재까지 진행한 연산작업을 result로 넘겨줌.
+
+
+
+
+## 참고자료
+- [occidere님의 블로그]( https://m.blog.naver.com/PostView.nhn?blogId=occidere&logNo=220923695595&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+- [백준 14888번](https://www.acmicpc.net/problem/14888)
