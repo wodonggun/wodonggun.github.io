@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "백준 14888번 연산자 끼워넣기 "
-subtitle: <span class="evidence">DFS 깊이우선탐색을 이용한 연산자 끼워넣기 백준 14888번</span>
+title: "백준 15686번 치킨배달"
+subtitle: <span class="evidence">2018년 4월 15일 SW직군 코딩테스트 문제</span>
 date: 2018-07-19
 author: NoonGam
 category: Algorithm
@@ -10,7 +10,7 @@ comments: true
 finished: true
 ---
 
-## 백준 15686 연산자 끼워넣기
+## 백준 15686 치킨배달
 
 - https://www.acmicpc.net/problem/15686 링크 바로가기
 
@@ -218,10 +218,10 @@ void cal()
 		for (int j = 0; j < chicken.size(); j++)					//치킨집 거리 탐색
 		{
 			str c = chicken[j];
-			if (c.visit == 1)										//선택된 치킨집일때
+			if (c.visit == 1)																//선택된 치킨집일때
 			{
-				int temp = abs(p.x - c.x) + abs(p.y - c.y);			//거리측정
-				if (temp < len)										//최소거리일때
+				int temp = abs(p.x - c.x) + abs(p.y - c.y);		//거리측정
+				if (temp < len)																//최소거리일때
 				{
 					len = temp;
 				}
@@ -229,7 +229,7 @@ void cal()
 			}
 
 		}
-		total += len;												//사람집에서 치킨집까지 최소거리들의 합
+		total += len;																	//사람집에서 치킨집까지 최소거리들의 합
 
 	}
 	if (total < answer)												
@@ -241,7 +241,7 @@ int sol(int next_combination_start, int M_count)
 {
 	//Recursive call end condition
 	if (M_count == M || chicken.size() == M_count)				// M개(최대 치킨집수)랑 선택한 M_count(선택한 치킨집 카운트)가 같거나
-	{															// chicken.size(존재하는 치킨집)과 M_count가 같으면
+	{																	// chicken.size(존재하는 치킨집)과 M_count가 같으면
 		cal();													//집들과 치킨집과의 거리 계산 함수 호출
 		return 0;												//재귀 종료
 	}
@@ -288,7 +288,9 @@ int main()
 
 
 ```
-
+<br>
+<br>
+<br>
 
 
 ## 참고자료
