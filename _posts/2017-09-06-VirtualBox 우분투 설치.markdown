@@ -118,8 +118,8 @@ https://www.ubuntu.com/download
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/16.png)
 
-- 1번을 클릭한 후, 2번을 클릭합니다.
-- 또는 ctrl+alt+t 단축키를 통해 터미널창을 엽니다.
+- <a>1번을 클릭한 후, 2번을 클릭합니다.</a>
+- <a>또는 ctrl+alt+t 단축키를 통해 터미널창을 엽니다.</a>
 
 <br>
 
@@ -127,14 +127,14 @@ https://www.ubuntu.com/download
 
 \< root 패스워드 설정하기 \>
 
-<a title = "code">
 
-- sudo su passwd root 를 입력합니다.
-- ubuntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.
-- root 계정의 새로운 비밀번호를 입력합니다.
-- root 계정의 새로운 비밀번호를 다시 한번 더 입력합니다.
 
-</a>
+- <a>sudo su passwd root 를 입력합니다.</a>
+- <a>buntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.</a>
+- <a>root 계정의 새로운 비밀번호를 입력합니다.</a>
+- <a>root 계정의 새로운 비밀번호를 다시 한번 더 입력합니다.</a>
+
+
 
 ![icon](/img/2017-09-06-VirtualBox 우분투 설치/18.png)
 
