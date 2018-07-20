@@ -67,7 +67,7 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%8
 
 <br>![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기2/9.png)
 
-- ```vi /etc/apache2/apache2.conf```
+- ```vi /etc/apache2/apache.conf```
 > vi는 편집기를 실행하는 명령어 입니다. 절대경로를 통해
  /etc/apache2 폴더로 이동하고, apache2.conf를 vi편집기로 엽니다.
 
