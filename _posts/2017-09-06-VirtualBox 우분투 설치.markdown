@@ -130,7 +130,7 @@ https://www.ubuntu.com/download
 
 
 - <a>sudo su passwd root 를 입력합니다.</a>
-- <a>buntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.</a>
+- <a>ubuntu 부팅시에 user로 로그인했던 비밀번호를 입력합니다.</a>
 - <a>root 계정의 새로운 비밀번호를 입력합니다.</a>
 - <a>root 계정의 새로운 비밀번호를 다시 한번 더 입력합니다.</a>
 
