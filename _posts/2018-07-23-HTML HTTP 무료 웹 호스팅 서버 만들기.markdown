@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "HTML HTTP 무료 웹 호스팅 서버 만들기 "
-subtitle: <span class="evidence">localhost서버가 아닌 public서버를 만들어보자.</span>
-date: 2018-07-09
+subtitle: <span class="evidence">localhost 127.0.0.1서버가 아닌 public IP 서버를 만들어보자.</span>
+date: 2018-07-23
 author: NoonGam
 category: HTML
 tags: HTML Linux
@@ -19,6 +19,8 @@ finished: true
 
 https://www.dothome.co.kr
 
+<br>
+<br>
 
 ![Codes](/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/1.jpg)
 > dothome을 통해서 무료로 서버를 대여받을 수 있습니다. 일반적으로는 localhost 즉, 개인 컴퓨터에 index.html을 만들어서 자기 자신만 접속할 수 있지만, 이렇게 서버 호스팅 업체를 통해서 홈페이지를 제작하면 전세계 어디서든 URL을 통해서 접속 할 수 있습니다.
@@ -88,9 +90,16 @@ https://www.dothome.co.kr
 
 - 마이닷홈 -> 상세보기를 클릭하면 상세 정보들도 다같이 볼 수 있어요.
 
+<br>
+<br>
+
+
 ## 다음 포스팅에서는...
 
-FTP를 통해서 직접 홈페이지 소스를 올려보고 확인해 보겠습니다.  
+파일질라 FTP를 통해서 직접 홈페이지 소스를 올려보고 확인해 보겠습니다.  
+
+<br>
+<br>
 
 
 ## 참고 자료
