@@ -1,0 +1,40 @@
+---
+layout: post
+title: "IP 클래스 서브넷 "
+subtitle: <span class="evidence">IP 클래스란?</span>
+date: 2018-07-25
+author: NoonGam
+category: HTML
+tags: PHP MYSQL
+comments: true
+finished: true
+---
+
+
+<!-- Study Sample  -->
+
+## 공인 IP, 사설 IP, 고정 IP, 동적 IP
+
+
+## IP 클래스 ?
+
+- what is Markdown? <br>
+
+![Codes](/img/2018-07-09-What is Markdown/mark_down.png)
+
+
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+
+## 참고 자료
+
+- [시크릿츠님의 블로그](https://m.blog.naver.com/PostView.nhn?blogId=xcripts&logNo=70121283191&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+
+- 

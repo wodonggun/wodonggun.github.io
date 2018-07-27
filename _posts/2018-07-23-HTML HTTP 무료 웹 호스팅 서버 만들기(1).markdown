@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTML HTTP 무료 웹 호스팅 서버 만들기 "
+title: "HTML HTTP 무료 웹 서버 호스팅 만들기(1) "
 subtitle: <span class="evidence">localhost 127.0.0.1서버가 아닌 public IP 서버를 만들어보자.</span>
 date: 2018-07-23
 author: NoonGam
@@ -12,6 +12,15 @@ finished: true
 
 
 <!-- Study Sample  -->
+
+## 웹 서버란?
+
+웹 서버란걸 많이 들어보셨을겁니다.
+
+웹 서버란, 웹 페이지(HTML 파일 등)를 제공해 주는 서버로 HTTP를 사용하여
+
+웹 페이지를 제공할 수 있는 웹 서버 프로그램이 설치되어있는 것을 말합니다.
+
 
 ## 닷홈 dothome 무료 웹 호스팅
 

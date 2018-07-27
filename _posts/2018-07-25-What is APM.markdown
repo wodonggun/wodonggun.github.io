@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Markdown(마크다운)이란? "
-subtitle: <span class="evidence">마크업은 들어봤어도 마크다운은 무엇일까?</span>
-date: 2018-07-09
+title: "APM 이란? "
+subtitle: <span class="evidence">APM이란 무엇일까?</span>
+date: 2018-07-25
 author: NoonGam
-category: Study
-tags: Markdown Language
+category: HTML
+tags: PHP MYSQL
 comments: true
 finished: true
 ---
@@ -64,7 +64,6 @@ finished: true
 <br>
 <br>
 <br>
-
 ## 장점
 마크다운은 <a>거의 모든 편집기</a> 에서 사용되고 있으며, <a>마우스를 사용하지 않고도</a> 즉시 텍스트 서식을 변경이 가능합니다. <br>
 작성된 문서가 쉽게 HTML 등 <a>다른 문서형태로 변환</a> 이 가능합니다.<br>
@@ -73,7 +72,6 @@ finished: true
 <br>
 <br>
 <br>
-
 ## 대표적으로 사용하는 곳
 * Wiki
 * tublr
