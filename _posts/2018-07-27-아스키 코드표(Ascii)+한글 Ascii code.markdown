@@ -28,7 +28,9 @@ finished: true
 > 일반적으로는 자주 볼일 없는 한글 유니코드 값이지만, 리눅스나 유닉스단에서 한글 데이터를 윈도우나 다른 호스트에게 전달하려면 hex단위로 전송하게 된다.
 UTF-8 방식의 파일을 통신하게되면 3바이트 단위로 한글을 끊어서 보내는데 <a>wireshark</a>나 <a>lpcap</a>을 이용하여 데이터를 확인하려면 유니코드값이 꼭 필요하다.
 
-<a>읽는 방법 : 왼쪽의 UTF-8 234,176,128 = EA B0 80 = "가""   ->  234,176,129 = EA B0 81 = "각"-> 234,176,130 = EA B0 82 ="갂" ....
+<a>읽는 방법 : 왼쪽의 UTF-8 234,176,128 = EA B0 80 = "가""   ->  234,176,129 = EA B0 81 = "각"-> 234,176,130 = EA B0 82 ="갂" ....</a>
+<a> ctrl + F 로 빠른 검색 </a>
+
 
 
 <div>
@@ -97,4 +99,6 @@ UTF-8 방식의 파일을 통신하게되면 3바이트 단위로 한글을 끊�
 </div>
 ## 참고 자료
 
-http://blog.naver.com/PostView.nhn?blogId=ouwukwfy&logNo=220248439711&parentCategoryNo=16&categoryNo=&viewDate=&isShowPopularPosts=true&from=search
+- [갠역시님의 블로그]( http://blog.naver.com/PostView.nhn?blogId=ouwukwfy&logNo=220248439711&parentCategoryNo=16&categoryNo=&viewDate=&isShowPopularPosts=true&from=search)
+
+- http://jjeong.tistory.com/696
