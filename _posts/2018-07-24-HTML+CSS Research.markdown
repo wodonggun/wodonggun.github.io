@@ -400,11 +400,12 @@ post방식으로 register.php를 실행한다.
 <br>
 
 
-## 선택자
+### 선택자
 
 - 전체 선택자 : 모든 페이지에 적용
+
 ```CSS
-\*{
+*{
   margin:10px;
   padding:10px;
   font-family: "Sans-serif"
@@ -434,7 +435,7 @@ p{
 id 선택자는 요소,크기,위치 등 레이아웃 지정용으로 주로 사용하기떄문에 문서안에서 한번만 적용됨
 
 ```CSS
-\#mynav{
+#mynav{
   color:blue;
 }
 ```
