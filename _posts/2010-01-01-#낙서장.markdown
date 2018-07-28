@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "# 낙서장 "
-subtitle: <span class="evidence">아이디어 낙서장 .</span>
+title: "# 낙서장"
+subtitle: <span class="evidence">잡다한 낙서장</span>
 date: 2018-07-16
 author: NoonGam
 category: bin
