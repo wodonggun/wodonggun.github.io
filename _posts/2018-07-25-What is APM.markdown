@@ -41,13 +41,10 @@ finished: true
 - PHP는 .php파일을 처리하고, Apache는 HTML파일을 처리합니다.
 - PHP를 활용하여 Dynamic(동적)웹 페이지를 만들 수 있습니다.
 - 이 외에도 JSP , ASP 등 사용되고 있습니다.
-
 - ex)예제 소스
 ```java
 <?php
-
     echo $_SERVER['HTTP_USER_AGENT'];
-
 ?>
 ```
 
@@ -60,7 +57,7 @@ finished: true
 - 거의 모든 데이터베이스를 지원
 - 가장 많은 공개소프트웨어가 PHP로 만들어짐
 
-현재는 Node.js와 함께 ASP , JSP등 좋은 언어가 많이 생겨났지만, 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다.
+현재는 객체 기반의 Node.js,javascript와 함께 ASP , JSP등 좋은 서버 언어가 많이 생겨났지만, PHP는 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다.
 <br><br><br>
 
 ## MySQL (!=MariaDB)
@@ -69,8 +66,8 @@ finished: true
 
 > SQL 데이터베이스 서버이다. MySQL 없이 PHP 만으로도 간단한 웹페이지를 만드는 것은 가능하다. 하지만 웹페이지에 사진, 동영상, 게시판 등 훨씬 많은 데이터들을 저장하고 보여주고 할 때 데이터베이스와의 연동이 필요하기 때문에 MySQL을 사용하는 것이다.
 
-MySQL은 무료이지만 기업이나 상업용으로 사용할때는 일정한 금액을 지불해야한다. 하지만 mariaDB라는 MySQL과 거의 똑같은 DBMS가 있는데 훨씬 가볍고 빠르다는 장점을 가지고 있다. 또한 MySQL을 사용하고있는 사용자도 손 쉽게 mariaDB로 변경 가능하다.
-https://mariadb.com/kb/ko/ <-- 한국어 메뉴얼로 제공한다.
+MySQL은 무료이지만 기업이나 상업용으로 사용할때는 일정한 금액을 지불해야한다. 하지만 mariaDB라는 MySQL과 거의 똑같은 DBMS가 있는데 훨씬 가볍고 빠르다는 장점을 가지고 있다. 또한 MySQL을 사용하고있는 사용자도 손 쉽게 mariaDB로 변경 가능하다.<br><br>
+https://mariadb.com/kb/ko/ <-- <a>한국어 메뉴얼로 제공한다.</a>
 
 <br><br><br>
 
