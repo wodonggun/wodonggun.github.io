@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "서울대학교 SKtechx ICT Kotlin 세미나"
+title: "코틀린 Kotlin 앱 개발의 차세대 언어"
 subtitle: <span class="evidence">안드로이드 스튜디오에서 개발하면서 지금까지 언어는 자바로 사용되었다. </span>
 date: 2018-07-09
 author: NoonGam
@@ -30,6 +30,8 @@ finished: true
 
 ## 코틀린 특징
 
+![Codes](/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/1.png)
+
 - Null safe의 특징을 통해서 자주 발생하는 NullException을 예방할 수 있다.
 - 기본적으로 객체지향언어이지만, 람다 표현식과 같은 함수형 프로그래밍의 컨셉을 가지고 있다.
 - 정적인 프로그래밍 언어
@@ -39,10 +41,11 @@ finished: true
 - 자바에서 코틀린 사용가능하고 코틀린에서 자바 사용을 가능하다.
 - getter , setter가 존재하지 않음.(하지만 자체적으로 비슷한 기능을 지원함)
 - null값을 지원하지않음.
-  >  var variable : String<a>?</a> = "a"
+  ```Java
+  var variable : String<a>?</a> = "a"
      variable = null;
-    위와 같이 물음표를 써야 null 사용 가능.
-
+  //위와 같이 물음표를 써야 널 사용 가능.
+  ```
 - Java는 클래스 생성시에 default로 클래스 범위가 정해지는데
 Kotlin은 클래스 범위 선언 안해도 자동으로 전역변수가 된다==private가없다.
 - 1 개의 primary constructor
@@ -161,12 +164,28 @@ when (a){
 <br>
 <br>
 
-
-## 참고 자료
-
-- [김태환] 안드로이드 코틀린 컨트리뷰터 https://thdev.tech/
-- http://tourspace.tistory.com/61
-
 ## 코틀린으로 개발한 앱
 
 - https://github.com/wodonggun/Kotlin_GitApp [wodonggun github]
+
+
+
+![Codes](/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/2.jpg)
+![Codes](/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/3.jpg)
+
+![Codes](/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/4.png)
+
+<br><br><br>
+
+## 안드로이드 코틀린 개발 및 적용 중인 회사들
+
+
+![Codes](/img/2018-07-26-ICT 세미나 안드로이드 코틀린Kotlin 출장/1.PNG)
+
+<br><br><br>
+
+
+## 참고 자료
+
+
+- http://tourspace.tistory.com/61

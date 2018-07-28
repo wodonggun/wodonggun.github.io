@@ -5,7 +5,7 @@ subtitle: <span class="evidence">아마존 웹서비스(AWS) EC2 Ubuntu에 기�
 date: 2017-09-13
 author: NoonGam
 category: AWS
-tags: EC2 MySQL phpmyadmin linux
+tags: EC2 MySQL Phpmyadmin Linux
 comments: true
 finished: true
 ---

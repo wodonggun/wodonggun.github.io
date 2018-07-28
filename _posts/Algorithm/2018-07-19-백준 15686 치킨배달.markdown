@@ -5,7 +5,7 @@ subtitle: <span class="evidence">2018년 4월 15일 SW직군 코딩테스트 문
 date: 2018-07-19
 author: NoonGam
 category: Algorithm
-tags: 백준알고리즘 "SW EXPERT"
+tags: 백준알고리즘 SW_expert
 comments: true
 finished: true
 ---

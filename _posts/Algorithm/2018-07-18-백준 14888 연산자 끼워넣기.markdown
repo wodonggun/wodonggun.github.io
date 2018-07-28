@@ -5,7 +5,7 @@ subtitle: <span class="evidence">DFS 깊이우선탐색을 이용한 연산자 �
 date: 2018-07-18
 author: NoonGam
 category: Algorithm
-tags: 백준
+tags: 백준알고리즘
 comments: true
 finished: true
 ---

@@ -5,7 +5,7 @@ subtitle: <span class="evidence">기본적인 아스키 코드와 한글 유니�
 date: 2018-07-27
 author: NoonGam
 category: study
-tags: C
+tags: C Language
 comments: true
 finished: true
 ---

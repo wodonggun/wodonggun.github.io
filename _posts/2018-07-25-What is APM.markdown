@@ -12,12 +12,9 @@ finished: true
 
 
 
-
-<!-- Study Sample  -->
-
 ## APM ?
 
-- what is APM? <br>
+- what is APM ? <br>
 
 ![Codes](/img/2018-07-25-What is APM/1.jpg)
 > Apache + PHP + MySQL 의 줄임말이다. APM 소프트웨어가 존재하는 것이 아니라, 이 3가지가 연동되어 운영되도록 만든 환경을 APM이라고 한다. Apache와 MySQL이 PHP와 호환성이 좋기 때문에 주로 세 프로그램을 묶어 패키지 형태로 사용한다.
@@ -38,13 +35,29 @@ finished: true
 ![Codes](/img/2018-07-25-What is APM/6.jpg)
 
 > Personal Home Page의 약자로, 통칭 PHP:Hypertext Preprocessor 라고 부른다.
-웹 프로그래밍 언어로, 사용자가 보는 웹 페이지를 구성하는 언어이다. HTML의 경우 웹브라우저에서 소스를 해석해 보여주지만, PHP 는 서버에서 해석하여 HTML 코드로 만들어 브라우저에게 전달하는 것이다.
+웹 프로그래밍 언어로, 서버에서 실행되는 언어이다. HTML의 경우 웹브라우저에서 소스를 해석해 보여주지만, PHP 는 서버에서 해석하여 HTML 코드로 만들어 브라우저에게 전달하는 것이다.
 
 - PHP는 Apache라는 웹서버 프로그램과 연동하여 동작합니다.
 - PHP는 .php파일을 처리하고, Apache는 HTML파일을 처리합니다.
 - PHP를 활용하여 Dynamic(동적)웹 페이지를 만들 수 있습니다.
--
+- 이 외에도 JSP , ASP 등 사용되고 있습니다.
 
+- ex)예제 소스
+```php
+<?php
+echo $_SERVER['HTTP_USER_AGENT'];
+?>
+```
+
+### 장점
+
+- 웹에 최적화된 언어
+- 웹개발에 필요한 수많은 로직들이 함수의 형태로 제공됨
+- 크로스플랫폼
+- 거의 모든 데이터베이스를 지원
+- 가장 많은 공개소프트웨어가 PHP로 만들어짐
+
+현재는 Node.js와 함께 ASP , JSP등 좋은 언어가 많이 생겨났지만, 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다.
 <br><br><br>
 
 ## MySQL (!=MariaDB)
@@ -62,7 +75,7 @@ https://mariadb.com/kb/ko/ <-- 한국어 메뉴얼로 제공한다.
 
 ![Codes](/img/2018-07-25-What is APM/4.png)
 
->클라이언트 측의 컴퓨터 사용자가 웹 브라우저에 URL을 입력하여 원하는 정보를 서버에 요청하고, 서버의 Apache 프로그램은 승인한다. 
+>클라이언트 측의 컴퓨터 사용자가 웹 브라우저에 URL을 입력하여 원하는 정보를 서버에 요청하고, 서버의 Apache 프로그램은 승인한다.
 해당 정보를 제공하기 위해 PHP에게 스크립트 실행하기를 요청하고 PHP는 미리 작성된 프로그램을 통해 MySQL에 쿼리를 질의한다.
 쿼리란 데이터베이스에 정보를 요청하는 것이다.
 MySQL은 데이터베이스에 저장된 데이터를 가져와 PHP에 돌려주고 PHP는 데이터베이스에서 가져온 데이터와 PHP 코드를 모두 HTML 형태로 변경하고, 해당 HTML 파일을 Apache에게 전송한다.

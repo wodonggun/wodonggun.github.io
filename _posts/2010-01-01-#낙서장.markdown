@@ -4,8 +4,8 @@ title: "# 낙서장 "
 subtitle: <span class="evidence">아이디어 낙서장 .</span>
 date: 2018-07-16
 author: NoonGam
-category: Study
-tags: SAMSUNG Algorithm
+category: bin
+tags: bin
 comments: true
 finished: true
 ---
