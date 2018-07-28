@@ -32,7 +32,7 @@ finished: true
 
 ## PHP
 
-![Codes](/img/2018-07-25-What is APM/6.jpg)
+![Codes](/img/2018-07-25-What is APM/6.png)
 
 > Personal Home Page의 약자로, 통칭 PHP:Hypertext Preprocessor 라고 부른다.
 웹 프로그래밍 언어로, 서버에서 실행되는 언어이다. HTML의 경우 웹브라우저에서 소스를 해석해 보여주지만, PHP 는 서버에서 해석하여 HTML 코드로 만들어 브라우저에게 전달하는 것이다.
@@ -43,11 +43,14 @@ finished: true
 - 이 외에도 JSP , ASP 등 사용되고 있습니다.
 
 - ex)예제 소스
-```php
+```java
 <?php
-echo $_SERVER['HTTP_USER_AGENT'];
+
+    echo $_SERVER['HTTP_USER_AGENT'];
+
 ?>
 ```
+
 
 ### 장점
 
@@ -75,10 +78,9 @@ https://mariadb.com/kb/ko/ <-- 한국어 메뉴얼로 제공한다.
 
 ![Codes](/img/2018-07-25-What is APM/4.png)
 
->클라이언트 측의 컴퓨터 사용자가 웹 브라우저에 URL을 입력하여 원하는 정보를 서버에 요청하고, 서버의 Apache 프로그램은 승인한다.
-해당 정보를 제공하기 위해 PHP에게 스크립트 실행하기를 요청하고 PHP는 미리 작성된 프로그램을 통해 MySQL에 쿼리를 질의한다.
-쿼리란 데이터베이스에 정보를 요청하는 것이다.
-MySQL은 데이터베이스에 저장된 데이터를 가져와 PHP에 돌려주고 PHP는 데이터베이스에서 가져온 데이터와 PHP 코드를 모두 HTML 형태로 변경하고, 해당 HTML 파일을 Apache에게 전송한다.
+> 컴퓨터 사용자(Client)가 인터넷창에서 URL을 입력하여 원하는 정보를 서버에 요청하고, 서버의 Apache 프로그램은 승인한다. 이때 포트는 80번 포트로 웹서버로 요청하고 웹서버는 사용자에게 홈페이지 정보(HTML,CSS 등)를 날려준다.
+사용자가 로그인 요청이나 다른 정보에 대한 요청을 하면 해당 정보를 제공하기 위해 웹서버는 PHP에게 스크립트 실행하기를 요청하고 PHP는 미리 작성된 프로그램을 통해 MySQL에 쿼리를 질의한다.
+MySQL은 데이터베이스에 저장된 데이터를 가져와 PHP에 돌려주고 PHP는 데이터베이스에서 가져온 데이터와 PHP 코드를 모두 HTML 형태로 변경하고, 해당 HTML 파일을 Apache(웹 서버)에게 전송한다.
 Apache는 완성된 HTML 파일을 클라이언트 측의 컴퓨터 웹 브라우저에 전달한다.
 
 <br><br><br>
