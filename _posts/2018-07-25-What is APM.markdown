@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "웹서버 APM 이란?"
+title: "웹 서버 APM 이란?"
 subtitle: <span class="evidence">웹 서버를 개발하다보면 APM을 모르고 지나칠 수 없다.</span>
 date: 2018-07-25
 author: NoonGam
@@ -66,7 +66,7 @@ finished: true
 - 가장 많은 공개소프트웨어가 PHP로 만들어짐
 
 
-현재는 객체 기반의 Node.js,javascript와 함께 ASP , JSP등 좋은 서버 언어가 많이 생겨났지만, PHP는 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다. 
+현재는 객체 기반의 Node.js,javascript와 함께 ASP , JSP등 좋은 서버 언어가 많이 생겨났지만, PHP는 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다.
 <br><br><br>
 
 ## MySQL (!=MariaDB)

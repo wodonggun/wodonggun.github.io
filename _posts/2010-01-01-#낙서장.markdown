@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "# 낙서장"
+title: "#낙서장"
 subtitle: <span class="evidence">잡다한 낙서장</span>
 date: 2018-07-16
 author: NoonGam
