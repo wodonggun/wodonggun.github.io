@@ -14,13 +14,38 @@ finished: true
 ## HTML 이란 ?
 
 ![codes](/img/2018-07-24-HTML+CSS Research/1.jpg)
-> 위와 같은 구조를 HTML5의 시맨틱 태그로 레이아웃을 만들었다고 한다.
+> 위와 같은 구조를 HTML5의 시맨틱 태그로 레이아웃을 만들었다고 한다. 일반적으로 HTML은
+HTML태그, HEAD 태그, TITLE태그, BODY태그로 이루어졌다. 하지만 HTML이 발전하면서 구조를 더 자세히 나누고
+직관적이고, 구조적으로 좀더 유지 보수를 쉽게 하기위해 발전해왔다.
 
-소스 날라감...와.....
+<a title="중학교때쯤에 이렇게 한번 배운적이 있는것 같다ㅎㅎ">기본적인 HTML 기본 소스</a>
+```HTML
+<!doctype html>
+<html>
+    <head>
+     	 <title>웹페이지 제목</title>
+    </head>
+  <body>
+  	<img src="dog_cat.jpg">
+  	<p>기본적인 웹페이지</p>
+   	<b>이제부터 본격적인 웹 개발을 시작해 보자!</b>
+  </body>
+
+</html>
+```
+<br>
+<br>
+
+<span class="evidence"> HTML 소스 공부 자료 날아가서.....중간 생략;;;;</span>
+
+
+<br>
+<br>
 
 
 ### css를 적용할때는 div를 사용한다
 
+```
 <style>
 #wrapper {
   width: 100px;
@@ -28,22 +53,35 @@ finished: true
   font-size: 20px;
 }
 </style>
+```
 
-- 사용할떄는
+- 사용할떄는 아래와 같이 사용.
+
+```HTML
+
 <div id="wrapper">
     가즈아!!!!
 </div>
+```
 
-
+<br>
 
 ### p 태그
+
 - p태그는 텍스트 단락을 만드는 용도로 앞 뒤로 줄바꿈이 일어남.
 - CSS를 이용하여 텍스트 서식을 손쉽게 조절 가능.
 
+```html
+<p>이곳은 p태그 입니다.</a>
+```
+
+<br>
 
 ### 형관펜
-- <mark> 내용 </mark>
 
+- \<mark\> 내용 \</mark\>
+
+```HTML
 <style>
 mark {
   background-color:lime;
@@ -56,76 +94,107 @@ mark {
 }
 </style>
 
+<br>
+```
 
+```
 <mark> 입실 시간은 1시 </mark>
+```
+
+```HTML
 <p class="accent"> 퇴실 시간은 밤11시 </p>
+```
+
+
+
 
 
 ## Ruby태그
+
 - 일본어를 사용하기위한 태그방법으로, 가타카나나 히라가나로 표시하기위한 방법
 
+```ruby
     <ruby>
       (안녕?)<rt>hello</rt>
       </ruby>
-
+```
 
 
 
 ## span 태그
+
 - 줄바꿈 없이 텍스트 영역 한 부분을 묶어서 스타일 적용하려할때 쓰임
+
+```HTML
 <span style="color:blue"> 내용 </span>
 <span class="evidence"> 내용 </span>
-
+```
 
 ## ul-li 목록 태그
+
 - 목록을 만들때는 ul(순서대로)표시와 li태그를 통해 각 항목을 표시
 
+```HTML
 <ul>
       <li> 내용 </li>
       <li> 내용2 </li>
       <li> 내용3 </li>
 </ul>
-
+```
 
 
 -------
 - 목록 표시를 ㅁ사각형으로 하고싶을때
 
+```HTML
 <style>
 ul {
       list-style-type :square;
     }
 </style>
+```
 
+```HTML
 <ul>
       <li> 내용 </li>
       <li> 내용2 </li>
       <li> 내용3 </li>
 </ul>
 
-
+```
 
 
 ## ol-li 태그
+
 - li의 순서대로 번호가 매겨짐.
 
+```HTML
 <ol>
       <li> 내용 </li>
       <li> 내용2 </li>
       <li> 내용3 </li>
 </ol>
+```
 
 -------------
+
 - 로마문자로 순서 표시
+
+```HTML
 <ol type="I" start="1">
   <li>첫번째</li>
   <li>두번쨰</li>
   <li>세번째</li>
 </ol>
+```
+<br>
+<br>
 
 ## dt dd 태그
+
 - 타이틀과 설명을 나타내는 태그
 
+```HTML
 <dt>방 종류</dt>
 <dd>스위트룸</dd>
 <dd>게스트룸</dd>
@@ -136,7 +205,13 @@ ul {
 <dd>냉장고</dd>
 <dd>싱글침대</dd>
 
+```
+
+<br><br>
+
 ## 테이블 태그
+
+```HTML
 <table>
   <tr>
     <th>1행 1열</th>
@@ -156,27 +231,35 @@ ul {
       </tr>
 
 </table>
+```
 
-- 행 열 합치기
+- 행 열 합치기(ex:엑셀의 셀 병합)
+
+```HTML
 <td rowspan="2"> 내용 </td>
 <td colspan="2"> 내용 </td>
+```
 
 2개의 행을 합친다.
 
 
 
 ## a태그
+
 - 이미지나 링크를 연결하기 !
 - 항목 연결하는 링크 만들기 !
 
+```HTML
 	<a name="top"></a>
       내용 ~
 
   <a href="#top" class="link1"><p>[위로 가기]</p></a>
     위의 링크를 누르면 해당 name항목으로 이동
+```
 
 
-<mar>< 전체적인 틀 > </marK>
+```HTML
+<mark>< 전체적인 틀 > </marK>
 1. nav 네비게이션을 통해 각 list 생성
 <nav>
   <ul>
@@ -191,11 +274,12 @@ ul {
   <a name="reserve"><h3>예약 방법</h3></a>
       <a name="fee"><h3>이용 요금</h3></a>
 
-
+```
 
 ## form 태그
 - 텍스트 상자, 버튼, 목록 등 웹사이트로 어떠한 정보를 전송 목적
 
+```HTML
 <form action="register.php" method="post">
 post방식으로 register.php를 실행한다.
 
@@ -224,11 +308,13 @@ post방식으로 register.php를 실행한다.
        </ul>
       </fieldset>
 </form>
+```
 
 ------------
 
 - 라디오 버튼
 
+```HTML
 <form>
     <fieldset id="register">
     <legend>수강 과목을 선택하세요 <small>(1과목 선택 가능)</small></legend>
@@ -245,11 +331,13 @@ post방식으로 register.php를 실행한다.
 		</ul>
      </fieldset>
   </form>
+```
 
 -----------
 
 - 체크 버튼
 
+```HTML
   <form>
      <fieldset>
       <legend for="pre"> 관심분야는? <small>(다수 선택 가능)</small></legend>
@@ -275,11 +363,13 @@ post방식으로 register.php를 실행한다.
         </ul>	 
 	    </fieldset>
   </form>
-
+```
 
 
 ## CSS에 대해서 드디어 알아보자...
+
 - CSS는 디자인 부분인데 HTML과 분리하여 편하게 보기위해서
+
 1. style.css파일을 만들고, 내부에
  my_h1_style{
    color:blue;
@@ -295,74 +385,110 @@ post방식으로 register.php를 실행한다.
 
 -----------
 - 스타일에는 우선순위가 존재
+
 기본적으로는 중복된 스타일 이름은 제일 마지막에 선언된 스타일이 적용된다.
 하지만 초반에 내부에
+```CSS
 .accent {
   color:red;
   !important;
 }
+```
 이렇게 !important라고 선언하면 순서에 상관없이 무조건 이 스타일이 적용됨.
+<br>
+<br>
+<br>
 
 
 ## 선택자
-- 전체 선택자 : 모든 페이지에 적용
 
+- 전체 선택자 : 모든 페이지에 적용
+```CSS
 \*{
   margin:10px;
   padding:10px;
   font-family: "Sans-serif"
 }
+```
 
 - 태그 선택자 : 해당 태그는 해당 스타일 적용
+
+```CSS
 p{
   font-size:12px
 }
-
+```
 
 - <a>클래스 선택자 : 같은 태그라도 다른 스타일을 적용하고 싶다면 class 선택자를 통해서 예외 스타일 적용 가능 </a>
+
+```CSS
 .redanccent{
   color:red;
   font-size:100px;
 }
+```
 
 <p class="redaccent">이 내용은 100px에 red스타일이 적용됩니다.</p>
 
 - id 선택자 : 클래스 선택자는 문서안에서 여러번 반복해서 적용 가능하지만,
 id 선택자는 요소,크기,위치 등 레이아웃 지정용으로 주로 사용하기떄문에 문서안에서 한번만 적용됨
 
+```CSS
 \#mynav{
   color:blue;
 }
+```
 
+```HTML
 <ul id="mynav">
     <li>메뉴1</li>
     <li>메뉴2</li>
 </ul>
+```
 
+<br>
 
 - 하위 선택자 : 상위 요소의 하위 요소에 스타일 적용
+
+```CSS
 section p {
   color:blue;
 }
+```
+
 section태그(상위)의 p태그(하위)
+<br>
 
 - 자식 선택자 : 하위 요소 모두에게 적용되지않고, 바로 아래 자식에게만 적용
-
+```css
 section > p {
   color:blue;
 }
+```
+
 section태그(상위)의 p태그(자식)만 적용
 
 - 그룹 선택자
+```css
 a , p{
   color:red;
 }
+```
+
 a태그 p태그를 red로 스타일 설정
 
 
 - 속성 선택자
 
+```CSS
 a[href] {
   color:blue;
 }
+```
 a태그에서 href 속성을 가지고있는 태그만 적용
+
+
+## HTML / CSS 지속적으로 수정
+
+- Do it! HTML5+CSS3 웹 표준의 정석
+- DO it! HTML5+CSS3 개정판
