@@ -1,4 +1,4 @@
-<h1> ●  A blog Comments Policy</h1>
+<h1> A blog Comments Policy</h1>
 
 
 
