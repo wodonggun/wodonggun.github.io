@@ -56,7 +56,6 @@ HTML태그, HEAD 태그, TITLE태그, BODY태그로 이루어졌다. 하지만 H
 ```
 
 - 사용할떄는 아래와 같이 사용.
-
 ```HTML
 
 <div id="wrapper">
@@ -70,7 +69,6 @@ HTML태그, HEAD 태그, TITLE태그, BODY태그로 이루어졌다. 하지만 H
 
 - p태그는 텍스트 단락을 만드는 용도로 앞 뒤로 줄바꿈이 일어남.
 - CSS를 이용하여 텍스트 서식을 손쉽게 조절 가능.
-
 ```html
 <p>이곳은 p태그 입니다.</a>
 ```
@@ -80,7 +78,6 @@ HTML태그, HEAD 태그, TITLE태그, BODY태그로 이루어졌다. 하지만 H
 ### 형관펜
 
 - \<mark\> 내용 \</mark\>
-
 ```HTML
 <style>
 mark {
@@ -112,7 +109,6 @@ mark {
 ## Ruby태그
 
 - 일본어를 사용하기위한 태그방법으로, 가타카나나 히라가나로 표시하기위한 방법
-
 ```ruby
     <ruby>
       (안녕?)<rt>hello</rt>
@@ -124,7 +120,6 @@ mark {
 ## span 태그
 
 - 줄바꿈 없이 텍스트 영역 한 부분을 묶어서 스타일 적용하려할때 쓰임
-
 ```HTML
 <span style="color:blue"> 내용 </span>
 <span class="evidence"> 내용 </span>
@@ -133,7 +128,6 @@ mark {
 ## ul-li 목록 태그
 
 - 목록을 만들때는 ul(순서대로)표시와 li태그를 통해 각 항목을 표시
-
 ```HTML
 <ul>
       <li> 내용 </li>
@@ -145,7 +139,6 @@ mark {
 
 -------
 - 목록 표시를 ㅁ사각형으로 하고싶을때
-
 ```HTML
 <style>
 ul {
@@ -167,7 +160,6 @@ ul {
 ## ol-li 태그
 
 - li의 순서대로 번호가 매겨짐.
-
 ```HTML
 <ol>
       <li> 내용 </li>
@@ -179,7 +171,6 @@ ul {
 -------------
 
 - 로마문자로 순서 표시
-
 ```HTML
 <ol type="I" start="1">
   <li>첫번째</li>
@@ -193,7 +184,6 @@ ul {
 ## dt dd 태그
 
 - 타이틀과 설명을 나타내는 태그
-
 ```HTML
 <dt>방 종류</dt>
 <dd>스위트룸</dd>
@@ -210,7 +200,7 @@ ul {
 <br><br>
 
 ## 테이블 태그
-
+- table tag
 ```HTML
 <table>
   <tr>
@@ -248,7 +238,6 @@ ul {
 
 - 이미지나 링크를 연결하기 !
 - 항목 연결하는 링크 만들기 !
-
 ```HTML
 	<a name="top"></a>
       내용 ~
@@ -256,8 +245,6 @@ ul {
   <a href="#top" class="link1"><p>[위로 가기]</p></a>
     위의 링크를 누르면 해당 name항목으로 이동
 ```
-
-
 ```HTML
 <mark>< 전체적인 틀 > </marK>
 1. nav 네비게이션을 통해 각 list 생성
@@ -278,7 +265,6 @@ ul {
 
 ## form 태그
 - 텍스트 상자, 버튼, 목록 등 웹사이트로 어떠한 정보를 전송 목적
-
 ```HTML
 <form action="register.php" method="post">
 post방식으로 register.php를 실행한다.
@@ -313,7 +299,6 @@ post방식으로 register.php를 실행한다.
 ------------
 
 - 라디오 버튼
-
 ```HTML
 <form>
     <fieldset id="register">
@@ -336,7 +321,6 @@ post방식으로 register.php를 실행한다.
 -----------
 
 - 체크 버튼
-
 ```HTML
   <form>
      <fieldset>
@@ -413,7 +397,6 @@ post방식으로 register.php를 실행한다.
 ```
 
 - 태그 선택자 : 해당 태그는 해당 스타일 적용
-
 ```CSS
 p{
   font-size:12px
@@ -421,7 +404,6 @@ p{
 ```
 
 - <a>클래스 선택자 : 같은 태그라도 다른 스타일을 적용하고 싶다면 class 선택자를 통해서 예외 스타일 적용 가능 </a>
-
 ```CSS
 .redanccent{
   color:red;
@@ -433,7 +415,6 @@ p{
 
 - id 선택자 : 클래스 선택자는 문서안에서 여러번 반복해서 적용 가능하지만,
 id 선택자는 요소,크기,위치 등 레이아웃 지정용으로 주로 사용하기떄문에 문서안에서 한번만 적용됨
-
 ```CSS
 #mynav{
   color:blue;
@@ -450,7 +431,6 @@ id 선택자는 요소,크기,위치 등 레이아웃 지정용으로 주로 사
 <br>
 
 - 하위 선택자 : 상위 요소의 하위 요소에 스타일 적용
-
 ```CSS
 section p {
   color:blue;
@@ -480,7 +460,6 @@ a태그 p태그를 red로 스타일 설정
 
 
 - 속성 선택자
-
 ```CSS
 a[href] {
   color:blue;

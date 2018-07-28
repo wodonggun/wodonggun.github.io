@@ -16,14 +16,14 @@ finished: true
 
 ![Codes](/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/k1.png)
 
-  > Kotlin이란 ㅁㄴㅇㄻㄴㄹ
+  > Kotlin is a statically typed programming language that runs on the Java virtual machine and also can be compield to JavaScript source code or use the LLVM compieler infrastructure.
 
 
 
-## 설치 정보
+## 환경 설정 / 설치 정보
   - Android Studio 3.0 이상
   - 코틀린 버전 1.2.51 이상
-
+  - gradle 버전 4.5 (아직 4.6이하만 지원)
   gradle scripte -> build.gradle(project) -> ext.kotlin_version = '1.2.51'으로 설정.
 
 
@@ -49,11 +49,13 @@ Kotlin은 클래스 범위 선언 안해도 자동으로 전역변수가 된다=
 - N 개의 secondary constructor
 - secondary constructor에서는 primary constructor 호출해야 한다.
 
+<span class="evidence"> Kotlin언어로 개발된 프로그램이 Java로 자동 변경 가능하며, Java로 개발된 프로그램이 Kotlin언어로 변환이 가능하다.</span>
 
-## 단축키
+ctrl + alt + shift + k 를 누르면 자동으로 jave->kotlin 변경 됨
 
-ctr alt shift k 를 누르면 자동으로 jave->kotlin 변경 됨
-
+<br>
+<br>
+<br>
 
 
 ## var와 val의 차이
@@ -76,6 +78,9 @@ var str = "abc";
 immutable
 val str str = "abc";
 
+<br>
+<br>
+<br>
 
 ## data class
 
@@ -89,7 +94,9 @@ data class hi(
   )
 
 ```
-
+<br>
+<br>
+<br>
 
 
 ## 다중 상속
@@ -99,7 +106,9 @@ data class hi(
 코틀린은 init<클래스명>.init() 으로 호출 가능
 
 
-
+<br>
+<br>
+<br>
 
 
 
@@ -133,6 +142,10 @@ when (a){
 
 @JvmStatic 를 붙여주면 마음대로 가져올 수 있다.
 
+<br>
+<br>
+<br>
+
 
 ## 어디서든 자바에서 접근하기
 
@@ -148,15 +161,12 @@ when (a){
 <br>
 <br>
 
-## 환경설정
-
-
 
 ## 참고 자료
 
 - [김태환] 안드로이드 코틀린 컨트리뷰터 https://thdev.tech/
 - http://tourspace.tistory.com/61
 
+## 코틀린으로 개발한 앱
 
-
-http://blog.naver.com/PostView.nhn?blogId=ouwukwfy&logNo=220248439711&parentCategoryNo=16&categoryNo=&viewDate=&isShowPopularPosts=true&from=search
+- https://github.com/wodonggun/Kotlin_GitApp [wodonggun github]

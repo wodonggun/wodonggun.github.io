@@ -1,0 +1,23 @@
+---
+layout: post
+title: "# 낙서장 "
+subtitle: <span class="evidence">아이디어 낙서장 .</span>
+date: 2018-07-16
+author: NoonGam
+category: Study
+tags: SAMSUNG Algorithm
+comments: true
+finished: true
+---
+
+## 알고리즘
+
+- 파일 인코딩 확인하기
+```
+$file -bi test.sh
+```
+
+- 파일 인코딩 변환하기
+```
+$iconv -c -f utf-8 -t euc-kr test.sh > test2.sh
+```

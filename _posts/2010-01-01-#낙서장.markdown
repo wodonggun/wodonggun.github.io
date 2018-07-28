@@ -1,0 +1,44 @@
+---
+layout: post
+title: "# 낙서장 "
+subtitle: <span class="evidence">아이디어 낙서장 .</span>
+date: 2018-07-16
+author: NoonGam
+category: Study
+tags: SAMSUNG Algorithm
+comments: true
+finished: true
+---
+
+## 알고리즘
+
+
+- 백준 알고리즘 삼성 기출문제  
+https://www.acmicpc.net/workbook/view/1209
+
+- 카카오 신입 공채 1차
+http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
+
+
+
+
+
+## 깃 정리
+
+깃 reject -> git push  (git마스터와 나의 코드 병합)
+
+git add .
+git commit -m "Edit: 2018-07-28 Version Change"
+git push origin master
+
+
+
+## 낙서장
+
+- 크로스 플랫폼 = 멀티플랫폼 소프트웨어
+
+> 프로그램, 운영체제, 언어, 소프트웨어 등이 여러 종류의 컴퓨터 플랫폼에서 동작하는 것
+
+- 크로스 컴파일러
+
+> windows -> linux , linux -> windows 에서 실행할 수 있게 코드를 생성해주는 컴파일러
