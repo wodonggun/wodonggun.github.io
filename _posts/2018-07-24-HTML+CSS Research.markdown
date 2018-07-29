@@ -2,7 +2,7 @@
 layout: post
 title: "HTML+CSS structure"
 subtitle: <span class="evidence">HTML5 구조와 CSS3 구조 공부.</span>
-date: 2017-09-05
+date: 2018-07-24
 author: NoonGam
 category: HTML
 tags: CSS HTML

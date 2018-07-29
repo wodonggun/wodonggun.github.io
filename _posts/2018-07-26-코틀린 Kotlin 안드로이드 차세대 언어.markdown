@@ -2,7 +2,7 @@
 layout: post
 title: "코틀린 Kotlin 앱 개발의 차세대 언어"
 subtitle: <span class="evidence">안드로이드 스튜디오에서 개발하면서 지금까지 언어는 자바로 사용되었다. </span>
-date: 2018-07-09
+date: 2018-07-26
 author: NoonGam
 category: Android
 tags: Kotlin Language

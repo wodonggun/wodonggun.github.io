@@ -2,7 +2,7 @@
 layout: post
 title: "ICT 안드로이드 차세대 언어 코틀린 Kotlin 세미나 출장"
 subtitle: <span class="evidence"> Java에서 Kotlin으로 넘어가는 안드로이드? </span>
-date: 2018-07-09
+date: 2018-07-26
 author: NoonGam
 category: Android
 tags: Kotlin Language
