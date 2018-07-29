@@ -37,6 +37,10 @@ DFS(Depth First Search; 깊이 우선 탐색)는 현재 정점에서 연결된 �
 트리에서 DFS는 Inorder와 동일하다.
 </a>
 
+<br>
+<br>
+<br>
+
 ## 코드
 
 ```c
@@ -139,7 +143,9 @@ int main()
 - 현재까지 변수를 count로 넘겨줌.
 - 현재까지 진행한 연산결과를 result로 넘겨줌.
 
-
+<br>
+<br>
+<br>
 
 
 ## 참고자료
