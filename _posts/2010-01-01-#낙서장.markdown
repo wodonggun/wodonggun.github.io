@@ -32,6 +32,10 @@ git commit -m "Edit: 2018-07-28 Version Change"
 git push origin master
 
 
+## AWS
+
+http://slack.awskr.org - AWS 커뮤니티 모임
+
 
 ## 낙서장
 
