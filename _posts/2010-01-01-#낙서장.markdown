@@ -2,7 +2,7 @@
 layout: post
 title: "#낙서장"
 subtitle: <span class="evidence">잡다한 낙서장</span>
-date: 2018-07-16
+date: 2016-01-01
 author: NoonGam
 category: bin
 tags: bin
@@ -32,9 +32,12 @@ git commit -m "Edit: 2018-07-28 Version Change"
 git push origin master
 
 
+- 깃 ppt 연동  https://www.slideshare.net
+
+
 ## AWS
 
-http://slack.awskr.org - AWS 커뮤니티 모임
+- http://slack.awskr.org - AWS 커뮤니티 모임
 
 
 ## 낙서장
