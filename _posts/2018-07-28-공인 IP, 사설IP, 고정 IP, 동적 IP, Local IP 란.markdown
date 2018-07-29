@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "공인 IP, 사설IP, 고정 IP, 동적 IP, Local IP"
+title: "공인 IP, 사설IP, 고정 IP, 동적 IP, Local IP 란?"
 subtitle: <span class="evidence">공인(public), 사설(private), 고정(static), 동적(dynamic) IP에 대해서 알아보자.</span>
-date: 2018-07-29
+date: 2018-07-28
 author: NoonGam
 category: Study
 tags: Network
@@ -14,7 +14,7 @@ finished: true
 ## 공인 IP, 사설 IP, 고정 IP, 동적 IP, Local IP
 
 
-![Codes](/img/2018-07-29-IP 클래스 서브넷/1.jpg)
+![Codes](/img/2018-07-29-공인 IP, 사설IP, 고정 IP, 동적 IP, Local IP 란/1.jpg)
 
 
 > <a>공인 IP</a>란 SK브로드밴드, Olleh KT, LG U+ 와 같은 ISP에게서 대여받은 IP를 말합니다. 이는 고정IP와 동적IP(=유동IP)로 나눌 수 있는데, 일반적으로는 기업은 고정 IP를 할당받고, 가정에서는 유동IP를 할당 받습니다.

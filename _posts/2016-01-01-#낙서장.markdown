@@ -49,3 +49,12 @@ git push origin master
 - 크로스 컴파일러
 
 > windows -> linux , linux -> windows 에서 실행할 수 있게 코드를 생성해주는 컴파일러
+
+
+
+
+## 에트리
+
+http://mwultong.blogspot.com/2006/12/c-argc-argv-main-function-parameter.html
+
+http://ra2kstar.tistory.com/144
