@@ -10,7 +10,10 @@ comments: true
 finished: true
 ---
 
-## 알고리즘
+
+https://css.or.kr/lkc2018/ - 리눅스 커널 프로그래밍
+
+## 리눅스 명령어(Linux Command)
 
 - 파일 인코딩 확인하기
 ```
@@ -21,3 +24,13 @@ $file -bi test.sh
 ```
 $iconv -c -f utf-8 -t euc-kr test.sh > test2.sh
 ```
+
+- 현재경로 부터 찾기
+$find -name 'title'
+
+$find -name 'title*'
+
+- 루트경로부터 찾기
+$find / -name 'title'
+
+- find / -name '.sh'

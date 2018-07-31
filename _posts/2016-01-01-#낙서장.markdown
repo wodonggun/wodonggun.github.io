@@ -6,7 +6,7 @@ date: 2016-01-01
 author: NoonGam
 category: bin
 tags: bin
-comments: true
+comments: false
 finished: true
 ---
 
@@ -58,3 +58,18 @@ git push origin master
 http://mwultong.blogspot.com/2006/12/c-argc-argv-main-function-parameter.html
 
 http://ra2kstar.tistory.com/144
+
+
+# 취업
+
+
+
+https://cafe.naver.com/dokchi - 독취사
+
+
+
+# ICT 네트워크 자료
+
+https://brunch.co.kr/@yudong/67 - ICT 지식
+
+https://www.netmanias.com/ko/ - 네트워크 지식
