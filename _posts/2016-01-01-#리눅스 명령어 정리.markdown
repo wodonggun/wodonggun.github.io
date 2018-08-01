@@ -34,3 +34,55 @@ $find -name 'title*'
 $find / -name 'title'
 
 - find / -name '.sh'
+
+
+
+
+## 네트워크 명령어
+
+- [인터페이스 연결 끊기] ifconfig enp0s3 down
+- [인터페이스 연결 ]     ifconfig enp0s3 up
+
+
+
+- [호스트 네트워크 속도 제한] sudo tc qdisc add dev enp0s8 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms
+- [호스트 네트워크 속도 변경] sudo tc qdisc change dev enp0s8 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms
+
+
+## 리눅스 TX RX 전송 속도 구하기
+
+- 실행 방법 : $./bw.sh enp0s8
+
+- vi bw.sh
+```php
+#!/bin/bash
+
+INTERVAL="1"  # update interval in seconds
+
+if [ -z "$1" ]; then
+        echo
+        echo usage: $0 [network-interface]
+        echo
+        echo e.g. $0 eth0
+        echo
+        exit
+fi
+
+IF=$1
+
+while true
+do
+        R1=`cat /sys/class/net/$1/statistics/rx_bytes`
+        T1=`cat /sys/class/net/$1/statistics/tx_bytes`
+        sleep $INTERVAL
+        R2=`cat /sys/class/net/$1/statistics/rx_bytes`
+        T2=`cat /sys/class/net/$1/statistics/tx_bytes`
+        TBPS=`expr $T2 - $T1`
+        RBPS=`expr $R2 - $R1`
+        TMBPS=`expr $TBPS \* 8 / 1024 / 1024`
+        RMBPS=`expr $RBPS \* 8 / 1024 / 1024`
+        TTBPS=`expr $TMBPS + $RMBPS`
+#      echo "$1 TX $TMBPS Mbits/s RX $RMBPS Mbits/s TOT $TTBPS Mbits/s"
+        echo "$TTBPS Mbits/s"
+done
+```
