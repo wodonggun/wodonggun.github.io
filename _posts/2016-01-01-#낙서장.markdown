@@ -21,6 +21,14 @@ http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
 
 
 
+
+## HTML + CSS + dynamic
+
+https://opentutorials.org/course/3084
+
+
+
+
 ## 블로그 관리
 
 
@@ -37,6 +45,10 @@ http://gifgifs.com/optimizer/ - gif 최적화
 ```
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/LfC5wzZtsL775T" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sanjoysanyal/tcpip-basics" title="TCP/IP Basics" target="_blank">TCP/IP Basics</a> </strong> from <strong><a href="https://www.slideshare.net/sanjoysanyal" target="_blank">sanjoysanyal</a></strong> </div>
 ```
+
+
+
+
 ## 깃 정리
 
 깃 reject -> git push  (git마스터와 나의 코드 병합)
