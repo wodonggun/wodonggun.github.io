@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Algorithm STL 정리"
-subtitle: <span class="evidence">Algorithm STL 헤더 - #include <algorithm> </span>
-date: 2018-01-01
+title: "Algorithm library C++ STL 정리"
+subtitle: <span class="evidence">알고리즘 라이브러리 정리
+date: 2018-08-03
 author: NoonGam
 category: Algorithm
 tags: C 백준알고리즘 SW_expert
