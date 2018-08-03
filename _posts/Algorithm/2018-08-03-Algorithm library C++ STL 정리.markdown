@@ -137,23 +137,20 @@ vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록�
 
 <br><br><br>
 
-## Vector 정리 및 요약
+## Vector
 
-> 벡터는 앞쪽이 막혀있는 구조로, FILO스택구조와 비슷하다고 생각하면 된다. 즉, 원소 제거는 맨 마지막에 넣은 것과 빼는 것만 가능하다.
+> 벡터는 앞쪽이 막혀있는 구조로, FILO스택구조와 비슷하다고 생각하면 된다. 즉, 원소 제거는 맨 마지막에 넣은 것과 빼는 것만 가능하다.<br>
 (ex: vec.push_back();   vec.pop_back();)
 
 
-- Vector와 Stack 함수 차이
-
-![img](/img/0-Algorithm/2018-08-03-Algorithm library C++ STL 정리/vector_stack.gif)
+<br>
 
 
 
-
+###추가
 
 - ```push_back(element)``` : end에 요소를 추가
-
-insert(v.begin()+3, element) : 3번째 인덱스에 요소를 추가, 그 뒤의 요소는 뒤로 밀림
+- ```insert(v.begin()+3, element)``` : 3번째 인덱스에 요소를 추가, 그 뒤의 요소는 뒤로 밀림
 
 ### 삭제
 
@@ -189,6 +186,11 @@ clear() : 벡터의 모든 요소 삭제
 - ```size()``` : 스택 사이즈를 반환
 
 
+## vector와 stack 멤머 함수 차이
+
+- Vector와 Stack 함수 차이
+
+![img](/img/0-Algorithm/2018-08-03-Algorithm library C++ STL 정리/vector_stack.gif)
 
 
 
