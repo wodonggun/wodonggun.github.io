@@ -2,7 +2,7 @@
 layout: post
 title: "Algorithm STL 정리"
 subtitle: <span class="evidence">Algorithm STL 헤더 - #include <algorithm> </span>
-date: 2018-01-01
+date: 2018-08-03
 author: NoonGam
 category: Algorithm
 tags: C 백준알고리즘 SW_expert
@@ -25,7 +25,8 @@ finished: true
 
 <br><br><br>
 ## 내림차순 예제 (Default)
-```c
+
+```c++
 #include <stdio.h>
 #include <algorithm>
 
@@ -47,6 +48,7 @@ int main()
 	return 0;
 }
 ```
+
 ![img](/img/0-Algorithm/2018-08-03-Algorithm STL 정리/1.PNG)
 
 
@@ -57,7 +59,7 @@ int main()
 
 - 따로 #include <functional> 를 추가하여 greater<int>()를 사용하여야 합니다.
 
-```
+```c++
 #include <stdio.h>
 #include <functional>
 #include <algorithm>
@@ -81,6 +83,7 @@ int main()
 }
 ```
 
+
 ![img](/img/0-Algorithm/2018-08-03-Algorithm STL 정리/2.PNG)
 
 
@@ -92,14 +95,12 @@ int main()
 ps. 서로다른 자료형의 데이터를 같이 저장할때 편리합니다. (구조체처럼)
 
 
-<fieldset id="gpg-fieldset">
-
-</fieldset>
 
 
 
 
-```c
+
+```c++
 #include <stdio.h>
 #include <algorithm>
 
@@ -129,6 +130,7 @@ int main()
 	return 0;
 }
 ```
+
 ![img](/img/0-Algorithm/2018-08-03-Algorithm STL 정리/3.png)
 
 
