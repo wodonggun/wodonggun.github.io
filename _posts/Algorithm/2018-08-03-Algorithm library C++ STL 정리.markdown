@@ -26,9 +26,7 @@ vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록�
 
 </fieldset>
 
-<p><table class="txc-table" width="614" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px"><tbody><tr><td style="width: 613px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(217, 229, 255);" colspan="2" rowspan="1"><p style="text-align: left;"><b>템플릿 형식</b></p></td>
-
-</tr>
+<p><table class="txc-table" width="614" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px"><tbody><tr><td style="width: 613px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(217, 229, 255);" colspan="2" rowspan="1"><p style="text-align: left;"><b>템플릿 형식</b></p></td></tr>
 <tr><td style="width: 340px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><p>&nbsp; template&lt;typename T, typename Allocator = allocator&lt;T&gt;&gt;</p><p>class vector</p></td>
 <td style="width: 273px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><p>T는 vector 컨테이너 원소의 형식&nbsp; </p></td>
 </tr>
@@ -147,7 +145,7 @@ vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록�
 
 
 
-###추가
+### 추가
 
 - ```push_back(element)``` : end에 요소를 추가
 - ```insert(v.begin()+3, element)``` : 3번째 인덱스에 요소를 추가, 그 뒤의 요소는 뒤로 밀림
@@ -185,6 +183,7 @@ clear() : 벡터의 모든 요소 삭제
 - ```empty()``` : 스택이 비어있으면 true 아니면 false를 반환
 - ```size()``` : 스택 사이즈를 반환
 
+<br><br><br>
 
 ## vector와 stack 멤머 함수 차이
 
@@ -198,4 +197,4 @@ clear() : 벡터의 모든 요소 삭제
 
 ## 참고 자료
 * [wnsgml972님의 깃허브]( https://github.com/wnsgml972/algorithm-study/blob/master/contents/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0_algorithm-%ED%97%A4%EB%8D%94-%EC%A0%95%EB%A6%AC.md)
-* [개발이 하고싶어요 블로그] ( http://hyeonstorage.tistory.com/324#recentComments)
+* [개발이 하고싶어요 블로그](http://hyeonstorage.tistory.com/324#recentComments)
