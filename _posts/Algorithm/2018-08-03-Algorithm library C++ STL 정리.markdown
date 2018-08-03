@@ -26,10 +26,9 @@ vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록�
 
 </fieldset>
 
+<p><table class="txc-table" width="614" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px"><tbody><tr><td style="width: 613px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(217, 229, 255);" colspan="2" rowspan="1"><p style="text-align: left;"><b>템플릿 형식</b></p></td>
 
-<table class="txc-table" width="614" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px">
-<tbody><tr><td style="width: 613px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(217, 229, 255);" colspan="2" rowspan="1"><p style="text-align: left;"><b>템플릿 형식</b></p></td></tr>
-
+</tr>
 <tr><td style="width: 340px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><p>&nbsp;template&lt;typename T, typename Allocator = allocator&lt;T&gt;&gt;</p><p>class vector</p></td>
 <td style="width: 273px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204);"><p>T는 vector 컨테이너 원소의 형식&nbsp;</p></td>
 </tr>
@@ -131,7 +130,7 @@ vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록�
 <tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;"><p>&nbsp;reference</p></td>
 <td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;"><p>&nbsp;value_type&amp; 형식&nbsp;</p></td>
 </tr>
-<tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1">&nbsp;reverse_iterator</td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1"><p>&nbsp;역 반복자 형식&nbsp;</p></td></tr><tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1">&nbsp;size_type</td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1">&nbsp;첨자(index)나 원소의 개수 등의 형식&nbsp;</td></tr><tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1"><p>&nbsp;value_type</p></td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1">&nbsp;원소의 형식&nbsp;</td></tr></tbody></table>
+<tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1">&nbsp;reverse_iterator</td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1"><p>&nbsp;역 반복자 형식&nbsp;</p></td></tr><tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1">&nbsp;size_type</td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1">&nbsp;첨자(index)나 원소의 개수 등의 형식&nbsp;</td></tr><tr><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;;" rowspan="1"><p>&nbsp;value_type</p></td><td style="width:307;height:24;border-bottom:1px solid #ccc;border-right:1px solid #ccc;;" rowspan="1">&nbsp;원소의 형식&nbsp;</td></tr></tbody></table></p><p><br /></p>
 
 <br><br><br>
 
