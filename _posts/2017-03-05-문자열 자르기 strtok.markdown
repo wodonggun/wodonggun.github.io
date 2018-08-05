@@ -14,7 +14,7 @@ finished: true
 
 ## strtok
 
-> strtok ( string tokenize ) 함수는 문자열을 분리해주는 역할을 한다. 예를 들어서 "I Love You Always." 라는 문자열을 공백을 기준으로 해서 분리하고 싶다. 그렇다면 I/Love/You/Alway. 와 같이 4개로 분리가 될 것이다. 이와 같이 분리하기 위해 strtok함수를 사용하지 않는다고 해서 구현하지 못하는 것은 아니다. 모든 문자들을 조사해서 공백인지 아닌지를 판단하고 그 앞에까지를 잘라내서 또 나머지를 공백을 찾고, 이와 같은 과정을 반복하면 되겠다. 그런데 그걸 이미 만들어놓은게 바로 strtok 이다. 따라서 우리는 필요할때 가따 쓰면 되겠다. 함수의 원형을 보자.
+> strtok ( string tokenize ) 함수는 문자열을 분리해주는 역할을 한다. 예를 들어서 "I Love You Always." 라는 문자열을 띄어쓰기 기준으로 해서 분리하고 싶다. 그렇다면 I/Love/You/Alway. 와 같이 4개로 분리가 될 것이다. 이와 같이 분리하기 위해 strtok함수를 사용하지 않는다고 해서 구현하지 못하는 것은 아니다. 모든 문자들을 조사해서 공백인지 아닌지를 판단하고 그 앞에까지를 잘라내서 또 나머지를 공백을 찾고, 이와 같은 과정을 반복하면 되겠다. 그런데 그걸 이미 만들어놓은게 바로 strtok 이다.
 
 <a>char* strtok(char* str, const char* delimiters); </a>
 
@@ -44,7 +44,8 @@ finished: true
 <a>char* strtok(char* str, const char* delimiters); </a>
 
 
-```c++
+```
+c++
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -69,12 +70,14 @@ int main()
 
 }
 ```
-<fieldset id="gpg-fieldset">
-ps. scanf는 띄어쓰기 단위로 받을 수 있는데 띄어쓰기를 무시하고 문자열을 받고 싶으면
 
-scanf("%s", arr1) -> scanf("%[\n]s", arr1)
 
-</fieldset>
+ <span class="evidence">
+Tip:  scanf는 띄어쓰기 단위로 받을 수 있는데 띄어쓰기를 무시하고 문자열을 받고 싶으면
+
+scanf("%s", arr1)  ->  scanf("%[\n]s", arr1)
+
+</span>
 
 
 
