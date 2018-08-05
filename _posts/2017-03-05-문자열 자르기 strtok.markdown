@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "문자열 자르기 함수 strtok [string.h library]"
+title: "문자열 자르기 함수 strtok"
 subtitle: <span class="evidence"> 어떤 특정한 문자를 기준으로 문자열을 구분해 보자. </span>
 date: 2017-03-05
 author: NoonGam
@@ -34,11 +34,11 @@ finished: true
 ## 코드
 
 
-<a>char* strtok(char* str, const char* delimiters); </a>
+- <a>char* strtok(char* str, const char* delimiters); </a>
 
 
-```
-c++
+```c++
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>

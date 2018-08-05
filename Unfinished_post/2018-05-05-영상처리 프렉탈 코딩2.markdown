@@ -12,7 +12,7 @@ finished: true
 
 
 
-## strtok
+## IP sec ?
 
 
 
@@ -22,9 +22,7 @@ finished: true
 
 <br><br><br>
 
-##
-
-https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZekuDs
+## data sniffing
 
 
 

@@ -1,0 +1,155 @@
+---
+layout: post
+title: "C++ openCV 설치 및 설정"
+subtitle: <span class="evidence">영상처리에 필요한 openCV를 숩게 설치하자.</span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+
+
+## openCV 설치
+
+1. openCV 3.0.0-beta 다운로드
+
+https://sourceforge.net/projects/opencvlibrary/files/opencv-win/
+
+위의 사이트에 접속해서 3.0.0-beta 버전을 다운받습니다.
+
+
+
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/1.png)
+
+> opencv-3.0.0파일을 c:드라이브에 이동후 설치를 진행합니다.
+
+<br><br><br>
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/2.png)
+
+> 정상적으로 설치 후 opencv 폴더에 들어가면 그림과 같이 build와 sources가 있습니다.
+
+
+<br><br><br>
+
+2. 빈프로젝트 생성
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/3.png)
+
+> 소스파일에 자신의 cpp 파일을 만듭니다.
+(openCV_test.cpp)
+
+
+<br><br>
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/3_1.png)
+
+> 프로젝트 선택 후 우측마우스 -> 속성(R) 선택
+
+<br><br>
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/4.png)
+
+> C/C++에서 추가 포함 디렉토리에 ```C:\opencv\build\include``` 입력
+
+<br><br>
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/5.png)
+
+> 링커에서 추가 라이브러리 디렉토리에  ```C:\opencv\build\x86\vc12\lib ``` 입력
+
+
+<br><br>
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/6.png)
+
+ > 링커->입력에서 추가 종속성에 ```opencv_ts300.lib;opencv_world300.lib;``` 입력
+
+<br><br>
+
+3. dll 파일 이동
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/7.png)
+
+> C:\opencv\build\x86\vc12\bin 폴더로 이동 후에 dll파일 3개를 복사 후에
+
+<br><br>
+
+ ![img](/img/2018-05-05-C++ openCV 설치 및 세팅/8.png)
+
+ > 프로젝트 우측마우스 -> 파일 탐색기에서 폴더 열기(x)
+
+ <br><br>
+
+
+ ![img](/img/2018-05-05-C++ openCV 설치 및 세팅/9.png)
+
+ > 해당 폴더에 dll파일 3개를 복사 합니다.
+
+
+
+
+
+<br><br><br>
+
+## openCV 테스트
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/10.png)
+
+
+https://www.ece.rice.edu/~wakin/images/lena512.bmp 에서 lena512 이미지 사진을 다운로드
+
+lena512.bmp파일을 프로젝트 폴더에 이동 후 아래 소스코드 실행.
+
+```c++
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char** argv)
+{
+
+	     Mat image;
+	   image = imread("lena512.bmp", IMREAD_COLOR);   // Read the file
+
+		 if (!image.data)                              // Check for invalid input
+		    {
+		         cout << "Could not open or find the image" << std::endl;
+			 return true;
+		    }
+
+		    namedWindow("Display window", WINDOW_AUTOSIZE);// Create a window for display.
+	     imshow("Display window", image);                   // Show our image inside it.
+
+	     waitKey(0);                                          // Wait for a keystroke in the window
+	 return 0;
+ }
+
+
+```
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/11.PNG)
+
+> 위의 소스를 실행하면 아래와같이 이미지가 출력되면 성공적으로 설정이 완료되었습니다.
+
+<br><br><br>
+
+## 설정 확인
+
+
+![img](/img/2018-05-05-C++ openCV 설치 및 세팅/openCV.gif)
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+* http://webnautes.tistory.com/673

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " -------- "
+title: "프렉탈 부호화 이미지 손실 압축"
 subtitle: <span class="evidence"> -------- </span>
 date: 2018-01-01
 author: NoonGam
@@ -14,7 +14,7 @@ finished: true
 
 ## IP sec ?
 
-
+> 프랙탈 부호화(영어: fractal compression)는 프랙탈에 기초한 손실 압축 방법이다. 이 방식은 텍스처와 사진에 가장 적합하다. 왜냐하면 한 이미지에서 한 부분과 다른 부분이 유사한 경우가 많기 때문이다. 프랙탈 알고리즘은 이러한 부분들을 '프랙탈 부호'라 불리는 수학적 데이터로 변환한다.
 
 
 
