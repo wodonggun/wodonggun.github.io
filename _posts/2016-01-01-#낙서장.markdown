@@ -35,11 +35,20 @@ https://opentutorials.org/course/3084
 http://gifgifs.com/optimizer/ - gif 최적화
 
 
+https://jekyllrb-ko.github.io/docs/home/ - 지킬 공식 설명서
+
+https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구글 검색어 등록
+
 - 유튜브 영상 임베드 시키기.(화면 바로 재생)
 
 ```
-<iframe width="560" height="315" src="//www.youtube.com/embed/K64mb5KUhhs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/K64mb5KUhhs"
+ frameborder="0" allowfullscreen></iframe>
 ```
+
+
+
+
 
 - slideshare PPT 연동하기
 ```
@@ -99,3 +108,20 @@ https://cafe.naver.com/dokchi - 독취사
 https://brunch.co.kr/@yudong/67 - ICT 지식
 
 https://www.netmanias.com/ko/ - 네트워크 지식
+
+
+
+# 쓰레기
+
+트리구조
+Terminal node == leaf node == 단말노드
+조상 = 자기자신과 자신의 상위 노드를 가리킴
+
+프리오더 전위탐색 (노드 좌 우) – DFS
+인오더 중위탐색 ( 왼 노드 오 ) = Binary sircuit tree
+포스트 후위 오더 – 선 자식 처리후 노드
+
+
+절대값 :  #define MAX_ABS(a,b) a>b?a-b:b-a
+int형 1234를 4321로 뒤집기 : ( 1*1000 + 2*100 + 3*10 + 4*1 )
+정수인지 판별 :  double a = 2.5; If(a-(int)a==0)

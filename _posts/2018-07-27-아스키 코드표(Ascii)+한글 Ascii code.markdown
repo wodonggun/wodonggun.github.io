@@ -4,7 +4,7 @@ title: "아스키 코드표(Ascii) + 한글 유니코드표(UTF-8)"
 subtitle: <span class="evidence">기본적인 아스키 코드와 한글 유니코드 UTF-8 정리 </span>
 date: 2018-07-27
 author: NoonGam
-category: study
+category: Study
 tags: C Language
 comments: true
 finished: true

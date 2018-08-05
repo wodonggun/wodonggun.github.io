@@ -5,7 +5,7 @@ subtitle: <span class="evidence">안드로이드 스튜디오에서 개발하면
 date: 2018-07-26
 author: NoonGam
 category: Android
-tags: Kotlin Language
+tags: Kotlin Language Conference
 comments: true
 finished: true
 ---
