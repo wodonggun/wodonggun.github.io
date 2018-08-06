@@ -36,6 +36,31 @@ $find / -name 'title'
 - find / -name '.sh'
 
 
+- 메모리 사용량 확인
+$sar -r 1
+
+- CPU, 메모리 사용량
+$htop
+(apt-get install htop)
+
+- make 컴파일 속도 (다중 쓰레드 사용)
+make -j4 (4코어 사용)
+
+- 경로 이동
+cd .. (상위 이동)
+cd /  (루트로이동)
+cd ~/  (루트폴더 이동)
+pwd (자신의 현재 위치)
+cd ~ 홈디렉토리로 이동
+
+cd /etc/apache2  (절대경로로 이동)
+
+
+- 파일 복사
+cp MPTCP.sh /users/user/home/MPTCP.sh
+
+- 폴더 복사
+cp -r MPTCP /etc/MPTCP
 
 
 ## 네트워크 명령어
