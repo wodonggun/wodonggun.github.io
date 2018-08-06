@@ -627,19 +627,11 @@ void main()//디코딩 메인함수
 
 
 
-<br><br><br>
-
-## 예시
-
-
-
-
 
 
 
 <br><br><br>
 
 ## 참고 자료
-*
-*
-*
+* https://github.com/kennberg/fractal-compression
+* https://en.wikipedia.org/wiki/Fractal_compression
