@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "프렉탈 부호화 이미지 손실 압축"
-subtitle: <span class="evidence"> -------- </span>
-date: 2018-01-01
+subtitle: <span class="evidence"> openCV Fractal Compression Coding </span>
+date: 2018-05-05
 author: NoonGam
-category: Study
-tags: Network Linux
+category: C / C++
+tags: openCV C / C++
 comments: true
 finished: true
 ---
@@ -16,11 +16,24 @@ finished: true
 
 > 프랙탈 부호화(영어: fractal compression)는 프랙탈에 기초한 손실 압축 방법이다. 이 방식은 텍스처와 사진에 가장 적합하다. 왜냐하면 한 이미지에서 한 부분과 다른 부분이 유사한 경우가 많기 때문이다. 프랙탈 알고리즘은 이러한 부분들을 '프랙탈 부호'라 불리는 수학적 데이터로 변환한다.
 
+<br><br><br>
+
+## Geometric Algorithm
+
+![img](/img/2018-05-05-영상처리 프렉탈 코딩/1.png)
+
+![img](/img/2018-05-05-영상처리 프렉탈 코딩/2.png)
+
+
+<br><br><br>
 
 ## Fractal Compression
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/hXds2LFhttRFB4" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WooDongKeun/fractal-compression-coding" title="Fractal compression coding" target="_blank">Fractal compression coding</a> </strong> from <strong><a href="//www.slideshare.net/WooDongKeun" target="_blank">WooDongKeun</a></strong> </div>
 
+
+
+<br><br><br>
 
 ## Encoding
 
@@ -316,7 +329,7 @@ void main()
 			printf(" < %3d , %3d > x좌표 : %3d   y좌표 : %3d  Error값 : %3d Isom값 : %3d  alpha값 : %.1lf  평균값 : %3d \n", j * size, i *size, en_result[i][j].x, en_result[i][j].y, en_result[i][j].error, en_result[i][j].geo, en_result[i][j].alpha, en_result[i][j].avg); //영상처리된 정보를 시각적으로 보기위해서 출력
 		}
 	WriteParameter("encoding.txt", en_result, width / size, height / size);			//구조체에 저장된 정보를 txt형식으로 저장.
-	//메모리해제는 할당의 역순
+
 	ERFree2(en_result, width / size, height / size);
 	IntFree2(block_temp, size, size);
 	IntFree2(img_in, width, height);
@@ -602,7 +615,7 @@ void main()//디코딩 메인함수
 		Decoding(en_result, image_dec, width, height, size, size);				//디코딩 실행(디코딩할 정보를 가지고있는 구조체, 디코딩결과값저장할이미지, 가로 , 새로 , 블록x사이즈, 블록y사이즈)
 	}
 	ImageShow("원본", img_in, width, height);									//이미지 원본 출력
-	//메모리해제는 할당의 역순
+
 	IntFree2(image_dec, width, height);
 	IntFree2(img_in, width, height);
 	ERFree2(en_result, width / size, height / size);
