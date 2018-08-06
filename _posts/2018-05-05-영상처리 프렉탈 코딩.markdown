@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "프렉탈 부호화 이미지 손실 압축"
+title: "프렉탈 부호화 이미지 손실 압축 Fractal Compression"
 subtitle: <span class="evidence"> openCV Fractal Compression Coding </span>
 date: 2018-05-05
 author: NoonGam
 category: C / C++
-tags: openCV C / C++
+tags: openCV C/C++
 comments: true
 finished: true
 ---
@@ -625,6 +625,17 @@ void main()//디코딩 메인함수
 
 ```
 
+<br><br><br>
+
+## 결과
+
+- 250KB인 lena.bmp 이미지가 46KB의 데이터만으로도 거의
+  원본에 가까운 이미지로 복원
+
+- 이미지를 직접 전송하는 것이 아니라 압축기술을 통해 필요한
+    정보만 전송함으로써 효율적인 자원 활용
+
+- 인코딩에는 유사성을 찾기위해 오랜 계산 시간이 걸리지만 디코딩 속도는 매우 빠르며 높은 효율성을 가짐.
 
 
 
