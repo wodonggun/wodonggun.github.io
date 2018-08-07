@@ -2,7 +2,7 @@
 layout: post
 title: "C++ openCV 설치 및 설정"
 subtitle: <span class="evidence">영상처리에 필요한 openCV를 숩게 설치하자.</span>
-date: 2018-01-01
+date: 2018-05-04
 author: NoonGam
 category: Study
 tags: Network Linux

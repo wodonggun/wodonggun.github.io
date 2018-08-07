@@ -27,7 +27,17 @@ finished: true
 
 <br><br><br>
 
-## Fractal Compression
+## fractal compression Algorithm
+
+![img](/img/2018-05-05-영상처리 프렉탈 코딩/4.jpg)
+
+![img](/img/2018-05-05-영상처리 프렉탈 코딩/3.png)
+
+
+
+<br><br><br>
+
+## Fractal Compression Presentation
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/hXds2LFhttRFB4" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WooDongKeun/fractal-compression-coding" title="Fractal compression coding" target="_blank">Fractal compression coding</a> </strong> from <strong><a href="//www.slideshare.net/WooDongKeun" target="_blank">WooDongKeun</a></strong> </div>
 
@@ -35,7 +45,7 @@ finished: true
 
 <br><br><br>
 
-## Encoding
+## Encoding Source
 
 
 ```c++
@@ -345,7 +355,7 @@ void main()
 
 <br><br><br>
 
-## Decoding
+## Decoding Source
 
 
 
@@ -637,8 +647,16 @@ void main()//디코딩 메인함수
 
 - 인코딩에는 유사성을 찾기위해 오랜 계산 시간이 걸리지만 디코딩 속도는 매우 빠르며 높은 효율성을 가짐.
 
+- Debug모드를 사용하지않고, Release모드를 사용하여 속도 개선
 
 
+<br><br><br>
+
+## Debug VS Release 속도 비교
+
+![img](/img/2018-05-05-영상처리 프렉탈 코딩/Debug_vs_release.gif)
+
+> Debug모드 보다 Release모드가 대략 5~10배가까이 속도가 빠르다는것을 알 수 있다. Fractal Compression을 block size 2로 정했을때 Debug모드로는 약 1시간 넘게 걸리고, release모드로 진행할시에 15분내에 완료할 수 있었다.
 
 
 <br><br><br>
