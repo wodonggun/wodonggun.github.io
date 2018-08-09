@@ -1,0 +1,112 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+jsp = 웹서버코딩 백엔드 언어(java로 백, node.js 자바스크립트로 웹서버 백앤드를 코딩할수있는 프레임 워크)
+
+node.js 장점 = 프론트와 백엔드를 둘다 개발이 가능하다.(프레임 워크)
+
+html - 웹 페이지
+
+
+
+
+
+
+
+## html
+
+content내부를 지워서 다시 만들면 됨.
+
+
+
+index.html 에서
+
+col-md-10 가로   
+
+sm-12  세로
+
+xs 폭?
+
+
+<테이블 갱신>
+<th id="hi" onclick=httpGetAsync(./aaa.jsp, mycallback)">First Name</th>
+
+
+페이지 네이션 = 페이지 1,2,3,4 이동
+
+
+
+
+## 디버깅
+
+크롬 -> f11 -> f10 디버깅
+
+
+## 버튼
+
+onlick = "httpGetAsync('/jsp/wget.jsp')" >
+jsp 비동기식으로 사용.
+
+jsp = 자바로 서버를 코딩
+
+
+wget.jsp
+
+
+톰캣-유저 apt-get install
+
+
+mycallback = 함수포인터(/jsp파일을 실행하고 정보 저장)
+
+ajax가 html은 자동으로 데이터 갱신을 하는 방식을 비동기식이라 한다.
+
+
+jquery ready function = 절차진행이라 만약에 중간에 선언되지않은 함수가 실행되면 에러가 발생하는데
+여기 안의 소스는 모든 페이지에 대한 컴파일 완료후에 실행하는 문장.
+
+
+
+
+
+
+<br><br><br>
+
+## 차트 js
+
+custom.min.js 이곳에 글로벌 변수를 만들고 차트를 써야 차트가 생성됨.
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+## 예시
+
+
+
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " -------- "
+title: "IPsec이란 ?"
 subtitle: <span class="evidence"> -------- </span>
 date: 2018-01-01
 author: NoonGam
@@ -12,11 +12,20 @@ finished: true
 
 
 
-## IP sec ?
+## IPsec - Internet Protocol Security
+
+> IPSec은 Internet Protocol Security의 약어로서 통신중 network layer에서의 보안을 위한 표준이다. IPSec은 인터넷 상에서 VPN(Virtual Private Network)을 구현하는데 사용될 수 있도록 IETF (Internet Engineering Task Force)에서 개발된 protocol set이다. 이는 네트워크상의 IP layer에서의 보안에 중점을 두었으며, 사설 및 공중망을 사용하는 TCP/IP 통신을 보다 안전하게 유지하기 위한 end-to-end encryption과 authentication을 제공한다.
+
+1. 네트워크계층(IP 계층) 상에서 IP 패킷 단위로 `인증`,`암호화`,`키관리`를 하는 프로토콜
+
+2. VPN을 구현하기 위해 만든 프로토콜(Tunnel Mode)
+
+3. Transport계층 아래에서 구현되며, 운영체제에서 IPsec을 지원함.
+
 
 $ sudo apt-get update
 
-$ sudo apt-get install libpcap-dev$ sudo apt-get install libpcap-dev
+$ sudo apt-get install libpcap-dev
 
 $ ln -s /usr/include/pcap/bpf.h /usr/include/net/bpf.h
 

@@ -12,11 +12,7 @@ finished: true
 
 
 
-##
-
-1. git clone 주소
-2. git clone -b etri 주소   (branch가 etri일 경우에)
-3.
+## strtok
 
 
 

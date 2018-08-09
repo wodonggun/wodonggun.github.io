@@ -66,9 +66,14 @@ git add .
 git commit -m "Edit: 2018-07-28 Version Change"
 git push origin master
 
+git log  (commit 로그 확인)
+
+
 
 - 깃 ppt 연동  https://www.slideshare.net
 
+- 깃정리
+https://www.zerocho.com/category/Git/post/58045dbc146be6001542a465
 
 ## AWS
 
