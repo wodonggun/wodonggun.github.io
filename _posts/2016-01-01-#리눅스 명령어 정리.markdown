@@ -62,7 +62,51 @@ cp MPTCP.sh /users/user/home/MPTCP.sh
 - 폴더 복사
 cp -r MPTCP /etc/MPTCP
 
+- 폴더 제거
 
+rm -rf 폴더명   (r:내부 파일 삭제  f:오류없이 무조건 삭제옵션)
+
+
+- 하위 폴더 전체 권한 주기
+chmod -R 777 파일명
+
+
+## apt-get install 불가능한 프로그램 설치하기
+
+16.04에서는 어떠한 문제인지 안밝혀졌지만 아톰을 직접 다운받아서 설치가 불가능.
+아톰에서 제공하는 ppa를 통해 apt의 repogitory에 등록하고 설치한다.
+
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
+(루트폴더에 접근하고 싶을때 = Atom을 루트권한으로 실행)
+$su
+$/usr/bin/atom
+
+```
+외부 업체에서 제공하는 프로그램을 설치할 경우, /opt에,
+컴파일 해서 설치하는 경우나 사용자가 압축을 풀어 설치하는 경우는 /usr/local을 기본
+디렉토리로 설치되며,
+패키지로 설치하는 경우, /usr을 기본 디렉토리로 설치됩니다.
+
+그리고, 디렉토리 구성은
+/usr[/local]/bin : 실행파일
+/usr[/local]/share: 공유파일로 그림이나 문서, 아이콘등
+/usr/[local]/lib: 각종 라이브러리
+/etc: 각종 설정파일
+/var: 각종 상태나, 캐시등
+$HOME/.패키지명: 사용자별 설정 및 저장된 파일 및 작업디렉토리
+
+패키지의 설치 경로를 정확히 알고 싶으시면,
+dpkg -L 패키지명 하시면 되는데...
+eclipse의 경우는 메타패키지(다른 패키지들을 묶어 하나의 패키지인양 처리하는 것)입니다.
+java를 사용하는 eclipse의 경우 eclipse-jdt가 메인패키지이기 때문에...
+dpkg -L eclipse-jdt 라고 하시면 되고,
+gcc를 사용하는 eclipse의 경우,
+dpkg -L eclipse-cdt 라고 하시면 됩니다.
+
+```
 
 ## 프로세스 명령어
 

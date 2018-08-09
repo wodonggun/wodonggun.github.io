@@ -72,8 +72,23 @@ git log  (commit 로그 확인)
 
 - 깃 ppt 연동  https://www.slideshare.net
 
+
 - 깃정리
 https://www.zerocho.com/category/Git/post/58045dbc146be6001542a465
+
+
+- 깃 입문자 듀토리얼
+https://github.com/Taeung/git-training
+
+
+ < 폴더에 깃 다운받기 >
+ git clone 주소
+ git clone -b 브랜치이름 주소
+
+
+
+
+
 
 ## AWS
 

@@ -12,22 +12,10 @@ finished: true
 
 
 
-## strtok
+## CPU 파싱
 
 
-
-
-
-
-
-<br><br><br>
-
-##
-
-https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZekuDs
-
-
-
+http://www.dreamy.pe.kr/zbxe/CodeClip/163339
 
 
 <br><br><br>

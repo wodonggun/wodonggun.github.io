@@ -25,7 +25,7 @@ Server -> Client  =    SYN ACK 플래그를 통한 접속 수락
 Client -> Server  =    ACK
 ```
 
-<a>Syn = Synchronize sequence numbers</a>
+<a>Syn = Synchronize sequence numbers</a> <br>
 <a>Ack = Acknowledgement</a>
 
 
@@ -83,6 +83,7 @@ Server -> Client : TCP ACK (종료 완료 ACK)
  A는 ACK를 통해 세션 종료를 완료합니다.
 
 ```
+
 client > Server : TCP FIN,ACK  (세션 종료 요청)
 
 Server > client : TCP FIN,ACK  (세션 종료 및 에크 플래그 동시에 전송)
@@ -94,4 +95,4 @@ Server > Client : TCP ACK      (종료 확인 ACK)
 <br><br><br>
 
 ## 참고 자료
-* [MindNet님의 블로그] (http://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake)
+* [MindNet님의 블로그](http://mindnet.tistory.com/entry/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-22%ED%8E%B8-TCP-3-WayHandshake-4-WayHandshake)
