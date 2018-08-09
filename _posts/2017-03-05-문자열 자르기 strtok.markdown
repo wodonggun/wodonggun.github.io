@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "문자열 자르기 함수 strtok"
+title: "문자열 자르기 strtok 함수 사용법"
 subtitle: <span class="evidence"> 어떤 특정한 문자를 기준으로 문자열을 구분해 보자. </span>
 date: 2017-03-05
 author: NoonGam
@@ -51,13 +51,13 @@ int main()
 
 	char arr1[20] = "I Love You Always";
 
-	char *ptr = strtok(arr1," ");		//arr1문자열을 띄어쓰기로 끊어서 ptr에 저장.
+	char *ptr = strtok(arr1," ");		//arr1문자열을 띄어쓰기로 끊어서 문자열의 첫주소 반환
 
-	while (ptr != NULL)					//strtok으로 잘린 문자
+	while (ptr != NULL)			//strtok으로 잘린 문자
 	{
-		printf("%s\n", ptr);			//ptr 출력
+		printf("%s\n", ptr);		//ptr 출력
 		ptr = strtok(NULL, " ");		//NULL을 넣으면 strtok에서 이전에 문자를 자른
-		                                //후에 다음 문자의 주소를 반환해줌.
+		                                     //후에 다음 문자의 주소를 반환해줌.
 	}
 
 
