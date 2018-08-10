@@ -35,7 +35,11 @@ $ ./snif enp0s8 (super user)
 
 
 
+## Ascii Ascii-extend  UTF-8
 
+UTF-8 최소 8비트로 이루어진 데이터타입
+한글은 UTF-8의 8비트 3개가 보여 24비트가 하나의 한글을
+표현할 수 있다.
 
 
 ## data sniffing

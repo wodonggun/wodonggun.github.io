@@ -56,6 +56,9 @@ https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구�
 ```
 
 
+- 검색어 등록 - Title의 내용이 검색어에 표시.
+
+
 
 
 ## 깃 정리
@@ -86,6 +89,14 @@ https://github.com/Taeung/git-training
  git clone -b 브랜치이름 주소
 
 
+< 포크한 깃 업데이트 >
+1. git remote -v  (연결된 버전 확인)
+
+2. gi remote add upstream https://github.com/wnsgml972/Dashboard-Thema
+
+3. git pull upsatream etri(포크떠온 프로젝트 가져오기)
+
+4. git push origin etri(나의 저장소로 푸쉬)
 
 
 
