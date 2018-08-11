@@ -119,7 +119,6 @@ finished: true
 
 
 
-
 ![img](/img/2018-08-11-대한민국 소프트웨어대전 2018 SoftWave 후기/20.jpg)
 
 > VR을 매우 좋아하는 인턴 동기 입니다 ㅎㅎ 직접 VR을 통해서 역사 유적지에 들어가 보고, 다양한 정보와
@@ -130,6 +129,17 @@ finished: true
 > VR을 통해 좀비게임을 해보는 부스입니다. 깜짝놀라기도 하고, 허공에 손을 흔드는 모습이 재밌었습니다.
 
 ![img](/img/2018-08-11-대한민국 소프트웨어대전 2018 SoftWave 후기/27.jpg)
+
+
+
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/LM0T6hLH15k?start=14"
+ frameborder="0" allowfullscreen></iframe>
+
+
+
+<br><br><br>
+
 
 ## 유니세프
 
