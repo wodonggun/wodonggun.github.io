@@ -26,7 +26,7 @@ finished: true
 
 ## 깃 설치
 
-- 깃 다운로드
+- 깃 다운로드 후 설치
 
 https://git-scm.com/downloads
 
@@ -50,13 +50,38 @@ https://atom.io/
 - git add
 커밋할 목록에 추가
 
-- commitee
+- commit
 히스토리의 한단위
 
+- push
+github에 밀어넣기
+
+- 강제 push
+
+git push origin master --force
+
+
+
+git log - commit 제출 내용 확인
 
 
 
 
+
+## 깃 제출 순서
+
+$git remote add origin <repository URL>
+$git push origin master
+
+
+
+## pull request
+
+> 다른 사람의 프로젝트에 내가 만든 commit을 제출한다.
+
+1. 상대방의 프로젝트를 fork 뜬다
+2. 내 계정에서 관리되는 프로젝트를 새롭게 만듬
+3. 새로운 commit 내용들을 pull-request 제출 할 수 있다.
 
 <br><br><br>
 
