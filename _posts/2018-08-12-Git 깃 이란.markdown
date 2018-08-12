@@ -1,0 +1,66 @@
+---
+layout: post
+title: "깃 정리 "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+
+
+## Git 이란?
+
+> Git이란 History 관리하는 도구로, History 관리를 통해 개발되어온 과정 역사를 볼 수 있고, 특정시점으로 복구가 가능합니다.
+(개발 과정, 소스파일 등을 관리하는 도구)
+
+
+
+
+
+
+<br><br><br>
+
+## 깃 설치
+
+- 깃 다운로드
+
+https://git-scm.com/downloads
+
+- 깃 회원가입
+
+https://github.com/
+
+- 아톰 편집기 다운로드
+
+https://atom.io/
+
+
+
+
+
+
+<br><br><br>
+
+## Git 명령어
+
+- git add
+커밋할 목록에 추가
+
+- commitee
+히스토리의 한단위
+
+
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+* https://github.com/Taeung/git-training
+*
+*
