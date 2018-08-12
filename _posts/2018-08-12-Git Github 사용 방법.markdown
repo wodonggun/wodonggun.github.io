@@ -14,6 +14,8 @@ finished: true
 
 ## Git 이란?
 
+![img](/img/2018-08-12-Git Github 사용 방법/0.png)
+
 > Git이란 History 관리하는 도구로, History 관리를 통해 개발되어온 과정 역사를 볼 수 있고, 특정시점으로 복구가 가능합니다.
 (개발 과정, 소스파일 등을 관리하는 도구)
 
@@ -27,15 +29,12 @@ GUI(Graphic User Interface)대신 CLI(Command Line Interface)를 통해 명령�
 ## 깃 설치
 
 - 깃 다운로드 후 설치(자신의 환경에 맞는 버전 선택=windows)
-
 https://git-scm.com/downloads
 
 - 깃 회원가입
-
 https://github.com/
 
 - 아톰 편집기 다운로드
-
 https://atom.io/
 
 
@@ -61,16 +60,16 @@ github에 강제로 밀어넣기
 
 
 
-- ```git push origin master --force```
+- ```$git push origin master --force```
 github에 master 브랜치에 강제로 push
 
-- ```git log```
+- ```$git log```
 commit 제출 내용 확인
 
-- ```git status```
+- ```$git status```
 현재 git 상태 확인
 
-- ```pwd```
+- ```$pwd```
 현재 자신의 폴더 경로 보기
 
 
@@ -79,15 +78,15 @@ commit 제출 내용 확인
 ## 깃 제출 순서
 
 
-1. $git init  - 깃 초기화 설정
+1. ```$git init```  - 깃 초기화 설정
 
-2. $git add (파일,폴더명)  -  폴더명 대신에 .(점) 사용시 현재위치 모든 폴더 add
+2. ```$git add (파일,폴더명)```  -  폴더명 대신에 .(점) 사용시 현재위치 모든 폴더 add
 
-3. $git commit -m "남길 Log 메세지"
+3. ```$git commit -m "남길 메세지"``` - commit log에 남길 메세지 입력 <br>(git 협력에서는 이 메세지를 통해서 복구 시점을 만들 수 있고, 문제점 발생 위치를 파악할 수 있기 때문에 대규모 프로젝트에서는 작성 규칙을 정하고 자세히 적음)
 
-4. $git remote add origin <repository URL>
+4. ```$git remote add origin <repository URL>``` - 해당 URL 연결
 
-5. $git push origin master / git push origin master --force
+5. ```$git push origin master / git push origin master --force``` - history정보 push / 강제 push
 
 <br><br><br>
 
@@ -127,6 +126,7 @@ commit 제출 내용 확인
 ![img](/img/2018-08-12-Git Github 사용 방법/5.png)
 
 - 원하는 Repository name을 적고, Description, Public, MIT License를 설정합니다.
+- 모든 설정이 완료된 후에, Create Repository를 클릭.
 
 <br><br>
 
