@@ -74,13 +74,21 @@ finished: true
 
 > VR을 통해 좀비게임을 해보는 부스입니다. 깜짝놀라기도 하고, 허공에 손을 흔드는 모습이 재밌었습니다.
 
-![img](/img/2018-08-11-대한민국 소프트웨어대전 2018 SoftWave 후기/27.jpg)
 
 
 
+<br><br>
+
+
+
+## VR,AR,MR의 대표적인 영상  
 
 <iframe width="660" height="345" src="//www.youtube.com/embed/LM0T6hLH15k?start=14"
  frameborder="0" allowfullscreen></iframe>
+
+- AR,VR,MR 등 가상현실에 대한 체험존과 부스가 많았다.
+
+- 이 외에도 빅데이터, 인공지능 챗봇, 클라우드 서비스, 드론, 딥러닝 등 주로 최근 이슈가 되는 부스들이 많았다.
 
 
 

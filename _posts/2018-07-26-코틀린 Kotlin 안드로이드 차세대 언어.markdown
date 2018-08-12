@@ -19,12 +19,22 @@ finished: true
   > Kotlin is a statically typed programming language that runs on the Java virtual machine and also can be compield to JavaScript source code or use the LLVM compieler infrastructure.
 
 
+  <br>
+  <br>
+  <br>
+
+
 
 ## 환경 설정 / 설치 정보
   - Android Studio 3.0 이상
   - 코틀린 버전 1.2.51 이상
   - gradle 버전 4.5 (아직 4.6이하만 지원)
   gradle scripte -> build.gradle(project) -> ext.kotlin_version = '1.2.51'으로 설정.
+
+
+  <br>
+  <br>
+  <br>
 
 
 

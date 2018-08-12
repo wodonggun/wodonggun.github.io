@@ -76,6 +76,7 @@ finished: true
 ### ```삼성전자 손기성 수석(Tizen)```
 -삼성전자 리서치센터<br>
 -Tizen 프로젝트<br>
+
 ![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/4.jpg)
 
 ![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/5.jpg)
