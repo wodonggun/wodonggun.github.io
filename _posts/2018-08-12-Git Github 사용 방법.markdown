@@ -19,7 +19,7 @@ finished: true
 > Git이란 History 관리하는 도구로, History 관리를 통해 개발되어온 과정 역사를 볼 수 있고, 특정시점으로 복구가 가능합니다.
 (개발 과정, 소스파일 등을 관리하는 도구)
 
-<span>GUI(Graphic User Interface)</span>대신 CLI(Command Line Interface)를 통해 명령창 환경에 익숙해지자.(기본 유닉스,리눅스 명령어)
+<span class="b">GUI(Graphic User Interface)</span>대신 <span class="r">CLI(Command Line Interface)</span>를 통해 명령창 환경에 익숙해지자.(기본 유닉스,리눅스 명령어)
 
 
 
