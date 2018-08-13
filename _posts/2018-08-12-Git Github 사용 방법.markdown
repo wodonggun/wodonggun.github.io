@@ -19,7 +19,7 @@ finished: true
 > Git이란 History 관리하는 도구로, History 관리를 통해 개발되어온 과정 역사를 볼 수 있고, 특정시점으로 복구가 가능합니다.
 (개발 과정, 소스파일 등을 관리하는 도구)
 
-GUI(Graphic User Interface)대신 CLI(Command Line Interface)를 통해 명령창 환경에 익숙해지자.(기본 유닉스,리눅스 명령어)
+<span>GUI(Graphic User Interface)</span>대신 CLI(Command Line Interface)를 통해 명령창 환경에 익숙해지자.(기본 유닉스,리눅스 명령어)
 
 
 
@@ -71,6 +71,12 @@ commit 제출 내용 확인
 
 - ```$pwd```
 현재 자신의 폴더 경로 보기
+
+- ```#git reset HEAD~1```
+가장 최근에 제출한 commit 제거
+
+
+
 
 
 <br><br><br>
