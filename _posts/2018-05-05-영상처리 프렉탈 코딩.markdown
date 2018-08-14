@@ -4,7 +4,7 @@ title: "프렉탈 부호화 이미지 손실 압축 Fractal Compression"
 subtitle: <span class="evidence"> openCV Fractal Compression Coding </span>
 date: 2018-05-05
 author: NoonGam
-category: C / C++
+category: C/C++
 tags: openCV C/C++
 comments: true
 finished: true

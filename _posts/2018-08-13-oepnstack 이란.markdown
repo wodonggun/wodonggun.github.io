@@ -5,7 +5,7 @@ subtitle: <span class="evidence"> SDN NFV VNF 5G와 관련된 openstack?</span>
 date: 2018-08-13
 author: NoonGam
 category: openstack
-tags: openstack Linux
+tags: OpenStack Linux OpenSource
 comments: true
 finished: true
 ---

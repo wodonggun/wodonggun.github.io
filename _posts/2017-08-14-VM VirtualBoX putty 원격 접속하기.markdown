@@ -2,10 +2,10 @@
 layout: post
 title: "VM virtualBoX putty 원격 접속 하기."
 subtitle: <span class="evidence">Putty를 통해 VM에 원격으로 접속해보자.</span>
-date: 2018-01-01
+date: 2017-08-14
 author: NoonGam
-category: Study
-tags: Network Linux
+category: Linux
+tags: VirtualBoX Linux
 comments: true
 finished: true
 ---
@@ -53,7 +53,7 @@ iface enp0s8 inet static
 - ```$vi /etc/hosts```
 - 아까 설정했던 호스트 네트워크 설정 ```192.168.56.101 ubuntu``` 추가
 
-![img](/img/2017-08-14-VM VirtualBoX putty 원격 접속하기/12.PNG)
+![img](/img/2017-08-14-VM VirtualBoX putty 원격 접속하기/12.png)
 
 
 <br><br>
