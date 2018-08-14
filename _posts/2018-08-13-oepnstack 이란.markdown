@@ -21,6 +21,12 @@ finished: true
 컴퓨팅 시스템.
 
 
+## 클라우드 서비스란 ?
+
+> 무엇을 서비스하냐에 따라 SaaS, PaaS, IaaS 로 나눕니다.
+
+[IaaS, PaaS, SaaS란 무엇인가?](https://wodonggun.github.io/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html)
+
 
 ## Floating IP?
 
@@ -56,7 +62,7 @@ floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 
 2. 네트워크 제어 기능과 실행환경을 분리하여 성능이 낮은 하드웨어 포트에는 더이상 할당 안함.
 
 
-## 
+##
 
 
 ##

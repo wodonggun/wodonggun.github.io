@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VirtualBoX 우분투 서버 버전 설치"
+title: "VirtualBoX 우분투 서버 버전 설치 - Ubuntu 16.04 Server install"
 subtitle: <span class="evidence">가상머신에 Ubuntu 우분투 설치하기.</span>
 date: 2018-08-14
 author: NoonGam
@@ -36,7 +36,7 @@ https://www.ubuntu.com/download
 - 자신이 필요한 버전을 다운받습니다. 저는 호환성과 가장 대중적인 Ubuntu 16.04를 선택하였습니다.
 
 ![img](/img/2017-08-14-우분투 서버 버전 설치/a.PNG)
-- server 버전과 Desktop버전을 잘 구분하고 필요한 버전을 설치합니다.
+- server 버전과 Desktop버전을 잘 구분하고 필요한 버전을 설치합니다.<br>
 <a>(Server 버전은 Desktop버전과 다르게 GUI를 제공하지않고, 검은색 화면에 command만 입력하는 CLI 방식의 가벼운 운영체제입니다)</a>
 
 <br><br><br>
@@ -46,38 +46,38 @@ https://www.ubuntu.com/download
 - [VirtualBox 설치하기](https://wodonggun.github.io/wodonggun.github.io/linux/VirtualBox-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0.html) 여기서 생성한 VM을 시작합니다.
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/1.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/1.png)
 
 > 다운받은 Ubuntu 16.04 server amd64를 엽니다.
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/2.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/2.png)
 
 > 다운받은 Ubuntu 16.04 server amd64를 엽니다.
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/3.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/3.png)
 
 > 리눅스는 아무리 한국인이라도 영어가 진리입니다....
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/4.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/4.png)
 
 - Install Ubuntu Server 선택
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/5.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/5.png)
 
 - English 선택
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/6.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/6.png)
 
 > 언어를 담당하는 location부분에서는 위에서 English를 선택하여 자동으로 미국으로 되어있는데 <span title="r">이 지역은 반드시 Korea, Republic</span>으로 설정하여야 합니다. PHP나 MySQL Apache 등을 설치시에 자동으로 local 설정을 하게 되는데 이게 맞지 않으면 지역의 차이에서 오는 알수없는 문제가 생길 수 있습니다.
 그리고 시차에 의해 요청시 정상적으로 작동되지않을 수 있습니다.
@@ -90,24 +90,24 @@ https://www.ubuntu.com/download
 
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/9.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/9.png)
 
 - 언어를 담당하는 locale설정입니다. 네트워크 통신이나 파일 형식이 UTF-8로,en_US 타입 이라는것을 잘 알고있어야 합니다.<a>(기본적으로 대부분의 언어 형식은 아스키,UTF-8,16,24,Unicode중 UTF-8방식을 선택하고 있습니다)</a>
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/10.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/10.png)
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/11.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/11.png)
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/12.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/12.png)
 
 > 네트워크 인터페이스를 선택합니다. 기본적으로 외부인터넷은 enp0s3으로 설정되고,
 나머지는 호스트 내부 네트워크 입니다.
@@ -115,14 +115,14 @@ https://www.ubuntu.com/download
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/13.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/13.png)
 
 - hostname 설정입니다. 저는 ubuntu default설정을 하였습니다.  
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/14.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/14.png)
 
 - 비밀번호 입력
 
@@ -131,33 +131,33 @@ https://www.ubuntu.com/download
 
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/15.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/15.png)
 
 > Asia/Seoul이 맞는지 확인하고 ```<YES>```
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/16.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/16.png)
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/17.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/17.png)
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/19.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/19.png)
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/20.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/20.png)
 
 > HTTP proxy 서버 설정은 사용하지않으니 패스합니다.
 
 <br><br>
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/21.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/21.png)
 
 > 자동으로 업데이트 여부를 결정합니다. 서버의 특성상 환경을 자주 업데이트하면 오히려 호환성이나 다른 문제가 야기될 수 있으니 자동업데이트는 안하는것이 좋습니다.
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/22.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/22.png)
 
 - standard system utilities 선택(space)
 - openSSH server 선택(space) ```putty를 통한 원격접속에 필요```
@@ -170,21 +170,21 @@ https://www.ubuntu.com/download
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/23.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/23.png)
 
 - Grub boot loader를 통해 멀티 부팅이 가능하도록 설정합니다. ```<YES>```
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/24.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/24.png)
 
 - ```<Continue>``` 계속
 
 <br><br>
 
 
-![img](/img/2017-08-14-우분투 서버 버전 설치/26.PNG)
+![img](/img/2017-08-14-우분투 서버 버전 설치/26.png)
 
 - 아까 hostname으로 설정했던 login id: ```ubuntu```
 - password 입력
