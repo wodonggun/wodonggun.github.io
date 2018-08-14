@@ -63,13 +63,16 @@ cp MPTCP.sh /users/user/home/MPTCP.sh
 cp -r MPTCP /etc/MPTCP
 
 - 폴더 제거
-
 rm -rf 폴더명   (r:내부 파일 삭제  f:오류없이 무조건 삭제옵션)
 
 
 - 하위 폴더 전체 권한 주기
 chmod -R 777 파일명
 
+
+
+- 환경변수 제거
+export -n 환경변수명
 
 ## apt-get install 불가능한 프로그램 설치하기
 
@@ -118,8 +121,8 @@ dpkg -L eclipse-cdt 라고 하시면 됩니다.
 
 ## 네트워크 명령어
 
-- [인터페이스 연결 끊기] ifconfig enp0s3 down
-- [인터페이스 연결 ]     ifconfig enp0s3 up
+- [인터페이스 연결 끊기] ifconfig enp0s3 down   /  ifdown enp0s3
+- [인터페이스 연결 ]     ifconfig enp0s3 up    /   ifup enp0s3
 
 
 
@@ -130,6 +133,10 @@ dpkg -L eclipse-cdt 라고 하시면 됩니다.
 - [ 네트워크 패킷 정보 보기 ] $sudo tcpdum -i enp0s8
 - $wireshark
 -
+
+
+- [a start job is running for raise network] $vi /etc/systemd/system/network-online.target.wants/networking.service
+
 
 ## 리눅스 TX RX 전송 속도 구하기
 
