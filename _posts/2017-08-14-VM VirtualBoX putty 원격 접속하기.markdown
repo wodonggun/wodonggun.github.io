@@ -16,9 +16,13 @@ finished: true
 
 [putty 설치 바로가기](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-putty.exe 64bit 버전을 다운받습니다. <br>
-(자신의 윈도우 버전이 64bit인지 32bit인지 윈도우 검색창에 ```dxdiag``` 입력 후 실행)
+링크를 타고 들어가 ```putty.exe```를 다운받습니다.
 
+<br><br>
+
+![img](/img/2017-08-14-VM VirtualBoX putty 원격 접속하기/13.png)
+
+(자신의 윈도우 버전이 64bit인지 32bit인지 윈도우 검색창에 ```dxdiag``` 입력 후 실행)
 
 <br><br><br>
 
@@ -57,8 +61,6 @@ iface enp0s8 inet static
 5. 인터페이스 설정 바뀌었으면 다시 시작을 합니다. 또는 reboot
  - ```ifconfig enp0s8 up```
  - ```ifconfig enp0s8 down```
-
-
  - ```sudo reboot```
 
 
