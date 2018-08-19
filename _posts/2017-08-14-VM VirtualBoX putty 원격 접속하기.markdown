@@ -56,7 +56,7 @@ iface enp0s8 inet static
 ![img](/img/2017-08-14-VM VirtualBoX putty 원격 접속하기/12.png)
 
 
-<br><br>
+<br><br><br>
 
 5. 인터페이스 설정 바뀌었으면 다시 시작을 합니다. 또는 reboot
  - ```ifconfig enp0s8 up```
@@ -64,6 +64,7 @@ iface enp0s8 inet static
  - ```sudo reboot```
 
 
+<br><br><br>
 
 ## putty 접속
 
@@ -84,7 +85,6 @@ iface enp0s8 inet static
 
 - 이렇게 putty를 통해 VM virtualBoX에 접속을 성공하였습니다.  
 
-<br><br>
 
 
 <br><br><br>

@@ -5,7 +5,7 @@ subtitle: <span class="evidence">Algorithm STL 헤더 - #include <algorithm> </s
 date: 2018-08-03
 author: NoonGam
 category: Algorithm
-tags: C 백준알고리즘 SW_expert
+tags: C/C++ 백준알고리즘 SW_expert
 comments: true
 finished: true
 ---
