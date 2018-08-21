@@ -2,7 +2,7 @@
 layout: post
 title: "깃 이란? - what is Git?"
 subtitle: <span class="evidence">깃을 써야한다고? 왜써야하고 어떻게 사용하는지....</span>
-date: 2018-08-20
+date: 2018-08-17
 author: NoonGam
 category: Study
 tags: Git Github
@@ -15,10 +15,10 @@ finished: true
 ## 깃이란 ?
 
 
-Git은 리눅스의 아버지라고 불리는 [리누스 토발즈(Linus Benedict Torvalds)](https://namu.wiki/w/%EB%A6%AC%EB%88%84%EC%8A%A4%20%ED%86%A0%EB%A5%B4%EB%B0%9C%EC%8A%A4)에 의해서 만들어졌습니다. 그는 프로그램을 개발하면서 소스코드를 관리하는 프로그램의 필요성을 느꼇지만, 현재 널리 사용되고있는 프로그램에 만족을 못하고 직접 Git을 제작하였다고 한다.
-(이후의 핵심 기술은 주니오 하마노에 의해서 유지보수를 했었다.)
+```Git```은 리눅스의 아버지라고 불리는 [리누스 토발즈(Linus Benedict Torvalds)](https://namu.wiki/w/%EB%A6%AC%EB%88%84%EC%8A%A4%20%ED%86%A0%EB%A5%B4%EB%B0%9C%EC%8A%A4)에 의해서 만들어졌습니다. 그는 프로그램을 개발하면서 소스코드를 관리하는 프로그램의 필요성을 느꼇지만, 현재 널리 사용되고있는 프로그램에 만족을 못하고 직접 Git을 제작하였다고 한다.
+_(이후의 핵심 기술은 주니오 하마노에 의해서 유지보수를 했었다.)_
 
-버전 관리 시스템(Version Control System)
+```버전 관리 시스템(Version Control System)```
 CVS , 머큐리얼, SVN , Git , 비트버킷등 다양한 버전관리시스템이 존재합니다.
 그 중에서 Git은 현재 가장 많은 개발자가 선택한 버전관리시스템 입니다.
 > 만약에 버전관리시스템이 없다면 개발자가 1~2년 동안 개발해 왔던 컴퓨터가 고장나거나
@@ -106,8 +106,8 @@ git add .           // 이 명령은 현재 디렉토리의 모든 화일을 추
 git commit -m “현재형으로 설명” // 커밋해서 스냅샷을 찍는다.
 
 git remote add origin https://github.com/username/myproject.git // 로컬과 원격 저장소를 연결한다.
-git remote -v // 연결상태를 확인한다.
-git push origin master // 깃허브로 푸시한다.
+git remote -v             // 연결상태를 확인한다.
+git push origin master    // 깃허브로 푸시한다.
 
 
 
@@ -129,6 +129,6 @@ clone - 저장소 다운로드
 <br><br><br>
 
 ## 참고 자료
-* [생활코딩 Git] https://opentutorials.org/course/1492
-* [Nolboo's Blog] https://nolboo.kim/blog/2013/10/06/github-for-beginner
-* [우아한형제들 김민태님] https://www.slideshare.net/ibare/dvcs-git
+* [생활코딩 Git](https://opentutorials.org/course/1492)
+* [Nolboo's Blog](https://nolboo.kim/blog/2013/10/06/github-for-beginner)
+* [우아한형제들 김민태님](https://www.slideshare.net/ibare/dvcs-git)
