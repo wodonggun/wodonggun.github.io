@@ -34,9 +34,16 @@ CVS , 머큐리얼, SVN , Git , 비트버킷등 다양한 버전관리시스템�
 GNU -> GNU's is Not Unix = OS를 독점하고있는 Unix와 차별을 두기위함
 ```
 
+
+
+
+
 <br><br><br>
 
-## 용어 정리
+## 공부 자료 / 용어 정리
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/rRvcSqdo6Iar5q" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ibare/dvcs-git" title="버전관리를 들어본적 없는 사람들을 위한 DVCS - Git" target="_blank">버전관리를 들어본적 없는 사람들을 위한 DVCS - Git</a> </strong></div>
+
 
 커맨트 라인(Command Line): 깃 명령어를 입력할 때 사용하는 컴퓨터 프로그램. 맥에선 터미널이라고 한다. PC에선 기본적인 프로그램이 아니어서 처음엔 깃을 다운로드해야 한다(다음 섹션에서 다룰 것이다). 두 경우 모두 마우스를 사용하는 것이 아닌 프롬프트로 알려진 텍스트 기반 명령어를 입력한다.
 
@@ -102,8 +109,14 @@ git push origin master // 깃허브로 푸시한다.
 
 </pre>
 
+
+
+
+
+
 <br><br><br>
 
 ## 참고 자료
-* [생활코딩 Git](https://opentutorials.org/course/1492)
-* [Nolboo's Blog](https://nolboo.kim/blog/2013/10/06/github-for-beginner)님의 블로그
+* [생활코딩 Git] https://opentutorials.org/course/1492
+* [Nolboo's Blog] https://nolboo.kim/blog/2013/10/06/github-for-beginner
+* [우아한형제들 김민태님] https://www.slideshare.net/ibare/dvcs-git
