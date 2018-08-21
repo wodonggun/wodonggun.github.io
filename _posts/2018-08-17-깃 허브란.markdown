@@ -92,6 +92,7 @@ cd "name" - change directory의 줄이말로, 해당 폴더로 이동한다.
 
 touch "name.txt" - name.txt를 생성한다는 말의 줄임말.
 
+
 git config --global user.name "이름"
 git config --global user.email "깃허브 메일주소" // 매번 물어보는 귀찮음을 피하기 위해 설정.
 
@@ -107,11 +108,21 @@ git remote add origin https://github.com/username/myproject.git // 로컬과 원
 git remote -v // 연결상태를 확인한다.
 git push origin master // 깃허브로 푸시한다.
 
+
+
 </pre>
 
 
 
+commit - 기록
+branch - master와 똑같이 파생된 프로젝트
+checkout - 브랜치를 master,sub 등 이동 가능
+merge - 브랜치와 마스터의 병합
+pull -  소규모 수정 요청
+push -  소규모 원본에 푸쉬
 
+remote - 프로젝트소스를 모든 개발자가 개인pc에 가지고있음.(원격 저장소->분산형)
+clone - 저장소 다운로드
 
 
 <br><br><br>
