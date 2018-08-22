@@ -47,15 +47,17 @@ finished: true
 
  ![img](/img/2018-08-22-Jekyll Google Analytics 등록/5.png)
 
-> Jekyll 프로젝트에 _config.yml이 있을때는 google-analytics에 자신의 추적 ID를 그림과 같이 입력합니다.
+> Jekyll 프로젝트에 \_config.yml이 있을때는 google-analytics에 자신의 추적 ID를 그림과 같이 입력합니다.
+
+
 
  <br><br>
 
  ![img](/img/2018-08-22-Jekyll Google Analytics 등록/6.png)
 
-  > 위와 같이 _config.yml이 없거나 google-analytics 변수가 없다면 직접 만들수도 있습니다.
+  > 위와 같이 \_config.yml이 없거나 google-analytics 변수가 없다면 직접 만들수도 있습니다.
 
-  _includes 폴더에 google-analytics.html로 파일을 생성합니다.
+  \_includes 폴더에 google-analytics.html로 파일을 생성합니다.
   아래의 소스를 복사해서 자신의 고유 추적 ID주소만 수정합니다.
 
 ```
@@ -74,7 +76,7 @@ ga('send', 'pageview');
 
  ![img](/img/2018-08-22-Jekyll Google Analytics 등록/5.png)
 
- > _layout의 default.html에 가서 head 부분에
+ > \_layout의 default.html에 가서 head 부분에
    {% include google-analytics.html %} 를 입력합니다.  
 
 <br><br>
