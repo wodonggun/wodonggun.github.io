@@ -135,7 +135,9 @@ dpkg -L eclipse-cdt 라고 하시면 됩니다.
 -
 
 
-- [a start job is running for raise network] $vi /etc/systemd/system/network-online.target.wants/networking.service
+- [네트워크 못잡는데 너무오래걸린다 a start job is running for raise network]
+
+ $vi /etc/systemd/system/network-online.target.wants/networking.service
 
 
 ## 리눅스 TX RX 전송 속도 구하기

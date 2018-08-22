@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "error Missing parameter(s):
+title: "ERROR Missing parameter(s):
 Set a username with --os-username, OS_USERNAME, or auth.username
 Set an authentication URL, with --os-auth-url, OS_AUTH_URL or auth.auth_url
 "
-subtitle: <span class="evidence"> SDN NFV VNF 5G와 관련된 openstack?</span>
+subtitle: <span class="evidence">Missing parameter(s) ERROR Solution.</span>
 date: 2018-08-21
 author: NoonGam
 category: Study
@@ -21,7 +21,7 @@ Set an authentication URL, with --os-auth-url, OS_AUTH_URL or auth.auth_url
 > OS 관련 해당 쉘 변수가 선언되지않고, 파라미터값이 존재하지않기때문에 위와 같은 에러를 나타낸다.
 
 
-<a>위와 같이 에러가 발생하면 아래의 OS 환경설정을 다시 입력후에 실행하면 정상작동</a>
+<a>위와 같이 에러가 발생하면 아래의 쉘 변수 선언과 파라미터값을 입력후 export - 코드 다시 입력후에 실행하면 정상작동</a>
 
 
 ```

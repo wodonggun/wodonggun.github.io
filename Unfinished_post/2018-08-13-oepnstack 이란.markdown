@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "openstack 이란? "
-subtitle: <span class="evidence"> SDN NFV VNF 5G와 관련된 openstack?</span>
+subtitle: <span class="evidence"> SDN NFV VNF 5G와 관련된 openstack? 관련된 용어들을 정리해보자.</span>
 date: 2018-08-13
 author: NoonGam
 category: openstack
@@ -21,6 +21,7 @@ finished: true
 쓰고 정보를 분석하고 처리하여, 저장하고 관리하는
 컴퓨팅 시스템.
 
+<br><br><br>
 
 ## 클라우드 서비스란 ?
 
@@ -53,7 +54,8 @@ floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 
 - Hosted(가상머신 개념) = 운영체제 아래에 하이퍼바이저를 두고 하이퍼바이저내부에 여러개의 OS를 구동 시킴
 
 
-
+가상머신은 하이퍼바이저위에 별도의 운영체제와 함께 동작
+컨테이너는 공통된 운영체제를 기반으로 독립적으로 응용프로그램을 실행합니다.
 
 
 
@@ -65,10 +67,13 @@ floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 
 2. 네트워크 제어 기능과 실행환경을 분리하여 성능이 낮은 하드웨어 포트에는 더이상 할당 안함.
 
 
+
+
+<br><br><br>
+
 ## 오픈스택이란 ?
 
-IaaS 형태의 클라우드 컴퓨팅 오픈소스 프로젝트
-
+> 초기 RackSpace 와 NASA가 합작으로 개발
 
 
 
@@ -113,20 +118,15 @@ IaaS 형태의 클라우드 컴퓨팅 오픈소스 프로젝트
 
 <br><br><br>
 
-## 예시
+## 네트워크
+
+- Provider Network (그냥 일반적인 네트워크 서비스)
+기본으로 라우터나 장비를 그대로 받아서 씀.
+
+프로바이더 브릿지로 인터페이스를 만들고 연결
 
 
+- self-service Network ( 스스로 모든 네트워크를 다 관리)
+라우터 동작 ,DHCP,포트포워딩 등 소프트웨어로 직접 구성하고 관리
 
-
-
-
-
-<br><br><br>
-
-## 참고 자료
-*
-*
-*
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
+프로바이더 브릿지로 인터페이스를 연결한걸 쓰면서 + 셀프 서비스브릿지로 내부 VLAN터널을 만들고 외부와 통신도 가능하게
