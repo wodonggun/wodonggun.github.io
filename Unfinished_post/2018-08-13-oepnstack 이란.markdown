@@ -10,8 +10,6 @@ comments: true
 finished: true
 ---
 
-##
-
 
 ## 클라우드 컴퓨팅
 
@@ -29,6 +27,7 @@ finished: true
 
 [IaaS, PaaS, SaaS란 무엇인가?](https://wodonggun.github.io/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html)
 
+<br><br><br>
 
 ## Floating IP?
 
@@ -36,12 +35,6 @@ finished: true
 인터넷이 가능하지만 오픈스택을 통해 가상화로 할당받은 private IP는 외부와 통신이 불가능합니다.
 floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 삭제하는 IP를 지칭합니다.
 하지만 이러한 floating IP를 통해 가상 인스턴스도 외부와 인터넷 통신이 가능합니다.
-
-
-
-
-
-
 
 <br><br><br>
 
@@ -65,8 +58,6 @@ floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 
 
 1. 네트워크 제어 기능을 데이터 전달기능과 분리
 2. 네트워크 제어 기능과 실행환경을 분리하여 성능이 낮은 하드웨어 포트에는 더이상 할당 안함.
-
-
 
 
 <br><br><br>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Robots.txt meta name="robots" 차이"
+title: "Robots.txt와 meta name="robots" 차이"
 subtitle: <span class="evidence">크롤링과 인덱싱의 차이를 이해하고 효율적으로 웹을 관리하자.</span>
 date: 2018-01-01
 author: NoonGam
@@ -41,7 +41,7 @@ finished: true
 
 ## 마무리
 
-크롤링과 인덱싱의 역할, 그리고 robots.txt 파일과 meta robots 태그의 사용방법을 잘 알아야 하며, 인덱스의 차단하는 역할은 ```< meta name="robots" content="noindex">``` 가 ```robots.txt```보다 우위에 있다는걸 숙지해야 합니다.
+크롤링과 인덱싱의 역할, 그리고 robots.txt 파일과 meta robots 태그의 사용방법을 잘 알아야 하며, 인덱스의 차단하는 역할은 ```< meta name="robots" content="noindex">```가 ```robots.txt``` 보다 우위에 있다는걸 숙지해야 합니다.
 
 
 
@@ -63,6 +63,3 @@ finished: true
 *
 *
 *
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
