@@ -1,0 +1,37 @@
+---
+layout: post
+title: "openstack 이란? "
+subtitle: <span class="evidence"> SDN NFV VNF 5G와 관련된 openstack?</span>
+date: 2018-08-13
+author: NoonGam
+category: openstack
+tags: OpenStack Linux OpenSource
+comments: true
+finished: true
+---
+
+## 대시보드 용어
+
+- 사용자와 프로젝트
+사용자 = 계정
+프로젝트 = 묶음
+
+한 사용자는 여러프로젝트에 묶일 수 있다.
+
+
+- 인스턴스
+
+가상머신이 실행중인 대상
+
+- 인스턴스 유형
+
+CPU , 램, 디스크 등 리소스를 미리 지정(=인스턴스 유형) ->  인서턴스 유형을 사용한다.
+
+- Fixed IP - 인스턴스가 생성되고 종료할때까지 고정되는 아이피
+- Floating IP - 서비스를 위해 필요에 따라 인스턴스에 연결/해제하는 IP 주소
+
+
+
+
+## 네트워크
+Provider Network
