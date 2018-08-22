@@ -2,17 +2,17 @@
 layout: post
 title: "Jekyll Blog에 Google Analytics 등록하기"
 subtitle: <span class="evidence"> -------- </span>
-date: 2018-01-01
+date: 2018-08-22
 author: NoonGam
-category: Study
-tags: Network Linux
+category: HTML
+tags: Github Jekyll
 comments: true
 finished: true
 ---
 
 
 
-##
+## adsf
 
 1. [Google Analytics 바로가기](https://analytics.google.com/analytics/web)
 
