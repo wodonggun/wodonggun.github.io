@@ -19,7 +19,11 @@ finished: true
 ##
 
 
+default.html은
 
+처음 웹페이지 기본을 나타내며 <Main> 페이지
+
+post.html은 default.html을 include 한다.
 
 
 
