@@ -16,7 +16,9 @@ finished: true
 
 
 
-##
+<br><br><br>
+
+## 정리
 
 
 default.html은
@@ -26,17 +28,14 @@ default.html은
 post.html은 default.html을 include 한다.
 
 
+## baseurl 정리
 
+https://kairos03.github.io/jekyll/2017/09/11/learing-Up-Confusion-Around-baseurl.html
 
 <br><br><br>
 
 ## 참고
+
 https://kairos03.github.io/jekyll/2017/06/24/github-page-jekyll.html
 
 https://nolboo.kim/
-
-
-
-
-*
-*

@@ -13,23 +13,23 @@ finished: true
 ## 일정 및 장소
 
 - 2018년 7월 6일(금) 14:00~18:00<br>
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/1_1.jpg)
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/1_2.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/1_1.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/1_2.jpg)
 >전자통신연구원(ETRI) 인턴으로 생활하면서 이번 공개 SW 컨퍼런스 참가를 권유 받아 대전에서 서울 코엑스로 출장을 가게 되었습니다.
 
 <br><br><br>
 
 ## 현장 분위기
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/2.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/2.jpg)
 >이번 공개 SW GRAND CHALLENGE에서는 오픈소스의 중요성과 국내외 주요 공개SW기술에 대해서 토론하고
 발전 방향에 대해서 이야기해보는 자리였습니다.
 
 
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/1.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/1.jpg)
 >코엑스 오디토리움 입구에서 책자와 응모권을 나눠주었습니다. 응모는 아쉽게도...ㅎㅎ
 
 
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/3.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/3.jpg)
 
 
 > 수많은 개발자들과 교수,실장급 분들이 이번 컨퍼런스에 참가하였습니다.
@@ -42,7 +42,7 @@ finished: true
 -Primary maintainer of networking and the SPARC implementation<br>
 -Founding member of the GNU Compiler Collection streering commitee<br>
 -MainTainers of the Linux TCP/IP stack
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/3.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/3.jpg)
 > 메인컨테이너와 개발자들과의 관계, 서로에 대한 신뢰, 일에 대한 우선순위와 적절한 판단력을
 강조하였습니다.<br>
 <span class="evidence">새로운 프로젝트가 주어지면 머리속은 "삐용-삐용" 이라면서 두려워하지말고, 비상상황이자 자신이 발전할 수 있는 기회라고 말씀하셨다.</span>
@@ -77,9 +77,9 @@ finished: true
 -삼성전자 리서치센터<br>
 -Tizen 프로젝트<br>
 
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/4.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/4.jpg)
 
-![Codes](/img/공개 SW GRAND CHALLENGE 출장 후기/5.jpg)
+![Codes](/img/2018-07-06-공개 SW GRAND CHALLENGE 출장 후기/5.jpg)
 > -타이젠 RT=가장 가벼운 플랫폼<br>
 -Tizen=안드로이드,iot 등 다양한 분야에 사용<br>
 -Tizen Things = GUI가 필요없고, 가벼운 OS<br>

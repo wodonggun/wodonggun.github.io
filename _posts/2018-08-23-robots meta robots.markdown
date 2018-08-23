@@ -13,8 +13,8 @@ finished: true
 
 ## 검색엔진의 크롤링과 인덱싱의 차이
 
-<a>크롤링 제어는 robots.txt</a><br>
-<a>인덱싱 제어는 < meta name="robots" content="noindex"> </a>
+- <a>크롤링 제어는 robots.txt</a><br>
+- <a>인덱싱 제어는 < meta name="robots" content="noindex"> </a>
 
 > 검색엔진이 검색 키워드에 대한 검색결과를 사용자한테 제공하기 위해서는 크롤러가 끊임없이 온라인 상의 문서를 수집해야하고, 크롤러가 수집한 문서를 인덱서가 잘 정리해서 인덱스 서버에 색인해 둬야 합니다.
 많은 분들이 헷갈려 하는 부분인데 크롤러나 인덱서는 서로 하는일이 약간 틀립니다.
@@ -73,8 +73,11 @@ User-agent: Daumoa
 Allow: /
 ```
 
-이러한 방법 말고도 다양한 처리가 가능합니다.
+<br><br>
 
+이러한 방법 말고도 다양한 처리가 가능합니다.
+[링크](https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%B4%87_%EB%B0%B0%EC%A0%9C_%ED%91%9C%EC%A4%80
+<br><br><br>
 
 ## robots 태그 구성
 
