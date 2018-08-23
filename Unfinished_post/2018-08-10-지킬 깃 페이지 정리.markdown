@@ -30,26 +30,13 @@ post.html은 default.html을 include 한다.
 
 <br><br><br>
 
-##
+## 참고
+https://kairos03.github.io/jekyll/2017/06/24/github-page-jekyll.html
+
+https://nolboo.kim/
 
 
 
 
-
-<br><br><br>
-
-## 예시
-
-
-
-
-
-
-
-
-<br><br><br>
-
-## 참고 자료
-*
 *
 *
