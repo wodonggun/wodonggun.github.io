@@ -23,16 +23,77 @@ finished: true
 크롤링을 제어하려면 사이트의 루트 디렉토리에 robots.txt 파일을 사용해서 제어해야 하고,
 인덱싱을 제어하려면 각각의 페이지 내에 < meta name="robots" content="noindex,nofollow"> 같은 메타 로봇 태그를 사용해서 제어해야 합니다.
 
-##
+<br><br><br>
 
+## robots란?
+
+> robots는 구글이나,네이버,다음 등 다양한 검색엔진에서 검색 정보를 수집하는 검색 로봇을 가리킵니다. 이러한
+
+1. robots 관련 데이터는 헤더 또는 루트 경로에 위치해야 합니다.
+2. robots 관련 내용은 [로봇 배제 표준 프로토콜[링크]](https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%B4%87_%EB%B0%B0%EC%A0%9C_%ED%91%9C%EC%A4%80)을 준수해야 합니다.
+
+
+<br><br><br>
+
+
+## robots.txt 구성
+
+- 모든 로봇에게 문서 접근을 허락
+```
+User-agent: *
+Allow: /
+```
+
+- 모든 로봇에게 문서 접근을 차단
+```
+User-agent: *
+Disallow: /
+```
+
+- 네이버 로봇 접근 제한
+```
+User-agent: Yeti
+Disallow: /
+```
+
+- 구글 로봇 접근 제한
+```
+User-agent: googlebot
+Disallow: /
+```
+
+
+- 다음 로봇 접근 허용
+```
+User-agent: Daumoa
+Allow: /
+```
+
+이러한 방법 말고도 다양한 처리가 가능합니다.
+
+
+## robots 태그 구성
+
+- HTML meta 태그를 이용하여 로봇을 제어할 수 있다.
+```html
+<meta name="robots" content="Noindex,Nofollow" />
+```
+
+
+
+```
 < meta name="robots" content="index" />
+
 < meta name="robots" content="noindex" />
 
 < meta name="robots" content="index,follow" />
-< meta name="robots" content="index,nofollow" />
-< meta name="robots" content="noindex,follow" />
-< meta name="robots" content="noindex,nofollow" />
 
+< meta name="robots" content="index,nofollow" />
+
+< meta name="robots" content="noindex,follow" />
+
+< meta name="robots" content="noindex,nofollow" />
+```
 
 
 
@@ -47,19 +108,8 @@ finished: true
 
 
 
-<br><br><br>
-
-## 예시
-
-
-
-
-
-
 
 <br><br><br>
 
 ## 참고 자료
-*
-*
-*
+* [Dothome 웹호스팅 참고]( http://blog.naver.com/PostView.nhn?blogId=anysecure3&logNo=221118269608&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true&directAccess=false)
