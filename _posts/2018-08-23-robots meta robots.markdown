@@ -87,7 +87,7 @@ Allow: /
 
 ## robots 태그 구성
 
-- HTML meta 태그를 이용하여 로봇을 제어할 수 있다.
+- HTML meta 태그를 이용하여 로봇을 제어할 수 있다.<br>
 ```html
 <meta name="robots" content="Noindex,Nofollow" />
 ```
