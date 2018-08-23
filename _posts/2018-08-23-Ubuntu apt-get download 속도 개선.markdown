@@ -31,6 +31,9 @@ finished: true
 %s/kr.archive.ubuntu.com/ftp.daum.net/g
 ```
 
+<a>위와 같이 esc -> shift + :  -> %s/kr.archive.ubuntu.com/ftp.daum.net/g 를 입력한다.</a>
+
+
 <br><br>
 
 
@@ -38,3 +41,7 @@ finished: true
 ```
 %s/security.ubuntu.com/ftp.daum.net/g
 ```
+
+<a>위와 같이 esc -> shift + :  -> %s/security.ubuntu.com/ftp.daum.net/g 를 입력한다.</a>
+
+이제 apt-get install [?] 를 다운로드받을때 매우 빠른속도로 패키지를 다운받을 수 있게 되었습니다.
