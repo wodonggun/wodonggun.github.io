@@ -4,8 +4,8 @@ title: "Robots.txt와 meta name=\"robots\" 차이"
 subtitle: <span class="evidence">크롤링과 인덱싱의 차이를 이해하고 효율적으로 웹을 관리하자.</span>
 date: 2018-01-01
 author: NoonGam
-category: Study
-tags: Network Linux
+category: HTML
+tags: Jekyll
 comments: true
 finished: true
 ---
