@@ -13,6 +13,8 @@ finished: true
 
 https://css.or.kr/lkc2018/ - 리눅스 커널 프로그래밍
 
+http://webdir.tistory.com/201 - 리눅스 관련 블로그
+
 ## 리눅스 명령어(Linux Command)
 
 - 파일 인코딩 확인하기

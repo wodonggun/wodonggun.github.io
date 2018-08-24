@@ -31,7 +31,7 @@ finished: true
 %s/kr.archive.ubuntu.com/ftp.daum.net/g
 ```
 
-<a>위와 같이 esc -> shift + :  -> %s/kr.archive.ubuntu.com/ftp.daum.net/g 를 입력한다.</a>
+<a>위와 같이 esc -> shift + :  -> `%s/kr.archive.ubuntu.com/ftp.daum.net/g` 를 입력한다.</a>
 
 
 <br><br>
@@ -42,11 +42,15 @@ finished: true
 %s/security.ubuntu.com/ftp.daum.net/g
 ```
 
-<a>위와 같이 esc -> shift + :  -> %s/security.ubuntu.com/ftp.daum.net/g 를 입력한다.</a>
+<a>위와 같이 esc -> shift + :  -> `%s/security.ubuntu.com/ftp.daum.net/g` 를 입력한다.</a>
 
 <br><br>
 
-- esc -> shift + : -> wq! -> enter
+![img](/img/2018-08-23-Ubuntu apt-get download 속도 개선/d.PNG)
+
+<a>esc -> shift + : -> wq! -> enter  를 통해 저장후 종료.</a>
+
+<br><br>
 
 - 마지막으로 아래와같이 업데이트와 업그레이드를 통해 마무리.
 
