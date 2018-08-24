@@ -53,11 +53,9 @@ finished: true
 <br><br>
 
 - 마지막으로 아래와같이 업데이트와 업그레이드를 통해 마무리.
-
 ```
 $ sudo apt-get update
 ```
-
 ```
 $ sudo apt-get upgrade
 ```
