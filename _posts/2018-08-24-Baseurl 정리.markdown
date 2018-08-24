@@ -13,10 +13,9 @@ finished: true
 -------------
 <center><b>Clearing Up Confusion Around baseurl -- Again : 번역</b></center>
 
----
----
----------
 
+---------
+<br>
 
 jekyll 블로그를 github-page를 이용하여 구성할 때 baseurl과 관련된 문제를 겪게 되어서 baseurl에 대해 깔끔하게 정리된 글을 번역해 보았습니다.
 
