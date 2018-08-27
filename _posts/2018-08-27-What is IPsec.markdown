@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "What is IPsec?"
-subtitle: <span class="evidence">IPsec에 대한 간단한 소개</span>
-date: 2018-01-01
+title: "IPsec 이란? - What is IPsec?"
+subtitle: <span class="evidence">IPsec에 대한 간단한 소개 및 실습</span>
+date: 2018-08-27
 author: NoonGam
 category: Study
 tags: Network Linux
@@ -38,9 +38,21 @@ finished: true
    - 따라서, 각 SA 마다 이를 구분하는 식별자(SPI)가 있게 됨
 </fieldset>
 
+
+<br><br><br>
+
+
 ## IPsec Tunnel Mode / Transport Mode
 
-- Tunnel Mode =
+
+![img](/img/2018-08-27-What is IPsec/2.png)
+
+
+
+![img](/img/2018-08-27-What is IPsec/1.PNG)
+
+
+- Tunnel Mode
 
 
 
@@ -48,14 +60,58 @@ finished: true
 - Transport Mode
 
 
-![img](/img/2018-08-07-What is IPsec/1.PNG)
-
-
-
-
 
 <br><br><br>
 
+## IPsec 설정 이전과 이후
+
+- 패킷의 암호화를 확인하기 위해 패킷을 스니핑하는 방법을 선택하였습니다.
+
+- 아스키코드 영어나 문자만 사용한다면 일반적인 wireshark를 통해 패킷을 확인할 수 있습니다.
+
+<a>`wireshark`를 통해서는 한글형식이 지원되지 않아서 `sniffing파일`을 직접 구현하였습니다.</a>
+
+
+<br><br>
+
+![img](/img/2018-08-27-What is IPsec/ipsec1.PNG)
+
+- 패킷 IPsec 설정 이전에 패킷 스니핑을 확인한 결과
+
+<br><br>
+
+![img](/img/2018-08-27-What is IPsec/ipsec3.PNG)
+
+- IPsec start를 통한 암호화 시작.
+
+<br><br>
+
+![img](/img/2018-08-27-What is IPsec/ipsec2.PNG)
+
+- IPsec start 후에는 데이터를 알아볼 수 없는 형태로 암호화하여 데이터를 전송합니다.
+
+- 목적지에 도착하면 복호화 키에 맞춰 암호화를 해제하여 데이터를 저장합니다.
+
+<br><br><br>
+
+## 스니핑 과정
+
+![img](/img/2018-08-27-What is IPsec/ipsec4.gif)
+
+`과정`
+1. A는 B로부터 FTP 통신을 통해 데이터를 받고 있습니다.
+
+2. A는 tx rx가 잘 되고있는지 speedometer를 통해 확인합니다.
+
+3. `./snif2 enp0s8`을 통해 스니핑 파일과 감시할 네트워크 인터페이스를 지정합니다.
+
+4. `ipsec start`를 통해서 암호화를 시작합니다.
+
+FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주어야 합니다.<br>
+(여유 될때마다 조금씩 포스팅해보겠습니다!!)
+
+
+<br><br><br>
 
 ## MTU maximum transmission unit
 
