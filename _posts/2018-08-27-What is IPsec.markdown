@@ -11,6 +11,9 @@ finished: true
 ---
 
 
+-----
+
+<br><br>
 
 ## IPsec - Internet Protocol Security
 
@@ -139,7 +142,3 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 ## 참고 자료
 
 * https://docs.oracle.com/cd/E26925_01/html/E25873/ipsec-ov-13.html
-*
-
-
- 샘플 파일
