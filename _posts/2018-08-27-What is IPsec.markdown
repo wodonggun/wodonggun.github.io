@@ -135,17 +135,17 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 
 - 하지만 end To end 에서볼때 MTU가 클수록 긍정적인 효과가 크다.
 
-
+<br><br><br>
 
 ## 정리
 
-인증 = 상대방이 자신이 원하는 목적지가 맞는지
-기밀성 = 가로채더라도 볼 수 없도록 데이터 암호화
-무결성 = 내용이 변경되지않았음을 보장
+인증 = 상대방이 자신이 원하는 목적지가 맞는지 <br>
+기밀성 = 가로채더라도 볼 수 없도록 데이터 암호화 <br>
+무결성 = 내용이 변경되지않았음을 보장 <br>
 
  패킷 암호화 -> 인증(AH)헤더 장착 ->  새로운 IP헤더 장착 -> 중간에
 
-`[new IP header | AH header | origin IP header | TCP/UDP header | payload ]`
+`[new IP header | AH header | origin IP header | TCP/UDP header | payload ]`<br>
  (호스트나 보안 게이트웨이에 적용)
 
  전송모드는 IP헤더의 일부분까지만 인증되지만
@@ -159,7 +159,7 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 
  AH헤더는 네트워크를 통해 보낸 송신자가 누구인지를 인증하는 것이다.
  제 3자가 마치 자기가 송신한것처럼 패킷을 가로채고 전송하는것을 방지.
-
+`(송신자 인증, 데이터 무결성 보장, but 기밀성 X)`
 
 
 
@@ -169,3 +169,4 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 
 * https://docs.oracle.com/cd/E26925_01/html/E25873/ipsec-ov-13.html
 * [ZDnet Korea 기사]( http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000010052877&type=det&re=zdk)
+* http://travelerstory.tistory.com/91
