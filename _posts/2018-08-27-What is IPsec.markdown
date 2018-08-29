@@ -26,6 +26,9 @@ finished: true
 3. Transport계층 아래에서 구현되며, 운영체제에서 IPsec을 지원함.
 
 4. 서로 키관리를 통해 캡슐화 및 디캡슐화를 진행
+
+<br>
+
 - SA (Security Association 보안연관)
 
 <fieldset id="gpg-fieldset">
@@ -101,7 +104,7 @@ finished: true
 
 ![img](/img/2018-08-27-What is IPsec/ipsec4.gif)
 
-`과정`
+`[ 과정 ] `
 1. A는 B로부터 FTP 통신을 통해 데이터를 받고 있습니다.
 
 2. A는 tx rx가 잘 되고있는지 speedometer를 통해 확인합니다.
@@ -134,6 +137,29 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 
 
 
+## 정리
+
+인증 = 상대방이 자신이 원하는 목적지가 맞는지
+기밀성 = 가로채더라도 볼 수 없도록 데이터 암호화
+무결성 = 내용이 변경되지않았음을 보장
+
+ 패킷 암호화 -> 인증(AH)헤더 장착 ->  새로운 IP헤더 장착 -> 중간에
+
+`[new IP header | AH header | origin IP header | TCP/UDP header | payload ]`
+ (호스트나 보안 게이트웨이에 적용)
+
+ 전송모드는 IP헤더의 일부분까지만 인증되지만
+ 터널모드는 새 IP헤더의 일부분부터 원본 IP헤더와 페이로드까지 인증됨.
+ `(VPN이나 터널로 설정된 경로는 새로운 IP헤더를 통해 찾아가고 마지막 게이트웨이 단에서 새로운 IP헤더를 해제하고 목적지를 찾아감=public 인터넷망을 보안 터널을 통해 통과후 회사 내부망(게이트웨이)에 도착하면 원래 IP헤더를 가지고 목적지를 찾으러 감)`
+
+ 2계층에서 터널링 = PPTP L2TP
+ 3계층에서 터널링 = IPsec
+
+
+
+ AH헤더는 네트워크를 통해 보낸 송신자가 누구인지를 인증하는 것이다.
+ 제 3자가 마치 자기가 송신한것처럼 패킷을 가로채고 전송하는것을 방지.
+
 
 
 
@@ -142,3 +168,4 @@ FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주�
 ## 참고 자료
 
 * https://docs.oracle.com/cd/E26925_01/html/E25873/ipsec-ov-13.html
+* [ZDnet Korea 기사]( http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000010052877&type=det&re=zdk)
