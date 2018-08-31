@@ -26,6 +26,7 @@ abcdefghijklmn
 1. atp-get install strongswan-starter
 2. apt-get install strongswan
 3. vi /etc/ipsec.conf
+10번째줄 쯤에
 ```
 
 
@@ -34,7 +35,12 @@ abcdefghijklmn
 4. vi /etc/ipsec.secrets
 
 
-5.
+left = 자신
+right = 상대
+
+
+libcap-dev 설치
+
 
 
 <br><br><br>

@@ -1,4 +1,4 @@
-  ---
+---
 layout: post
 title: " -------- "
 subtitle: <span class="evidence"> -------- </span>
@@ -14,21 +14,23 @@ finished: true
 
 ##
 
-1. git clone 주소
-2. git clone -b etri 주소   (branch가 etri일 경우에)
-3.
+
+## 회사 경험
+
+- 한국전자통신연구원(ETRI) 2018-06-25 ~ 2018-08-24
+국방신뢰인프라 연구실
+박혜숙 실장님
+정부금 팀장님
+전기철 책임님
+임진혁 연구원님
+
+- (주)세노텍 2017-07-03 ~ 2017-07-28
+채석병 대표님
 
 
-
-
-
-
-
-<br><br><br>
 
 ##
 
-https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZekuDs
 
 
 
