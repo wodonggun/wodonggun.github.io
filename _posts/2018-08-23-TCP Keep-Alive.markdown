@@ -2,7 +2,7 @@
 layout: post
 title: "Keep Alive 란? - What is Keep Alive? "
 subtitle: <span class="evidence">TCP HTTP Keep Alive에 대해 알아보자.</span>
-date: 2018-01-01
+date: 2018-08-23
 author: NoonGam
 category: Study
 tags: Network Linux
