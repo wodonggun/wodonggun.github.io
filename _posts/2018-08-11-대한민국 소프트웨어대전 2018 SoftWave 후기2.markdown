@@ -2,7 +2,7 @@
 layout: post
 title: "대한민국 소프트웨어대전 2018 SoftWave 후기 (2)"
 subtitle: <span class="evidence">2018 대한민국 소프트웨어대전 전시회 출장 두번째</span>
-date: 2018-01-01
+date: 2018-08-11
 author: NoonGam
 category: Conference
 tags: Conference Unicef

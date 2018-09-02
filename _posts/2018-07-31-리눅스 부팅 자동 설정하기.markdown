@@ -2,7 +2,7 @@
 layout: post
 title: "리눅스 부팅 자동 설정하기"
 subtitle: <span class="evidence">리눅스에서 커널부팅 순서를 변경해 보자. </span>
-date: 2018-01-01
+date: 2018-07-31
 author: NoonGam
 category: Linux
 tags: Network Linux MPTCP
