@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "IPsec이란 ?"
-subtitle: <span class="evidence"> -------- </span>
-date: 2018-01-01
+title: "우분투에서 IPsec 스니핑 설정 - IPsec Sniffing setting"
+subtitle: <span class="evidence">실제 Linux단에서 패킷 송수신 과정을 스니핑하기</span>
+date: 2018-09-05
 author: NoonGam
 category: Study
 tags: Network Linux
-comments: true
+comments: true  
 finished: true
 ---
 
