@@ -182,21 +182,7 @@ int main(int argc, char* argv[])
 
 <br><br><br>
 
-## 예시
 
+## 정리
 
-
-
-
-
-
-<br><br><br>
-
-## 참고 자료
-
-*
-*
-
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
+<a>아직 정리해야 할 일들이 많아서 조금씩 업데이트 하겠습니다.</a>
