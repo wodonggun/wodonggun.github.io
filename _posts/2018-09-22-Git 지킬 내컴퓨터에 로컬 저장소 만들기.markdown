@@ -27,13 +27,12 @@ finished: true
 
 - 저장할 폴더를 만들고 그 폴더에서 `마우스 우측 클릭`->`Git bash Here`실행
 
-- git bash 실행
 
 <br><br>
 
 ![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/1.PNG)
 
-- 자신의 Github주소에서 `Clone or download`클릭
+- 가져올 Github주소에서 `Clone or download`클릭
 
 - 저장소 `HTTPS 주소` 복사하기
 
