@@ -10,7 +10,7 @@ comments: false
 finished: true
 ---
 
-## 알고리즘
+## 알고리즘 Test1
 
 
 - 백준 알고리즘 삼성 기출문제  
