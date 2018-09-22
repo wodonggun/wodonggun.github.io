@@ -1,4 +1,4 @@
-  ---
+---
 layout: post
 title: "Atom 아톰 편집기 자동완성 끄기 "
 subtitle: <span class="evidence">Atom Editor auto complete</span>
@@ -29,13 +29,5 @@ finished: true
 - `Package -> auto를 검색`
 - `autocomplete-atom-api를 Disable 합니다.`
 
-
+<br><br>
 <a>이제 자유롭게 자동완성 기능 없이 사용할 수 있습니다.</a>
-
-
-
-
-
-
-
-<br><br><br>
