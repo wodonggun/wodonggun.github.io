@@ -11,7 +11,6 @@ finished: true
 ---
 
 
-
 ## Atom
 
 ![img](/img/2018-09-16-Atom Editor 자동완성 끄기/3.png)
@@ -20,14 +19,21 @@ finished: true
 
 <br><br>
 
-![img](/img/2018-09-16-Atom Editor 자동완성 끄기/1.png)
-- `File -> Setting을 선택`
+![img](/img/2018-09-16-Atom Editor 자동완성 끄기/0.png)
+- `File -> Setting`을 선택
+- `Package` 선택
 
 <br><br>
 
 ![img](/img/2018-09-16-Atom Editor 자동완성 끄기/2.png)
-- `Package -> auto를 검색`
-- `autocomplete-atom-api를 Disable 합니다.`
+- 검색창에 `auto`를 검색
 
 <br><br>
+
+![img](/img/2018-09-16-Atom Editor 자동완성 끄기/1.png)
+- `autocomplete-plus를 Disable 합니다.`
+
+
+<br><br>
+
 <a>이제 자유롭게 자동완성 기능 없이 사용할 수 있습니다.</a>
