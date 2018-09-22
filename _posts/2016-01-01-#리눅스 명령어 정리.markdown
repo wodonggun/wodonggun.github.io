@@ -71,7 +71,8 @@ rm -rf 폴더명   (r:내부 파일 삭제  f:오류없이 무조건 삭제옵�
 - 하위 폴더 전체 권한 주기
 chmod -R 777 파일명
 
-
+- 프로그램 위치 찾기
+whereis htop
 
 - 환경변수 제거
 export -n 환경변수명
@@ -112,6 +113,11 @@ gcc를 사용하는 eclipse의 경우,
 dpkg -L eclipse-cdt 라고 하시면 됩니다.
 
 ```
+
+
+sudo apt-get install
+sudo apt-get remove  프로그램만 삭제
+sudo apt-get purge  프로그램과 관련 데이터,환경설정 모두 삭제(더 강력한 삭제)
 
 ## 프로세스 명령어
 
@@ -180,3 +186,12 @@ do
         echo "$TTBPS Mbits/s"
 done
 ```
+
+
+
+cat /etc/hosts // hosts 파일 IP 설정 열람
+cat /etc/resolv.conf // DNS 서버 IP 설정 열람
+ip addr // IP 주소 열람
+curl ipinfo.io/ip // 자신의 IP 주소 확인(ipinfo.io/ip라는 웹사이트의 서비스를 이용하는 것임)
+host [도메인 네임] // [도메인 이름]의 IP 주소를 알려줌.
+dig +trace [도메인 네임] // [도메인 네임]의 DNS 서버를 통한 IP 주소 확인 경로 추적
