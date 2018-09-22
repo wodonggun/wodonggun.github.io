@@ -1,11 +1,11 @@
-  ---
+---
 layout: post
 title: "Git 지킬 내컴퓨터에 로컬저장소 만들기"
 subtitle: <span class="evidence">Github Repositoy를 내 컴퓨터로 가져와보자.</span>
 date: 2018-01-01
 author: NoonGam
-category: Study
-tags: Network Linux
+category: Git
+tags: Git Jekyll
 comments: true
 finished: true
 ---
@@ -14,32 +14,119 @@ finished: true
 
 ## 로컬 저장소 만들기
 
-1. git 설치
- https://gitforwindows.org/
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/6.PNG)
 
-2. 저장소 HTTPS 주소 복사하기
+- git 설치(Git bash 사용 목적)
 
-3.
-
-4. git clone https://github.com/아이디/저장소
+[[Git for windows 바로가기 링크]](https://gitforwindows.org)
 
 
-3.
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/2.png)
+
+- 저장할 폴더를 만들고 그 폴더에서 `마우스 우측 클릭`->`Git bash Here`실행
+- git bash 실행
+
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/1.PNG)
+
+- 자신의 Github주소에서 `Clone or download`클릭
+- 저장소 `HTTPS 주소` 복사하기
 
 
+<br><br>
 
-## 깃허브 원격저장소
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/7.PNG)
 
-> 깃허브의 저장소(원격 저장소)가 나의 PC의 저장소(로컬 저장소)가 다르면 push를 진행하기 전에
-먼저 서로다른 두개의 저장소를 일치시키는 작업(pull)을 진행해야합니다.
+- `git clone https://github.com/아이디/저장소` 명령어 입력
+
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/8.PNG)
+
+- `Cloning을 진행`
+
+- `git init` git initialize를 통한 깃 설정
+
+- `git config --global user.name "이름"` 깃허브 commit에 나타낼 자신의 이름
+
+- `git config --global user.email "이메일주소"`  깃허브 commit에 나타낼 자신의 이메일주소
+
+
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/9.PNG)
+
+- 이제 폴더 내부에 해당 프로젝트가 다운되어있습니다.
+
+
 
 
 
 <br><br><br>
 
 
+## Git push 원격저장소에 파일 푸쉬하기
+
+1. `git add .` 해당 디렉토리의 바뀐 파일들을 모두 add
+
+2. `git commit -m "커밋메시지"` 추후 백업이나 변경 사항을 볼 수 있는 log 기록<br>
+(ex: `git commit -m "Edit:2018-09-22 레이아웃 변경"`)
+
+3. `git push origin master`  master브랜치에 푸쉬
+
+<br><br><br>
+
+## Git pull 원격저장소 push 에러
 
 
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/4.PNG)
+
+> 원인 : 현재 작업하고 있는 Repository가 서버에 있는 Repository보다 오래된 내용이다. Push 를 하게 되면 서버에 있는 최신 내용은 날라가고 현재 작업한 내용만 적용이 되는 문제가 발생할 수 있기 때문에 에러가 발생하게 된 것입니다.
+
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/5.PNG)
+
+1. `git pull` 최신내용을 로컬저장소에 적용한 후 올리기 <br>
+ (Local에 자동으로 최신 소스가 Merge됨)<br>
+
+만약 덧붙이는 과정에서 conflict가 발생한 경우, 그 안에 어느 부분이 conflict가 발생했는지가 나오기 때문에 잘 확인해서 소스를 수정한 후 다시 올리면 된다.
+
+
+2. `git push --force` 강제 삽입하기 <br>
+(<a>추천하지 않음.</a> 깃허브 저장소에 데이터를 날리고 자신의 데이터를 강제 푸쉬)
+
+
+<br><br>
+
+![img](/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/3.PNG)
+
+- `git pull을 통한 병합 후에 다시 진행하면 성공적으로 push가 완료됩니다.`
+
+
+
+
+<br><br><br>
+
+
+## 깃허브 정리
+
+- `git clone 주소` 원격저장소(깃허브)프로젝트를 내pc로 가져오기.
+
+- `git config --global --list` 전역 설정 정보 조회하기
+
+- `git config --list` 지역 설정 정보 조회하기
+
+- `ls` 현재 위치에서 폴더 및 파일 보기
+
+- `rm 파일명` 해당 파일 삭제하기
+
+- `rm -rf 폴더명` 해당 폴더 삭제하기(r=recursive, f=force)
+
+- `git log` 패치(변경사항)와 로그 표시
 
 
 
