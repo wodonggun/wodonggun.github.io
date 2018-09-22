@@ -1,7 +1,7 @@
   ---
 layout: post
-title: " -------- "
-subtitle: <span class="evidence"> -------- </span>
+title: "Git 지킬 내컴퓨터에 로컬저장소 만들기"
+subtitle: <span class="evidence">Github Repositoy를 내 컴퓨터로 가져와보자.</span>
 date: 2018-01-01
 author: NoonGam
 category: Study
@@ -12,31 +12,31 @@ finished: true
 
 
 
-##
+## 로컬 저장소 만들기
 
-1. git clone 주소
-2. git clone -b etri 주소   (branch가 etri일 경우에)
+1. git 설치
+ https://gitforwindows.org/
+
+2. 저장소 HTTPS 주소 복사하기
+
+3.
+
+4. git clone https://github.com/아이디/저장소
+
+
 3.
 
 
 
+## 깃허브 원격저장소
 
-
-
-
-<br><br><br>
-
-##
-
-https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZekuDs
-
-
+> 깃허브의 저장소(원격 저장소)가 나의 PC의 저장소(로컬 저장소)가 다르면 push를 진행하기 전에
+먼저 서로다른 두개의 저장소를 일치시키는 작업(pull)을 진행해야합니다.
 
 
 
 <br><br><br>
 
-## 예시
 
 
 
@@ -47,9 +47,5 @@ https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZek
 <br><br><br>
 
 ## 참고 자료
-*
-*
-*
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
+
+* https://dololak.tistory.com/346
