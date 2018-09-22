@@ -1,42 +1,36 @@
   ---
 layout: post
-title: " -------- "
-subtitle: <span class="evidence"> -------- </span>
-date: 2018-01-01
+title: "Atom 아톰 편집기 자동완성 끄기 "
+subtitle: <span class="evidence">Atom Editor auto complete</span>
+date: 2018-09-16
 author: NoonGam
-category: Study
-tags: Network Linux
+category: Setting
+tags: Git Atom Jekyll
 comments: true
 finished: true
 ---
 
 
 
-##
+## Atom
 
-1. git clone 주소
-2. git clone -b etri 주소   (branch가 etri일 경우에)
-3.
+![img](/img/2018-09-16-Atom Editor 자동완성 끄기/3.png)
 
+> 아톰 편집기를 사용하다 보면 사진과 같이 자동완성 기능때문에 매우 불편함을 느끼게 됩니다. 기본적으로 자동완성 기능이 설치되어 있습니다.  
 
+<br><br>
 
+![img](/img/2018-09-16-Atom Editor 자동완성 끄기/1.png)
+- `File -> Setting을 선택`
 
+<br><br>
 
-
-
-<br><br><br>
-
-##
-
-https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZekuDs
-
+![img](/img/2018-09-16-Atom Editor 자동완성 끄기/2.png)
+- `Package -> auto를 검색`
+- `autocomplete-atom-api를 Disable 합니다.`
 
 
-
-
-<br><br><br>
-
-## 예시
+<a>이제 자유롭게 자동완성 기능 없이 사용할 수 있습니다.</a>
 
 
 
@@ -45,11 +39,3 @@ https://www.youtube.com/watch?list=PLa9dKeCAyr7jsbboqbsSnsTIVds0Dl3Ec&v=B51VLZek
 
 
 <br><br><br>
-
-## 참고 자료
-*
-*
-*
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
