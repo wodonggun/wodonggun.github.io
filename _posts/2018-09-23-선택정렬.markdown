@@ -27,9 +27,9 @@ finished: true
 
 ## 동작
 
-<center>
+
 ![img](/img/0-Algorithm/2018-09-23-선택정렬/Selection-Sort-Animation.gif)
-</center>
+
 
 
 > <a> 8 5 2 6 9 3 1 4 0 7 </a> <br><br>간단하게 8번이 있는 `첫번째 자리`를 선택하고 -> 1~10번째까지 가장 작은 수 전체 탐색 <br>
@@ -39,8 +39,7 @@ finished: true
 1(7번째자리)이 가장 작으므로 두번째와 7번째자리를 바꿈. (2 싸이클)<br><br>
 2번이 있는 `세번째 자리`를 선택하고 -> 3~10번째까지 가장 작은 수 전체 탐색<br>
 2번이 있는 세번째 자리가 가장 작으므로 그냥 그대로 유지 (3 싸이클)<br><center>.</center><center>.</center><center>.</center><br>
-  https://wodonggun.github.io/wodonggun.github.io/algorithm/%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC.html
-    `N번째 자리`까지 반복.....
+마지막 `N번째 자리`까지 반복.....
 
 <br><br><br>
 
