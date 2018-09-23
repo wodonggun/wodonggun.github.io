@@ -50,8 +50,8 @@ finished: true
 
 ## 소스코드
 
-[소스코드]()
-```
+
+```c
 #include <stdio.h>
 
 int main()
