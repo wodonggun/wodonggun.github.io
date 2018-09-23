@@ -1,0 +1,88 @@
+---
+layout: post
+title: "Selection Sort - 선택정렬 정리"
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Algorithm
+tags: Algorithm C/C++
+comments: true
+finished: true
+---
+
+
+
+## Selection Sort - 선택정렬
+
+> 선택 정렬은 첫 번째 자료를 두 번째 자료부터 마지막 자료까지 차례대로 비교하여 가장 작은 값을 찾아 첫 번째에 놓고,
+두 번째 자료를 세 번째 자료부터 마지막 자료까지와 차례대로 비교하여 그 중 가장 작은 값을 찾아 두 번째 위치에 놓는 과정을 반복하며 정렬을 수행한다.
+
+
+
+```
+#include <stdio.h>
+
+int main()
+{
+	int n = 10;
+	int arr[10] = { 8,5,2,6,9,3,1,4,0,7 };   //무작위 배열
+
+	for (int i = 0; i < n; i++)		 	//i번째 자리 선택
+	{
+		int min_pos = i;				
+		for (int j = i + 1; j < n; j++)   //i번째 이후 탐색 시작
+		{
+			if (arr[min_pos] > arr[j])	//i번째 자리에 들어갈 최소자리 찾기
+			{
+				min_pos = j;
+			}
+		}
+
+		//최소자리 찾기 for문 종료후에 i번째 위치에 최소값 자리 스왑
+		int temp = arr[i];
+		arr[i] = arr[min_pos];
+		arr[min_pos] = temp;
+
+	}
+	for (int i = 0; i < n; i++)
+		printf("%d ", arr[i]);
+
+}
+```
+
+
+
+
+<br><br><br>
+
+## 동작
+
+![img](/img/0-Algorithm/2018-09-23-선택정렬/Selection-Sort-Animation.gif)
+
+
+
+<br><br><br>
+
+## 정렬 알고리즘 시간복잡도 비교
+
+![img](/img/0-Algorithm/2018-09-23-선택정렬/1.png)
+
+- 단순(구현 간단)하지만 비효율적인 방법<br>
+삽입 정렬, 선택 정렬, 버블 정렬
+
+
+
+
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/Ns4TPTC8whw"
+ frameborder="0" allowfullscreen></iframe>
+
+<br><br><br>
+
+## 참고 자료
+* https://gmlwjd9405.github.io
+*
+
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
