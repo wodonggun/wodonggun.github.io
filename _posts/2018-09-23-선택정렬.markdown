@@ -14,6 +14,9 @@ finished: true
 
 ## Selection Sort - 선택 정렬
 
+---
+
+<br>
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/220px-Selection_sort_animation.gif)
 <center>[선택 정렬 알고리즘 애니메이션]</center>
