@@ -9,14 +9,30 @@ tags: Network Linux
 comments: true
 finished: true
 ---
-
 ---
 
-##
+## 1일차
+1. Processor
+- CPU(연산장치)
+- Process랑 다름(저장소->RAM에 프로그램이 올라간 상태를 Process라고 함)
+
+2. Memory
+- RAM 메모리
+- HDD,SDD 등 저장소
+
+3. I/O
+- 마우스, 키보드, 마우스
+
+
+```
+
+Fetch = 메인 메모리에 올라온 명령어를 CPU가 한줄 한줄 읽어온다.
+Decode = 가져온 명령어를 해석
+Execute = 실행
 
 
 
-
+```
 
 
 
@@ -27,7 +43,7 @@ finished: true
 
 
 ## 참고 자료
-* [최민 교수님]()https://wodonggun.github.io/wodonggun.github.io/algorithm/%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC.html
+* [최민 교수님](God!)
 
 *
 *
