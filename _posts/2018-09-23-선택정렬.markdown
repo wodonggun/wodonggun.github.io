@@ -17,7 +17,7 @@ finished: true
 
 ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/220px-Selection_sort_animation.gif)
 
-<center>선택 정렬 알고리즘 애니메이션</center>
+<center><선택 정렬 알고리즘 애니메이션></center>
 
 > 선택 정렬은 첫 번째 자료를 두 번째 자료부터 마지막 자료까지 차례대로 비교하여 가장 작은 값을 찾아 첫 번째에 놓고,
 두 번째 자료를 세 번째 자료부터 마지막 자료까지와 차례대로 비교하여 그 중 가장 작은 값을 찾아 두 번째 위치에 놓는 과정을 반복하며 정렬을 수행한다.
@@ -38,8 +38,7 @@ finished: true
 5번이 있는 `두번째 자리` 선택하고 -> 2~10번째까지 가장 작은 수 전체 탐색<br>
 1(7번째자리)이 가장 작으므로 두번째와 7번째자리를 바꿈. (2 싸이클)<br><br>
 2번이 있는 `세번째 자리`를 선택하고 -> 3~10번째까지 가장 작은 수 전체 탐색<br>
-2번이 있는 세번째 자리가 가장 작으므로 그냥 그대로 유지 (3 싸이클)<br><center>.</center><center>.</center><center>.</center><br>
-마지막 `N번째 자리`까지 반복.....
+2번이 있는 세번째 자리가 가장 작으므로 그냥 그대로 유지 (3 싸이클)<br><center>.</center><center>.</center><center>.</center><br>마지막 `N번째 자리`까지 반복.....
 
 <br><br><br>
 
