@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Atom 아톰 편집기 자동완성 끄기 "
+title: "Atom 아톰 에디터 자동완성 끄기"
 subtitle: <span class="evidence">Atom Editor auto complete</span>
 date: 2018-09-16
 author: NoonGam

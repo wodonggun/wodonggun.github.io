@@ -30,7 +30,7 @@ finished: true
 - 검색창에 `spell-check`를 검색
 - `spell-check`를 `Disable` 합니다.
 
+<br><br>
+
 
 <a>이제 빨간줄 없이 편하게 사용할 수 있습니다.</a>
-
-<br><br>

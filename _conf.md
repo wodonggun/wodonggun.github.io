@@ -1,13 +1,16 @@
 
 
+## Folder_List
 
+Algorithm
+Util
 
 ## category_list
 
 Bin
 Linux
 Study
-C / C++
+C/C++
 AWS
 Conference
 Algorithm
@@ -31,7 +34,7 @@ EC2
 Phpmyadmin
 MySQL
 Network
-C / C++
+C/C++
 OpenSource
 openCV
 CSS
