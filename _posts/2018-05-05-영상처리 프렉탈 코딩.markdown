@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프렉탈 부호화 이미지 손실 압축 Fractal Compression"
-subtitle: <span class="evidence"> openCV Fractal Compression Coding </span>
+title: "프랙탈 부호화 - 이미지 손실 압축 Fractal Compression"
+subtitle: <span class="evidence"> 멀티미디어 openCV Fractal Compression Coding </span>
 date: 2018-05-05
 author: NoonGam
 category: C/C++
@@ -12,9 +12,13 @@ finished: true
 
 
 
-## 프랙탈 부호화 압축(fractal compression)
+## 프렉탈 부호화 압축(fractal compression)
 
 > 프랙탈 부호화(영어: fractal compression)는 프랙탈에 기초한 손실 압축 방법이다. 이 방식은 텍스처와 사진에 가장 적합하다. 왜냐하면 한 이미지에서 한 부분과 다른 부분이 유사한 경우가 많기 때문이다. 프랙탈 알고리즘은 이러한 부분들을 '프랙탈 부호'라 불리는 수학적 데이터로 변환한다.
+
+
+프렉탈 압축은 데이터 전체와 부분 간의 자기유사성(Self-similarity)를 고려하여<br>
+수축변환의 변환계수들만으로 표현함으로써 정보량을 줄이는 압축 기법을 말한다.
 
 <br><br><br>
 
@@ -664,3 +668,4 @@ void main()//디코딩 메인함수
 ## 참고 자료
 * https://github.com/kennberg/fractal-compression
 * https://en.wikipedia.org/wiki/Fractal_compression
+* http://www.ktword.co.kr/abbr_view.php?m_temp1=3815[정보통신기술용어해설]
