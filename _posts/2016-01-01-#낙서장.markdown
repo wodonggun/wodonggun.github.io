@@ -31,11 +31,14 @@ https://opentutorials.org/course/3084
 
 ## 블로그 관리
 
+https://nesoy.github.io/ - 기능,깔끔 테마 포크뜨기
+
+https://jekyllrb-ko.github.io/docs/home/ - 지킬 공식 설명서
 
 http://gifgifs.com/optimizer/ - gif 최적화
 
+https://nesoy.github.io/articles/2016-12/github-Jekyll - 지킬 블로그 사용법
 
-https://jekyllrb-ko.github.io/docs/home/ - 지킬 공식 설명서
 
 https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구글 검색어 등록
 
