@@ -1,0 +1,61 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## 리틀 엔디언 / 빅 엔디언
+
+- 빅 엔디언(Big endian)
+1. 최상위 바이트 부터 차례로 저장하는 방식 = MSB = Most Significant Byte
+2. 주로 네트워크에서 쓰이며, Unix의 RISC계열의 프로세서가 사용하는 바이트 오더링
+3. 장점 : 디버그를 편하게 해준다. 사람이 숫자를 읽는 방식과 같기 때문에
+
+- 리틀 엔디언(Little endian)
+1. 최하위 바이트 부터 차례로 저장하는 방식 = LSB = Least Significant Byte
+2. x86 아키텍처를 사용하는 대부분의 컴퓨터에서 쓰이며, '인텔포맷'이라고 불림.
+3. 장점 : 작은 값을 계산할때 필요없는 메모리 이동을 하지 않는다.<br>
+
+`0x21 값 -> 메모리: 21 00 00 00 -> 앞에 21만 계산함.`<br>
+`0x21 값 -> 메모리: 00 00 00 21 -> 메모리 마지막까지 이동 후 21 계산함.`
+
+##
+
+32비트 체계에서 0x12345678(`0001 0010 0011 0100 0101 0110 0111 1000`)
+
+빅 엔디언 = `0x12 34 56 78`<br>
+리틀 엔디언 = `0x78 56 34 12`<br>
+
+
+
+
+##
+
+<br><br><br>
+
+## 내 PC의 엔디언 방식 확인하기
+
+
+
+
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>

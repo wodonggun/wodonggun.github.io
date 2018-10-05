@@ -1,0 +1,114 @@
+---
+layout: post
+title: "문자열 자르기 strtok 함수 사용법"
+subtitle: <span class="evidence"> 어떤 특정한 문자를 기준으로 문자열을 구분해 보자. </span>
+date: 2017-03-05
+author: NoonGam
+category: STL
+tags: STL
+comments: true
+finished: true
+---
+
+
+
+## strtok
+
+> strtok ( string tokenize ) 함수는 문자열을 분리해주는 역할을 한다. 예를 들어서 "I Love You Always." 라는 문자열을 띄어쓰기 기준으로 해서 분리하고 싶다. 그렇다면 I/Love/You/Alway. 와 같이 4개로 분리가 될 것이다. 이와 같이 분리하기 위해 strtok함수를 사용하지 않는다고 해서 구현하지 못하는 것은 아니다. 모든 문자들을 조사해서 공백인지 아닌지를 판단하고 그 앞에까지를 잘라내서 또 나머지를 공백을 찾고, 이와 같은 과정을 반복하면 되겠다. 그런데 그걸 이미 만들어놓은게 바로 strtok 이다.
+
+<a>char* strtok(char* str, const char* delimiters); </a>
+
+<a>strtok(문자열,"자를 문자");</a>
+
+만약 띄어쓰기를 기준으로 문자를 나누고 싶다면
+<a>strtok(arr1, " "); </a>
+
+만약 콤마를 기준으로 문자를 나누고 싶다면
+<a>strtok(arr1, ","); </a>  
+
+
+
+
+
+<br><br><br>
+## 코드
+
+
+- <a>char* strtok(char* str, const char* delimiters); </a>
+
+
+```c++
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <string.h>
+using namespace std;
+
+
+int main()
+{
+
+	char arr1[20] = "I Love You Always";
+
+	char *ptr = strtok(arr1," ");		//arr1문자열을 띄어쓰기로 끊어서 문자열의 첫주소 반환
+
+	while (ptr != NULL)			//strtok으로 잘린 문자
+	{
+		printf("%s\n", ptr);		//ptr 출력
+		ptr = strtok(NULL, " ");		//NULL을 넣으면 strtok에서 이전에 문자를 자른
+		                                     //후에 다음 문자의 주소를 반환해줌.
+	}
+
+
+}
+```
+
+
+ <span class="evidence">
+Tip:  scanf는 띄어쓰기 단위로 받을 수 있는데 띄어쓰기를 무시하고 문자열을 받고 싶으면 scanf("%s", arr1)  ->  scanf("%[\n]s", arr1)</span>
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+## 설명
+
+
+![img](/img/2017-03-05-문자열 자르기 strtok/strtok.gif)
+
+
+![img](/img/2017-03-05-문자열 자르기 strtok/1.png)
+
+
+ - 위의 코드에서 ptr = strtok(NULL, " ") 문장을 주목하자. 최초 분리할때는 분리하고자 하는 문자열 arr1을 매개변수로 넘겨주었다. 한번 분리한후에 만약 새로운 문자열을 가지고 다시 분리를 원한다면 당연히 strtok의 첫번째 인자에 그 문자열을 넣어주어야 한다. 그러나 만약 방금전에 분리하고 남은 문자열을 가지고 다시 분리하고자 한다면 위와 같이 그 첫번째 인자를 NULL로 넣어준다는 점에 유의하자. 이것은 strtok 함수가 방금전에 분리한문자열의 분리지점 바로 다음 주소값을 기억하고 있기 때문이다. 즉 strtok 함수는 첫번째 인자로 문자열의 주소값이 들어오면 거기서부터 분리를 시도하고, 만약 NULL이 들어오면 이전에 자기가 기억한 곳으로부터 분리를 시도한다는 것이다.
+(마지막에 분리를 시도하고 다음 문자가 NULL(=문자열의 끝)이면 ptr에 NULL을 리턴해준다.)
+
+
+<br><br>
+<br><br><br>
+
+## 문자열 자르기 동영상
+
+- ```특정한 문자를 기준으로 문자열 자르기```
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/B51VLZekuDs" frameborder="0" allowfullscreen></iframe>
+
+
+<br><br><br>
+
+
+## 참고 자료
+* http://blog.naver.com/PostView.nhn?blogId=sharonichoya&logNo=220490957748
+* https://dojang.io/mod/page/view.php?id=376
