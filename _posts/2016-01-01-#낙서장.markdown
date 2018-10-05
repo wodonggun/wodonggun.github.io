@@ -20,7 +20,8 @@ https://www.acmicpc.net/workbook/view/1209
 http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
 
 
-
+- 알고리즘 쉽게 정리
+http://blog.naver.com/PostList.nhn?blogId=foat3376
 
 ## HTML + CSS + dynamic
 
@@ -30,6 +31,8 @@ https://opentutorials.org/course/3084
 
 
 ## 블로그 관리
+
+https://nashory.github.io/routine/programming/2017/06/16/1_starting_blog_with_github.html - 깃,지킬,부트스트랩
 
 https://nesoy.github.io/ - 기능,깔끔 테마 포크뜨기
 
@@ -59,7 +62,6 @@ https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구�
 ```
 
 
-- 검색어 등록 - Title의 내용이 검색어에 표시.
 
 
 
