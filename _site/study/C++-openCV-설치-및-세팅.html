@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/study/C++-openCV-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%B8%ED%8C%85.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>C++ openCV 설치 및 설정</title>
+  <meta name="description" content="openCV 설치">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">C++ openCV 설치 및 설정</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="04 May 2018" itemprop="datePublished">May 4 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Network</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">영상처리에 필요한 openCV를 쉽게 설치하자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="opencv-설치">openCV 설치</h2>
+
+<ol>
+  <li>openCV 3.0.0-beta 다운로드</li>
+</ol>
+
+<p>https://sourceforge.net/projects/opencvlibrary/files/opencv-win/</p>
+
+<p>위의 사이트에 접속해서 3.0.0-beta 버전을 다운받습니다.</p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/1.png" alt="img" /></p>
+
+<blockquote>
+  <p>opencv-3.0.0파일을 c:드라이브에 이동후 설치를 진행합니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/2.png" alt="img" /></p>
+
+<blockquote>
+  <p>정상적으로 설치 후 opencv 폴더에 들어가면 그림과 같이 build와 sources가 있습니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<ol>
+  <li>빈프로젝트 생성</li>
+</ol>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/3.png" alt="img" /></p>
+
+<blockquote>
+  <p>소스파일에 자신의 cpp 파일을 만듭니다.
+(openCV_test.cpp)</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/3_1.png" alt="img" /></p>
+
+<blockquote>
+  <p>프로젝트 선택 후 우측마우스 -&gt; 속성(R) 선택</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/4.png" alt="img" /></p>
+
+<blockquote>
+  <p>C/C++에서 추가 포함 디렉토리에 <code class="highlighter-rouge">C:\opencv\build\include</code> 입력</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/5.png" alt="img" /></p>
+
+<blockquote>
+  <p>링커에서 추가 라이브러리 디렉토리에  <code class="highlighter-rouge">C:\opencv\build\x86\vc12\lib</code> 입력</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/6.png" alt="img" /></p>
+
+<blockquote>
+  <p>링커-&gt;입력에서 추가 종속성에 <code class="highlighter-rouge">opencv_ts300.lib;opencv_world300.lib;</code> 입력</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<ol>
+  <li>dll 파일 이동</li>
+</ol>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/7.png" alt="img" /></p>
+
+<blockquote>
+  <p>C:\opencv\build\x86\vc12\bin 폴더로 이동 후에 dll파일 3개를 복사 후에</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/8.png" alt="img" /></p>
+
+<blockquote>
+  <p>프로젝트 우측마우스 -&gt; 파일 탐색기에서 폴더 열기(x)</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/9.png" alt="img" /></p>
+
+<blockquote>
+  <p>해당 폴더에 dll파일 3개를 복사 합니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="opencv-테스트">openCV 테스트</h2>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/10.png" alt="img" /></p>
+
+<p>https://www.ece.rice.edu/~wakin/images/lena512.bmp 에서 lena512 이미지 사진을 다운로드</p>
+
+<p>lena512.bmp파일을 프로젝트 폴더에 이동 후 아래 소스코드 실행.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;opencv2/core/core.hpp&gt;
+#include &lt;opencv2/highgui/highgui.hpp&gt;
+#include &lt;iostream&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+
+	     <span class="n">Mat</span> <span class="n">image</span><span class="p">;</span>
+	   <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">"lena512.bmp"</span><span class="p">,</span> <span class="n">IMREAD_COLOR</span><span class="p">);</span>   <span class="c1">// Read the file</span>
+
+		 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">image</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>                              <span class="c1">// Check for invalid input</span>
+		    <span class="p">{</span>
+		         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Could not open or find the image"</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+			 <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+		    <span class="p">}</span>
+
+		    <span class="n">namedWindow</span><span class="p">(</span><span class="s">"Display window"</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span><span class="p">);</span><span class="c1">// Create a window for display.</span>
+	     <span class="n">imshow</span><span class="p">(</span><span class="s">"Display window"</span><span class="p">,</span> <span class="n">image</span><span class="p">);</span>                   <span class="c1">// Show our image inside it.</span>
+
+	     <span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                                          <span class="c1">// Wait for a keystroke in the window</span>
+	 <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="p">}</span>
+
+
+</code></pre></div></div>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/11.PNG" alt="img" /></p>
+
+<blockquote>
+  <p>위의 소스를 실행하면 아래와같이 이미지가 출력되면 성공적으로 설정이 완료되었습니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="설정-확인">설정 확인</h2>
+
+<p><img src="/img/2018-05-05-C++ openCV 설치 및 세팅/openCV.gif" alt="img" /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li>http://webnautes.tistory.com/673</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=C++ openCV 설치 및 설정@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/study/C++-openCV-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%B8%ED%8C%85.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/study/C++-openCV-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%B8%ED%8C%85.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/study/C++-openCV-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%B8%ED%8C%85.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

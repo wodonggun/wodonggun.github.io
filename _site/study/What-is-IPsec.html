@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/study/What-is-IPsec.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>IPsec 이란? - What is IPsec?</title>
+  <meta name="description" content="">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">IPsec 이란? - What is IPsec?</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="27 Aug 2018" itemprop="datePublished">Aug 27 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Network</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">IPsec에 대한 간단한 소개 및 실습</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <hr />
+
+<p><br /><br /></p>
+
+<h2 id="ipsec---internet-protocol-security">IPsec - Internet Protocol Security</h2>
+
+<blockquote>
+  <p>IPSec은 Internet Protocol Security의 약어로서 통신중 network layer에서의 보안을 위한 표준이다. IPSec은 인터넷 상에서 VPN(Virtual Private Network)을 구현하는데 사용될 수 있도록 IETF (Internet Engineering Task Force)에서 개발된 protocol set이다. 이는 네트워크상의 IP layer에서의 보안에 중점을 두었으며, 사설 및 공중망을 사용하는 TCP/IP 통신을 보다 안전하게 유지하기 위한 end-to-end encryption과 authentication을 제공한다.</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>네트워크계층(IP 계층) 상에서 IP 패킷 단위로 <code class="highlighter-rouge">인증</code>,<code class="highlighter-rouge">암호화</code>,<code class="highlighter-rouge">키관리</code>를 하는 프로토콜</p>
+  </li>
+  <li>
+    <p>VPN을 구현하기 위해 만든 프로토콜(Tunnel Mode)</p>
+  </li>
+  <li>
+    <p>Transport계층 아래에서 구현되며, 운영체제에서 IPsec을 지원함.</p>
+  </li>
+  <li>
+    <p>서로 키관리를 통해 캡슐화 및 디캡슐화를 진행</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<ul>
+  <li>SA (Security Association 보안연관)</li>
+</ul>
+
+<fieldset id="gpg-fieldset">
+ㅇ 데이터의 안전한 전달을 위해 통신의 쌍방 간의 약속<br />
+   - 암호 알고리즘, 키 교환 방법, 암호화 키 교환 주기 등에 대한 합의<br />
+       이는 통신 연결 이전에 쌍방 간에 합의가 있어야 함<br /><br />
+
+   - 결국, 구체적으로 합의되어야 할 요소들의 결합을 보안연합 이라함<br />
+      하나 이상의 보안서비스를 구현하기 위한 보안 속성들의 연결 집합<br />
+<br />
+ㅇ 특징<br />
+   - 각 SA 마다 단 방향성(Unidirectional)이고, 양 방향성을 이루려면 쌍으로 구성되게 됨<br />
+   - 따라서, 각 SA 마다 이를 구분하는 식별자(SPI)가 있게 됨<br />
+</fieldset>
+
+<p><br /><br /><br /></p>
+
+<h2 id="ipsec-tunnel-mode--transport-mode">IPsec Tunnel Mode / Transport Mode</h2>
+
+<p><img src="/img/2018-08-27-What is IPsec/2.png" alt="img" /></p>
+
+<p><img src="/img/2018-08-27-What is IPsec/1.PNG" alt="img" /></p>
+
+<ul>
+  <li>
+    <p>Tunnel Mode</p>
+  </li>
+  <li>
+    <p>Transport Mode</p>
+  </li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="ipsec-설정-이전과-이후">IPsec 설정 이전과 이후</h2>
+
+<ul>
+  <li>
+    <p>패킷의 암호화를 확인하기 위해 패킷을 스니핑하는 방법을 선택하였습니다.</p>
+  </li>
+  <li>
+    <p>아스키코드 영어나 문자만 사용한다면 일반적인 wireshark를 통해 패킷을 확인할 수 있습니다.</p>
+  </li>
+</ul>
+
+<p><a><code class="highlighter-rouge">wireshark</code>를 통해서는 한글형식이 지원되지 않아서 <code class="highlighter-rouge">sniffing파일</code>을 직접 구현하였습니다.</a></p>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-08-27-What is IPsec/ipsec1.PNG" alt="img" /></p>
+
+<ul>
+  <li>패킷 IPsec 설정 이전에 패킷 스니핑을 확인한 결과</li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-08-27-What is IPsec/ipsec3.PNG" alt="img" /></p>
+
+<ul>
+  <li>IPsec start를 통한 암호화 시작.</li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-08-27-What is IPsec/ipsec2.PNG" alt="img" /></p>
+
+<ul>
+  <li>
+    <p>IPsec start 후에는 데이터를 알아볼 수 없는 형태로 암호화하여 데이터를 전송합니다.</p>
+  </li>
+  <li>
+    <p>목적지에 도착하면 복호화 키에 맞춰 암호화를 해제하여 데이터를 저장합니다.</p>
+  </li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="스니핑-과정">스니핑 과정</h2>
+
+<p><img src="/img/2018-08-27-What is IPsec/ipsec4.gif" alt="img" /></p>
+
+<p><code class="highlighter-rouge">[ 과정 ] </code></p>
+<ol>
+  <li>
+    <p>A는 B로부터 FTP 통신을 통해 데이터를 받고 있습니다.</p>
+  </li>
+  <li>
+    <p>A는 tx rx가 잘 되고있는지 speedometer를 통해 확인합니다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">./snif2 enp0s8</code>을 통해 스니핑 파일과 감시할 네트워크 인터페이스를 지정합니다.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">ipsec start</code>를 통해서 암호화를 시작합니다.</p>
+  </li>
+</ol>
+
+<p>FTP , IPsec, 패킷 스니핑, wireshark 등은 따로 설치 및 설정해주어야 합니다.<br />
+(여유 될때마다 조금씩 포스팅해보겠습니다!!)</p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="mtu-maximum-transmission-unit">MTU maximum transmission unit</h2>
+
+<ul>
+  <li>
+    <p>MTU는 대부분 이더넷에 의해 결정됨.</p>
+  </li>
+  <li>
+    <p>헤더(header) 또는 패킷 당 지연(per-packet delay)과 같은 고정된 프로토콜 오버헤드가 있는 반면, MTU가 클수록 패킷은 한번에 많은 데이터를 전송하기 때문이다</p>
+  </li>
+  <li>
+    <p>느린 링크를 점유하게되면 이후 패킷들을 지연시키고, 지연 및 최소 대기시간이 증가하게 됨.</p>
+  </li>
+  <li>
+    <p>데이터 오류 발생시, 하나의 비트가 잘못되더라도 전체 패킷을 다 전송해야 하므로, 트래픽 증가</p>
+  </li>
+  <li>
+    <p>비트 에러율은 패킷이 클수록 손상되기 쉽다.</p>
+  </li>
+  <li>
+    <p>패킷 재전송 시간이 오래걸린다.</p>
+  </li>
+  <li>
+    <p>하지만 end To end 에서볼때 MTU가 클수록 긍정적인 효과가 크다.</p>
+  </li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="정리">정리</h2>
+
+<p>인증 = 상대방이 자신이 원하는 목적지가 맞는지 <br />
+기밀성 = 가로채더라도 볼 수 없도록 데이터 암호화 <br />
+무결성 = 내용이 변경되지않았음을 보장 <br /></p>
+
+<p>패킷 암호화 -&gt; 인증(AH)헤더 장착 -&gt;  새로운 IP헤더 장착 -&gt; 중간에</p>
+
+<p><code class="highlighter-rouge">[new IP header | AH header | origin IP header | TCP/UDP header | payload ]</code><br />
+ (호스트나 보안 게이트웨이에 적용)</p>
+
+<p>전송모드는 IP헤더의 일부분까지만 인증되지만
+ 터널모드는 새 IP헤더의 일부분부터 원본 IP헤더와 페이로드까지 인증됨.
+ <code class="highlighter-rouge">(VPN이나 터널로 설정된 경로는 새로운 IP헤더를 통해 찾아가고 마지막 게이트웨이 단에서 새로운 IP헤더를 해제하고 목적지를 찾아감=public 인터넷망을 보안 터널을 통해 통과후 회사 내부망(게이트웨이)에 도착하면 원래 IP헤더를 가지고 목적지를 찾으러 감)</code></p>
+
+<p>2계층에서 터널링 = PPTP L2TP
+ 3계층에서 터널링 = IPsec</p>
+
+<p>AH헤더는 네트워크를 통해 보낸 송신자가 누구인지를 인증하는 것이다.
+ 제 3자가 마치 자기가 송신한것처럼 패킷을 가로채고 전송하는것을 방지.
+<code class="highlighter-rouge">(송신자 인증, 데이터 무결성 보장, but 기밀성 X)</code></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li>https://docs.oracle.com/cd/E26925_01/html/E25873/ipsec-ov-13.html</li>
+  <li><a href="http://www.zdnet.co.kr/news/news_view.asp?artice_id=00000010052877&amp;type=det&amp;re=zdk">ZDnet Korea 기사</a></li>
+  <li>http://travelerstory.tistory.com/91</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=IPsec 이란? - What is IPsec?@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/study/What-is-IPsec.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/study/What-is-IPsec.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/study/What-is-IPsec.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

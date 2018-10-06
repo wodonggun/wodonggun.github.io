@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/html/What-is-APM.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>웹 서버 APM 이란?</title>
+  <meta name="description" content="APM ?">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">웹 서버 APM 이란?</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="25 Jul 2018" itemprop="datePublished">Jul 25 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">PHP</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">MySQL</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">웹 서버를 개발하다보면 APM을 모르고 지나칠 수 없다.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="apm-">APM ?</h2>
+
+<ul>
+  <li>what is APM ? <br /></li>
+</ul>
+
+<p><img src="/img/2018-07-25-What is APM/1.jpg" alt="Codes" /></p>
+<blockquote>
+  <p>Apache + PHP + MySQL 의 줄임말이다. APM 소프트웨어가 존재하는 것이 아니라, 이 3가지가 연동되어 운영되도록 만든 환경을 APM이라고 한다. Apache와 MySQL이 PHP와 호환성이 좋기 때문에 주로 세 프로그램을 묶어 패키지 형태로 사용한다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="apache">Apache?</h2>
+
+<p><img src="/img/2018-07-25-What is APM/2.png" alt="Codes" /></p>
+<blockquote>
+  <p>정식 명칭 : Apache HTTP server
+웹 서버 프로그램이다. 웹 서버란 웹 서비스를 제공해주는 서버인데, 예를 들어 사용자가 사이트에 접속하면 웹 서버에게 HTML 파일을 요청한다. 요청을 받은 웹 서버는 클라이언트 컴퓨터에 HTML 파일을 제공하면서 사용자는 화면으로 웹 페이지를 볼 수 있게 된다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="php">PHP</h2>
+
+<p><img src="/img/2018-07-25-What is APM/6.png" alt="Codes" /></p>
+
+<blockquote>
+  <p>Personal Home Page의 약자로, 통칭 PHP:Hypertext Preprocessor 라고 부른다.
+웹 프로그래밍 언어로, 서버에서 실행되는 언어이다. HTML의 경우 웹브라우저에서 소스를 해석해 보여주지만, PHP 는 서버에서 해석하여 HTML 코드로 만들어 브라우저에게 전달하는 것이다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>PHP는 Apache라는 웹서버 프로그램과 연동하여 동작합니다.</p>
+  </li>
+  <li>
+    <p>PHP는 .php파일을 처리하고, Apache는 HTML파일을 처리합니다.</p>
+  </li>
+  <li>
+    <p>PHP를 활용하여 Dynamic(동적)웹 페이지를 만들 수 있습니다.</p>
+  </li>
+  <li>
+    <p>이 외에도 JSP , ASP 등 사용되고 있습니다.</p>
+  </li>
+  <li>
+    <p>ex)예제 소스</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;?</span><span class="n">php</span>
+  <span class="n">echo</span> <span class="n">$_SERVER</span><span class="o">[</span><span class="err">'</span><span class="n">HTTP_USER_AGENT</span><span class="err">'</span><span class="o">];</span>
+<span class="o">?&gt;</span>
+</code></pre></div>    </div>
+    <p><br /><br /></p>
+  </li>
+</ul>
+
+<h3 id="장점">장점</h3>
+
+<ul>
+  <li>
+    <p>웹에 최적화된 언어</p>
+  </li>
+  <li>
+    <p>웹개발에 필요한 수많은 로직들이 함수의 형태로 제공됨</p>
+  </li>
+  <li>
+    <p>크로스플랫폼</p>
+  </li>
+  <li>
+    <p>거의 모든 데이터베이스를 지원</p>
+  </li>
+  <li>
+    <p>가장 많은 공개소프트웨어가 PHP로 만들어짐</p>
+  </li>
+</ul>
+
+<p>현재는 객체 기반의 Node.js,javascript와 함께 ASP , JSP등 좋은 서버 언어가 많이 생겨났지만, PHP는 가장 기본적이면서도 전세계에서 아직도 가장 많이 쓰이는 언어이다.
+<br /><br /><br /></p>
+
+<h2 id="mysql-mariadb">MySQL (!=MariaDB)</h2>
+
+<p><img src="/img/2018-07-25-What is APM/5.jpg" alt="Codes" /></p>
+
+<blockquote>
+  <p>SQL 데이터베이스 서버이다. MySQL 없이 PHP 만으로도 간단한 웹페이지를 만드는 것은 가능하다. 하지만 웹페이지에 사진, 동영상, 게시판 등 훨씬 많은 데이터들을 저장하고 보여주고 할 때 데이터베이스와의 연동이 필요하기 때문에 MySQL을 사용하는 것이다.</p>
+</blockquote>
+
+<p>MySQL은 무료이지만 기업이나 상업용으로 사용할때는 일정한 금액을 지불해야한다. 하지만 mariaDB라는 MySQL과 거의 똑같은 DBMS가 있는데 훨씬 가볍고 빠르다는 장점을 가지고 있다. 또한 MySQL을 사용하고있는 사용자도 손 쉽게 mariaDB로 변경 가능하다.<br /><br />
+https://mariadb.com/kb/ko/ &lt;– <a>한국어 메뉴얼로 제공한다.</a></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="apm-구동-원리">APM 구동 원리</h2>
+
+<p><img src="/img/2018-07-25-What is APM/4.png" alt="Codes" /></p>
+
+<blockquote>
+  <p>컴퓨터 사용자(Client)가 인터넷창에서 URL을 입력하여 원하는 정보를 서버에 요청하고, 서버의 Apache 프로그램은 승인한다. 이때 포트는 80번 포트로 웹서버로 요청하고 웹서버는 사용자에게 홈페이지 정보(HTML,CSS 등)를 날려준다.
+사용자가 로그인 요청이나 다른 정보에 대한 요청을 하면 해당 정보를 제공하기 위해 웹서버는 PHP에게 스크립트 실행하기를 요청하고 PHP는 미리 작성된 프로그램을 통해 MySQL에 쿼리를 질의한다.
+MySQL은 데이터베이스에 저장된 데이터를 가져와 PHP에 돌려주고 PHP는 데이터베이스에서 가져온 데이터와 PHP 코드를 모두 HTML 형태로 변경하고, 해당 HTML 파일을 Apache(웹 서버)에게 전송한다.
+Apache는 완성된 HTML 파일을 클라이언트 측의 컴퓨터 웹 브라우저에 전달한다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li>http://gwonhouse.tistory.com/2 [김윤권]</li>
+  <li>http://to-paz.tistory.com/8#comment12952368</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=웹 서버 APM 이란?@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/html/What-is-APM.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/html/What-is-APM.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/html/What-is-APM.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/study/What-is-LoRa.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>LoRa(로라) 란? </title>
+  <meta name="description" content="로라는 무엇일까 ?">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">LoRa(로라) 란? </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="12 Jul 2018" itemprop="datePublished">Jul 12 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">IoT</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Network</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">IoT 분야에서 떠오르고 있는 로라</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="로라는-무엇일까-">로라는 무엇일까 ?</h2>
+
+<ul>
+  <li>what is LoRa? <br />
+<img src="/img/2018-07-12-What is LoRa/1.png" alt="icon" />
+    <blockquote>
+      <p>로라(LoRa)는 Long Range의 약자로 Long의 Lo와 Range의 Ra를 합쳐서 만든 단어입니다. 사물인터넷이 발전하면서 기존에 있던 통신 장비로는 IoT분야에 적용하기에는 힘들다 생각하여 고안한 방법입니다. 로라는 보안성과 저전력,고효율의 장거리 통신이 가능한 것이 특징입니다.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><br /><br />
+<img src="/img/2018-07-12-What is LoRa/2.jpg" alt="icon" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>로라는 전 세계적으로 IoT 네트워크를 구축하기 위한 기술이다.
+자율주행 자동차,스마트 장비, 가전 제품, 웨어러블 장치 등 모든 분야에 사용되고 있다.
+저전력, 장거리, 보안성이 높은 특징이 있다.
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="로라-기술-및-주요-기능">로라 기술 및 주요 기능</h2>
+<p><img src="/img/2018-07-12-What is LoRa/4.PNG" alt="icon" /></p>
+
+<p><br />
+<br />
+<br /></p>
+<h2 id="장점">장점</h2>
+<p><img src="/img/2018-07-12-What is LoRa/3.jpg" alt="icon" /></p>
+
+<p>로라는 <a>Low Energy 저전력</a>으로 베터리 하나로 최대 10년정도를 사용할 수 있도록 만든다고 합니다. 또한 16마일 이상<a>Long Range 장거리</a> 10마일 이상, 약 16KM 이상 통신범위가 가능하다고 합니다. <br />
+그리고 하나의 모듈에 IoT에 장착되는<a>여러 센서를 장착</a>이 가능하다고 합니다.<br />
+마지막으로 IoT에서 보안성은 재산과 생명과도 관련이 있을수 있는데 로라는 <a>기본적으로 AES128 보안</a>기능을 제공하고 있다고 합니다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="lora-alliance-대표적인-멤버">LoRa Alliance 대표적인 멤버</h2>
+<ul>
+  <li>IBM</li>
+  <li>CISCO</li>
+  <li>BOSH</li>
+  <li>Alibaba</li>
+  <li>Google</li>
+  <li>SK Telecom</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+<h2 id="참고자료">참고자료</h2>
+
+<ul>
+  <li>https://www.lora-alliance.org/</li>
+  <li>http://www.bloter.net/archives/288884</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=LoRa(로라) 란? @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/study/What-is-LoRa.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/study/What-is-LoRa.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/study/What-is-LoRa.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

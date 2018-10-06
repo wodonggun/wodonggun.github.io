@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/study/TCP-Keep-Alive.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>Keep Alive 란? - What is Keep Alive? </title>
+  <meta name="description" content="Keep Alive">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">Keep Alive 란? - What is Keep Alive? </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="23 Aug 2018" itemprop="datePublished">Aug 23 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Network</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">TCP HTTP Keep Alive에 대해 알아보자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="keep-alive">Keep Alive</h2>
+
+<blockquote>
+  <p>디바이스간의 데이터 링크가 잘 동작하고 있는지 확인하거나 이 데이터 링크가 끊어지는
+것을 방지하기 위해서 디바이스 간에 서로 주고받는 메시지를 말한다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="tcp-keep-alive">TCP Keep Alive</h2>
+
+<blockquote>
+  <p>서로 Connection을 유지하고 확인하면서, 한쪽이라도 Close가 되면 다른쪽도 close를 시키기 위한 방식</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TCP KEEP-ALIVE는 옵션으로써 컨셉은 심플 합니다.
+A – B가 서로 Connection이 Establish된 상태에서 (3-handshake)
+지정된 시간(OS 설정 값 또는 어플리케이션 설정) 동안 서로
+패킷 교환(Exchange)이 없을경우 payload가 없는 probe(프로토스 유닛 아님) 패킷을
+보냅니다.
+만약 정상일 경우 connection을 유지하고, 그렇지 않을 경우는 장애로
+판단해서 본인 Connection도 close 합니다.
+
+그러면 Keep-Alive를 어떨때 사용하면 좋냐면..
+
+1. Checking for dead peers
+A-B가 연결된 경우 B시스템이 장애로 인해서 restart될 경우 A는 keep-alive 설정에 의해
+probe 패킷을 보내고, B는 RST(Rest)을 응답 합니다.
+
+2. Preventing disconnection
+A - NAT - B 일 경우
+
+NAT 또는 Proxy 서버는 커넥션들을 메모리에 캐싱하고 있음.
+즉 제한된 사이즈만큼 queuing을 하는데
+정책이 inactive된 것들 중에서 가장 오래된 커넥션을 지음.
+
+이런 현상은 주로 A,B 서버는 이상이 없는데 요청이
+많을 경우 커넥션이 자꾸 끊기는 경우 발생.
+
+그래서 keep-alive를 통해서 inactive된 커넥션을
+queue에 밀리지 않도록 상단으로 올려주는 효과를 통해서
+disconnection을 방지
+
+※ 주의사항 지나친 keep-alive의 남발은 주기적으로 probe 데이터를
+보내기 때문에 network에 불필요한 traffic를 유발함
+
+</code></pre></div></div>
+
+<h2 id="nat-참고-지식">NAT (참고 지식)</h2>
+
+<p><a> NAT (Network Address translation) - 1개의 공인 IP에 N개의 사설 IP를 매핑하는 주소 변환 방식 </a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+1개의 공인 아이피
+
+NAT은 IPv4의 주소 부족 문제를 해결하기 위해서 고안되었으며, 사설 또는 로컬 네트워크 주소를
+사용하는 망에서 외부 public망에 접근하기 위해서 네트워크 주소를 변환하는 것을 말합니다.
+
+NAT를 방식으로 구분하면 첫째,수동으로 외부 공인 IP와 사설 IP를 1:1로 매핑하는 정적 NAT
+(Static NAT) 방식, 둘째, 사설 IP 주소를 풀(Pool)화하여 공인 주소로 자동 매핑하는 동적
+NAT 방식 (Dynamic NAT), 셋째 가정에서 주로 사용하는 공유기에 사용되는 방식으로 IP 주소
+뿐만 아니라 포트 번호까지도 포함시켜 내부 호스트를 구분하는 NAPT 또는 PAT(Port Address Translation)
+ 방식으로 나눌수 있습니다.
+
+또한 NAT를 기능을 중심으로 구분하면, 첫째 외부망에서 볼 때 내부망의 여러 호스트들이
+단일한 NAT 서버로 만 보이게하는 기법인 IP Masquerading, 둘째, 내부망의 여러 호스트들이
+외부망과 트랜스포트계층에서 각각 별도로 연결짓게 할 수 있는 Port Forwarding (포트 포워드),
+셋째 각 포트별로 트래픽을 균형있게 하는 Load Balancing으로 나눌 수 있습니다.
+
+1. 인터넷 IP를 한정되어 있는데 라우터에게는 자신의 아이피 하나만 알려주고, 공유기(NAT 보유)는
+ 자신의 내부에 있는 사설 IP만 가지고 있다.
+
+2. public ip와 private IP를 사용하면서 그 사이에 방화벽(Firewall)을 설치하여 사설 IP를 보호하는
+ 수단으로 활용할 수 있습니다. 외부에서 사설망으로 들어오기 위해서는 해당 IP를 알아야 하지만, NAT을
+ 활용하여 공유기(NAT)의 public ip만 라우터 테이블에 등록합니다.
+ 따라서 외부 침입자가 공격하기 위해서는 사설망의 내부 사설 IP주소를 알아야 하기 때문에
+ 공격이 불가능해지므로 내부 네트워크를 보호할 수 있게 됩니다.
+
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="http-keep-alive">HTTP Keep Alive</h2>
+
+<blockquote>
+  <p>HTTP는 특성상 Connection을 유지하지 않는데, KeepAlive를 설정하면 사용할 수 있습니다.
+HTTP에서는 매번 계속 Connection을 유지하면 여러 사용자가 접속할때 성능이 떨어지므로,
+서버에서는 Connection을 유지하더라도 클라이언트 쪽에서 요청이 들어오지 않으면 서버쪽에서
+Connection을 끊음.</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>일단 결론적으로 말하면 TCP-KeepAlive 와 HTTP-KeepAlive는 전혀다름.
+
+TCP는 OS에 제어, HTTP 어플리케이션(웹 서버) 제어.
+
+HTTP-KeepAlive는 HTTP/1.1 이상에서는 기본적으로 제공하지만 사실 클라이언트에서
+하는게 없고 다 서버에서 담당.
+
+
+서버에서 설정하면 클라이언트 해더에 아래와 같이 표시됨
+
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+
+두번 요청 하면
+
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+
+timeout : 단위는 초 즉 커넥션 유지 시간 5초
+max는 : 위에서 보면 최초 100에서 두번째는 -1된 99.
+
+즉, 아무리 keep-alive로 유지를 한다고 해도 허가된 요청수. 해당 요청수가 넘으면 reconnect
+
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li>http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=Keep Alive 란? - What is Keep Alive? @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/study/TCP-Keep-Alive.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/study/TCP-Keep-Alive.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/study/TCP-Keep-Alive.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

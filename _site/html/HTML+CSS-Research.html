@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/html/HTML+CSS-Research.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>HTML+CSS structure</title>
+  <meta name="description" content="HTML 이란 ?">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">HTML+CSS structure</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="24 Jul 2018" itemprop="datePublished">Jul 24 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">CSS</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">HTML</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">HTML5 구조와 CSS3 구조 공부.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="html-이란-">HTML 이란 ?</h2>
+
+<p><img src="/img/2018-07-24-HTML+CSS Research/1.jpg" alt="codes" /></p>
+<blockquote>
+  <p>위와 같은 구조를 HTML5의 시맨틱 태그로 레이아웃을 만들었다고 한다. 일반적으로 HTML은
+HTML태그, HEAD 태그, TITLE태그, BODY태그로 이루어졌다. 하지만 HTML이 발전하면서 구조를 더 자세히 나누고
+직관적이고, 구조적으로 좀더 유지 보수를 쉽게 하기위해 발전해왔다.</p>
+</blockquote>
+
+<p><a title="중학교때쯤에 이렇게 한번 배운적이 있는것 같다ㅎㅎ">기본적인 HTML 기본 소스</a></p>
+<pre><code class="language-HTML">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+     	 &lt;title&gt;웹페이지 제목&lt;/title&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+  	&lt;img src="dog_cat.jpg"&gt;
+  	&lt;p&gt;기본적인 웹페이지&lt;/p&gt;
+   	&lt;b&gt;이제부터 본격적인 웹 개발을 시작해 보자!&lt;/b&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p><br />
+<br /></p>
+
+<p><span class="evidence"> HTML 소스 공부 자료 날아가서…..중간 생략;;;;</span></p>
+
+<p><br />
+<br /></p>
+
+<h3 id="css를-적용할때는-div를-사용한다">css를 적용할때는 div를 사용한다</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+#wrapper {
+  width: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+&lt;/style&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>사용할떄는 아래와 같이 사용.
+```HTML</li>
+</ul>
+
+<div id="wrapper">
+    가즈아!!!!
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+&lt;br&gt;
+
+### p 태그
+
+- p태그는 텍스트 단락을 만드는 용도로 앞 뒤로 줄바꿈이 일어남.
+- CSS를 이용하여 텍스트 서식을 손쉽게 조절 가능.
+```html
+&lt;p&gt;이곳은 p태그 입니다.&lt;/a&gt;
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="형관펜">형관펜</h3>
+
+<ul>
+  <li>&lt;mark&gt; 내용 &lt;/mark&gt;
+```HTML</li>
+</ul>
+<style>
+mark {
+  background-color:lime;
+  font-weight:bold;
+}
+</style>
+
+<p>.accent{
+  background-color:rgba(255,0,0,0.2);
+}
+&lt;/style&gt;</p>
+
+<p><br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p><mark> 입실 시간은 1시 </mark></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```HTML
+&lt;p class="accent"&gt; 퇴실 시간은 밤11시 &lt;/p&gt;
+</code></pre></div></div>
+
+<h2 id="ruby태그">Ruby태그</h2>
+
+<ul>
+  <li>일본어를 사용하기위한 태그방법으로, 가타카나나 히라가나로 표시하기위한 방법
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&lt;</span><span class="n">ruby</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="err">안녕</span><span class="p">?)</span><span class="o">&lt;</span><span class="n">rt</span><span class="o">&gt;</span><span class="n">hello</span><span class="o">&lt;</span><span class="sr">/rt&gt;
+    &lt;/</span><span class="n">ruby</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="span-태그">span 태그</h2>
+
+<ul>
+  <li>줄바꿈 없이 텍스트 영역 한 부분을 묶어서 스타일 적용하려할때 쓰임
+    <pre><code class="language-HTML">&lt;span style="color:blue"&gt; 내용 &lt;/span&gt;
+&lt;span class="evidence"&gt; 내용 &lt;/span&gt;
+</code></pre>
+  </li>
+</ul>
+
+<h2 id="ul-li-목록-태그">ul-li 목록 태그</h2>
+
+<ul>
+  <li>목록을 만들때는 ul(순서대로)표시와 li태그를 통해 각 항목을 표시
+```HTML</li>
+</ul>
+<ul>
+      <li> 내용 </li>
+      <li> 내용2 </li>
+      <li> 내용3 </li>
+</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+-------
+- 목록 표시를 ㅁ사각형으로 하고싶을때
+```HTML
+&lt;style&gt;
+ul {
+      list-style-type :square;
+    }
+&lt;/style&gt;
+</code></pre></div></div>
+
+<pre><code class="language-HTML">&lt;ul&gt;
+      &lt;li&gt; 내용 &lt;/li&gt;
+      &lt;li&gt; 내용2 &lt;/li&gt;
+      &lt;li&gt; 내용3 &lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+
+<h2 id="ol-li-태그">ol-li 태그</h2>
+
+<ul>
+  <li>li의 순서대로 번호가 매겨짐.
+```HTML</li>
+</ul>
+<ol>
+      <li> 내용 </li>
+      <li> 내용2 </li>
+      <li> 내용3 </li>
+</ol>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+-------------
+
+- 로마문자로 순서 표시
+```HTML
+&lt;ol type="I" start="1"&gt;
+  &lt;li&gt;첫번째&lt;/li&gt;
+  &lt;li&gt;두번쨰&lt;/li&gt;
+  &lt;li&gt;세번째&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div></div>
+<p><br />
+<br /></p>
+
+<h2 id="dt-dd-태그">dt dd 태그</h2>
+
+<ul>
+  <li>타이틀과 설명을 나타내는 태그
+```HTML</li>
+</ul>
+<dt>방 종류</dt>
+<dd>스위트룸</dd>
+<dd>게스트룸</dd>
+<dd>비지니스룸</dd>
+
+<dt>포함 목록</dt>
+<dd>드라이기</dd>
+<dd>냉장고</dd>
+<dd>싱글침대</dd>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+&lt;br&gt;&lt;br&gt;
+
+## 테이블 태그
+- table tag
+```HTML
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;1행 1열&lt;/th&gt;
+    &lt;th&gt;1행 2열&lt;/th&gt;
+  &lt;/tr&gt;  
+    &lt;tr&gt;
+      &lt;td&gt;2행 1열&lt;/td&gt;
+      &lt;td&gt;2행 2열&lt;/td&gt;
+    &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3행 1열&lt;/td&gt;
+        &lt;td&gt;3행 2열&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2"&gt;4행 1열&lt;/td&gt;
+        &lt;td&gt;4행 2열&lt;/td&gt;
+      &lt;/tr&gt;
+
+&lt;/table&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>행 열 합치기(ex:엑셀의 셀 병합)</li>
+</ul>
+
+<pre><code class="language-HTML">&lt;td rowspan="2"&gt; 내용 &lt;/td&gt;
+&lt;td colspan="2"&gt; 내용 &lt;/td&gt;
+</code></pre>
+
+<p>2개의 행을 합친다.</p>
+
+<h2 id="a태그">a태그</h2>
+
+<ul>
+  <li>이미지나 링크를 연결하기 !</li>
+  <li>항목 연결하는 링크 만들기 !
+    <pre><code class="language-HTML">  &lt;a name="top"&gt;&lt;/a&gt;
+    내용 ~
+
+&lt;a href="#top" class="link1"&gt;&lt;p&gt;[위로 가기]&lt;/p&gt;&lt;/a&gt;
+  위의 링크를 누르면 해당 name항목으로 이동
+</code></pre>
+    <p>```HTML
+<mark>&lt; 전체적인 틀 &gt; </mark>
+      1. nav 네비게이션을 통해 각 list 생성</p>
+  </li>
+</ul>
+<nav>
+  <ul>
+    <li><a href="#usage">이용 안내</a></li>
+    <li><a href="#reserve">예약 방법</a></li>
+    <li><a href="#fee">이용 요금</a></li>
+  </ul>
+</nav>
+
+<ol>
+  <li>아래와같이 해당 라인에 아래와 같은 a태그를 사용하여
+<a name="usage">&lt;h3&gt;이용 안내&lt;/h3&gt;</a>
+  <a name="reserve">&lt;h3&gt;예약 방법&lt;/h3&gt;</a>
+   <a name="fee">&lt;h3&gt;이용 요금&lt;/h3&gt;</a></li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## form 태그
+- 텍스트 상자, 버튼, 목록 등 웹사이트로 어떠한 정보를 전송 목적
+```HTML
+&lt;form action="register.php" method="post"&gt;
+post방식으로 register.php를 실행한다.
+
+- 로그인 form창 예시
+&lt;form&gt;
+      &lt;fieldset&gt;
+      	&lt;legend&gt;로그인 정보&lt;/legend&gt;
+        &lt;ul&gt;
+			    &lt;li&gt;
+            &lt;label&gt;아이디(6자 이상)&lt;input type="text" id="id"&gt;&lt;/label&gt;
+          &lt;/li&gt;
+        	&lt;li&gt;
+           	&lt;label&gt;비밀번호&lt;input type="password" id="pw1"&gt;&lt;/label&gt;
+          &lt;/li&gt;
+        	&lt;li&gt;
+        	 	&lt;label&gt;비밀번호(확인)&lt;input type="password" id="pw2"&gt;&lt;/label&gt;
+          &lt;/li&gt;  
+        &lt;/ul&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+      	&lt;legend&gt;개인 정보&lt;/legend&gt;
+        &lt;ul&gt;
+	        &lt;li&gt;&lt;label&gt;이름 &lt;input type="text" id="name"&gt;&lt;/label&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;label&gt;이메일 주소 &lt;input type="email" id="email"&gt;&lt;/label&gt;&lt;/li&gt;
+		    &lt;li&gt;...&lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre></div></div>
+
+<hr />
+
+<ul>
+  <li>라디오 버튼
+```HTML</li>
+</ul>
+<form>
+    <fieldset id="register">
+    <legend>수강 과목을 선택하세요 <small>(1과목 선택 가능)</small></legend>
+    	<ul>  
+	        <li>
+                <label><input type="radio" name="spk" id="spk" value="low" checked="" />영어 회화(초급)</label>
+			</li>
+			<li>
+                <label><input type="radio" name="spk" id="spk" value="middle" />영어 회화(중급)</label>
+			</li>
+			<li>
+                <label><input type="radio" name="spk" id="spk" value="high" />영어 회화(고급)</label>
+            </li>        
+		</ul>
+     </fieldset>
+  </form>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+-----------
+
+- 체크 버튼
+```HTML
+  &lt;form&gt;
+     &lt;fieldset&gt;
+      &lt;legend for="pre"&gt; 관심분야는? &lt;small&gt;(다수 선택 가능)&lt;/small&gt;&lt;/legend&gt;
+       	&lt;ul&gt;
+	       	&lt;li&gt;
+			    	&lt;input type="checkbox" name="pre" id="pre"  value="grammar"&gt;문법
+			    &lt;/li&gt;
+			    &lt;li&gt;
+            &lt;input type="checkbox" name="pre" id="pre"  value="voca"&gt;어휘
+			    &lt;/li&gt;
+			    &lt;li&gt;
+            &lt;input type="checkbox" name="pre" id="pre"  value="grammar"&gt;회화
+			    &lt;/li&gt;
+			    &lt;li&gt;
+            &lt;input type="checkbox" name="pre" id="pre"  value="listening"&gt;리스닝
+			    &lt;/li&gt;
+		    	&lt;li&gt;
+            &lt;input type="checkbox" name="pre" id="pre"  value="news"&gt;뉴스 청취
+		    	&lt;/li&gt;
+		    	&lt;li&gt;
+           &lt;input type="checkbox" name="pre" id="pre"  value="reading"&gt;독해                
+          &lt;/li&gt;
+        &lt;/ul&gt;	 
+	    &lt;/fieldset&gt;
+  &lt;/form&gt;
+</code></pre></div></div>
+
+<h2 id="css에-대해서-드디어-알아보자">CSS에 대해서 드디어 알아보자…</h2>
+
+<ul>
+  <li>CSS는 디자인 부분인데 HTML과 분리하여 편하게 보기위해서</li>
+</ul>
+
+<ol>
+  <li>
+    <p>style.css파일을 만들고, 내부에
+ my_h1_style{
+color:blue;
+font-size: 10px;
+ }</p>
+  </li>
+  <li>
+    <head>부분에 <link href="style.css" rel="stylesheet" type="text/css" />&lt;/link&gt;
+
+</head>
+  </li>
+  <li>이제 쓰면된다.</li>
+</ol>
+
+<hr />
+<ul>
+  <li>스타일에는 우선순위가 존재</li>
+</ul>
+
+<p>기본적으로는 중복된 스타일 이름은 제일 마지막에 선언된 스타일이 적용된다.
+하지만 초반에 내부에</p>
+<pre><code class="language-CSS">.accent {
+  color:red;
+  !important;
+}
+</code></pre>
+<p>이렇게 !important라고 선언하면 순서에 상관없이 무조건 이 스타일이 적용됨.
+<br />
+<br />
+<br /></p>
+
+<h3 id="선택자">선택자</h3>
+
+<ul>
+  <li>전체 선택자 : 모든 페이지에 적용</li>
+</ul>
+
+<pre><code class="language-CSS">*{
+  margin:10px;
+  padding:10px;
+  font-family: "Sans-serif"
+}
+</code></pre>
+
+<ul>
+  <li>태그 선택자 : 해당 태그는 해당 스타일 적용
+    <pre><code class="language-CSS">p{
+font-size:12px
+}
+</code></pre>
+  </li>
+  <li><a>클래스 선택자 : 같은 태그라도 다른 스타일을 적용하고 싶다면 class 선택자를 통해서 예외 스타일 적용 가능 </a>
+    <pre><code class="language-CSS">.redanccent{
+color:red;
+font-size:100px;
+}
+</code></pre>
+  </li>
+</ul>
+
+<p class="redaccent">이 내용은 100px에 red스타일이 적용됩니다.</p>
+
+<ul>
+  <li>id 선택자 : 클래스 선택자는 문서안에서 여러번 반복해서 적용 가능하지만,
+id 선택자는 요소,크기,위치 등 레이아웃 지정용으로 주로 사용하기떄문에 문서안에서 한번만 적용됨
+    <pre><code class="language-CSS">#mynav{
+color:blue;
+}
+</code></pre>
+  </li>
+</ul>
+
+<pre><code class="language-HTML">&lt;ul id="mynav"&gt;
+    &lt;li&gt;메뉴1&lt;/li&gt;
+    &lt;li&gt;메뉴2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p><br /></p>
+
+<ul>
+  <li>하위 선택자 : 상위 요소의 하위 요소에 스타일 적용
+    <pre><code class="language-CSS">section p {
+color:blue;
+}
+</code></pre>
+  </li>
+</ul>
+
+<p>section태그(상위)의 p태그(하위)
+<br /></p>
+
+<ul>
+  <li>자식 선택자 : 하위 요소 모두에게 적용되지않고, 바로 아래 자식에게만 적용
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">section</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span>
+<span class="nl">color</span><span class="p">:</span><span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>section태그(상위)의 p태그(자식)만 적용</p>
+
+<ul>
+  <li>그룹 선택자
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="o">,</span> <span class="nt">p</span><span class="p">{</span>
+<span class="nl">color</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>a태그 p태그를 red로 스타일 설정</p>
+
+<ul>
+  <li>속성 선택자
+    <pre><code class="language-CSS">a[href] {
+color:blue;
+}
+</code></pre>
+    <p>a태그에서 href 속성을 가지고있는 태그만 적용</p>
+  </li>
+</ul>
+
+<h2 id="html--css-지속적으로-수정">HTML / CSS 지속적으로 수정</h2>
+
+<ul>
+  <li>Do it! HTML5+CSS3 웹 표준의 정석</li>
+  <li>DO it! HTML5+CSS3 개정판</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=HTML+CSS structure@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/html/HTML+CSS-Research.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/html/HTML+CSS-Research.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/html/HTML+CSS-Research.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

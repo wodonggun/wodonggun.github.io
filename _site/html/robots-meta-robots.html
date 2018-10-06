@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/html/robots-meta-robots.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>Robots.txt와 meta name= robots 차이</title>
+  <meta name="description" content="검색엔진의 크롤링과 인덱싱의 차이">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">Robots.txt와 meta name= robots 차이</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="23 Aug 2018" itemprop="datePublished">Aug 23 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Jekyll</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">크롤링과 인덱싱의 차이를 이해하고 효율적으로 웹을 관리하자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="검색엔진의-크롤링과-인덱싱의-차이">검색엔진의 크롤링과 인덱싱의 차이</h2>
+
+<ul>
+  <li>
+    <p><a>크롤링 제어는 robots.txt</a><br /></p>
+  </li>
+  <li>
+    <p><a>인덱싱 제어는 &lt; meta name=”robots” content=”noindex”&gt; </a>
+<br /></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>검색엔진이 검색 키워드에 대한 검색결과를 사용자한테 제공하기 위해서는 크롤러가 끊임없이 온라인 상의 문서를 수집해야하고, 크롤러가 수집한 문서를 인덱서가 잘 정리해서 인덱스 서버에 색인해 둬야 합니다.
+많은 분들이 헷갈려 하는 부분인데 크롤러나 인덱서는 서로 하는일이 약간 틀립니다.
+말그대로 크롤러는 단순히 사이트와 사이트 사이의 링크를 타고다니며 문서를 수집하는 역할만 하며, 인덱서는 수집된 문서를 검색엔진이 사용자에게 결과물을 좀더 빠르고 쉽게 제공할수 있도록 색인 또는 인덱스하는 역할을 합니다.<br /><br />
+마찬가지로 크롤러를 제어하는 방법과 인덱싱을 제어하는 방법이 다릅니다.
+크롤링을 제어하려면 사이트의 루트 디렉토리에 robots.txt 파일을 사용해서 제어해야 하고,
+인덱싱을 제어하려면 각각의 페이지 내에 &lt; meta name=”robots” content=”noindex,nofollow”&gt; 같은 메타 로봇 태그를 사용해서 제어해야 합니다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="robots란">robots란?</h2>
+
+<blockquote>
+  <p>robots는 구글이나,네이버,다음 등 다양한 검색엔진에서 검색 정보를 수집하는 검색 로봇을 가리킵니다. 이러한</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>robots 관련 데이터는 헤더 또는 루트 경로에 위치해야 합니다.</p>
+  </li>
+  <li>
+    <p>robots 관련 내용은 <a href="https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%B4%87_%EB%B0%B0%EC%A0%9C_%ED%91%9C%EC%A4%80">로봇 배제 표준 프로토콜[링크]</a>을 준수해야 합니다.</p>
+  </li>
+</ol>
+
+<p><br /><br /><br /></p>
+
+<h2 id="robotstxt-구성">robots.txt 구성</h2>
+
+<p><img src="/img/2018-08-23-robots meta robots/1.PNG" alt="img" /></p>
+
+<p><br /></p>
+
+<ul>
+  <li>모든 로봇에게 문서 접근을 허락
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Allow: /
+</code></pre></div>    </div>
+  </li>
+  <li>모든 로봇에게 문서 접근을 차단
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /
+</code></pre></div>    </div>
+  </li>
+  <li>네이버 로봇 접근 제한
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: Yeti
+Disallow: /
+</code></pre></div>    </div>
+  </li>
+  <li>구글 로봇 접근 제한
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: googlebot
+Disallow: /
+</code></pre></div>    </div>
+  </li>
+  <li>다음 로봇 접근 허용
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: Daumoa
+Allow: /
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /><br /></p>
+
+<p>이러한 방법 말고도 다양한 처리가 가능합니다.
+<a href="https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%B4%87_%EB%B0%B0%EC%A0%9C_%ED%91%9C%EC%A4%80">링크</a></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="robots-태그-구성">robots 태그 구성</h2>
+
+<ul>
+  <li>HTML meta 태그를 이용하여 로봇을 제어할 수 있다.<br /></li>
+</ul>
+
+<p><img src="/img/2018-08-23-robots meta robots/2.PNG" alt="img" /></p>
+<blockquote>
+  <p>head부분에 robots 관련을 meta태그를 통해 설정이 가능합니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"Noindex,Nofollow"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"index"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"noindex"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"index,follow"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"index,nofollow"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"noindex,follow"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"noindex,nofollow"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>크롤링과 인덱싱의 역할, 그리고 robots.txt 파일과 meta robots 태그의 사용방법을 잘 알아야 하며, 인덱스의 차단하는 역할은 <code class="highlighter-rouge">&lt; meta name="robots" content="noindex"&gt;</code>가 <code class="highlighter-rouge">robots.txt</code> 보다 우위에 있다는걸 숙지해야 합니다.</p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li><a href="http://blog.naver.com/PostView.nhn?blogId=anysecure3&amp;logNo=221118269608&amp;beginTime=0&amp;jumpingVid=&amp;from=search&amp;redirect=Log&amp;widgetTypeCall=true&amp;directAccess=false">Dothome 웹호스팅 참고</a></li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=Robots.txt와 meta name= robots 차이@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/html/robots-meta-robots.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/html/robots-meta-robots.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/html/robots-meta-robots.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

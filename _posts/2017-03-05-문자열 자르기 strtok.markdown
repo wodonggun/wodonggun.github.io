@@ -4,7 +4,7 @@ title: "문자열 자르기 strtok 함수 사용법"
 subtitle: <span class="evidence"> 어떤 특정한 문자를 기준으로 문자열을 구분해 보자. </span>
 date: 2017-03-05
 author: NoonGam
-category: C / C++
+category: C/C++
 tags: C 백준알고리즘 SW_expert
 comments: true
 finished: true

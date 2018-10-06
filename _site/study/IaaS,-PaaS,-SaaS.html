@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>IaaS, PaaS, SaaS란 무엇인가?</title>
+  <meta name="description" content="IaaS, PaaS, SaaS란 무엇인가?">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">IaaS, PaaS, SaaS란 무엇인가?</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="13 Jul 2018" itemprop="datePublished">Jul 13 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">IoT</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">AWS</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">클라우드 컴퓨팅 시대의 탄생</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="iaas-paas-saas란-무엇인가">IaaS, PaaS, SaaS란 무엇인가?</h2>
+
+<ul>
+  <li>what is IaaS, PaaS, SaaS? <br /></li>
+</ul>
+
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/2.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>클라우드 컴퓨팅이 도입되면서 IT업계에서는 최근에 자주 들을 수 있는 용어이다. 각각 IaaS(Infrastructure as a service), PaaS(Platform as a service), SaaS(Software as a service)의 준말이다.</p>
+</blockquote>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/3.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>IT 인프라의 구성요소로 보았을때 각각 차이는 <a title="사용자=기업,개인 등, 제공자=AWS,Azure 등">사용자가 관리해야 할 범위와 제공자가 제공해주는 서비스의 범위</a>에 따라 구분을 지어 위의 이미지처럼 간략하게 보일 수 있습니다.</p>
+</blockquote>
+
+<p>아마존의 AWS는 처음에는 IaaS를 서비스하였지만, 점차 사업을 확장하면서 PaaS를 넘어 SaaS까지
+사용자들에게 제공하고 있다. 이와 달리 Google이나 마이크로소프트는 SaaS 기반의 클라우드
+서비스로 시작하여 PaaS,IaaS로 확장하고 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="packaged-software">Packaged Software</h2>
+
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/4.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>on-premise라고도 불리며, 직접 인프라와 플랫폼, 어플리케이션을 관리하는 모델을 의미합니다.
+이러한 모델은 기업에서는 많은 비용이 소모되며, 유지 보수 또한 만만치 않았습니다.</p>
+</blockquote>
+
+<ul>
+  <li>서버를 운영해야할 하드웨어(CPU,램,저장소,네트워크 장비 등)를 직접 구매해야 합니다.</li>
+  <li>하드웨어에 올라가야 할 운영체제(OS)나 프로그램이 있어야 합니다.</li>
+  <li>물리적 네트워크 연결과 논리적 설정 및 환경 설정이 필요합니다.</li>
+  <li>유료OS나 유료 소프트웨어 등 라이센스 문제나 비용을 부담해야 합니다.</li>
+  <li>보안적인 문제나 데이터 손실,백업 기능,로깅 등 다양한 문제를 사전에 예방해야 합니다.</li>
+  <li>서버 상황이나 각종 트래픽 관련 모니터링이나 프로지버닝 등 직접 개발해야 합니다.</li>
+  <li>서버를 개선하고, 유지 보수 해야할 인원이 있어야 합니다.(이부분에서 큰 비용이 발생)</li>
+</ul>
+
+<p><span class="evidence">중소기업이나 벤처기업들은 위와 같은 요구를 비용적인 측면때문에 충족하기 매우 힘들었습니다.</span></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="iaas">IaaS</h2>
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/5.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p><span class="evidence">“컴퓨팅 인프라 자원을 필요한 만큼 이용하고,사용한 만큼 합리적으로 지불하자.”<br /></span>
+인프라스트럭쳐 레벨을 제공하는 서비스를 의미하며, 위의 표에서 주의깊게 보실 부분은 하부의 인프라 부분만 제공됩니다. 즉, OS부터 상위의 모든 플랫폼이나 어플리케이션을 사용자가 직접 올릴 수 있습니다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>클라우드 서비스 제공자는 관리 부담이 적어집니다.</p>
+  </li>
+  <li>
+    <p>가상 호스팅(VM Hosting) 서비스와 일부 유사하나, 클라우드 서비스는 Elastic 서비스 확장 관점에서 차이가 있습니다.</p>
+  </li>
+  <li>
+    <p>일반적으로, 매우 적은 수의 OS만 일반적으로 제공 됩니다.(일반적으로, 일부 Linux 배포판과 Windows Server만 제공)</p>
+  </li>
+  <li>
+    <p>고객은 여전히 직접 OS와 어플리케이션을 직접 관리 해야 합니다.</p>
+  </li>
+  <li>
+    <p>유료 OS나 유료 DBMS에 대란 라이센스 비용은 고객 부담일 수 있습니다.(RHEL, Windows Server나 MSSQL 또는 Oracle)</p>
+  </li>
+  <li>
+    <p>관리 측면에서, 개발자와 인프라 관리자의 역할이 분담될 수 있음. 인프라 관리자는 여전히 OS 및 OS 상부 전반적 보안에 대한 책임을 가질 수 있습니다.</p>
+  </li>
+  <li>
+    <p>Amazon EC2(Amazon Elastic Compute Cloud) 서비스가 사용하는 방식이며 SKT나 KT, LGU+와 같은 국내 이통사가 제공하는 클라우드 서비스는 2012년 1월 현재, 초기의 IaaS모델을 제공하고 있습니다.(국내 서비스는 향후 빠른 속도로 발전하겠지요)</p>
+  </li>
+  <li>
+    <p>서비스사가 제공하는 형태로 VM을 이용(구축)할 경우 모니터링이나 프로비저닝 등도 손쉽게 구현 가능합니다.</p>
+
+    <p>여담으로, 기업의 인프라를 클라우드로 가져올때 가장 저항이 적은 클라우드 컴퓨팅 서비스가 바로
+  이 IaaS입니다.</p>
+  </li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="paas">PaaS</h2>
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/6.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>개발자가 어플리케이션을 개발, 서비스 하기위해 사용가능한 서비스와 기능들이 제공되는 클라우드 서비스를 의미합니다. 개발자들을 위한 서비스로, 개발자들이 Low Level의 인프라스트럭처에 대해 신경 쓰지 않고, 앱을 개발하고 테스트 할 수 있게 해줍니다. 즉, 백그라운드서비스에 대해서는 크게 고려하지않고, 프론트앤드 개발에 집중할 수 있습니다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>네트워크 연결 인프라부터 어플리케이션 실행을 위한 런타임까지 제공되며, 사용자는 어플리케이션과 데이터만 관리합니다.</p>
+  </li>
+  <li>
+    <p>마이크로소프트 Azure Platform 과 세일즈포스닷컴이 제공하는 Force.com(세일즈포스닷컴의 Salesforces - SaaS와 다른 서비스입니다)이 PaaS의 대표적인 서비스 입니다.</p>
+  </li>
+  <li>
+    <p>PaaS는 개발자와 개발사에게 인프라나 OS, 플랫폼 관리에 대한 부담을 거의 대부분 경감시킵니다. 하지만, 경험적으로 볼때, 모든 부담을 없애지는 않습니다.</p>
+  </li>
+  <li>
+    <p>PaaS 어플리케이션 서비스를 위해 대부분의 경우 비즈니스 모델과 비즈니스 로직이 추가되어야 합니다.</p>
+  </li>
+  <li>
+    <p>가장 이상적인 어플리케이션 플랫폼 관점의 클라우드 모델로 업계에 받아들여지고 있습니다.</p>
+  </li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="saas">Saas</h2>
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/7.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>어플리케이션을 조직이나 개인에게 쉽게 제공되는 IT 서비스 방식을 의미합니다. 간단하게 인터넷으로 우리가 필요한 서비스를 별다른 설치 없이 pc에서 이용할 수 있는 서비스이다. 대표적으로 웹메일, 구글 클라우드, 네이버 클라우드, MS오피스365,드롭박스 등이 있다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>SaaS는 위의 구성요소 표에서 보이는 것처럼, 서비스 제공의 관점에서 볼때 철저한 소비(Consume)를 목적으로 합니다. Finished Service의 관점으로도 볼 수 있으며, 서비스 사용자에게 추가적인 개발이나 데이터에 대한 추가적인 부담을 씌우지 않습니다.</p>
+  </li>
+  <li>
+    <p>기업소비 관점에서 본다면 세일즈포스닷컴의 CRM 서비스나,  개인 소비 관점에서 본다면 포털이 제공하는 웹메일도 하나의 SaaS 예가 될 수 있습니다.</p>
+  </li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="마무리">마무리</h2>
+
+<p><img src="/img/2018-07-13-IaaS, PaaS, SaaS/1.png" alt="icon" /></p>
+<blockquote>
+  <p>지금까지 공부했던 내용을 그림을 보고 정리해 보세요.</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="참고자료">참고자료</h2>
+
+<ul>
+  <li>https://blogs.msdn.microsoft.com/eva/?p=1383</li>
+  <li>http://www.bloter.net/archives/259518</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=IaaS, PaaS, SaaS란 무엇인가?@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

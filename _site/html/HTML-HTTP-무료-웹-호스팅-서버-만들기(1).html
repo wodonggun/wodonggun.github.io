@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/html/HTML-HTTP-%EB%AC%B4%EB%A3%8C-%EC%9B%B9-%ED%98%B8%EC%8A%A4%ED%8C%85-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0(1).html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>HTML HTTP 무료 웹 서버 호스팅 만들기(1) </title>
+  <meta name="description" content="">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">HTML HTTP 무료 웹 서버 호스팅 만들기(1) </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="23 Jul 2018" itemprop="datePublished">Jul 23 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">HTML</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">localhost 127.0.0.1서버가 아닌 public IP 서버를 만들어보자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <!-- Study Sample  -->
+
+<h2 id="웹-서버란">웹 서버란?</h2>
+
+<p>웹 서버란걸 많이 들어보셨을겁니다.</p>
+
+<p>웹 서버란, 웹 페이지(HTML 파일 등)를 제공해 주는 서버로 HTTP를 사용하여</p>
+
+<p>웹 페이지를 제공할 수 있는 웹 서버 프로그램이 설치되어있는 것을 말합니다.</p>
+
+<h2 id="닷홈-dothome-무료-웹-호스팅">닷홈 dothome 무료 웹 호스팅</h2>
+
+<ul>
+  <li>localhost? no! <br /></li>
+</ul>
+
+<p>https://www.dothome.co.kr</p>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/1.jpg" alt="Codes" /></p>
+<blockquote>
+  <p>dothome을 통해서 무료로 서버를 대여받을 수 있습니다. 일반적으로는 localhost 즉, 개인 컴퓨터에 index.html을 만들어서 자기 자신만 접속할 수 있지만, 이렇게 서버 호스팅 업체를 통해서 홈페이지를 제작하면 전세계 어디서든 URL을 통해서 접속 할 수 있습니다.</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="무료-웹-서버-호스팅-방법">무료 웹 서버 호스팅 방법</h2>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/2.png" alt="Codes" /></p>
+
+<ul>
+  <li>웹 호스팅 -&gt; 무료호스팅 클릭</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/3.png" alt="Codes" /></p>
+<ul>
+  <li>무료호스팅 신청 -&gt; 공간만 설치 선택 -&gt; 신청하기</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/4.png" alt="Codes" /></p>
+
+<ul>
+  <li>관련 사항들 한번 읽어보고 -&gt; 약관 체크 -&gt; 무료호스팅 신청하기</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/5.png" alt="Codes" /></p>
+
+<ul>
+  <li>FTP 접속할 아이디 설정</li>
+  <li>FTP 비밀번호 설정</li>
+  <li>DB 비밀번호 설정</li>
+</ul>
+
+<p>꼭 ID와 비밀번호는 잃어버리지 않도록 주의하세요.</p>
+
+<p><br />
+<br /></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/8.png" alt="Codes" /></p>
+
+<ul>
+  <li>인터넷창을 키고 <a> ‘ID’.dothome.co.kr </a> 을 입력하시면 다음과 같이 화면이 뜨면 정상적으로 진행된것 입니다.</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/6.png" alt="Codes" /></p>
+
+<ul>
+  <li>마이닷홈을 통해서 자신의 도메인 정보를 알 수 있습니다.</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2018-07-23-HTML HTTP 무료 웹 호스팅 서버 만들기/7.png" alt="Codes" /></p>
+
+<ul>
+  <li>마이닷홈 -&gt; 상세보기를 클릭하면 상세 정보들도 다같이 볼 수 있어요.</li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<h2 id="다음-포스팅에서는">다음 포스팅에서는…</h2>
+
+<p>파일질라 FTP를 통해서 직접 홈페이지 소스를 올려보고 확인해 보겠습니다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li>Do it! HTML5 + CSS3</li>
+  <li>Do it! 웹 표준의 정석</li>
+  <li>https://www.dothome.co.kr/</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=HTML HTTP 무료 웹 서버 호스팅 만들기(1) @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/html/HTML-HTTP-%EB%AC%B4%EB%A3%8C-%EC%9B%B9-%ED%98%B8%EC%8A%A4%ED%8C%85-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0(1).html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/html/HTML-HTTP-%EB%AC%B4%EB%A3%8C-%EC%9B%B9-%ED%98%B8%EC%8A%A4%ED%8C%85-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0(1).html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/html/HTML-HTTP-%EB%AC%B4%EB%A3%8C-%EC%9B%B9-%ED%98%B8%EC%8A%A4%ED%8C%85-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0(1).html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

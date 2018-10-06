@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/algorithm/%EB%B0%B1%EC%A4%80-14888-%EC%97%B0%EC%82%B0%EC%9E%90-%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>백준 14888번 연산자 끼워넣기 </title>
+  <meta name="description" content="백준 14888 연산자 끼워넣기">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">백준 14888번 연산자 끼워넣기 </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="18 Jul 2018" itemprop="datePublished">Jul 18 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">백준알고리즘</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">DFS 깊이우선탐색을 이용한 연산자 끼워넣기 백준 14888번</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="백준-14888-연산자-끼워넣기">백준 14888 연산자 끼워넣기</h2>
+
+<ul>
+  <li>https://www.acmicpc.net/problem/14888 링크 바로가기</li>
+</ul>
+
+<p>제일 고려해야할 부분은 이 모든 연산작업에 대해서 for문이나 while문을 통해서 남은 +,-,×,÷를 모두 체크하면서 연산작업을 수행하는 방법이 있지만 DFS에 조금만 알고 응용 가능하다면 훨씬 쉬운방법으로 풀 수 있습니다.</p>
+
+<blockquote>
+  <p>C언어를 이용한 DFS방식의 코딩이므로, DFS에 대한 기본 지식을 베이스로 코드를 작성하였습니다. 푸는 방식은 여러가지가 존재하며 제가 푼 방식이 꼭 최적화된 정답은 아닙니다.</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="dfs">DFS</h2>
+
+<p><img src="/img/0-Algorithm/2018-07-18-백준 14888 연산자 끼워넣기/1.png" alt="img" /></p>
+
+<p><a>
+DFS(Depth First Search; 깊이 우선 탐색)는 현재 정점에서 연결된 정점을 하나 골라 파고들수 있는 최대한 깊게 파고들어가며 탐색하는 방법이다.
+탐색 순서가 약간 난해하게 느껴질 수도 있는데 쉽게 생각해서 “갈 수 있는 길을 찾아 쭉 내려감 -&gt; 더 이상 못가면 1번 되돌아 간 뒤 -&gt; 또 갈 수 있는 길을 찾아 쭉 내려감 -&gt; …. “ 을 반복한다고 보면 된다.
+이 원리를 응용한 알고리즘이 ‘백 트래킹(역추적)’이다.
+스택(Stack)을 이용해서 구현하며, 직접 스택을 구현해도 되고, 시스템 스택(재귀 호출)을 사용할 수도 있다.
+옆으로 넓은 그래프에 대해서 준수한 성능을 보이나 아래로 깊은 그래프의 경우 좋은 성능을 기대하기는 힘들다.
+예를들어 C 정점을 방문하려 할 때, BFS에선 3번만에 방문할 수 있으나, DFS로는 12번만에 방문이 가능하다.
+트리에서 DFS는 Inorder와 동일하다.
+</a></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="코드">코드</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//c언어 백준 14888번</span>
+
+<span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="n">N</span><span class="p">;</span>                      
+<span class="kt">int</span> <span class="n">num</span><span class="p">[</span><span class="mi">101</span><span class="p">];</span>                <span class="c1">//N개의 숫자를 저장할 변수</span>
+<span class="kt">int</span> <span class="n">giho</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>                <span class="c1">//+,-,*,/ 순서대로 연산자 갯수를 저장</span>
+<span class="kt">int</span> <span class="n">INT_MIN</span> <span class="o">=</span> <span class="mi">987654321</span><span class="p">;</span>    <span class="c1">//최소값은 언제나 가장큰값보다 작아야</span>
+<span class="kt">int</span> <span class="n">INT_MAX</span> <span class="o">=</span> <span class="o">-</span><span class="mi">987654321</span><span class="p">;</span>   <span class="c1">//최대값은 언제나 가장 작은값보단 커야</span>
+
+<span class="kt">int</span> <span class="nf">sol</span><span class="p">(</span><span class="kt">int</span> <span class="n">plus</span><span class="p">,</span> <span class="kt">int</span> <span class="n">minus</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mul</span><span class="p">,</span> <span class="kt">int</span> <span class="n">div</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">,</span> <span class="kt">int</span> <span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;=</span> <span class="n">N</span><span class="p">)</span>  <span class="c1">//종료조건</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&lt;</span> <span class="n">INT_MIN</span><span class="p">)</span>
+			<span class="n">INT_MIN</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&gt;</span> <span class="n">INT_MAX</span><span class="p">)</span>
+			<span class="n">INT_MAX</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+
+
+	<span class="c1">//plus</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">plus</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>           
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">tmp_result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="n">tmp_result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">num</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
+
+		<span class="n">sol</span><span class="p">(</span><span class="n">plus</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">minus</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">div</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tmp_result</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="c1">//minus</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">minus</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">tmp_result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="n">tmp_result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">-</span> <span class="n">num</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
+
+		<span class="n">sol</span><span class="p">(</span><span class="n">plus</span><span class="p">,</span> <span class="n">minus</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">div</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tmp_result</span><span class="p">);</span>
+
+	<span class="p">}</span>
+
+	<span class="c1">//mul</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">mul</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">tmp_result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="n">tmp_result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">num</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
+
+		<span class="n">sol</span><span class="p">(</span><span class="n">plus</span><span class="p">,</span> <span class="n">minus</span><span class="p">,</span> <span class="n">mul</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">div</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tmp_result</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="c1">//div</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">div</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">tmp_result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="n">tmp_result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">/</span> <span class="n">num</span><span class="p">[</span><span class="n">count</span><span class="p">];</span>
+
+		<span class="n">sol</span><span class="p">(</span><span class="n">plus</span><span class="p">,</span> <span class="n">minus</span><span class="p">,</span> <span class="n">mul</span><span class="p">,</span> <span class="n">div</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tmp_result</span><span class="p">);</span>
+	<span class="p">}</span>
+
+
+<span class="p">}</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">giho</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+
+	<span class="n">sol</span><span class="p">(</span><span class="n">giho</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">giho</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">giho</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">giho</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">INT_MIN</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="문제-적용-방식">문제 적용 방식</h2>
+
+<p><img src="/img/0-Algorithm/2018-07-18-백준 14888 연산자 끼워넣기/2.png" alt="img" /></p>
+
+<ul>
+  <li>재귀함수를 통한 함수호출</li>
+  <li>DFS를 이용한 모든 연산작업 실행</li>
+  <li>N개의 숫자를 다 사용(=count갯수) -&gt; 종료조건</li>
+  <li>함수를 호출할때는 현재상태에서 +,-,×,÷ 남은 연산자 갯수를 매개변수로 넘겨줌.</li>
+  <li>현재까지 변수를 count로 넘겨줌.</li>
+  <li>현재까지 진행한 연산결과를 result로 넘겨줌.</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="참고자료">참고자료</h2>
+<ul>
+  <li><a href="https://m.blog.naver.com/PostView.nhn?blogId=occidere&amp;logNo=220923695595&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F">occidere님의 블로그</a></li>
+  <li><a href="https://www.acmicpc.net/problem/14888">백준 14888번</a></li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=백준 14888번 연산자 끼워넣기 @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/algorithm/%EB%B0%B1%EC%A4%80-14888-%EC%97%B0%EC%82%B0%EC%9E%90-%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/algorithm/%EB%B0%B1%EC%A4%80-14888-%EC%97%B0%EC%82%B0%EC%9E%90-%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/algorithm/%EB%B0%B1%EC%A4%80-14888-%EC%97%B0%EC%82%B0%EC%9E%90-%EB%81%BC%EC%9B%8C%EB%84%A3%EA%B8%B0.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

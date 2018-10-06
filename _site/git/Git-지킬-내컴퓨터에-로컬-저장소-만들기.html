@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/git/Git-%EC%A7%80%ED%82%AC-%EB%82%B4%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>Git 지킬 내컴퓨터에 로컬저장소 만들기</title>
+  <meta name="description" content="로컬 저장소 만들기">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">Git 지킬 내컴퓨터에 로컬저장소 만들기</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="22 Sep 2018" itemprop="datePublished">Sep 22 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Git</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Github</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Jekyll</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">Github Repositoy를 내 컴퓨터로 가져와보자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="로컬-저장소-만들기">로컬 저장소 만들기</h2>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/6.PNG" alt="img" /></p>
+
+<ul>
+  <li>git 설치(Git bash 사용 목적)</li>
+</ul>
+
+<p><a href="https://gitforwindows.org">[Git for windows 바로가기 링크]</a></p>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/2.png" alt="img" /></p>
+
+<ul>
+  <li>저장할 폴더를 만들고 그 폴더에서 <code class="highlighter-rouge">마우스 우측 클릭</code>-&gt;<code class="highlighter-rouge">Git bash Here</code>실행</li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/1.PNG" alt="img" /></p>
+
+<ul>
+  <li>
+    <p>가져올 Github주소에서 <code class="highlighter-rouge">Clone or download</code>클릭</p>
+  </li>
+  <li>
+    <p>저장소 <code class="highlighter-rouge">HTTPS 주소</code> 복사하기</p>
+  </li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/7.PNG" alt="img" /></p>
+
+<ul>
+  <li><code class="highlighter-rouge">git clone https://github.com/아이디/저장소</code> 명령어 입력</li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/8.PNG" alt="img" /></p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">Cloning을 진행</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git init</code> git initialize를 통한 깃 설정</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git config --global user.name "이름"</code> 깃허브 commit에 나타낼 자신의 이름</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git config --global user.email "이메일주소"</code>  깃허브 commit에 나타낼 자신의 이메일주소</p>
+  </li>
+</ul>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/9.PNG" alt="img" /></p>
+
+<ul>
+  <li>이제 폴더 내부에 해당 프로젝트가 다운되어있습니다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="git-push-원격저장소에-파일-푸쉬하기">Git push 원격저장소에 파일 푸쉬하기</h2>
+
+<ol>
+  <li>
+    <p><code class="highlighter-rouge">git add .</code> 해당 디렉토리의 바뀐 파일들을 모두 add</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git commit -m "커밋메시지"</code> 추후 백업이나 변경 사항을 볼 수 있는 log 기록<br />
+(ex: <code class="highlighter-rouge">git commit -m "Edit:2018-09-22 레이아웃 변경"</code>)</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git push origin master</code>  master브랜치에 푸쉬</p>
+  </li>
+</ol>
+
+<p><br /><br /><br /></p>
+
+<h2 id="git-pull-원격저장소-push-에러">Git pull 원격저장소 push 에러</h2>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/4.PNG" alt="img" /></p>
+
+<blockquote>
+  <p>원인 : 현재 작업하고 있는 Repository가 서버에 있는 Repository보다 오래된 내용이다. Push 를 하게 되면 서버에 있는 최신 내용은 날라가고 현재 작업한 내용만 적용이 되는 문제가 발생할 수 있기 때문에 에러가 발생하게 된 것입니다.</p>
+</blockquote>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/5.PNG" alt="img" /></p>
+
+<ol>
+  <li><code class="highlighter-rouge">git pull</code> 최신내용을 로컬저장소에 적용한 후 올리기 <br />
+ (Local에 자동으로 최신 소스가 Merge됨)<br /></li>
+</ol>
+
+<p>만약 덧붙이는 과정에서 conflict가 발생한 경우, 그 안에 어느 부분이 conflict가 발생했는지가 나오기 때문에 잘 확인해서 소스를 수정한 후 다시 올리면 된다.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">git push --force</code> 강제 삽입하기 <br />
+(<a>추천하지 않음.</a> 깃허브 저장소에 데이터를 날리고 자신의 데이터를 강제 푸쉬)</li>
+</ol>
+
+<p><br /><br /></p>
+
+<p><img src="/img/2018-09-22-Git 지킬 내컴퓨터에 로컬 저장소 만들기/3.PNG" alt="img" /></p>
+
+<ul>
+  <li><code class="highlighter-rouge">git pull을 통한 병합 후에 다시 진행하면 성공적으로 push가 완료됩니다.</code></li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="깃허브-정리">깃허브 정리</h2>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">git clone 주소</code> 원격저장소(깃허브)프로젝트를 내pc로 가져오기.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git config --global --list</code> 전역 설정 정보 조회하기</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git config --list</code> 지역 설정 정보 조회하기</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">ls</code> 현재 위치에서 폴더 및 파일 보기</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">rm 파일명</code> 해당 파일 삭제하기</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">rm -rf 폴더명</code> 해당 폴더 삭제하기(r=recursive, f=force)</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">git log</code> 패치(변경사항)와 로그 표시</p>
+  </li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li>https://dololak.tistory.com/346</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=Git 지킬 내컴퓨터에 로컬저장소 만들기@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/git/Git-%EC%A7%80%ED%82%AC-%EB%82%B4%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/git/Git-%EC%A7%80%ED%82%AC-%EB%82%B4%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/git/Git-%EC%A7%80%ED%82%AC-%EB%82%B4%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-%EB%A1%9C%EC%BB%AC-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

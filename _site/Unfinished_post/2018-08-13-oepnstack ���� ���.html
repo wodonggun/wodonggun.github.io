@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/Unfinished_post/2018-08-13-oepnstack%20%B0%FC%B7%C3%20%BF%EB%BE%EE.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>openstack 이란? </title>
+  <meta name="description" content="A Simple Jekyll Blog Theme. # this means to ignore newlines until "baseurl:"
+">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">openstack 이란? </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="13 Aug 2018" itemprop="datePublished">Aug 13 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">OpenStack Linux OpenSource</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence"> SDN NFV VNF 5G와 관련된 openstack? 관련된 용어들을 정리해보자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <p>##</p>
+
+<h2 id="클라우드-컴퓨팅">클라우드 컴퓨팅</h2>
+
+<blockquote>
+  <p>개인이 가진 스마트 폰, 스마트패드, 스마트 TV, 노트북,
+컴퓨터와 같은 인터넷이 가능한 디바이스를 통해
+클라우드라고 불리는 제 3의 공간에서 데이터를 읽고
+쓰고 정보를 분석하고 처리하여, 저장하고 관리하는
+컴퓨팅 시스템.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="클라우드-서비스란-">클라우드 서비스란 ?</h2>
+
+<blockquote>
+  <p>무엇을 서비스하냐에 따라 SaaS, PaaS, IaaS 로 나눕니다.</p>
+</blockquote>
+
+<p><a href="https://wodonggun.github.io/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html">IaaS, PaaS, SaaS란 무엇인가?</a></p>
+
+<h2 id="floating-ip">Floating IP?</h2>
+
+<p>일반적으로 외부에서 제공되는 public IP를 Fixed된 상태로 IP를 얻습니다. 일반적으로는 외부와
+인터넷이 가능하지만 오픈스택을 통해 가상화로 할당받은 private IP는 외부와 통신이 불가능합니다.
+floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 삭제하는 IP를 지칭합니다.
+하지만 이러한 floating IP를 통해 가상 인스턴스도 외부와 인터넷 통신이 가능합니다.</p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="하이퍼-바이저-타입">하이퍼 바이저 타입</h2>
+
+<blockquote>
+  <p>하이퍼바이저는 호스트 컴퓨터 1대에서 운영체제 다수를 실행하기 위한 논리적 플랫폼을 의미합니다. 즉, VMM(Virtual Machine Monitor)라고 부릅니다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Native(물리적 분할 개념) = 운영체제보다 위에 하이퍼바이저개념이 상주하여 여러개의 OS를 프로그램 다루듯이 제어함</p>
+  </li>
+  <li>
+    <p>Hosted(가상머신 개념) = 운영체제 아래에 하이퍼바이저를 두고 하이퍼바이저내부에 여러개의 OS를 구동 시킴</p>
+  </li>
+</ul>
+
+<p>가상머신은 하이퍼바이저위에 별도의 운영체제와 함께 동작
+컨테이너는 공통된 운영체제를 기반으로 독립적으로 응용프로그램을 실행합니다.</p>
+
+<h2 id="sdn---software-defined-networking">SDN - Software Defined Networking</h2>
+
+<p>네트워크 제어기능이 물리적 네트워크와 분리되도록 프로그래밍한 네트워크 구조</p>
+
+<ol>
+  <li>네트워크 제어 기능을 데이터 전달기능과 분리</li>
+  <li>네트워크 제어 기능과 실행환경을 분리하여 성능이 낮은 하드웨어 포트에는 더이상 할당 안함.</li>
+</ol>
+
+<p><br /><br /><br /></p>
+
+<h2 id="오픈스택이란-">오픈스택이란 ?</h2>
+
+<blockquote>
+  <p>초기 RackSpace 와 NASA가 합작으로 개발</p>
+</blockquote>
+
+<h2 id="가상-서버를-생성하는-nova">가상 서버를 생성하는 Nova</h2>
+
+<blockquote>
+  <p>OpenStack에서 Nova는 Compute Service의 핵심이며, 메세지 큐,
+노바는 IaaS(Infrastructure As A Service)를 제공합니다.</p>
+</blockquote>
+
+<ol>
+  <li>Nova는 대시보드나 콘솔을 통해 Nova-api를 호출합니다.</li>
+  <li>Nova-api는 메세지큐를 통해 nova-compute에 인스턴스 생성을 명령<br />
+(직접 하이퍼바이저에게 명령 불가능)</li>
+  <li>nova-compute는 하이퍼바이저 라이브러리를 통해 하이퍼바이저에게 인스턴스 명렁 전달</li>
+  <li>하이퍼바이저 인스턴스 생성</li>
+  <li>인스턴스에 nova-console을 통해 사용자가 접근 가능</li>
+</ol>
+
+<h2 id="-controller"><a>¶ controller<a></a></a></h2>
+
+<p>컨트롤러
+컨트롤러 노드는 ID 서비스, 이미지 서비스, Compute의 관리 부분, Networking의 관리 부분, 다양한 Networking 에이전트 및 Dashboard를 실행합니다. SQL 데이터베이스, 메시지 대기열 및 NTP (Network Time Protocol)와 같은 지원 서비스도 포함됩니다.</p>
+
+<p>필요에 따라 컨트롤러 노드는 블록 저장소, 개체 저장소, 오케스트레이션 및 원격 측정 서비스의 일부를 실행합니다.</p>
+
+<p>컨트롤러 노드에는 최소 두 개의 네트워크 인터페이스가 필요합니다.</p>
+
+<h2 id="-compute"><a>¶ compute<a></a></a></h2>
+
+<h2 id="오브젝트-스토리지-swift">오브젝트 스토리지 Swift</h2>
+
+<p><br /><br /><br /></p>
+
+<h2 id="네트워크">네트워크</h2>
+
+<ul>
+  <li>Provider Network (그냥 일반적인 네트워크 서비스)
+기본으로 라우터나 장비를 그대로 받아서 씀.</li>
+</ul>
+
+<p>프로바이더 브릿지로 인터페이스를 만들고 연결</p>
+
+<ul>
+  <li>self-service Network ( 스스로 모든 네트워크를 다 관리)
+라우터 동작 ,DHCP,포트포워딩 등 소프트웨어로 직접 구성하고 관리</li>
+</ul>
+
+<p>프로바이더 브릿지로 인터페이스를 연결한걸 쓰면서 + 셀프 서비스브릿지로 내부 VLAN터널을 만들고 외부와 통신도 가능하게</p>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=openstack 이란? @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/Unfinished_post/2018-08-13-oepnstack%20%B0%FC%B7%C3%20%BF%EB%BE%EE.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/Unfinished_post/2018-08-13-oepnstack%20%B0%FC%B7%C3%20%BF%EB%BE%EE.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/Unfinished_post/2018-08-13-oepnstack%20%B0%FC%B7%C3%20%BF%EB%BE%EE.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

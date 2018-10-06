@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/algorithm/Greedy-Algorithm-%ED%83%90%EC%9A%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9E%80.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>그리드 알고리즘이란? - Greedy Algorithm</title>
+  <meta name="description" content="">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">그리드 알고리즘이란? - Greedy Algorithm</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="05 Oct 2018" itemprop="datePublished">Oct 5 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Algorithm</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">C/C++</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">What is Greedy Algorithm? 그리드 알고리즘을 알아보자.</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <hr />
+
+<h2 id="greedy-algorithm">Greedy Algorithm</h2>
+
+<blockquote>
+  <p>최적해를 구하는 데 사용하는 근시안적인 방법. 매 선택에서 지금 이순간 최적의 답을 계속 선택하여 결과를 도출하는것을 말한다.</p>
+</blockquote>
+
+<p><br /></p>
+<fieldset id="gpg-fieldset">
+
+1. 여러 경우 중 하나를 결정해야 할 때마다 그 순간이 최적이라고 생각되는 것을 선택해 나가는 방식으로 진행하여 최종적인 해답에 도달하여 해결함.<br /><br />
+
+2. 각 선택의 시점에서 이루어지는 결정은 지역적으로는 최적이지만, 그것들을 계속 수집하여 최종적인 해답을 만들었다고 하여, 그것이 최적이라는 보장은 없다.<br /><br />
+
+3. 일반적으로, 머리속에 떠오르는 생각을 검증 없이 바로 구현하면 Greedy 접근이 된다.
+
+</fieldset>
+<p><br /><br /><br /></p>
+
+<h2 id="거스름돈-줄이기">거스름돈 줄이기</h2>
+
+<blockquote>
+  <p>500원 100원 50원 10원 동전이 있다. 고객이 3800원 금액을 구매하고, 5천원을 받았을때
+최소한의 동전수로 거스름돈을 주려고 한다.<br />
+<code class="highlighter-rouge">500원</code> 선택 -&gt; <code class="highlighter-rouge">500원</code> 선택 -&gt; <code class="highlighter-rouge">100원</code> 선택 -&gt; <code class="highlighter-rouge">100원</code> 선택  (총 1200원)</p>
+</blockquote>
+
+<blockquote>
+  <p>500원 400원 100원 50원 10원 동전이 있다. 고객이 3800원 금액을 구매하고, 5천원을 받았을때
+최소한의 동전수로 거스름돈을 주려고 한다.<br />
+<code class="highlighter-rouge">500원</code> 선택 -&gt; <code class="highlighter-rouge">500원</code> 선택 -&gt; <code class="highlighter-rouge">100원</code> 선택 -&gt; <code class="highlighter-rouge">100원</code> 선택  (총 1200원)</p>
+</blockquote>
+
+<p><a>400원 짜리 동전을 추가하였지만 그래도 500원이라는 가장 큰 단위로 거스름돈을 선택하는게 최선이다. 결국에는 100원짜리 2개가 추가되어 총 4개의 동전을 줘야한다.(최선의 선택) </a><br /></p>
+
+<blockquote>
+  <p>전체적으로 봤을때는 400원짜리 동전 3개만 주면 동전 3개로 거스름돈을 줄 수 있다.(최적의 선택)<br />
+<code class="highlighter-rouge">400원</code> 선택 -&gt; <code class="highlighter-rouge">400원</code> 선택 -&gt; <code class="highlighter-rouge">400원</code> 선택 (총 1200원)</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="경로-탐색">경로 탐색</h2>
+
+<p><img src="/img/0-Algorithm/2018-10-05-Greedy Algorithm 탐욕 알고리즘이란/1.png" alt="img" /></p>
+<ul>
+  <li>그리디 알고리즘을 통해 1에서 7로 이동하고자 한다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<p><img src="/img/0-Algorithm/2018-10-05-Greedy Algorithm 탐욕 알고리즘이란/2.png" alt="img" /></p>
+<ul>
+  <li>1번노드에서 가장 비용이 적게드는 간선을 통해 이동한다.
+비용이 1이 발생하는 <code class="highlighter-rouge">2번 노드</code>로 이동한다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<p><img src="/img/0-Algorithm/2018-10-05-Greedy Algorithm 탐욕 알고리즘이란/3.png" alt="img" /></p>
+<ul>
+  <li>비용이 3이 발생하는 <code class="highlighter-rouge">4번 노드</code>로 이동한다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<p><img src="/img/0-Algorithm/2018-10-05-Greedy Algorithm 탐욕 알고리즘이란/4.png" alt="img" /></p>
+<ul>
+  <li>비용이 2이 발생하는 <code class="highlighter-rouge">3번 노드</code>로 이동한다.</li>
+  <li>비용이 4이 발생하는 <code class="highlighter-rouge">5번 노드</code>로 이동한다.</li>
+  <li>비용이 1이 발생하는 <code class="highlighter-rouge">7번 노드</code>로 이동한다.
+<br /><br /></li>
+</ul>
+
+<p>그리디 알고리즘을 통해 경로를 선택한 결과<br />
+<code class="highlighter-rouge">1번노드</code>-&gt;<code class="highlighter-rouge">2번노드</code>-&gt;<code class="highlighter-rouge">4번노드</code>-&gt;<code class="highlighter-rouge">3번노드</code>-&gt;<code class="highlighter-rouge">5번노드</code>-&gt;<code class="highlighter-rouge">7번노드</code></p>
+
+<p><br /><br /><br /></p>
+
+<p><img src="/img/0-Algorithm/2018-10-05-Greedy Algorithm 탐욕 알고리즘이란/5.png" alt="img" /></p>
+<ul>
+  <li>하지만 전체적으로 봤을때는 <code class="highlighter-rouge">1번노드</code>-&gt;<code class="highlighter-rouge">2번노드</code>-&gt;<code class="highlighter-rouge">4번노드</code>-&gt;<code class="highlighter-rouge">7번노드</code>가 최종적으로
+최적의 경로이다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li><a href="http://blog.naver.com/PostList.nhn?blogId=foat3376">PB님의 블로그</a></li>
+  <li><a href="https://www.swexpertacademy.com">SW Expert Academy</a></li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=그리드 알고리즘이란? - Greedy Algorithm@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/algorithm/Greedy-Algorithm-%ED%83%90%EC%9A%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9E%80.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/algorithm/Greedy-Algorithm-%ED%83%90%EC%9A%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9E%80.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/algorithm/Greedy-Algorithm-%ED%83%90%EC%9A%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9E%80.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

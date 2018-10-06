@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wodonggun.github.io/wodonggun.github.io/sitemap.xml

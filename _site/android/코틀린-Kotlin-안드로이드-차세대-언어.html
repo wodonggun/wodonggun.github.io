@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/android/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B0%A8%EC%84%B8%EB%8C%80-%EC%96%B8%EC%96%B4.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>코틀린 Kotlin 앱 개발의 차세대 언어</title>
+  <meta name="description" content="코틀린(Kotlin) 이란 ?">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">코틀린 Kotlin 앱 개발의 차세대 언어</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="26 Jul 2018" itemprop="datePublished">Jul 26 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Kotlin</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Language</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Conference</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">안드로이드 스튜디오에서 개발하면서 지금까지 언어는 자바로 사용되었다. </span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="코틀린kotlin-이란-">코틀린(Kotlin) 이란 ?</h2>
+
+<ul>
+  <li>what is Kotlin?</li>
+</ul>
+
+<p><img src="/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/k1.png" alt="Codes" /></p>
+
+<blockquote>
+  <p>Kotlin is a statically typed programming language that runs on the Java virtual machine and also can be compield to JavaScript source code or use the LLVM compieler infrastructure.</p>
+</blockquote>
+
+<p><br />
+  <br />
+  <br /></p>
+
+<h2 id="환경-설정--설치-정보">환경 설정 / 설치 정보</h2>
+<ul>
+  <li>Android Studio 3.0 이상</li>
+  <li>코틀린 버전 1.2.51 이상</li>
+  <li>gradle 버전 4.5 (아직 4.6이하만 지원)
+  gradle scripte -&gt; build.gradle(project) -&gt; ext.kotlin_version = ‘1.2.51’으로 설정.</li>
+</ul>
+
+<p><br />
+  <br />
+  <br /></p>
+
+<h2 id="코틀린-특징">코틀린 특징</h2>
+
+<p><img src="/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/1.png" alt="Codes" /></p>
+
+<ul>
+  <li>Null safe의 특징을 통해서 자주 발생하는 NullException을 예방할 수 있다.</li>
+  <li>기본적으로 객체지향언어이지만, 람다 표현식과 같은 함수형 프로그래밍의 컨셉을 가지고 있다.</li>
+  <li>정적인 프로그래밍 언어</li>
+  <li>JVM 위에서 작동되는 언어</li>
+  <li>Jetbrain 개발</li>
+  <li>Javascript를 지원한다</li>
+  <li>자바에서 코틀린 사용가능하고 코틀린에서 자바 사용을 가능하다.</li>
+  <li>getter , setter가 존재하지 않음.(하지만 자체적으로 비슷한 기능을 지원함)</li>
+  <li>null값을 지원하지않음.
+    <pre><code class="language-Java">var variable : String&lt;a&gt;?&lt;/a&gt; = "a"
+   variable = null;
+//위와 같이 물음표를 써야 널 사용 가능.
+</code></pre>
+  </li>
+  <li>Java는 클래스 생성시에 default로 클래스 범위가 정해지는데
+Kotlin은 클래스 범위 선언 안해도 자동으로 전역변수가 된다==private가없다.</li>
+  <li>1 개의 primary constructor</li>
+  <li>N 개의 secondary constructor</li>
+  <li>secondary constructor에서는 primary constructor 호출해야 한다.</li>
+</ul>
+
+<p><span class="evidence"> Kotlin언어로 개발된 프로그램이 Java로 자동 변경 가능하며, Java로 개발된 프로그램이 Kotlin언어로 변환이 가능하다.</span></p>
+
+<p>ctrl + alt + shift + k 를 누르면 자동으로 jave-&gt;kotlin 변경 됨</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="var와-val의-차이">var와 val의 차이</h2>
+<blockquote>
+  <p>var은 Read &amp; Write가 가능한 변수이고, val은 Read만 가능한 변수이다.</p>
+</blockquote>
+
+<ul>
+  <li>Java
+mutable 변수
+String str = “abc”;</li>
+</ul>
+
+<p>immutable
+final String str = “abc”;</p>
+
+<ul>
+  <li>Kotlin은
+mutable 변수
+var str = “abc”;</li>
+</ul>
+
+<p>immutable
+val str str = “abc”;</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="data-class">data class</h2>
+
+<blockquote>
+  <p>getter와 setter를 사용하지않고도 변수를 변경 가능하다. data class를 통해서 가능.</p>
+</blockquote>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">data</span> <span class="k">class</span> <span class="nc">hi</span><span class="p">(</span>
+      <span class="k">var</span> <span class="nx">id</span> <span class="o">:</span> <span class="nx">Int</span><span class="p">,</span>
+      <span class="k">var</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">String</span><span class="p">,</span>
+      <span class="k">var</span> <span class="nx">age</span><span class="o">:</span> <span class="nx">Int</span>
+  <span class="p">)</span>
+
+</code></pre></div></div>
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="다중-상속">다중 상속</h2>
+
+<p>인터페이스와 추상클래스 생성자를 둘다 호출 가능.
+자바에서는 추상클래스와 인터페이스를 동시에 상속받으면 생성자호출시에 추상클래스를 호출하는데
+코틀린은 init<클래스명>.init() 으로 호출 가능</클래스명></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="코틀린-문법">코틀린 문법</h2>
+<p>mutual</p>
+<ul>
+  <li>Read/wrtie =  String v;
+  final String</li>
+</ul>
+
+<p>var name: String : “”</p>
+
+<p>when (a){
+  is Int -&gt; println(a)
+  is String -&gt; println(a)
+  else -&gt; println(“Nothing”)</p>
+
+<p>}</p>
+
+<ul>
+  <li>전역변수 constructor(a: String, b: String) : this(a)</li>
+</ul>
+
+<p>@JvmStatic 를 붙여주면 마음대로 가져올 수 있다.</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="어디서든-자바에서-접근하기">어디서든 자바에서 접근하기</h2>
+
+<p>@file:JvmName(“LifecycleExtensionUtil”)</p>
+
+<p>다른 클래스파일에서 LifecycleExtensioUtil.”클래스”로 해당 메소드 접근 가능</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="코틀린으로-개발한-앱">코틀린으로 개발한 앱</h2>
+
+<ul>
+  <li>https://github.com/wodonggun/Kotlin_GitApp [wodonggun github]</li>
+</ul>
+
+<p><img src="/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/2.jpg" alt="Codes" />
+<img src="/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/3.jpg" alt="Codes" /></p>
+
+<p><img src="/img/2018-07-26-ICT 세미나 안드로이드 차세대 언어 코틀린Kotlin/4.png" alt="Codes" /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="안드로이드-코틀린-개발-및-적용-중인-회사들">안드로이드 코틀린 개발 및 적용 중인 회사들</h2>
+
+<p><img src="/img/2018-07-26-ICT 세미나 안드로이드 코틀린Kotlin 출장/1.PNG" alt="Codes" /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li>http://tourspace.tistory.com/61</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=코틀린 Kotlin 앱 개발의 차세대 언어@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/android/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B0%A8%EC%84%B8%EB%8C%80-%EC%96%B8%EC%96%B4.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/android/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B0%A8%EC%84%B8%EB%8C%80-%EC%96%B8%EC%96%B4.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/android/%EC%BD%94%ED%8B%80%EB%A6%B0-Kotlin-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B0%A8%EC%84%B8%EB%8C%80-%EC%96%B8%EC%96%B4.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>AWS EC2 Ubuntu 서버 생성하기. </title>
+  <meta name="description" content="AWS EC2">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">AWS EC2 Ubuntu 서버 생성하기. </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="11 Sep 2017" itemprop="datePublished">Sep 11 2017</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">EC2</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">SDN기반의 클라우드 컴퓨팅 시스템 EC2</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="aws-ec2">AWS EC2</h2>
+
+<ul>
+  <li>아마존 웹 서비스(AWS) EC2는 무엇인가? <br />
+<img src="/img/2017-09-11-AWS EC2 생성하기/1.jpg" alt="icon" /></li>
+</ul>
+
+<blockquote>
+  <p>Elastic Cloud Computing의 약자로, 아마존 웹 서비스(AWS)에서 제공하는 서버 입니다. 그 전에는 값비싼 물리적인 서버장치와 개발인원, 유지보수 등
+많은 비용이 발생하였지만, 현재는 이러한 Paas(Platform as a Service)의 형태로 사용자에게 제공합니다.</p>
+</blockquote>
+
+<p><a title="설명충">예전에는 서버를 만들어야 한다면서 카페24,가비아 등 서버호스팅 업체를 찾으면서 적게는 십만원~수백만원의
+    비용이 발생하였지만, 그 이후에 가상서버와 SDN NFV라는 개념이 생기고 가격이 저렴해졌다. 이전까지만해도
+    Woobi라는 가상서버호스팅 업체를 통해서 월 3500원이라는 저렴한 가격으로 프로젝트에 사용하였지만 정말로
+    학교에서 프로젝트정도로 할만한 수준만 제공해줬다. 그러나 아마존 웹 서비스가 나오면서 이러한 비용이
+    발생하지 않게되었고, 또한 성능도 이전보다 훨씬 우수하다.</a></p>
+
+<p><br /><span class="evidence">tip : AWS EC2는 인스턴스 1개만 유지해야하며, 2개 이상이 되면 아무리 프리티어라도 요금이 부과됩니다.</span></p>
+
+<p><br /><br /></p>
+
+<h2 id="aws-ec2-인스턴스-생성하기">AWS EC2 인스턴스 생성하기</h2>
+<ul>
+  <li>지역과 서비스 방식 구분하기</li>
+</ul>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/2.jpg" alt="icon" /></p>
+
+<blockquote>
+  <p>1번의 지역이 꼭 자신의 지역이거나 근처 지역이여야 합니다. EC2서버를 할당받을 물리적 위치를 찾는것이기 때문에
+가까울수록 속도가 빠릅니다.
+또한 지역마다 서버가 다르기때문에 실수로 다른지역인 tokyo에 만들었다면 나중에 seoul로 들어가면 서버가 존재하지 않습니다.</p>
+</blockquote>
+
+<p><span class="evidence">2번의 서비스 -&gt; EC2를 선택합니다.</span>
+<br />
+<br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/3.png" alt="icon" /></p>
+
+<blockquote>
+  <p>왼쪽 중간쯤의 ‘1.인스턴스’를 클릭하고, ‘2.인스턴스 시작’을 누릅니다.</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+<ul>
+  <li>서버 운영체제(OS) 선택하기</li>
+</ul>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/4.PNG" alt="icon" /></p>
+
+<blockquote>
+  <p>프리티어에서 가장 보편적인 <a>우분투 14.04 LTS</a>를 선택합니다.(서버에 설치될 OS 및 OS 버전 결정)</p>
+</blockquote>
+
+<p><span class="evidence">서버는 리눅스를 기반으로 해야하며, 우분투는 편리성이 좋은 OS라고 생각합니다.</span></p>
+
+<p><br />
+<br />
+ <br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/5.PNG" alt="icon" /></p>
+
+<blockquote>
+  <p>무료인 General purpose(일반적인 사용자) Free Tier전용을 선택하고 다음~
+ vCPUs(가상화 CPU 갯수=많을수록 빠름) , 메모리(우리가 아는 Ram)</p>
+</blockquote>
+
+<p><br />
+ <br />
+  <br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/6.PNG" alt="icon" /></p>
+
+<blockquote>
+  <p>나중에 AWS를 세부적으로 다뤄야할때 고쳐야하지만 현재는 필요 없습니다. 다음~</p>
+</blockquote>
+
+<p><br />
+<br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/7.PNG" alt="icon" /></p>
+<blockquote>
+  <p>우리가 아는 HDD, SDD 개념의 스토리지 입니다. 프리티어는 최대 30기가까지 가능하므로 자신의 목적에 맞게
+용량을 할당 합니다.</p>
+</blockquote>
+
+<p><br />
+<br />
+ <br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/8.PNG" alt="icon" /></p>
+<blockquote>
+  <p>지금은 필요없지만 추후에 대규모 작업이나 기업에서는 업무 세분화 및 구분을 위해 TAG를 사용합니다.
+(추후 변경 가능합니다)</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<ul>
+  <li>보안 그룹 구성(인바운드)</li>
+</ul>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/9.PNG" alt="icon" /></p>
+
+<blockquote>
+  <p>위와 같이 기본적으로 HTTP 포트인 80번을 열어주고, MYSQL DB연동에 필요한 3306포트를 열어 줍니다. FTP 관련 파일 전송이나 원격 등 필요한 ssh 보안 포트 22번을 설정합니다. 사용 안하려면 설정을 안하셔도 됩니다. 추후에 사용할때 변경 가능합니다.
+(꼭 위치 무관을 확인해주세요. 위치를 고정하면 해당 아이피에서만 접속이 가능하며, 위치 무관일 시에는 다른 장소에서 로그인해도 접속 가능합니다.)</p>
+</blockquote>
+
+<p><span class="evidence">검토 및 시작을 누르고 인스턴스(서버) 설정을 확인후 시작!</span></p>
+
+<p><br />
+<br />
+<br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/10.PNG" alt="icon" /></p>
+<blockquote>
+  <p>새 키 페어 생성을 누르고, 적절한 키 페어 이름을 짓습니다. 키 페어 다운로드를 합니다.
+이 키는 AWS EC2 서버에 접속하기위한 중요한 private key 이므로 잃어버리거나 지우시면 안됩니다.
+(복사해서 usb나 클라우드에 저장하는게 좋아요!)</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<p><img src="/img/2017-09-11-AWS EC2 생성하기/11.png" alt="icon" /></p>
+<blockquote>
+  <p>처음에는 pending중인데 running상태가 될때까지 기다려주세요.</p>
+</blockquote>
+
+<p><br />
+<br />
+<br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 이렇게 AWS EC2 인스턴스 생성을 해 보았습니다. 이러한 서버를 만들고 응용할
+  수 있는 방법들은 다음 포스팅에서 올리겠습니다.
+</code></pre></div></div>
+
+<p><br />
+<br />
+<br /></p>
+
+<h2 id="마무리">마무리</h2>
+<p>AWS쓰기 전까지 저렴하게 사용할 수 있었던 우비 업체에 감사합니다.
+월 3,500원에 친절한 고객센터까지….
+<br />
+<a href="https://woobi.co.kr" title="저렴한 가상 서버">우비 가상서버 홈페이지 링크</a></p>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=AWS EC2 Ubuntu 서버 생성하기. @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/aws/AWS-EC2-Ubuntu-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

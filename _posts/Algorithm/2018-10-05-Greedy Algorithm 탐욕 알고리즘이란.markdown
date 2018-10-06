@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "그리디 알고리즘이란? - Greedy Algorithm"
+title: "그리드 알고리즘이란? - Greedy Algorithm"
 subtitle: <span class="evidence">What is Greedy Algorithm? 그리드 알고리즘을 알아보자.</span>
 date: 2018-10-05
 author: NoonGam

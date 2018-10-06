@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/c/c++/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC-%ED%94%84%EB%A0%89%ED%83%88-%EC%BD%94%EB%94%A9.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>프랙탈 부호화 - 이미지 손실 압축 Fractal Compression</title>
+  <meta name="description" content="프렉탈 부호화 압축(fractal compression)">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">프랙탈 부호화 - 이미지 손실 압축 Fractal Compression</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="05 May 2018" itemprop="datePublished">May 5 2018</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">openCV</a>
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">C/C++</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence"> 멀티미디어 openCV Fractal Compression Coding </span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <h2 id="프렉탈-부호화-압축fractal-compression">프렉탈 부호화 압축(fractal compression)</h2>
+
+<blockquote>
+  <p>프랙탈 부호화(영어: fractal compression)는 프랙탈에 기초한 손실 압축 방법이다. 이 방식은 텍스처와 사진에 가장 적합하다. 왜냐하면 한 이미지에서 한 부분과 다른 부분이 유사한 경우가 많기 때문이다. 프랙탈 알고리즘은 이러한 부분들을 ‘프랙탈 부호’라 불리는 수학적 데이터로 변환한다.</p>
+</blockquote>
+
+<p>프렉탈 압축은 데이터 전체와 부분 간의 자기유사성(Self-similarity)를 고려하여<br />
+수축변환의 변환계수들만으로 표현함으로써 정보량을 줄이는 압축 기법을 말한다.</p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="geometric-algorithm">Geometric Algorithm</h2>
+
+<p><img src="/img/2018-05-05-영상처리 프렉탈 코딩/1.png" alt="img" /></p>
+
+<p><img src="/img/2018-05-05-영상처리 프렉탈 코딩/2.png" alt="img" /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="fractal-compression-algorithm">fractal compression Algorithm</h2>
+
+<p><img src="/img/2018-05-05-영상처리 프렉탈 코딩/4.jpg" alt="img" /></p>
+
+<p><img src="/img/2018-05-05-영상처리 프렉탈 코딩/3.png" alt="img" /></p>
+
+<p><br /><br /><br /></p>
+
+<h2 id="fractal-compression-presentation">Fractal Compression Presentation</h2>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/hXds2LFhttRFB4" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/WooDongKeun/fractal-compression-coding" title="Fractal compression coding" target="_blank">Fractal compression coding</a> </strong> from <strong><a href="//www.slideshare.net/WooDongKeun" target="_blank">WooDongKeun</a></strong> </div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="encoding-source">Encoding Source</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+#include &lt;malloc.h&gt;
+</span>
+<span class="cp">#include &lt;opencv2/opencv.hpp&gt;   
+#include &lt;opencv2/core/core.hpp&gt;   
+#include &lt;opencv2/highgui/highgui.hpp&gt;  
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">EncodingResult</span> <span class="p">{</span>									<span class="c1">//data struct</span>
+	<span class="kt">int</span> <span class="n">geo</span><span class="p">;</span> <span class="kt">int</span> <span class="n">avg</span><span class="p">;</span> <span class="kt">int</span> <span class="n">error</span><span class="p">;</span> <span class="kt">double</span> <span class="n">alpha</span><span class="p">;</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>		
+<span class="p">}</span><span class="n">EncodingResult</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="o">**</span> <span class="nf">IntAlloc2</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>						<span class="c1">//alloc image</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">tmp</span><span class="p">;</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">));</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IntFree2</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>				<span class="c1">//alloc free</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="o">**</span> <span class="nf">ReadImage</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>	<span class="c1">//image read</span>
+	<span class="n">Mat</span> <span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">IMREAD_GRAYSCALE</span><span class="p">);</span>
+
+	<span class="kt">int</span><span class="o">**</span> <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">);</span>
+	<span class="o">*</span><span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">WriteImage</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>		<span class="c1">//image write</span>
+	<span class="n">Mat</span> <span class="n">img</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">CV_8UC1</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+
+	<span class="n">imwrite</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">img</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ImageShow</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">winname</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>		<span class="c1">//console image print</span>
+	<span class="n">Mat</span> <span class="n">img</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">CV_8UC1</span><span class="p">);</span>
+
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+	<span class="n">imshow</span><span class="p">(</span><span class="n">winname</span><span class="p">,</span> <span class="n">img</span><span class="p">);</span>
+	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">Contraction</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image_out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 1/2 이미지 축소</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span>
+			<span class="n">image_out</span><span class="p">[</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_0</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 이미지 복사(a-&gt;b copy)</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_1</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 좌우대칭(y축 대칭)</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">i</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_2</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 상하대칭(x축 대칭)</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_3</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// y=-x 대칭(역슬래쉬 대칭)</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_4</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// y=x대칭(슬래쉬 대칭)</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_5</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//90도 회전</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">width</span> <span class="o">!=</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+	<span class="p">}</span><span class="k">else</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_6</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//180도 회전</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_7</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//-90도 회전</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">j</span><span class="p">][(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Isometry</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//Isom 선택함수</span>
+
+	<span class="k">switch</span> <span class="p">(</span><span class="n">num</span><span class="p">)</span>
+	<span class="p">{</span>
+	<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">IsoM_0</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+		<span class="n">IsoM_1</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+		<span class="n">IsoM_2</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+		<span class="n">IsoM_3</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+		<span class="n">IsoM_4</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+		<span class="n">IsoM_5</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
+		<span class="n">IsoM_6</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">7</span><span class="p">:</span>
+		<span class="n">IsoM_7</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="nl">default:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Isom default"</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">ComputeAVG</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지 평균 계산</span>
+	<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">avg</span> <span class="o">+=</span> <span class="n">image</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+	<span class="k">return</span> <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span> <span class="o">/</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">//0.5를 반올림해줘야 오차 최소가 됨.</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ReadBlock</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">)</span> <span class="p">{</span><span class="c1">//image(a)의 x,y의 좌표에 블록크기만큼 block(b)에 씌움.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dy</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">dx</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">WriteBlock</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">)</span> <span class="p">{</span><span class="c1">//image(a)의 x,y의 좌표에다가 block(b)를 블록크기만큼 씌움.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dy</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">dx</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">ComputeError</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_block</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x_temp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y_temp</span><span class="p">)</span> <span class="p">{</span><span class="c1">//error값 검출</span>
+	<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">size_block</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">size_block</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">temp</span> <span class="o">+=</span> <span class="n">abs</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">block</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">y_temp</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">x_temp</span><span class="p">]);</span>
+	<span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Find_AC</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">block_avg</span><span class="p">)</span> <span class="p">{</span><span class="c1">//AC 평균 제거</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">size_y</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">size_x</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">block_avg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Copy_img</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지 복사</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">AC_control</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">double</span> <span class="n">alpha</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지에 alpha곱하고</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">temp</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">);</span><span class="c1">//+0.5를 꼭 해줘야 손실 줄임.</span>
+<span class="p">}</span>
+
+<span class="n">EncodingResult</span> <span class="nf">TemplateMatchingWithDownSamplingPlusShuffle_StructEncoding</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">by</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">double</span> <span class="n">alpha</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//구조체 결과 값을 리턴하는 인코딩 함수</span>
+
+	<span class="n">EncodingResult</span> <span class="n">struct_Tmp</span><span class="p">;</span>	<span class="c1">//리턴할 구조체 선언</span>
+	<span class="kt">int</span> <span class="n">error_min</span> <span class="o">=</span> <span class="n">INT_MAX</span><span class="p">;</span>	<span class="c1">//최소값은 비교를 위한 int최대값으로 초기화</span>
+
+	<span class="kt">int</span><span class="o">**</span> <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">bx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">by</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>									<span class="c1">//블럭사이즈의 2배만큼 읽어올 메모리 할당</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">domain</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>										<span class="c1">//축소 처리하고 저장할 이미지 메모리 할당</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">tmp_test</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>										<span class="c1">//isom처리하고 저장할 이미지 메모리 할당</span>
+	<span class="kt">int</span> <span class="n">block_avg</span> <span class="o">=</span> <span class="n">ComputeAVG</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>										<span class="c1">//읽어온 block의 평균값 계산</span>
+	<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">avg</span> <span class="o">=</span> <span class="n">block_avg</span><span class="p">;</span>														<span class="c1">//블록의 평균은 일정하지만 매번 error의 최소값이 바뀔때마다 구조체에 넣으면 필요없는 연산이므로</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">block_AC</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>										<span class="c1">//읽어온 블럭을 마음대로 수정해도 상관없는 이미지</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">domain_AC</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>										<span class="c1">//모든 과정을 끝낸 이미지를 저장할 메모리 할당</span>
+	<span class="n">Copy_img</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">block_AC</span><span class="p">);</span>												<span class="c1">//block에 대한 정보를 block_AC에 복사								</span>
+	<span class="c1">//ImageShow("test", block_AC, bx, by);		</span>
+	<span class="n">Find_AC</span><span class="p">(</span><span class="n">block_AC</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">block_avg</span><span class="p">);</span>											<span class="c1">//AC평균 제거</span>
+
+	<span class="c1">// x,y좌표의 블럭을 사이즈의 2배만큼 읽음 -&gt; 1/2축소 -&gt; 평균계산 -&gt; isom반복을 통해 에러가 최소일때 alpha와 정보들을 저장</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span> <span class="o">-</span> <span class="p">(</span><span class="n">by</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span> <span class="n">i</span><span class="o">+=</span><span class="n">by</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">-</span> <span class="p">(</span><span class="n">bx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span> <span class="n">j</span><span class="o">+=</span><span class="n">bx</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">ReadBlock</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">bx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">by</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
+			<span class="n">Contraction</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">bx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">by</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+			<span class="kt">int</span> <span class="n">domain_avg</span> <span class="o">=</span> <span class="n">ComputeAVG</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>							<span class="c1">//domain의 평균값 저장</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>											<span class="c1">//isom반복</span>
+				<span class="n">Isometry</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">tmp_test</span><span class="p">);</span>								
+				<span class="n">Find_AC</span><span class="p">(</span><span class="n">tmp_test</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">domain_avg</span><span class="p">);</span>								<span class="c1">//domain의 평균값 빼줌</span>
+				<span class="k">for</span> <span class="p">(</span><span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="n">d</span> <span class="o">+=</span> <span class="mf">0.1</span><span class="p">)</span> <span class="p">{</span>							<span class="c1">//alpha값 반복 (double형 연산시 2.999999 부터시작 - 1024bit화)</span>
+					<span class="n">AC_control</span><span class="p">(</span><span class="n">tmp_test</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">domain_AC</span><span class="p">);</span>						<span class="c1">//error값 구하기전에 알파 곱함</span>
+					<span class="kt">int</span> <span class="n">error</span> <span class="o">=</span> <span class="n">ComputeError</span><span class="p">(</span><span class="n">block_AC</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">domain_AC</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span><span class="c1">//error값 추출</span>
+					<span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">&lt;</span> <span class="n">error_min</span><span class="p">)</span> <span class="p">{</span>										<span class="c1">//error값이 최소값일때 구조체에 값 넣음.</span>
+						<span class="n">error_min</span> <span class="o">=</span> <span class="n">error</span><span class="p">;</span>
+						<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+						<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+						<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+						<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">geo</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+						<span class="n">struct_Tmp</span><span class="p">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">error</span><span class="p">;</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span><span class="c1">//	printf("%3d %3d %d %3d %.1lf %3d : %d\n", struct_Tmp.x, struct_Tmp.y, struct_Tmp.geo, struct_Tmp.avg, struct_Tmp.alpha, struct_Tmp.error);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">bx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">by</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">block_AC</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">domain_AC</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">tmp_test</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">struct_Tmp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">EncodingResult</span><span class="o">**</span> <span class="nf">ERAlloc2</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">//인코딩 결과 구조체 동적 할당함수</span>
+	<span class="n">EncodingResult</span><span class="o">**</span> <span class="n">tmp</span><span class="p">;</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">EncodingResult</span><span class="o">**</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">EncodingResult</span><span class="o">*</span><span class="p">));</span> <span class="c1">// calloc은 기본적으로 값을 0으로 초기화시켜주며, sizeof(int*)의 크기의 height갯수만큼 할당(1차원)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">EncodingResult</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">EncodingResult</span><span class="p">));</span> <span class="c1">//calloc은 기본적으로 값을 0으로 초기화시켜주며, sizeof(int*)의 크기의 width갯수만큼 할당(2차원)</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ERFree2</span><span class="p">(</span><span class="n">EncodingResult</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">//인코딩결과 구조체 동적할당받은거 메모리 해제 함수</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="c1">//메모리 해제는 할당의 역순으로</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">WriteParameter</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">EncodingResult</span><span class="o">**</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span><span class="c1">//txt로 구조체 정보를 파일로 저장</span>
+	<span class="kt">FILE</span><span class="o">*</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">"w"</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s"> Failure in fopen!!"</span><span class="p">);</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ty</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ty</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">;</span> <span class="n">ty</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">tx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">tx</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">;</span> <span class="n">tx</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">"%d %d %d %d %f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">ty</span><span class="p">][</span><span class="n">tx</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">ty</span><span class="p">][</span><span class="n">tx</span><span class="p">].</span><span class="n">y</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">ty</span><span class="p">][</span><span class="n">tx</span><span class="p">].</span><span class="n">geo</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">ty</span><span class="p">][</span><span class="n">tx</span><span class="p">].</span><span class="n">avg</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="n">ty</span><span class="p">][</span><span class="n">tx</span><span class="p">].</span><span class="n">alpha</span><span class="p">);</span>
+	<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span><span class="c1">//블록 사이즈 결정</span>
+	<span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span> <span class="o">=</span> <span class="n">ReadImage</span><span class="p">(</span><span class="s">"lena256x512.bmp"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">width</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">height</span><span class="p">);</span>					<span class="c1">//이미지 읽어옴</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">block_temp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>								<span class="c1">//블럭 읽어올 temp 할당</span>
+
+	<span class="n">EncodingResult</span><span class="o">**</span> <span class="n">en_result</span> <span class="o">=</span> <span class="n">ERAlloc2</span><span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>				<span class="c1">//인코딩결과를 저장할 구조체 동적 할당</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">ReadBlock</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">size</span> <span class="o">*</span> <span class="n">j</span><span class="p">,</span> <span class="n">size</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">block_temp</span><span class="p">);</span>			<span class="c1">//x,y의 좌표의 size만큼의 블록을 읽어와서 temp에 저장.</span>
+			<span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">TemplateMatchingWithDownSamplingPlusShuffle_StructEncoding</span><span class="p">(</span><span class="n">block_temp</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span><span class="c1">//인코딩 함수 실행(순서대로 구조체에 저장)</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">" &lt; %3d , %3d &gt; x좌표 : %3d   y좌표 : %3d  Error값 : %3d Isom값 : %3d  alpha값 : %.1lf  평균값 : %3d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">j</span> <span class="o">*</span> <span class="n">size</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span><span class="n">size</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">y</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">error</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">geo</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">alpha</span><span class="p">,</span> <span class="n">en_result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">avg</span><span class="p">);</span> <span class="c1">//영상처리된 정보를 시각적으로 보기위해서 출력</span>
+		<span class="p">}</span>
+	<span class="n">WriteParameter</span><span class="p">(</span><span class="s">"encoding.txt"</span><span class="p">,</span> <span class="n">en_result</span><span class="p">,</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>			<span class="c1">//구조체에 저장된 정보를 txt형식으로 저장.</span>
+
+	<span class="n">ERFree2</span><span class="p">(</span><span class="n">en_result</span><span class="p">,</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">block_temp</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="decoding-source">Decoding Source</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+#include &lt;malloc.h&gt;
+</span>
+<span class="cp">#include &lt;opencv2/opencv.hpp&gt;   
+#include &lt;opencv2/core/core.hpp&gt;   
+#include &lt;opencv2/highgui/highgui.hpp&gt;  
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">EncodingResult</span> <span class="p">{</span><span class="c1">//인코딩결과 저장할 구조체</span>
+	<span class="kt">int</span> <span class="n">geo</span><span class="p">;</span> <span class="kt">int</span> <span class="n">avg</span><span class="p">;</span> <span class="kt">int</span> <span class="n">error</span><span class="p">;</span> <span class="kt">double</span> <span class="n">alpha</span><span class="p">;</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span><span class="n">EncodingResult</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="o">**</span> <span class="nf">IntAlloc2</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">tmp</span><span class="p">;</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">));</span><span class="c1">//calloc은 기본적으로 값을 0으로 초기화시켜주며, sizeof(int*)의 크기의 height갯수만큼 할당</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="c1">//calloc은 기본적으로 값을 0으로 초기화시켜주며, sizeof(int*)의 크기의 width갯수만큼 할당</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IntFree2</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="o">**</span> <span class="nf">ReadImage</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">Mat</span> <span class="n">img</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">IMREAD_GRAYSCALE</span><span class="p">);</span>
+
+	<span class="kt">int</span><span class="o">**</span> <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">**</span><span class="p">)</span><span class="n">IntAlloc2</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">);</span>
+	<span class="o">*</span><span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">;</span>
+	<span class="o">*</span><span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="n">cols</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">WriteImage</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">Mat</span> <span class="n">img</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">CV_8UC1</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+
+	<span class="n">imwrite</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">img</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ImageShow</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">winname</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">Mat</span> <span class="n">img</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">CV_8UC1</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+	<span class="n">imshow</span><span class="p">(</span><span class="n">winname</span><span class="p">,</span> <span class="n">img</span><span class="p">);</span>
+	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Contraction</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image_out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 1/2 이미지 축소</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span>
+			<span class="n">image_out</span><span class="p">[</span><span class="n">y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">][</span><span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_0</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 이미지 복사(a-&gt;b copy)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_1</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 좌우대칭(y축 대칭)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">i</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_2</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// 상하대칭(x축 대칭)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_3</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// y=-x 대칭(역슬래쉬 대칭)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_4</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">// y=x대칭(슬래쉬 대칭)</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_5</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//90도 회전</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">width</span> <span class="o">!=</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="k">else</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_6</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//180도 회전</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">][(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">IsoM_7</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//-90도 회전</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_in</span><span class="p">[</span><span class="n">j</span><span class="p">][(</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Isometry</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//Isom 선택함수</span>
+
+	<span class="k">switch</span> <span class="p">(</span><span class="n">num</span><span class="p">)</span>
+	<span class="p">{</span>
+	<span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">IsoM_0</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+		<span class="n">IsoM_1</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+		<span class="n">IsoM_2</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+		<span class="n">IsoM_3</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+		<span class="n">IsoM_4</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+		<span class="n">IsoM_5</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
+		<span class="n">IsoM_6</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="k">case</span> <span class="mi">7</span><span class="p">:</span>
+		<span class="n">IsoM_7</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">img_out</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="nl">default:</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Isom default"</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">ComputeAVG</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지 평균 계산</span>
+	<span class="kt">int</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">avg</span> <span class="o">+=</span> <span class="n">image</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+	<span class="k">return</span> <span class="n">avg</span> <span class="o">=</span> <span class="n">avg</span> <span class="o">/</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">//0.5를 반올림해줘야 오차 최소가 됨.</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ReadBlock</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">)</span> <span class="p">{</span><span class="c1">//image(a)의 x,y의 좌표에 블록크기만큼 block(b)에 씌움.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dy</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">dx</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">WriteBlock</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dy</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">)</span> <span class="p">{</span><span class="c1">//image(a)의 x,y의 좌표에다가 block(b)를 블록크기만큼 씌움.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dy</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">dx</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">ComputeError</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">block</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_block</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x_temp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y_temp</span><span class="p">)</span> <span class="p">{</span><span class="c1">//error값 검출</span>
+	<span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">size_block</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">size_block</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">temp</span> <span class="o">+=</span> <span class="n">abs</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">block</span><span class="p">[</span><span class="n">y</span> <span class="o">+</span> <span class="n">y_temp</span><span class="p">][</span><span class="n">x</span> <span class="o">+</span> <span class="n">x_temp</span><span class="p">]);</span>
+	<span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Find_AC</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">block_avg</span><span class="p">)</span> <span class="p">{</span><span class="c1">//AC 평균 제거</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">size_y</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">size_x</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+				<span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">-</span> <span class="n">block_avg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Copy_img</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">img_out</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지 복사</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">img_out</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">AC_control</span><span class="p">(</span><span class="kt">int</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">double</span> <span class="n">alpha</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">temp</span><span class="p">)</span> <span class="p">{</span><span class="c1">//이미지값에 알파 곱함</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">temp</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">ReadParameter</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">name</span><span class="p">,</span> <span class="n">EncodingResult</span><span class="o">**</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">FILE</span><span class="o">*</span> <span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s">"r"</span><span class="p">);</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">fp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s"> Failure in fopen!!"</span><span class="p">);</span><span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">fscanf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s">"%d%d%d%d%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">geo</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">avg</span><span class="p">),</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">alpha</span><span class="p">));</span>
+
+	<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">EncodingResult</span><span class="o">**</span> <span class="nf">ERAlloc2</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">EncodingResult</span><span class="o">**</span> <span class="n">tmp</span><span class="p">;</span>
+	<span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">EncodingResult</span><span class="o">**</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">EncodingResult</span><span class="o">*</span><span class="p">));</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">EncodingResult</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">EncodingResult</span><span class="p">));</span>
+	<span class="k">return</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ERFree2</span><span class="p">(</span><span class="n">EncodingResult</span><span class="o">**</span> <span class="n">image</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="n">free</span><span class="p">(</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Decoding</span><span class="p">(</span><span class="n">EncodingResult</span><span class="o">**</span> <span class="n">en_Result</span><span class="p">,</span> <span class="kt">int</span><span class="o">**</span> <span class="n">image_dec</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size_y</span><span class="p">)</span> <span class="c1">//디코딩 함수</span>
+<span class="p">{</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">block</span> <span class="o">=</span> <span class="n">IntAlloc2</span><span class="p">(</span><span class="n">size_x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size_y</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">block_contract_tmp</span> <span class="o">=</span> <span class="n">IntAlloc2</span><span class="p">(</span><span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">);</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">block_contract_tmp_aftercontrol</span> <span class="o">=</span> <span class="n">IntAlloc2</span><span class="p">(</span><span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">);</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">image_dec_tmp</span> <span class="o">=</span> <span class="n">IntAlloc2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+	<span class="c1">//x,y좌표에서 size의 2배크기만큼 읽어옴-&gt;이미지 축소-&gt;축소한이미지의 평균구하고 그 이미지에서 평균빼줌 -&gt; 저장된 isom진행 -&gt; 저장된 alpha 곱해주고 -&gt; 평균 더해주고-&gt; dec에 그려줌.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size_y</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size_x</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">ReadBlock</span><span class="p">(</span><span class="n">image_dec</span><span class="p">,</span> <span class="n">en_Result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">en_Result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">y</span><span class="p">,</span> <span class="n">size_x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size_y</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">block</span><span class="p">);</span>							<span class="c1">//x,y좌표의 블록크기의 2배만큼 읽어옴</span>
+			<span class="n">Contraction</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">block_contract_tmp</span><span class="p">,</span> <span class="n">size_x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size_y</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>														<span class="c1">// 이미지1/2 축소</span>
+			<span class="kt">int</span> <span class="n">b_avg</span> <span class="o">=</span> <span class="n">ComputeAVG</span><span class="p">(</span><span class="n">block_contract_tmp</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">);</span>															<span class="c1">//평균값 계산</span>
+			<span class="n">Find_AC</span><span class="p">(</span><span class="n">block_contract_tmp</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">,</span> <span class="n">b_avg</span><span class="p">);</span>																	<span class="c1">//평균값 빼줌</span>
+			<span class="n">Isometry</span><span class="p">(</span><span class="n">en_Result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">geo</span><span class="p">,</span> <span class="n">block_contract_tmp</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">,</span> <span class="n">block_contract_tmp_aftercontrol</span><span class="p">);</span>					<span class="c1">//저장된 isom(geo)진행</span>
+			<span class="n">AC_control</span><span class="p">(</span><span class="n">block_contract_tmp_aftercontrol</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">,</span> <span class="n">en_Result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">alpha</span><span class="p">,</span> <span class="n">block_contract_tmp_aftercontrol</span><span class="p">);</span><span class="c1">//alpha 곱해줌.</span>
+			<span class="n">Find_AC</span><span class="p">(</span><span class="n">block_contract_tmp_aftercontrol</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">,</span> <span class="o">-</span><span class="n">en_Result</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">avg</span><span class="p">);</span>										<span class="c1">//저장된 평균값을 더해줌</span>
+			<span class="n">WriteBlock</span><span class="p">(</span><span class="n">image_dec_tmp</span><span class="p">,</span> <span class="n">j</span> <span class="o">*</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">size_y</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">,</span> <span class="n">block_contract_tmp_aftercontrol</span><span class="p">);</span>					<span class="c1">//img_dec_tmp의 x,y의 좌표에 블록크기만큼 처리된이미지를 씌움.</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">Copy_img</span><span class="p">(</span><span class="n">image_dec_tmp</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">image_dec</span><span class="p">);</span>				<span class="c1">//image_tmp(디코딩처리한 이미지)를 image_dec(출력할 이미지)에 복사.</span>
+	<span class="c1">//메모리 해제</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">size_x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size_y</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">block_contract_tmp</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">block_contract_tmp_aftercontrol</span><span class="p">,</span> <span class="n">size_x</span><span class="p">,</span> <span class="n">size_y</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">image_dec_tmp</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span><span class="c1">//디코딩 메인함수</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>																<span class="c1">//블록 사이즈 결정</span>
+	<span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">img_in</span> <span class="o">=</span> <span class="n">ReadImage</span><span class="p">(</span><span class="s">"lena256x512.bmp"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">width</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">height</span><span class="p">);</span>				<span class="c1">//이미지 읽어옴</span>
+	<span class="kt">int</span><span class="o">**</span> <span class="n">image_dec</span> <span class="o">=</span> <span class="n">IntAlloc2</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>									<span class="c1">//디코딩 변환할때마다 출력할 이미지 할당</span>
+	<span class="n">EncodingResult</span><span class="o">**</span> <span class="n">en_result</span> <span class="o">=</span> <span class="n">ERAlloc2</span><span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>			<span class="c1">//디코딩할 정보를 가지고있는 구조체 동적 할당</span>
+	<span class="n">ReadParameter</span><span class="p">(</span><span class="s">"encoding2.txt"</span><span class="p">,</span> <span class="n">en_result</span><span class="p">,</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>		<span class="c1">//디코딩 할 정보를 가지고있는 txt파일 읽어옴</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>											
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">image_dec</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>												<span class="c1">//image_dec 디폴트 값 128로 초기화</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"====== %d번째 디코딩 진행 ======</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>						<span class="c1">//0번째 이미지는 무색의 화면</span>
+		<span class="n">ImageShow</span><span class="p">(</span><span class="s">"디코딩 이미지"</span><span class="p">,</span> <span class="n">image_dec</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>					<span class="c1">//0번돌린 이미지부터 4번돌린 이미지까지 순차적으로 디코딩(처음에는 회색의 도화지)</span>
+		<span class="n">Decoding</span><span class="p">(</span><span class="n">en_result</span><span class="p">,</span> <span class="n">image_dec</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>				<span class="c1">//디코딩 실행(디코딩할 정보를 가지고있는 구조체, 디코딩결과값저장할이미지, 가로 , 새로 , 블록x사이즈, 블록y사이즈)</span>
+	<span class="p">}</span>
+	<span class="n">ImageShow</span><span class="p">(</span><span class="s">"원본"</span><span class="p">,</span> <span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>									<span class="c1">//이미지 원본 출력</span>
+
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">image_dec</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+	<span class="n">IntFree2</span><span class="p">(</span><span class="n">img_in</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+	<span class="n">ERFree2</span><span class="p">(</span><span class="n">en_result</span><span class="p">,</span> <span class="n">width</span> <span class="o">/</span> <span class="n">size</span><span class="p">,</span> <span class="n">height</span> <span class="o">/</span> <span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+
+</code></pre></div></div>
+
+<p><br /><br /><br /></p>
+
+<h2 id="결과">결과</h2>
+
+<ul>
+  <li>
+    <p>250KB인 lena.bmp 이미지가 46KB의 데이터만으로도 거의
+원본에 가까운 이미지로 복원</p>
+  </li>
+  <li>
+    <p>이미지를 직접 전송하는 것이 아니라 압축기술을 통해 필요한
+  정보만 전송함으로써 효율적인 자원 활용</p>
+  </li>
+  <li>
+    <p>인코딩에는 유사성을 찾기위해 오랜 계산 시간이 걸리지만 디코딩 속도는 매우 빠르며 높은 효율성을 가짐.</p>
+  </li>
+  <li>
+    <p>Debug모드를 사용하지않고, Release모드를 사용하여 속도 개선</p>
+  </li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h2 id="debug-vs-release-속도-비교">Debug VS Release 속도 비교</h2>
+
+<p><img src="/img/2018-05-05-영상처리 프렉탈 코딩/Debug_vs_release.gif" alt="img" /></p>
+
+<blockquote>
+  <p>Debug모드 보다 Release모드가 대략 5~10배가까이 속도가 빠르다는것을 알 수 있다. Fractal Compression을 block size 2로 정했을때 Debug모드로는 약 1시간 넘게 걸리고, release모드로 진행할시에 15분내에 완료할 수 있었다.</p>
+</blockquote>
+
+<p><br /><br /><br /></p>
+
+<h2 id="참고-자료">참고 자료</h2>
+<ul>
+  <li>https://github.com/kennberg/fractal-compression</li>
+  <li>https://en.wikipedia.org/wiki/Fractal_compression</li>
+  <li>http://www.ktword.co.kr/abbr_view.php?m_temp1=3815[정보통신기술용어해설]</li>
+</ul>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=프랙탈 부호화 - 이미지 손실 압축 Fractal Compression@Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/c/c++/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC-%ED%94%84%EB%A0%89%ED%83%88-%EC%BD%94%EB%94%A9.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/c/c++/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC-%ED%94%84%EB%A0%89%ED%83%88-%EC%BD%94%EB%94%A9.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/c/c++/%EC%98%81%EC%83%81%EC%B2%98%EB%A6%AC-%ED%94%84%EB%A0%89%ED%83%88-%EC%BD%94%EB%94%A9.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>

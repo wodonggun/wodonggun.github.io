@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- robots indexing & following -->
+<meta name="robots" content="index, follow">
+<!-- <meta name="Daumoa" content="noindex, follow"> Daum robot -->
+<!-- <meta name="googlebot" content="index"> Google robot-->
+<!-- <meta name="Yeti" content="index"> Naver robot-->
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/wodonggun.github.io/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/wodonggun.github.io/linux/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html">
+  <link rel="alternate" type="application/rss+xml" title="NoonGam's Blog" href="http://localhost:4000/wodonggun.github.io/feed.xml">
+
+
+<!-- Google font -->
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+
+<!-- add korea font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejugothic.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+
+
+
+
+<!-- Google analytics -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121952650-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121952650-1');
+</script>
+
+<meta name="google-site-verification" content="Z3wzSkChrAOaQnWwvjvUHrwXwAXeumy4wnqafOmpoPI"/>
+
+<!-- Naver analytics -->
+
+<meta name="naver-site-verification" content="1a8aa9f0ba31614634ee93eaec09db6a5198c941"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NoonGam's IT 블로그">
+<meta property="og:description" content="네트워크, 프로그래밍, IT 관련 배우고자 하는 블로그입니다.">
+<meta property="og:image" content="https://wodonggun.github.io/img/homepage/Naver_sample.PNG">
+<meta property="og:url" content="https://wodonggun.github.io/">
+
+
+
+
+
+<!-- My Font  -->
+  <style>
+    .post-content p, li {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 16px;
+    }
+    .post-content h2 {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+    }
+    .post-title {
+      font-family: 'Jeju Gothic', serif;
+      font-weight: 500;
+      font-size : 40px;
+    }
+  </style>
+
+
+  
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-121952650-1', 'auto');
+  ga('send', 'pageview');
+ 	</script>
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>#리눅스 명령어 정리 </title>
+  <meta name="description" content="https://css.or.kr/lkc2018/ - 리눅스 커널 프로그래밍">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">#리눅스 명령어 정리 </div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="01 Jan 2016" itemprop="datePublished">Jan 1 2016</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">NoonGam</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="http://localhost:4000/wodonggun.github.io/tags/">Linux</a>
+        
+	</div>
+    </center>
+
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p><span class="evidence">아이디어 낙서장 .</span></p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <p>https://css.or.kr/lkc2018/ - 리눅스 커널 프로그래밍</p>
+
+<p>http://webdir.tistory.com/201 - 리눅스 관련 블로그</p>
+
+<h2 id="리눅스-명령어linux-command">리눅스 명령어(Linux Command)</h2>
+
+<ul>
+  <li>파일 인코딩 확인하기
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$file -bi test.sh
+</code></pre></div>    </div>
+  </li>
+  <li>파일 인코딩 변환하기
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$iconv -c -f utf-8 -t euc-kr test.sh &gt; test2.sh
+</code></pre></div>    </div>
+  </li>
+  <li>현재경로 부터 찾기
+$find -name ‘title’</li>
+</ul>
+
+<p>$find -name ‘title*’</p>
+
+<ul>
+  <li>
+    <p>루트경로부터 찾기
+$find / -name ‘title’</p>
+  </li>
+  <li>
+    <p>find / -name ‘.sh’</p>
+  </li>
+  <li>
+    <p>메모리 사용량 확인
+$sar -r 1</p>
+  </li>
+  <li>
+    <p>CPU, 메모리 사용량
+$htop
+(apt-get install htop)</p>
+  </li>
+  <li>
+    <p>make 컴파일 속도 (다중 쓰레드 사용)
+make -j4 (4코어 사용)</p>
+  </li>
+  <li>
+    <p>경로 이동
+cd .. (상위 이동)
+cd /  (루트로이동)
+cd ~/  (루트폴더 이동)
+pwd (자신의 현재 위치)
+cd ~ 홈디렉토리로 이동</p>
+  </li>
+</ul>
+
+<p>cd /etc/apache2  (절대경로로 이동)</p>
+
+<ul>
+  <li>
+    <p>파일 복사
+cp MPTCP.sh /users/user/home/MPTCP.sh</p>
+  </li>
+  <li>
+    <p>폴더 복사
+cp -r MPTCP /etc/MPTCP</p>
+  </li>
+  <li>
+    <p>폴더 제거
+rm -rf 폴더명   (r:내부 파일 삭제  f:오류없이 무조건 삭제옵션)</p>
+  </li>
+  <li>
+    <p>하위 폴더 전체 권한 주기
+chmod -R 777 파일명</p>
+  </li>
+  <li>
+    <p>프로그램 위치 찾기
+whereis htop</p>
+  </li>
+  <li>
+    <p>환경변수 제거
+export -n 환경변수명</p>
+  </li>
+</ul>
+
+<h2 id="apt-get-install-불가능한-프로그램-설치하기">apt-get install 불가능한 프로그램 설치하기</h2>
+
+<p>16.04에서는 어떠한 문제인지 안밝혀졌지만 아톰을 직접 다운받아서 설치가 불가능.
+아톰에서 제공하는 ppa를 통해 apt의 repogitory에 등록하고 설치한다.</p>
+
+<p>sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom</p>
+
+<p>(루트폴더에 접근하고 싶을때 = Atom을 루트권한으로 실행)
+$su
+$/usr/bin/atom</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>외부 업체에서 제공하는 프로그램을 설치할 경우, /opt에,
+컴파일 해서 설치하는 경우나 사용자가 압축을 풀어 설치하는 경우는 /usr/local을 기본
+디렉토리로 설치되며,
+패키지로 설치하는 경우, /usr을 기본 디렉토리로 설치됩니다.
+
+그리고, 디렉토리 구성은
+/usr[/local]/bin : 실행파일
+/usr[/local]/share: 공유파일로 그림이나 문서, 아이콘등
+/usr/[local]/lib: 각종 라이브러리
+/etc: 각종 설정파일
+/var: 각종 상태나, 캐시등
+$HOME/.패키지명: 사용자별 설정 및 저장된 파일 및 작업디렉토리
+
+패키지의 설치 경로를 정확히 알고 싶으시면,
+dpkg -L 패키지명 하시면 되는데...
+eclipse의 경우는 메타패키지(다른 패키지들을 묶어 하나의 패키지인양 처리하는 것)입니다.
+java를 사용하는 eclipse의 경우 eclipse-jdt가 메인패키지이기 때문에...
+dpkg -L eclipse-jdt 라고 하시면 되고,
+gcc를 사용하는 eclipse의 경우,
+dpkg -L eclipse-cdt 라고 하시면 됩니다.
+
+</code></pre></div></div>
+
+<p>sudo apt-get install
+sudo apt-get remove  프로그램만 삭제
+sudo apt-get purge  프로그램과 관련 데이터,환경설정 모두 삭제(더 강력한 삭제)</p>
+
+<h2 id="프로세스-명령어">프로세스 명령어</h2>
+
+<ul>
+  <li>$ps -efc</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>$ps -def</td>
+          <td>grep wget2.sh</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>[ 종료 ]     kill -9 2147</li>
+  <li>[ 강제 종료 ] kill -15 2147   (PID넘버값)</li>
+</ul>
+
+<h2 id="네트워크-명령어">네트워크 명령어</h2>
+
+<ul>
+  <li>[인터페이스 연결 끊기] ifconfig enp0s3 down   /  ifdown enp0s3</li>
+  <li>
+    <p>[인터페이스 연결 ]     ifconfig enp0s3 up    /   ifup enp0s3</p>
+  </li>
+  <li>[호스트 네트워크 속도 제한] sudo tc qdisc add dev enp0s8 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms</li>
+  <li>
+    <p>[호스트 네트워크 속도 변경] sudo tc qdisc change dev enp0s8 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms</p>
+  </li>
+  <li>[ 네트워크 패킷 정보 보기 ] $sudo tcpdum -i enp0s8</li>
+  <li>
+    <h2 id="wireshark">$wireshark</h2>
+  </li>
+  <li>[네트워크 못잡는데 너무오래걸린다 a start job is running for raise network]</li>
+</ul>
+
+<p>$vi /etc/systemd/system/network-online.target.wants/networking.service</p>
+
+<h2 id="리눅스-tx-rx-전송-속도-구하기">리눅스 TX RX 전송 속도 구하기</h2>
+
+<ul>
+  <li>
+    <p>실행 방법 : $./bw.sh enp0s8</p>
+  </li>
+  <li>
+    <p>vi bw.sh</p>
+  </li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#!/bin/bash
+</span>
+<span class="n">INTERVAL</span><span class="o">=</span><span class="s">"1"</span>  <span class="err">#</span> <span class="n">update</span> <span class="n">interval</span> <span class="n">in</span> <span class="n">seconds</span>
+
+<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">z</span> <span class="s">"$1"</span> <span class="p">];</span> <span class="n">then</span>
+        <span class="n">echo</span>
+        <span class="n">echo</span> <span class="n">usage</span><span class="o">:</span> <span class="err">$</span><span class="mi">0</span> <span class="p">[</span><span class="n">network</span><span class="o">-</span><span class="n">interface</span><span class="p">]</span>
+        <span class="n">echo</span>
+        <span class="n">echo</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="err">$</span><span class="mi">0</span> <span class="n">eth0</span>
+        <span class="n">echo</span>
+        <span class="n">exit</span>
+<span class="n">fi</span>
+
+<span class="n">IF</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span>
+
+<span class="k">while</span> <span class="nb">true</span>
+<span class="k">do</span>
+        <span class="n">R1</span><span class="o">=</span><span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span><span class="o">/</span><span class="n">statistics</span><span class="o">/</span><span class="n">rx_bytes</span><span class="err">`</span>
+        <span class="n">T1</span><span class="o">=</span><span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span><span class="o">/</span><span class="n">statistics</span><span class="o">/</span><span class="n">tx_bytes</span><span class="err">`</span>
+        <span class="n">sleep</span> <span class="err">$</span><span class="n">INTERVAL</span>
+        <span class="n">R2</span><span class="o">=</span><span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span><span class="o">/</span><span class="n">statistics</span><span class="o">/</span><span class="n">rx_bytes</span><span class="err">`</span>
+        <span class="n">T2</span><span class="o">=</span><span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">class</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span><span class="o">/</span><span class="n">statistics</span><span class="o">/</span><span class="n">tx_bytes</span><span class="err">`</span>
+        <span class="n">TBPS</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span> <span class="err">$</span><span class="n">T2</span> <span class="o">-</span> <span class="err">$</span><span class="n">T1</span><span class="err">`</span>
+        <span class="n">RBPS</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span> <span class="err">$</span><span class="n">R2</span> <span class="o">-</span> <span class="err">$</span><span class="n">R1</span><span class="err">`</span>
+        <span class="n">TMBPS</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span> <span class="err">$</span><span class="n">TBPS</span> <span class="err">\</span><span class="o">*</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span><span class="err">`</span>
+        <span class="n">RMBPS</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span> <span class="err">$</span><span class="n">RBPS</span> <span class="err">\</span><span class="o">*</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span><span class="err">`</span>
+        <span class="n">TTBPS</span><span class="o">=</span><span class="err">`</span><span class="n">expr</span> <span class="err">$</span><span class="n">TMBPS</span> <span class="o">+</span> <span class="err">$</span><span class="n">RMBPS</span><span class="err">`</span>
+<span class="cp">#      echo "$1 TX $TMBPS Mbits/s RX $RMBPS Mbits/s TOT $TTBPS Mbits/s"
+</span>        <span class="n">echo</span> <span class="s">"$TTBPS Mbits/s"</span>
+<span class="n">done</span>
+</code></pre></div></div>
+
+<p>cat /etc/hosts // hosts 파일 IP 설정 열람
+cat /etc/resolv.conf // DNS 서버 IP 설정 열람
+ip addr // IP 주소 열람
+curl ipinfo.io/ip // 자신의 IP 주소 확인(ipinfo.io/ip라는 웹사이트의 서비스를 이용하는 것임)
+host [도메인 네임] // [도메인 이름]의 IP 주소를 알려줌.
+dig +trace [도메인 네임] // [도메인 네임]의 DNS 서버를 통한 IP 주소 확인 경로 추적</p>
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<!-- 공유 기능 하단 -->
+
+<!--
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=#리눅스 명령어 정리 @Woodonggun&amp;url=http://localhost:4000/wodonggun.github.io/linux/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/wodonggun.github.io/linux/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url=http://localhost:4000/wodonggun.github.io/linux/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+-->
+
+
+<script id="dsq-count-scr" src="//noongams-it-blog.disqus.com/count.js" async></script>
+<!-- 포스트 상단에 comments: true 일때 댓글 표시 -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+
+var d = document, s = d.createElement('script');
+
+s.src = 'https://noongams-it-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+
+(d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    
+<footer class="site-footer">
+
+  <div class="wrapper">
+    <center>
+    <b>
+		<p><a class="link" href="/wodonggun.github.io/home/">Home</a> /
+    <a class="link" href="/wodonggun.github.io/archive/">Archive</a> /
+		<a class="link" href="/wodonggun.github.io/category/">Category</a> /
+		<a class="link" href="/wodonggun.github.io/tags/">Tags</a> /
+
+		<a class="link" href="/wodonggun.github.io/resume/">Resume</a> /
+    	<a class="link" href="/wodonggun.github.io/about/">About</a>
+    <br></br>
+    <a class="link" href="https://wodonggun.github.io"> &lt;Main&gt;<br> </a>
+
+    </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+
+		<a class="link" href="/wodonggun.github.io">Developer Woo,Dong-Gun</a>
+		<br>
+		<span>Github &copy; <a class="link" href="https://github.com/wodonggun" target="_blank"> wodonggun</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="95px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=wodonggun&repo=wodonggun.github.io&type=star&count=true" &nbsp; &nbsp; &nbsp;>
+	     </iframe>
+    <br>
+  <span>E-mail @ </span><span id="color_hyperlink">wodonggun@gmail.com&nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+
+    </b>
+    </center>
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/wodonggun.github.io/js/main.js"></script>
+
+
+
+</foot>
+
+
+</foot>
+
+</html>
