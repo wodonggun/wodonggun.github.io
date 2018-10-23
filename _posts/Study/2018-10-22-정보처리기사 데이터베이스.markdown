@@ -15,19 +15,154 @@ finished: true
 
 ## 데이터베이스
 
+database server   < ---- >   database client
+
+우리가 mysql로 접속하면 database client를 통해 server에 접속하는거다.
+server는 직접 건들지 않음.
+
+```
+client - > mysql monitor
+       - > phpmyadmin
+       - > mysql workbench     
+```
+
+
+DELETE - 데이터는 지워지지만 테이블의 용량은 줄지 않는다.(구조는 그대로 남음) = 원하는 데이터 삭제시 용이 = 삭제 후 다시 되돌릴 수 있다.
+TRUNCATE - 테이블 용량과 데이터 둘다 지워짐. 한꺼번에 다 지워야하며, 삭제 후 절대 복구 불가.
+DROP - 테이블 전체 삭제 명령, 삭제 후 절대 되돌릴 수 없다.
+
+
+## 데이터베이스 정리
+
+SQL
+
+row,record,행(데이터)
+
+column,열(데이터 구조)
+
+`varchar char 차이` 100글자만 받고싶은데 넘어가면 나머지는 다 버림
+255글자까지 최대 가능
+
+```
+SET PASSWORD = PASSWORD('1');
+```
+
+
+## 명령어 정리
+
+CREATE database AAA;
+show tables;
+show databases;
+
+DROP
+DESC aaa; - 테이블 형식 보기
+
+
+<테이블 생성>
+
+```
+CREATE TABLE topic(
+ id INT(11) NOT NULL AUTO_INCREMENT,
+ title VARCHAR(100) NOT NULL,
+ description TEXT NULL,
+ created DATETIME NOT NULL,
+ author VARCHAR(30) NULL.
+ profile VARCHAR(100) NULL,
+ PRIMARY KEY(id));
+```
+
+
+INSERT INTO test(title,description,created,author,profile) VALUES('MYSQL','MySQL is...',NOW(),'egoing','developer');
+
+SELECT * FROM aaa; - 테이블 내용 출력
+
+
+
+select id,title,description from test where author='egoing' ORDER BY id increment; - id를 기준으로 내림차순으로 정렬   
+
+select id,title,description from test where author='egoing' ORDER BY id increment limit 2;  - 최대 2개만 출력
+
+UPDATE test SET description='Oracle is ...', title='Oracle' where id=2;
+
+
+<삭제>
+delete from test where id = 5;
+
+
+
+
+<데이터베이스 합치기>
+
+select * from topic left JOIN author ON topic.title != author.name;
+
+select * from topic left join author on topic.author_id = author.id;
+
+select topic.id from topic left join author on topic.author_id = author.id;
+
+
+
+
+## 관계형 데이터베이스의 필요성
+
+유지보수가 매우 편해진다.
+
+장바구니(개인)에 운영체제 과목번호를 추가하고,
+만약에 참조를 시키면
+과목리스트(서버)에서 운영체제 과목번호만을 보고 이 과목의 정보를 알 수 있고,
+과목리스트의 운영체제 과목번호만 바꿔도 다른 테이블에서는 영향이 없다.
+
+
+
+
+## 데이터베이스란? - 상식
+
+`CRUD = Create Read Update Delete (기본적인 데이터 처리 과정)`
+```
+input = Create, Update, Delete
+
+output = Read
+```
+
+- SQL(Structured Query Language) = 관계형데이터베이스 구축 언어
+(사용자는 데이터베이스와 SQL을 통해 대화)
+
+
+데이터베이스 순위
+1. 오라클
+2. Mysql
+3. ms SQL
+4. postgreSQL
+5. MongoDB  - `비관계형 데이터베이스`
+11. SQLite
+
+
+
+NoSQL = 관계가없는 데이터가 폭발적으로 증가하여 비정형화된 데이터를 처리가 필요해짐.
+
+
+## 데이터베이스
+
 시스템 카탈로그 = 데이터 사전 (데이터베이스에 저장되어 있는 개체들의 정보를 저장)
 메타데이터 = 데이터에 관한 데이터(메타데이터는 넓은개념 > 시스템 카탈로그는 DB한정)
 
-
+파일시스템 - 데이터 가공 힘듬.
+스프레드시트 - 데이터 가공이 쉬워짐(ex:엑셀로 날짜별 정렬, 크기별 정렬, 같은 이름만 표시하기 등).
+데이터베이스시스템 - 데이터가공과 관리가 쉬워짐.
 
 1. Atomicity(원자성) - 트랜잭션 연산은 데이터베이스에 모두 반영되거나 전혀 반영되지 않아야 함
 
 2. Consistency(일관성) - 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 변환
-                      시스템의 고정 요소는 수행 완료 후에도 상태가 이전과 같아야함.
+(시스템의 고정 요소는 수행 완료 후에도 상태가 이전과 같아야함)
 
 3. Isolation(고립성) - 둘 이상의 트랜잭션이 동시에 실행되는 경우 서로 실행중에 간섭 할 수 없다.
 
 4. Durability(지속성) - 성공적으로 완료된 트랜잭션은 영구적으로 반영되어야 함.
+
+
+외부 스키마(서브스키마=사용자 뷰) = 사용자가 필요로 하는 데이터베이스의 논리적 구조를 정의
+개념 스키마(스키마=전체 뷰) = 개체간의 관계와 제약조건, 접근 권한,보안 및 뮤결성 규칙 명세
+내부 스키마(물리적 구조) = 데이터의 실제 저장 방법을 기술, 시스템 설계자나 프로그래머가 보는 관점의 스키마
+
 
 
 ## 데이터베이스 정의
@@ -39,6 +174,17 @@ finished: true
 
 특징 1. 논리적 독립성 - 응용프로그램과 데이터베이스를 독립시켜서 데이터베이스의 논리적 구조를 변경시키더라도 응용 프로그램에 영향을 안줌
 .   2 .물리적 독립성 - 응용프로그램과 보조기억장치(물리)를 분리시켜 새로운 디스크를 변경하더라도 응용프로그램 영향 x
+
+## 데이터베이스 특징
+1. 실시간 접근성
+수시적이고 비정형적인 질의(query)에 대하여 실시간 처리로 응답할 수 있어야 한다.
+2. 계속적인 변화
+새로운 데이터의 삽입(insertion), 기존 데이터의 삭제(deletion), 갱신(update)으로 항상 그 내용이 변하고, 또 그 속에서 현재의 정확한 데이터를 유지해야 한다.
+3. 동시 공유
+같은 내용의 데이터를 여러 사람이 서로 다른 방법으로 동시에 공용할 수 있어야 한다.
+4. 내용에 의한 참조
+데이터베이스 내에 있는 데이터 레코드들은 주소나 위치에 의해서가 아니라 사용자가 요구하는 데이터의 내용에 따라 참조해야 한다.
+
 
 
 ## 데이터 언어
@@ -67,11 +213,34 @@ finished: true
 ## 키
 
 - 슈퍼키 = 속성들의 집합으로 구성된 키(유일성은 만족하지만 최소성은 만족x)
-- 후보키 =
+- 후보키 = 튜플을 유일하게 식별하기 위해 사용되는 부분집합(유일성과 최소성 만족)
+- 기본키 = 후보키중에서도 특별히 선정된 키로 중복값을 가질 수 없다.(ex:주민등록번호,이메일 등)
+- 대체키 = 기본키를 제외한 나머지 후보키
+- 외래키 = 다른 릴레이션의 기본키를 참조
+
+
+## 무결성
+- 데이터값이 저장된 실제값이랑 같다 = 잘못된 데이터가 없다.
+1.
 
 
 
 
+
+## 해싱과 인덱싱
+
+해싱함수를 통해 정의된 방법으로 저장된 위치를 연산하여 저장
+
+루트노드  리프노드
+
+
+- 인덱싱의 개념
+접근 경로를 제공한다.
+빠른 접근 보장
+인덱스는 DBMS의 최적화가 사용된다.
+인덱스는 항상 정렬상태를 유지한다.
+
+-
 
 <br><br><br>
 
