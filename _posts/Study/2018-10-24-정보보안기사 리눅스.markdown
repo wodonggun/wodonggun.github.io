@@ -1,0 +1,43 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-10-22
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+
+##
+
+netstat(TCP/IP 프로토콜 진단시 다양한 용도로 네트워크 정보 확인) -r -i -s -a -n
+
+netstat -s = TCP/IP 프로토콜의 세부 정보를 출력(ICMP,TCP,UDP)
+
+tcpdump - 인터페이스를 거치는 패킷의 내용을 출력해줌
+
+nslookup - 해당 도메인의 주소를 출력해줌
+
+host - nslookup과 비슷한 비대화형 모드(좀더 단순)
+
+ping - ICMP를 통한 연결 확인
+
+traceroute -m 5 hostname = 최대 5홉(max_hop)까지 추적
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
