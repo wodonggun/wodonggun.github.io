@@ -76,6 +76,45 @@ DAM(Direct Access Memory)
 높이 = 최대 깊이
 터미널 노드 = 자식이없는 노드(종단)
 
+
+## 데이터 통신(네트워크)
+
+ ■ 오류검출
+1. CRC
+2. 해밍코드
+3. Block parity
+4. Parity Bit
+
+ ■ ARQ(Automatic Repeat reQuest)
+ `오류 발생시 오류 통보 및 재전송`
+1. stop and wait = 매번 확인하며 기다림(오류 발생시 전체 패킷 전송)
+2. Continuos ARQ = 부정 ACK만 수신함
+3. Go back N ARQ = 여러 블록을 계속 진행하면서 부정 ACK가 온 이후의 비트를 다시 전송(이후 모든 패킷 전송)
+4. Selective Repeat ARQ = 여러 블록을 동시에 보내고 오류가 발생한 블록만 재전송
+5. Adaptive ARQ = 길이와 채널의 상태에 따라 동적으로 변경하는 방식  
+
+
+ ■ ISI(Inter Symbol Interference)
+ `PCM 통신에서 파형이 타임슬롯을 벗어나 인접 슬롯에 간섭을 주는 현상`
+ 1. 세로 = 잡음 여유도
+ 2. 가로 = ISI 간섭 없이 Sampling하는 주기
+
+
+## 라우터
+
+- RIP - 15홉수를 제한하여 30초마다 라우팅 정보를 알리며, 180초 이내로 도착안하면 이상 상태로 간주
+
+- OSPF -  라우팅 정보에 변화가 있을때만 알림(효율성)
+
+## 네트워크 상식
+
+- Keying - 디지털 데이터를 아날로그 신호를 바꿈
+1. ASK
+2. FSK
+3. PSK
+4. QAM
+
+
 ## 참고 자료
 *
 *

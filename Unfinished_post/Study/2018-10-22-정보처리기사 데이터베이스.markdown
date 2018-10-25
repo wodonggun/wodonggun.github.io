@@ -100,6 +100,15 @@ select * from topic left join author on topic.author_id = author.id;
 select topic.id from topic left join author on topic.author_id = author.id;
 
 
+SELECT 속성
+FROM 테이블
+WEHRE 조건
+GROUP BY
+ +HAVING
+ ORDER BY (내림차순 DESC)
+ AND height BETWEEN 170 AND 180;
+
+
 
 
 ## 관계형 데이터베이스의 필요성
@@ -186,6 +195,13 @@ NoSQL = 관계가없는 데이터가 폭발적으로 증가하여 비정형화�
 데이터베이스 내에 있는 데이터 레코드들은 주소나 위치에 의해서가 아니라 사용자가 요구하는 데이터의 내용에 따라 참조해야 한다.
 
 
+` ■ 무결성 종류 `
+1. 개체 무결성 = 기본키는 NULL,중복 없다
+2. 참조 무결성 = 외래키는 NULL이거나 기본키여야한다.
+3. 널 무결성 = 특정 속성은 NULL이 될 수 없다.
+4. 키 무결성 = 하나의 릴레이션에는 적어도 하나의 키가 존재해야 한다.
+
+
 
 ## 데이터 언어
 - SQL(Structured Query Language) = 관계형데이터베이스 구축 언어
@@ -267,7 +283,11 @@ NoSQL = 관계가없는 데이터가 폭발적으로 증가하여 비정형화�
 선형구조 = 큐,스택,배열
 비선형구조 = 그래프, 트리
 
-
+병행제어 기법
+1. 로킹
+2. 타임 스탬프 순서
+3. 최적 병행수행 기법(검증,확인,낙관적)
+4. 다중 버전 기법
 
 ## 데이터 백업 방식
 
