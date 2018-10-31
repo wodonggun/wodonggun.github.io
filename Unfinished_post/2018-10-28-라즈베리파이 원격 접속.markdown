@@ -1,0 +1,33 @@
+---
+layout: post
+title: " [xrdp] 라즈베리파이 원격 접속하기"
+subtitle: <span class="evidence">PC에서 xrdp를 통해 라즈베리파이에 접속해보자!</span>
+date: 2018-10-28
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+
+
+## xrdp를 활용하여 원격 테스크톱 연결
+
+![img](/img/4-Documentation/2018-10-28-라즈베리파이 원격 접속/1.png)
+
+- sudo apt-get install xrdp
+
+![img](/img/4-Documentation/2018-10-28-라즈베리파이 원격 접속/2.png)
+<br><br><br>
+
+Sudo apt-get install ssh  라즈베리파이에 ssh 설치가 안되있으면  NetWork error:connection refused 라는 용어와 함께 ssh 접속을 거부함
+
+## 참고 자료
+*
+*
+*
+
+■
