@@ -14,13 +14,10 @@ finished: true
 
 ## -------- ?
 
-- what is -------- ? <br>
 
 ![Codes](/img/ ----- /1.png)
 
-> abcdefghijklmnabcdefghijklmnabcdefghijklmnabcdefghijefghijklmn
-abcdefghijklmnabcdefghijklmnabcdefghijklmnabcdefghijklmn
-abcdefghijklmn
+
 
 1. sudo apt-get install gcc
 
@@ -42,7 +39,6 @@ int main()
 
 
 
-
 <br><br><br>
 
 ## gcc 커널 이해
@@ -51,7 +47,9 @@ https://wiki.kldp.org/KoreanDoc/html/gcc_and_make/gcc_and_make-2.html
 
 
 
-
+가장 좋아하는 말은 처음처럼, 초심입니다.
+첫 면접인데, 되돌아보니 많이 서툴렀고 아쉬운 부분이 많았습니다.
+하지만 제가 만약에 한화시스템에 입사하게 된다면, 대학생활
 
 
 
