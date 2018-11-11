@@ -68,6 +68,10 @@ https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구�
 
 ## 깃 정리
 
+- 깃 정리 잘된 블로그
+https://www.tuwlab.com/ece/22202
+
+
 깃 reject -> git push  (git마스터와 나의 코드 병합)
 
 git add .

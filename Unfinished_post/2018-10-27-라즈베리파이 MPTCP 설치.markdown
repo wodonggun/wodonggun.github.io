@@ -1,0 +1,76 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## 우분투 mate 16.04 설치
+
+[라즈베리파이 우분투 메이트 바로가기](https://www.raspberrypi.org/downloads/)
+
+
+![img](/img/2018-10-27-라즈베리파이 MPTCP 설치/1.jpg)
+
+
+## 우분투 설치 후
+
+
+- 가장 먼저 루트 패스워드 설정
+`sudo passwd root`명령어 입력<br>
+기본 Unix password 입력후 비밀번호 설정(부팅시 입력한 비밀번호, 또는 설정안했으면 그냥 엔터)
+
+
+1. 터미널창에서 라즈베리파이 설정
+`sudo raspi-config`
+
+`Advanced Option -> Over scan -> yes 설정`
+
+
+
+3. sudo apt-get install geany
+
+4. 설치 후 실행
+`sudo geany`
+
+5.
+`filesystem -> boot -> cmdline.txt 열기`  
+
+6. 맨 끝에 usbhid.mousepoll = 0 추가
+
+7. reboot
+
+8. 재부팅후 업데이트
+sudo rpi-update
+
+
+## Windows에서 운영체제 이미지 설치하기
+
+SD 카드를 SD 카드 리더에 넣습니다. SD 카드 슬롯이 있으면 사용할 수 있고, USB 포트에 SD 어댑터를 꽂을 수도 있습니다. SD 카드에 할당된 드라이브 문자를 적어두도록 합니다. 탐색기의 왼쪽에서 드라이브 문자를 확인할 수 있습니다(예: G:).
+Win32DiskImager 유틸리티의 인스톨러를 Sourceforge 프로젝트 페이지에서 다운로드하여 실행합니다.
+데스크톱 또는 메뉴에서 Win32DiskImager 유틸리티를 실행합니다.
+앞에서 압축을 푼 이미지 파일을 선택합니다.
+장치 선택상자에서 SD 카드의 드라이브 문자열을 선택합니다. 잘못된 것을 골랐다가는 컴퓨터의 하드 디스크에 있는 데이터를 망가뜨릴 수 있으니 조심하세요! 만약 컴퓨터에 있는 SD 카드 슬롯을 사용하는데 Win32DiskImager 창에서 드라이브가 보이지 않는다면, 외장 SD 어댑터를 가지고 시도해보세요.
+'Write'를 클릭하고 기록이 완료될 때까지 기다립니다.
+imager를 종료하고 SD 카드를 꺼냅니다.
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)

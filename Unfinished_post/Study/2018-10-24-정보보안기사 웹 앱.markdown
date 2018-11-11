@@ -77,10 +77,26 @@ https://wodonggun.github.io/wodonggun.github.io/study/IaaS,-PaaS,-SaaS.html
 
 
 
+
 흐름 통제 - 높은 수준의 권한이 필요한 정보를 낮은 수준의 권한을 가진 폴더로
 이동하여 낮은 권한을 가진 사용자가 접근할 수 있는것을 통제하는것.
 
 악의적인 웹 액티브x 컨트롤은 웹 클라이언트에게 영향을 줌(서버 영향x)
+
+
+<  SSL(Secure Socket Layer)  TLS(Transport Layer Security Protocol)  >
+
+HTTPS = SSL위에서 돌아가는 프로토콜이다.
+HTTP = HTTP는 HTML을 전송하기 위한 프로토콜이고, 보안성이 낮다.
+
+TLS(Trnasport Layer Security Protocol) = SSL 같은말이다.
+
+
+
+
+CSRF(Cross-site Request Forgery)
+웹페이지를 위조된 HTTP요청
+
 
 
 <br><br><br>

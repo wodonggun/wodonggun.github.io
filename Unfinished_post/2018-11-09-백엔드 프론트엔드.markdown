@@ -1,0 +1,56 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+##
+
+프론트엔드란? = 사용자에게 GUI나 UI환경을 제공하고, 디자인하고 페이지를 구성하는 기술.
+웹에서는 웹페이지를 구성하는 기술이고, 스마트폰 어플리케이션에서는 액티비티를 구성하는 기술을 말합니다.
+HTML,CSS,JAVA SCRIP, JQUERY
+
+
+백엔드란? = GUI나 UI에 필요한 데이터를 가져오기 위해 통신이나 요청서비스를 구성하고, DB,인터페이스 등의 시스템에 접근하는것 입니다.
+
+서버관리자,DB관리자, 백엔드 개발자
+
+API,JAVA,스프링 프레임워크,JSP,python,Django
+
+
+
+미들웨어 = 다른 두개의 시스템을 연결하는 시스템 소프트웨어
+
+ DB 미들웨어 -
+ WAS 미들웨어 -
+RPC(REmote Procedure Call)
+MOM(Messeage Oriented Middleware)
+TP-모니터
+Object Request broker
+
+
+JVM
+자바 바이트 코드와 컴퓨터 시스템 간의 번역기 역할을 해주어 자바로 작성한 코드를 어떠한 시스템에도 동작 가능하게 만들 수 있습니다.
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)

@@ -55,6 +55,8 @@ finished: true
 
 
 
+
+
 ## 운영체제 개요
 
 운영체제란 ?
@@ -168,6 +170,9 @@ CPU 스케쥴링 = cpu자원을 언제 어떤 프로세스에게 배당할 것�
 1. 선점 스케쥴링 = RR(round robin), SRT(Shortest Reamaing time), MLQ(multilevel queue), MFQ(Multilevel feedback queue) = 프로세스 도중에 끊고 큐에 넣고 다음걸로 넘어감
 
 2. 비선점 스케쥴링 = FiFO, SJF(Shortest-job-first), HRN(Hightest response-ratio Next) = 한번 프로세스에 들어가면 끝날때까지 사용
+
+priority Queue(우선순위 큐)
+
 
 FCFS(First come first service)
 선입 선출방식
