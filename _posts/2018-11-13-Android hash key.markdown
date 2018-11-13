@@ -18,7 +18,7 @@ finished: true
 
 
 1. Oncreate 외부(클래스 메소드)에 아래의 코드 생성.
-```Java
+~~~Java
 private void getAppKeyHash() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
@@ -34,12 +34,13 @@ private void getAppKeyHash() {
             Log.e("name not found", e.toString());
         }
     }
-```
-
+~~~
+<br><br>
 2. OnCreate 내부에 `getAppKeyHash();` 함수 호출.
-
-
+![img](/img/1-Everything/123_2.JPG);
+<br><br>
 3. 안드로이드 실행
+- Instance Run!
 
 <br><br><br>
 
