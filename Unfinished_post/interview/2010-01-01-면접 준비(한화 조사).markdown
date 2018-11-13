@@ -14,7 +14,9 @@ finished: true
 
 
 
-
+```
+#include <stdio.h>
+```
 
 
 ## IDC센터 조사
