@@ -18,8 +18,7 @@ finished: true
 
 
 1. Oncreate 외부(클래스 메소드)에 아래의 코드 생성.
-
-```
+```Java
 private void getAppKeyHash() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
@@ -42,6 +41,7 @@ private void getAppKeyHash() {
 
 3. 안드로이드 실행
 
+<br><br><br>
 
 ## 해쉬키 결과
 
