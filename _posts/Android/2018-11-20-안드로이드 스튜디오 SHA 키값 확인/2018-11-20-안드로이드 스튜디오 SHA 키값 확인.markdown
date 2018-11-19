@@ -4,7 +4,7 @@ title: "[Android] 안드로이드 스튜디오 SHA1 키값 확인"
 subtitle: <span class="evidence">안드로이드 스튜디오에서 SHA1 키값을 알아보자.</span>
 date: 2018-11-20
 author: NoonGam
-category: Study
+category: Android
 tags: Android Java
 comments: true
 finished: true
@@ -16,7 +16,7 @@ finished: true
 
 <fieldset id="gpg-fieldset">
  Auth, 클라우드 서비스,연동 서비스,앱 배포시에 SHA1의 등록은 필수적으로 필요합니다.
- 여러 방법이 있지만 가장 쉽고 빠른 방법을 선택하였습니다. 
+ 여러 방법이 있지만 가장 쉽고 빠른 방법을 선택하였습니다.
 </fieldset>
 
 ![img](/_posts/Android/2018-11-20-안드로이드 스튜디오 SHA 키값 확인/1.PNG)
