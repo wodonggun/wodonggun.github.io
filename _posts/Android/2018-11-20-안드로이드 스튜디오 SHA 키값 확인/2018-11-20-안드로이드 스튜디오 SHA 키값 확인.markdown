@@ -15,7 +15,8 @@ finished: true
 ## 안드로이드 스튜디오 SHA1 키값 확인하기
 
 <fieldset id="gpg-fieldset">
- Auth, 클라우드 서비스,연동 서비스,앱 배포시에 SHA1의 등록은 필수적으로 필요합니다.
+ Auth, 클라우드 서비스,연동 서비스,앱 배포시에 SHA1의 등https://wodonggun.github.io/wodonggun.github.io/archive/
+ 록은 필수적으로 필요합니다.
  여러 방법이 있지만 가장 쉽고 빠른 방법
 </fieldset>
 
