@@ -21,6 +21,8 @@ finished: true
 
 ![img](/img/1-Everything/1.PNG)
 ![img](/_posts/Android/2018-11-20-안드로이드 스튜디오 SHA 키값 확인/1.PNG)
+
+![img](/_posts/1.PNG)
 - 우측에 `Gradle` 클릭
 - 프로젝트명 `MyApplication` -> `Tasks` 클릭
 - `Android` -> `SigningReport` 더블 클릭
