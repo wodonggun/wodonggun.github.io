@@ -1,0 +1,60 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## intro
+
+1. daily coding
+2. 비전공자와 전공자의 차이
+전공자인데 매일 해야지
+
+- 버그 메이커?
+
+
+- 눈에 보이는 버그가 없다고해서 버그가 없는것은 아니다. 
+- 성능이 안나오는것도 버그의 일종
+
+
+3. 막노동이 아닌 소프트웨어 개발자
+-
+
+4. API만 사용하는 개발자가 아닌, API를 개발하고 사용하는 개발자
+
+아름다운코드를 보고 배워야한다.
+뺏기고 익숙해질때까지
+
+
+
+## 면접
+
+왜 윈도우즈폰은 안드로이드를 포기했는가 ?
+- 윈도우즈 아키텍쳐는 안드로이드 아키텍쳐에 맞지 않습니다.
+
+
+-
+
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
