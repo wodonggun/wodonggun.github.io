@@ -38,6 +38,17 @@ ICT 부문 = `김경한` 대표이사
 1952년 한국화약 주식회사 -> 2001년 한화로부터 한화S&C 분사 -> 2018년 한화시스템과 S&C 합병
 
 
+
+## 다른 기업 데이터센터
+
+LG CNS = 부산
+AWS = 서울
+Azure = 서울, 부산
+삼성 SDS = 강원
+SK C&C = 판교
+한화 S&C = 죽전
+
+
 ## 현재 기술 정리
 
 1. 스마트워크
@@ -57,9 +68,18 @@ One step ahead = 늘 현실에 안주하지않고, 내일의 더 큰 진보를 �
 
 3. 한화 we러닝 e러닝 시스템
 
+
+
+
 4. Intelligent Transprotation System
 
+
+
+
 5. IBS
+
+
+
 
 6. u-home (ubiquitous home)
 

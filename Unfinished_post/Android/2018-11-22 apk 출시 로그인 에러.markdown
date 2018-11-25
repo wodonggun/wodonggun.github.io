@@ -12,10 +12,10 @@ finished: true
 
 ---
 
-##
+## 구글 콘솔에서 sha1을 또 파이어베이스에 등록해야됨 .
 
 
-
+https://stackoverflow.com/questions/36999751/google-signin-not-working-in-release-mode-apk-android
 
 
 
