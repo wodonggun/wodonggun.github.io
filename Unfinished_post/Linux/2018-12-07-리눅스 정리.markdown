@@ -1,0 +1,38 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## 리눅스 정리
+LPRng - 버클리 프린팅 시스템
+1. BSD 계열 = lpr,lpq,lprm
+2. V system 계열 = lp,lpstat,cancel
+
+CUPS - 애플 프린팅 시스템
+
+
+
+흰주주 흰초파 흰파초 흰갈갈
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
