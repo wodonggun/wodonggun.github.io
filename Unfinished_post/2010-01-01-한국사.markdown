@@ -1,0 +1,45 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## ㅇㅇ
+유리이사금
+
+
+관산성전투
+- 신라진흥왕 15년 백제가 신라를 공격 = 성왕 전사(백제)
+
+
+
+
+
+## 8 성리학 중심 사회 이해
+
+훈고학(질문법으로 지식 전달 : 하늘 천 따지 검을현) -> 성리학(성명학81수리이론(길흉)) -> 양명학 -> 고증학
+
+향교(청주 향교) = 시골학교 이상의 의미
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
