@@ -1,0 +1,37 @@
+---
+layout: post
+title: "안드로이드 버전 설정하기 "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## 안드로이드 버전 관리
+
+> 안드로이드 6.0(API 23 이상)부터는 사용자가 앱을 설치할 때가 아닌, 앱이 실행되는 동안에 앱에 권한을 부여합니다.
+이 접근방식에서는 사용자가 앱을 설치하거나 업데이트할 때 권한을 부여할 필요가 없으므로 앱 설치 과정이 간소화됩니다.
+또한 사용자가 앱의 기능을 더 세부적으로 제어할 수 있습니다.
+
+>이전까지 우리는 안드로이드의 권한을 관리하는것에 대해서 큰 어려움을 느끼지 않았습니다.
+사용하는 권한들을 AndroidManifest.xml에 선언해두고 사용자가 앱을 설치하는 시점에 한번만 동의를 받으면 그 이후에는 문제없이 해당 권한들을 사용할 수 있었기 때문입니다.
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
