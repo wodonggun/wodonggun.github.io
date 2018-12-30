@@ -314,14 +314,170 @@ protected 다른패키지에서 상속관계가 아닐때 보호 (퍼블릭과 �
 
 default 같은패키지만 가능
 
-private 같은클래스말고 다 접근 불가 
+private 같은클래스말고 다 접근 불가
 
 
 
 
 
+## 추상클래스 != 추상화
+
+클래스의 선언만하고, 상속받아서 사용하는 사람에게 동작 설계를 맡김.
+
+동작과정을 정하기만하고 필요한 메소드는 사용자가 만들어서 동작하도록 강제함.
 
 
+## 디자인패턴
+
+
+## final
+
+변수 = 선언과 동시에 값을 주고, 변경 불가
+메소드 = 해당 메소드 오버라이딩 불가
+클래스 = 상속을 못하게 함(금지)
+
+## 인터페이스
+
+상속은 상위 기능을 하위에서 물려 받는 것이라면,
+인터페이스는 하위클래스에 특정 메소드를 강제하도록 제한.
+
+1. 다중상속 안하는 이유
+```
+class MyVehicle extends car, plane {
+    @Override
+    public void goTo(){
+        super.drive();    
+    }
+}
+```
+위와 같이 car와 plane을 두개 상속받았는데 두개다 drive라는 클래스를 가지고 있다면 누구의 drive메소드를 호출해야하는지
+애매함이 생김.
+
+2. 인터페이스와 상속의 차이
+
+
+3. 추상클래스와 인터페이스의 사용 상황
+- Draw와 같이 같은 종류의 행동들을 구현할게 많을때 자식에게 떠맡김.(변수와 메소드를 쓸수있음)
+
+- 인터페이스는 전체적인 로직과 메소드 형태만 서로 공유해서 구현되는 상황일때 동시다발적으로 각 모듈을 개발할 수 있다.
+
+
+
+## 다형성
+1. A obj = new B(); 일때 B를 인스턴스화 했지만 A의 메소드만 사용 가능하다.
+2. A obj = new B(); 하지만 B에서 A의 클래스를 x를 오버로딩했으면 A의 x메소드를 호출해도 오버로딩된 B의 x메소드가 호출된다.
+
+3. 매개변수를 넘길때 매개변수의 자료형을 부모클래스로 선언함으로써, 부모를 상속받은 B,C클래스 등 아무거나 넘길 수 있다.
+4.
+
+
+
+## 예외처리
+
+Exception = 최상위 예외처리(모든경우 커버 가능)
+xxxxException = Exception의 하위 예외처리 (세분화 가능)
+
+try{
+
+}catch(xxxException e){
+  "xxx에 관련된 예외처리만 걸러냄"
+}catch(Exception e){
+  "위에 예외에서 안걸린 나머지 모든걸 처리"
+}
+
+- throw를 통해 더이상 진행하지않음.
+if(right == 0){
+          throw new IllegalArgumentException("두번째 인자의 값은 0이 될 수 없습니다.");
+}
+
+
+## string
+equals , == 차이
+
+`==` 주소가 같은지
+`equals` 같은 객체인지
+
+
+## clone
+A객체 a랑 똑같은 객체를 복사하고 싶을때
+기본적으로는
+A a = new A();
+A b = a;           <------- 이건 주소값을 넣는거기 때문에 똑같은 메모리를 바라보게함.
+
+
+```
+class A implements Cloneable{
+		String name = "hahaha"
+	protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+}
+
+public class test{
+
+	public static void main(String args[])
+	{
+		A a = new A();
+		A b;
+		try {
+			b = (A)a.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+```
+위와 같이 clone을 구현하여 사용하면 주소가 다르지만 원래 가지고있던 변수정보나 메소드는 똑같은 객체를 복제하게 된다.
+
+
+
+## 상수와 enum
+
+interface내부의 변수는 public ifnal static 값이 된다.
+interface FRUIT{
+  int APPLE =1, PEACH =2, BANANA = 3;
+}
+
+enum Fruit{
+  APPLE,PEACH,BANANA        ==              public static final Fruit APPLE  = new Fruit();
+                                            public static final Fruit PEACH  = new Fruit();
+                                            public static final Fruit BANANA = new Fruit();
+}
+
+## 제네릭
+- 자료형을 미리 선언하지않고, 유동적으로 받을 수 있다.
+class info<T>{
+
+}
+
+기본 데이터 타입 = char,int,double, float
+
+레퍼런스 = Integer,Double;
+
+
+
+1. 생성자 또는 변수를 제네릭화 하는 방법
+EmployeeInfo e = new EmployeeInfo(1);
+Integer i = new Integer(10);
+Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(e, i);   ->    Person p1 = new Person(e,i);
+
+2. 메소드를 제네릭화 하는 방법
+public <U> void test(U info){
+  System.out.println(info);
+}
+
+제네릭 5강은 다시들어야됨.
+
+
+## 컬렉션 프레임워크
+
+1. ArrayList
+
+2. Set 중복 허용x (집합 포함여부 확인가능)
+
+3.
 
 
 

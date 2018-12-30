@@ -1,0 +1,87 @@
+---
+layout: post
+title: " [Git] 깃허브 동작 과정"
+subtitle: <span class="evidence">깃을 써야한다고? 왜써야하고 어떻게 사용하는지....</span>
+date: 2018-12-30
+author: NoonGam
+category: Study
+tags: Git Github
+comments: true
+finished: true
+---
+
+
+
+## 깃이란 ?
+
+- Working Directory: 작업할 파일이 있는 내PC의 폴더
+
+- Staging Area: 커밋(Commit)을 수행할 파일들이 올라가는 영억
+
+- Git Local Directory: .git폴더(Working Directory와 차이점은 깃허브 저장소에 올라갈 정보를 보관)
+
+- Git Directory: Git 프로젝트의 메타 데이터와 데이터 정보가 저장되는 디렉토리입니다.
+
+
+![img](/img/3-Study/2018-12-30-Git 동작 원리/1.jpg)
+
+Working Directory(내 컴퓨터의 수정중인 파일) -> Staging Area(commit을 해야할 파일)
+-> Local Repository(내 컴퓨터의 저장소) -> Remote Repository(깃허브 저장소)
+
+
+- 해당 프로젝트의 소속된 사람이 아닌 경우
+해당 프로젝트의 구성원이 아니라서 직접 그 프로젝트에 commit을 할수 없지만 `Pull Request`를 통해 소스코드 수정한 부분을 합쳐달라고 요청을 할수 있다.
+
+## 공부 자료 / 용어 정리
+
+
+
+
+- commit 명령어 수정(잘못 commit 했을떄)
+`git commit --amend`
+
+
+
+
+- `git pull = git fetch + git merge`
+
+
+- `git reset --hard 해쉬값` 해당 commit로그로 돌아가기.
+
+
+- `git push -f` commit로그가 변경되어 force강압적으로 깃허브에 push해야함.
+
+
+
+- `git branch` 깃 브랜치 확인
+
+- `git branch 브랜치명` 깃 브랜치 생성
+
+- `git checkout 브랜치명` 해당 브랜치로 변경
+
+- `git merge 브랜치명` 해당 브랜치를 master와 병합(master브랜치 일때)
+
+
+
+master(A)와 B브랜치가 서로 다를때부터 Conflict 발생
+해당 파일을 열면 `=====`을 경계로 위 아래가 서로 다른 브랜치간의 차이를 나타내줌.
+```
+<<<<<<HEAD master
+asdf
+====
+cdefg
+>>>>>>B branch
+```
+두개의 다른 코드중 원하지 않는 코드를 지워주고 저장하고, `git merge 브랜치명`
+
+- `git remote add 저장소명 저장소주소` 원격저장소 등록(기본은 origin)
+- `git remote -v`
+- `git remote rename 원래명 바꿀명` 원격저장소 이름 변경.
+
+깃허브는 기본적으로 origin repo인데 다른 깃허브 repo나 클라우드에 원격 저장소를 두고 싶다면 remote add를 통해 등록하여 사용 가능함.
+`git push origin master`
+`git push test 브랜치명(master일수도,part1일수도)`
+
+## 참고 자료
+* [생활코딩 Git](https://opentutorials.org/course/1492)
+* [안경잡이개발자](http://ndb796.tistory.com/search/git)
