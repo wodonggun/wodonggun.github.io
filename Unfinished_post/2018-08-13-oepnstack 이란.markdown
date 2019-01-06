@@ -102,7 +102,33 @@ floating IP는 가상 인스턴스에 IP를 부여했다가 필요에 의해서 
 
 
 
+## 정리
 
+1. 네트워크 슬라이싱
+- NFV를 서로 호환에 맞춰 나눔
+- NFV의 다양한 기능 중에
+
+2. ㅁㄴㅇㄻㄴㅇㄹ
+- ㅁㄴㅇㄹ
+- ㅁㄴㅇㄹ
+
+## 오픈스택
+> 퀀텀을 시도하였으나, 계속 문제가 발생하여 뉴턴으로 결정
+
+
+
+오픈스택은 controller와 compute의 2개로 나누어져 있다고 생각하면 된다.
+- controller : 네트워크,DB(Keystone),스토리지 제공
+- compute : 계산작업, 자원할당, VM 할당
+
+
+keystone = 모든 프로젝트 인증 관리
+Cinder = 스토리지=block storage(aws EBS Elastic Block store로 생각해도 됨.)
+swift = 오프젝트 스토리지로 REST API를 통해 파일 관리(aws 버킷이랑 비)
+nova = 서버 가상화 컴퓨팅
+horizon = 대쉬보드
+glance = nova에서 서버를 가상화할 때 필요한 OS 이미지 관리
+뉴트론 : 네트워크,리눅스 브릿지, 로드밸런싱? SDN 지원
 
 
 
