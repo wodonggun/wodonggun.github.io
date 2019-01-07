@@ -76,7 +76,7 @@ https://wodonggun.github.io/wodonggun.github.io/aws/AWS-EC2-Ubuntu%EC%97%90%EC%8
 <br>![icon](/img/2017-09-12-AWS EC2 Ubuntu에서 MySQL,phpMyAdmin 설치하기2/10.png)
 ```ruby
 Include sites-enabled
-Include /etc/phpmyadmin/apache2.conf
+Include /etc/phpmyadmin/apache.conf
 ServerName localhost
 ```
 > 맨 아래끝에 i를 누른후(수정 모드) 코드를 입력합니다. 입력이 끝난후 esc키를 누르고 ' :wq ' 를 입력합니다.(수정내용을 덮어쓰고, 종료를 의미)

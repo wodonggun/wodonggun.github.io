@@ -13,6 +13,8 @@ finished: true
 ---
 
 ## 1일차
+
+```
 1. Processor
 - CPU(연산장치)
 - Process랑 다름(저장소->RAM에 프로그램이 올라간 상태를 Process라고 함)
@@ -25,12 +27,11 @@ finished: true
 - 마우스, 키보드, 마우스
 
 
-```
 
 Fetch = 메인 메모리에 올라온 명령어를 CPU가 한줄 한줄 읽어온다.
-
 Decode = 가져온 명령어를 해석
 Execute = 실행
+
 
 OS 종류
 Dos - Disk Operating System
@@ -53,15 +54,15 @@ CLI(Command Line Interface)
 
 
 1. 고급언어 -> 컴파일러 -> 어셈블리어 -> 기계어 해석기
-2. 고급언어 -> 인터프리터(베이직 언어 사용할때 사용되었음)
+2. 고급언어 -> 인터프리터(베이직 언어 사용할때 사용되었음=현재는 사용하지 않음))
 
 자바의 장점 = Unix, windows, mac 어디에서든 작성하고 컴파일하면 어떠한 타입의 컴퓨터에서도
 실행 가능합니다.
 
+
 Java 코드작성 -> Java Compiler -> Java ByteCode -> 1. JVM for intel
                                                 -> 2. JVM for Mac
                                                 -> 3. JVM for Unix
-
 자바 컴팡일러는 컴파일에러를 체크하고, 바이트코드를 생성한다.
 
 
@@ -73,14 +74,6 @@ JSP(Java Server Page) - 상당 부분이 자바랑 거의 비슷함
 스프링(자바를 기반으로 웹페이지 개발) -
 스트럿츠(자바를 기반으로 웹페이지 개발) -  
 전자정부프레임워크(자바를 기반으로 웹페이지 개발) - 국내에서 개발된 공공웹사이트 개발 툴
-
-
-- 스마트폰
-안드로이드 앱개발
-
--스마트 TV 응용프로그램
-자바스크립트로 된 응용프로그램 개발
-
 
 
 
@@ -110,14 +103,14 @@ float형은 끝에 선언과 동시에 값에 f를 붙여줘야함.
 
 
 
-```
+■ 시프트 연산자
+> 비교 연산자
+>> 시프트연산자(부호비트는 무시)
+>>> 시프트연산자(부호비트도 시프트시킴)
 
 
 
 
-## 3일차
-
-```
 int[] score = new int[4];    or    int score[] = new int[4];
 
 int[] score = {1,2,3,...,24)};
@@ -168,7 +161,7 @@ arr[1] = temp;
 
 
 
-## 4일차
+## 3일차
 
 ```
 객체지향기술 = 소프트웨어 부품화,컴포넌트의 재사용을 주요 목표
@@ -184,10 +177,6 @@ arr[1] = temp;
 3. 프로그램의 확장 및 유지 보수가 용이
 4. 쉬운 프로그램의 개발로 인한 생산성 향상
 
-int a;
-int b;
-int c;
-
 클래스 = 객체를 생성하는 형판
 
 객체는 항상 클래스로부터 생성된다.
@@ -195,20 +184,19 @@ int c;
 클래스로부터 생성된 객체를 instance라고 한다.
 
 
-
 생성자 = 객체 생성시 호출되는 메소드(초기화 용도)
 
      객체이름     생성자 호출
-Dog myDog = new Dog()
-객체종류   객체생성   
+  Dog myDog = new Dog()
+객체종류    객체생성   
 
+< this 사용 예 >
+this.변수명 = 멤버필드나 메소드를 명확히 지시
+b.swap(this) = 필드내의 객체 전체를 매개변수로 전달할때
+this() = 현재 클래스의 다른 생성자를 호출.
 
+transient 변수 = 디스크에 저장할때 transient는 저장하지 않음.
 
-```
-
-
-
-## 5일차
 
 
 <a>this 키워드</a>
@@ -227,10 +215,10 @@ public Circle(int r)
 }
 
 
-```
+
 컴파일러가 자동으로 생성자 초기화 함수를 만들어준다.
 ABC클래스이면 자동으로 ABC(){ }를 자동으로 생성해줌.
-```
+
 
 메소드 규칙
 1. 메소드가 같은 클래스 혹은 상위클래스가 존재해야 함.
@@ -243,7 +231,6 @@ super() 상하관계에서 상위 메소드 호출
 this() 동등한관계에서 생성자 호출
 
 
-## 6일차
 
 1. 쓰레딩
 자바 = 우선순위(priority)와 순활 할당(Round-robin) 방식을 사용
@@ -263,101 +250,243 @@ this() 동등한관계에서 생성자 호출
    notifyAll = 모든 스레드를 깨움
 
 
-## 퀴즈 모음
-
-
-```
-자바 키워드 = class , import
-
-
-
-float형 올바른것 float a = -1;
-                float a = -1.2f;
-                float a = 1.23e2;
-
-                float b = -1.1;
-                float b = 12e2;
-
-
-if(i=0) 안됨
-switch('a') 됨
-switch(3) 됨
-
-
-
 
 ```
 
 
+## Exception
 
-## 7일차
-
-CGI (Command Gateway interface ) = 프로세스단위로 생성되어 과부화
-
-애플릿
-
-서블릿 = 자바언어를 이용하여 동적 웹페이지를 개발하기 위해 등장한 기술(웹 어플리케이션 개발 기술)
-(JSP는 서블릿 기술에 기반함)
+String char 차이
+String = 클래스
 
 
 
-- 자바 서블릿 이해
-1. 서블릿 문제점 대두 = 컨텐츠와 비지니스 로직이 분리되지 않음. 개발과 관리의 어려움
-2. JSP 등장 = JSP 스크립팅 기술을 통해 핸들링 가능
-3. JSP 스크립트 기술의 한계 = 컨텐츠와 비지니스 로직은 아직 분리 안됨. 컨텐츠 관리는 쉬워짐
-4. MVC패턴 주목 =
-  모델 : 자바 클래스(DAO,DO)
-  뷰:JSP,JSTL
-  컨트롤러: 서블릿
-
-- 서블릿 컨테이너
-JVM을 내장한 운영환경.
-대표적으로 apache tomcat이 있음.
 
 
-- 서블릿 장점
-1. 쓰레드를 기반으로 하므로 운영 효율적으로
-2. 자바기반이므로 자바 API 사용 가능
+char = primitive 타입
+```
+Type        Bits      Range of Values
+----------------------------------------------------------------------------------------
+byte         8bits    -2^7 ~ 2^7-1 (-128 ~ 127)
+short       16bits    -2^15 ~ 2^15-1 (-32768 ~ 32767)
+int         32bits    -2^31 ~ 2^31-1 (-2147483648 ~ 2147483647)
+long        64bits    -2^63 ~ 2^63-1 (-9223372036854775808 ~ 9223372036854775807)
+float       32bits    0x0.000002P-126f ~ 0x1.fffffeP+127f
+double      64bits    0x0.0000000000001P-1022 ~ 0x1.fffffffffffffP+1023
+char        16bits    \u0000 ~ \uffff (0 ~ 2^15-1) * 자바에서 unsgined로 동작하는 자료형
+boolean      1bit     true, false
+```
+
+
+
+
+
+
+
+
+
+## 추상화
+
+현실()
+
+관심가질만한 데이터를 중심적으로 직관적으로 표현하는 행위(디자인 추상화)
+
+반영해야할 사실을 소프트웨어적으로 좋게 설계하는것(소프트웨어 추상화)
+
+
+
+
+## 정리
+
+Scope(스코프) = 유효범위 = 변수적용범위
+
+## static변수, 변수(필드) 차이
+
+클래스 변수를 static변수로 선언하면 인스턴스를 여러개를 만들어도 static변수 하나로 공유하여 사용한다.
+
+
+
+## 접근제어자
+
+public 모두
+
+protected 다른패키지에서 상속관계가 아닐때 보호 (퍼블릭과 동일하지만)
+
+default 같은패키지만 가능
+
+<<<<<<< HEAD
+private 같은클래스말고 다 접근 불가
+=======
+private 같은클래스말고 다 접근 불가 
+>>>>>>> f93cd6ba5841404d08eb9b1fae654e3da3afe688
+
+
+
+
+
+<<<<<<< HEAD
+## 추상클래스 != 추상화
+
+클래스의 선언만하고, 상속받아서 사용하는 사람에게 동작 설계를 맡김.
+
+동작과정을 정하기만하고 필요한 메소드는 사용자가 만들어서 동작하도록 강제함.
+
+
+## 디자인패턴
+
+
+## final
+
+변수 = 선언과 동시에 값을 주고, 변경 불가
+메소드 = 해당 메소드 오버라이딩 불가
+클래스 = 상속을 못하게 함(금지)
+
+## 인터페이스
+
+상속은 상위 기능을 하위에서 물려 받는 것이라면,
+인터페이스는 하위클래스에 특정 메소드를 강제하도록 제한.
+
+1. 다중상속 안하는 이유
+```
+class MyVehicle extends car, plane {
+    @Override
+    public void goTo(){
+        super.drive();    
+    }
+}
+```
+위와 같이 car와 plane을 두개 상속받았는데 두개다 drive라는 클래스를 가지고 있다면 누구의 drive메소드를 호출해야하는지
+애매함이 생김.
+
+2. 인터페이스와 상속의 차이
+
+
+3. 추상클래스와 인터페이스의 사용 상황
+- Draw와 같이 같은 종류의 행동들을 구현할게 많을때 자식에게 떠맡김.(변수와 메소드를 쓸수있음)
+
+- 인터페이스는 전체적인 로직과 메소드 형태만 서로 공유해서 구현되는 상황일때 동시다발적으로 각 모듈을 개발할 수 있다.
+
+
+
+## 다형성
+1. A obj = new B(); 일때 B를 인스턴스화 했지만 A의 메소드만 사용 가능하다.
+2. A obj = new B(); 하지만 B에서 A의 클래스를 x를 오버로딩했으면 A의 x메소드를 호출해도 오버로딩된 B의 x메소드가 호출된다.
+
+3. 매개변수를 넘길때 매개변수의 자료형을 부모클래스로 선언함으로써, 부모를 상속받은 B,C클래스 등 아무거나 넘길 수 있다.
+4.
+
+
+
+## 예외처리
+
+Exception = 최상위 예외처리(모든경우 커버 가능)
+xxxxException = Exception의 하위 예외처리 (세분화 가능)
+
+try{
+
+}catch(xxxException e){
+  "xxx에 관련된 예외처리만 걸러냄"
+}catch(Exception e){
+  "위에 예외에서 안걸린 나머지 모든걸 처리"
+}
+
+- throw를 통해 더이상 진행하지않음.
+if(right == 0){
+          throw new IllegalArgumentException("두번째 인자의 값은 0이 될 수 없습니다.");
+}
+
+
+## string
+equals , == 차이
+
+`==` 주소가 같은지
+`equals` 같은 객체인지
+
+
+## clone
+A객체 a랑 똑같은 객체를 복사하고 싶을때
+기본적으로는
+A a = new A();
+A b = a;           <------- 이건 주소값을 넣는거기 때문에 똑같은 메모리를 바라보게함.
+
+
+```
+class A implements Cloneable{
+		String name = "hahaha"
+	protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+}
+
+public class test{
+
+	public static void main(String args[])
+	{
+		A a = new A();
+		A b;
+		try {
+			b = (A)a.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+```
+위와 같이 clone을 구현하여 사용하면 주소가 다르지만 원래 가지고있던 변수정보나 메소드는 똑같은 객체를 복제하게 된다.
+
+
+
+## 상수와 enum
+
+interface내부의 변수는 public ifnal static 값이 된다.
+interface FRUIT{
+  int APPLE =1, PEACH =2, BANANA = 3;
+}
+
+enum Fruit{
+  APPLE,PEACH,BANANA        ==              public static final Fruit APPLE  = new Fruit();
+                                            public static final Fruit PEACH  = new Fruit();
+                                            public static final Fruit BANANA = new Fruit();
+}
+
+## 제네릭
+- 자료형을 미리 선언하지않고, 유동적으로 받을 수 있다.
+class info<T>{
+
+}
+
+기본 데이터 타입 = char,int,double, float
+
+레퍼런스 = Integer,Double;
+
+
+
+1. 생성자 또는 변수를 제네릭화 하는 방법
+EmployeeInfo e = new EmployeeInfo(1);
+Integer i = new Integer(10);
+Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(e, i);   ->    Person p1 = new Person(e,i);
+
+2. 메소드를 제네릭화 하는 방법
+public <U> void test(U info){
+  System.out.println(info);
+}
+
+제네릭 5강은 다시들어야됨.
+
+
+## 컬렉션 프레임워크
+
+1. ArrayList
+
+2. Set 중복 허용x (집합 포함여부 확인가능)
+
 3.
+=======
 
 
-- JSP 과정
-1. JSP 파일(java.jsp)을 읽어옴
-2. JSP파일을 servlet파일(test.java)로 변경
-3. 바이트코드 파일(test.class)로 변경.
-
-
-
-ASP(마이크로소프트 )
-1. 인터프리팅 방식 = 사용자가 요청할때마다 컴파일을 시작하고 완료되면 보내줌.
-
-
-JSP(자바)
-1. 미리 컴파일된 코드를 가지고 응답해줌.
-2. 속도 빠름
-
-```
-JSP
-<%@ page import = "java.util.Date" %>
-<html>
-  <head></head>
-    <body>
-      안녕하세요. 오늘은 <% =today.getDate()%>일 입니다.
-    </body>
-</html>
-```
-
-
-
- - JSP 문법
-
-`@` : Directive : Global information for Page (Language,import statement)
-
-
-
-## 8일차
-
-JSP의
+>>>>>>> f93cd6ba5841404d08eb9b1fae654e3da3afe688
 
 
 
