@@ -129,6 +129,16 @@ void main()
 </div>  
 \`\`\`  
 
+<hr/>
+
+<hr>  </hr>
+
+======================
+
+----------------------
+
+
+
 ```html
 <div class="post-header-container">
   <div class="scrim {% if page.cover %}has-cover{% endif %}">
