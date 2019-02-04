@@ -80,13 +80,13 @@ finished: true
 
 ## 코드 또는 문장 나타내기 (번역 불가능)
 
-\`\`\`  <br>
-\#include <stdio.h>       <br>
-void main()               <br>
-{                         <br>
-  printf("hello world");  <br>
-}                          <br>
-\`\`\`
+\`\`\`                  <br>
+\#include \<stdio.h\>   <br>
+void main()             <br>
+{                       <br>
+  printf\(\"hello world\"\); <br>
+}                            <br>
+\`\`\`                       <br>
 
 
 ```
@@ -97,12 +97,12 @@ void main()
 }
 ```
 
+<br><br>
 
-
-\`\`\`c++             <br>
-\#include \<stdio.h\>   <br>
-void main()           <br>
-{                     <br>
+\`\`\`c++                   <br>
+\#include \<stdio.h\>       <br>
+void main()                 <br>
+{                           <br>
   printf\(\"hello world\"\); <br>
 }                        <br>
 \`\`\`                   <br>
@@ -116,7 +116,18 @@ void main()
 }
 ```
 
+<br><br>
 
+\`\`\`html
+<div class="post-header-container">  
+  <div class="scrim {% if page.cover %}has-cover{% endif %}">  
+    <header class="post-header">  
+        <h1 class="title">{{ page.title }}</h1>  
+        <p class="info">by <strong>{{ page.author }}</strong></p>  
+    </header>  
+    </div>  
+</div>  
+\`\`\`
 
 ```html
 <div class="post-header-container">
@@ -130,7 +141,7 @@ void main()
 ```  
 
 
-
+<br><br>
 
 ```html
 <script>
@@ -150,7 +161,7 @@ ga('send', 'pageview');
 
 
 - HTML 태그 무시하기 `앞에 스페이스 4번`  
-`    <p>A paragraph in <b>HTML</b> displayed as code</p>`  
+`\ \ \ <p>A paragraph in <b>HTML</b> displayed as code</p>`  
     <p>A paragraph in <b>HTML</b> displayed as code</p>  
 
 
@@ -166,7 +177,8 @@ ga('send', 'pageview');
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
 
-- 이미지 크기 조절하기  `![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}`  
+- 이미지 크기 조절하기  
+`![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}`  
 ![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}
 
 <br><br>
