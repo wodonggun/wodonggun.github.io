@@ -47,6 +47,24 @@ finished: true
 - 알흠마
 
 
+```
+- AAA
+  - BBB
+  - CCC
+    1. aaa
+    2. bbb
+    3. ccc
+```
+
+- AAA
+  - BBB
+  - CCC
+    1. aaa
+    2. bbb
+    3. ccc
+
+
+
 - 줄바꿈
 1. `<br>태그를 통한 줄바꿈`
 ```
@@ -68,7 +86,7 @@ finished: true
 
 
 
-- 코드 또는 문장 나타내기 (번역 불가능)
+## 코드 또는 문장 나타내기 (번역 불가능)
 
 \`\`\`
 #include <stdio.h>
@@ -104,6 +122,8 @@ void main(){
 <br><br>
 
 
+
+
 ## 폰트
 
 - 기울이기 `_기울어라_`
@@ -115,43 +135,27 @@ __굵어져라__
 - 기울이고 & 굵어져라 `___기울고&굵어___`
 ___기울고&굵어___
 
-##
 
-There are three ways to make an unordered list:
+- 글 삭제 `~~삭제해라~~`
 
-`* AAA`
+~~삭제해라~~
 
-* AAA
-* BBB
-* CCC
+- 폰트 작게 `<small>작은 문자들</small>`
+ <small>작은 문자들</small>
 
-`- AAA`
+ - 폰트 크게 ` <big>큰 글자들</big>`
+ <big>큰 글자들</big>
 
-- AAA
-- BBB
-- CCC
 
-`+ AAA`
 
-+ AAA
-+ BBB
-+ CCC
+
+
+
+
 
 ## Block quote
 
-`> War is Peace`
 
-`> Freedom is Slavery`
-
-`> Ignorance is Strength`
-
-> War is Peace
-
-> Freedom is Slavery
-
-> Ignorance is Strength
-
-You can also do this:
 
 `> * War is Peace`
 
@@ -169,6 +173,13 @@ You can also do this:
 
 
 
+> * War is Peace
+- 하이룽
+- 하이룽
+
+> * Freedom is Slavery
+  * Freedom
+> * Ignorance is Stength
 
 
 
@@ -247,6 +258,7 @@ ga('send', 'pageview');
 
 
 
+## 각주 ,
 
 - 각주 Footnote
 
@@ -277,15 +289,16 @@ Something needs a footnote[^목차].
 ```
 | 이름   | C/C++ | Java | Python | Linux | Network |
 | ----- | ------ | ----- | ------- | ------- | -------- |
-| 홍길동 | A+ | B+ | A0 | B0   | A-  |
-| 이순신 | A+ | A+ | A+ | A+ | A+ |
+| __홍길동__ | A+ | B+ | A0 | B0   | A-  |
+| __이순신__ | A+ | A+ | A+ | A+ | A+ |
 ```
 
 |           | C/C++ | Java | Python | Linux | Network |
 | ------- | -------- | ------ | -------- | -------- | --------- |
-| 홍길동 | A+ | B+ | A0 | B0   | A-  |
-| 이순신 | A+ | A+ | A+ | A+ | A+ |
+| __홍길동__ | A+ | B+ | A0 | B0   | A-  |
+| ~~이순신~~ | A+ | A+ | A+ | A+ | A+ |
 
+`테이블 내부에 `
 
 
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
@@ -301,3 +314,7 @@ left      | center       | center       | right
 :--- | :---: | :---: | ---:
 a         | b            | c            | d
 e         | f            | g            | h
+
+
+:+1: :sparkles: :camel: :tada:  
+:rocket: :metal: :octocat:  
