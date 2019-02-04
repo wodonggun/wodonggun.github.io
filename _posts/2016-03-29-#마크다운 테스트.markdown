@@ -22,20 +22,14 @@ finished: true
 
 <br><br>
 
-- 구분 하기<br>
+- 구분 하기
+
 ```
 + 알흠플
 * 알흠별
 - 알흠마
 ```
 
-
-- 구분 하기  
-```
-+ 알흠플
-* 알흠별
-- 알흠마
-```
 
 + 알흠플
 * 알흠별
@@ -44,6 +38,7 @@ finished: true
 <br><br>
 
 - 세분화로 구분 하기
+- 
 ```
 - AAA
   - BBB
@@ -52,6 +47,7 @@ finished: true
     2. bbb
     3. ccc
 ```  
+
 - AAA
   - BBB
   - CCC
