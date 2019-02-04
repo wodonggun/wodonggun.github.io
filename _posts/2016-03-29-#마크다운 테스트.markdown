@@ -304,7 +304,7 @@ ___기울고&굵어___
 ```
 - 문단 강조
 ```
-> <center><span class="evidence">Hello World, My Name is C</span></center>
+    <center><span class="evidence">Hello World, My Name is C</span></center>
 ```
 
 
