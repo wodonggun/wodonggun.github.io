@@ -13,9 +13,9 @@ finished: true
 ---
 
 
-==================================================================
-<span class="evidence"> Markdown Gramma 정리</span>
-==================================================================
+===============================================================
+<center><span class="evidence"> Markdown Gramma 정리</span></center>
+===============================================================
 
 ## 정리
 
@@ -294,14 +294,8 @@ ___기울고&굵어___
 
 ---  
 
+<br><br>
 
-
-- 테스트
-```
-> #include stdio.h는 기본 헤더이다.  (space space)
-설명을 한다면 standard input output의 줄임말이다.  (space space)
-헤더파일은 이외에도 많이 있다.  
-```
 - 문단 강조
 ```
     <center><span class="evidence">Hello World, My Name is C</span></center>
