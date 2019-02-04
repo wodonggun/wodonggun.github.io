@@ -169,7 +169,7 @@ void main()
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
 
-- 이미지 크기 조절하기 `![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}`  
+- 이미지 크기 조절하기 ```![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}```  
 ![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}  
 
 <br><br>
