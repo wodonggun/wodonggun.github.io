@@ -269,7 +269,7 @@ ___기울고&굵어___
 ## 문단 나누기
 
 - 문단 나누기  
-`---`
+`---`를 통해서 Line 한줄이 추가된다.
 
 ---  
 
@@ -321,7 +321,9 @@ Something needs a footnote[^test].
 [^test]: footnote의 뜻은 각주이다.
 
 
+Something needs a footnote2[^test2].
 
+[^test2]: footnote의 뜻은 각주이다2.
 
 
 
