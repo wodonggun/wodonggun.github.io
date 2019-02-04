@@ -272,7 +272,7 @@ ___기울고&굵어___
 
 ---
 
-<span class="evidence"> Hello World, My Name is C</span>  
+<span class="evidence"><center>Hello World, My Name is C</center></span>  
 
 ---
 
