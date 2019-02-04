@@ -186,7 +186,7 @@ __굵어져라__
 ___기울고&굵어___
 
 
-- 글 삭제 표시  
+- 글 삭제 표시
 1. `~~There is no tree waiting for me.~~`  
 ~~There is no tree wating for me.~~
 2. `<del>There is no tree waiting for me.</del>`  
@@ -200,7 +200,7 @@ ___기울고&굵어___
  <big>큰 글자들</big>
 
 
-- 문장 강조  
+- 문장 강조
 `<span class="evidence">강조하고 싶어요!</span>`  
 <span class="evidence">강조하고 싶어요!</span>
 
