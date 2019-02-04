@@ -22,18 +22,6 @@ finished: true
 
 <br><br>
 
-- 문장 블록  
-```
-> #include stdio.h는 기본 헤더이다.
-설명을 한다면 standard input output의 줄임말이다.
-헤더파일은 이외에도 많이 있다.
-```
-
-> #include stdio.h는 기본 헤더이다.
-설명을 한다면 standard input output의 줄임말이다.
-헤더파일은 이외에도 많이 있다.
-
-<br><br>
 
 - 구분 하기
 ```
@@ -175,6 +163,9 @@ ga('send', 'pageview');
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
 
+- 이미지 크기 조절하기  `![index-page](https://i.imgur.com/BrmOMmv.png){: width="400" height="400"}`  
+![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}
+
 <br><br>
 
 
@@ -192,7 +183,7 @@ __굵어져라__
 ___기울고&굵어___
 
 
-- 글 삭제 표시  
+- \ \ \ 글 삭제 표시  
 1. `~~There is no tree waiting for me.~~`  
 ~~There is no tree wating for me.~~
 2. `<del>There is no tree waiting for me.</del>`  
@@ -206,7 +197,7 @@ ___기울고&굵어___
  <big>큰 글자들</big>
 
 
-- 문장 강조 `<span class="evidence">강조하고 싶어요!</span>`  
+- \ \ \ \ 문장 강조 `<span class="evidence">강조하고 싶어요!</span>`  
 <span class="evidence">강조하고 싶어요!</span>  
 
 <br><br>
@@ -214,6 +205,20 @@ ___기울고&굵어___
 
 
 ## Block quote
+
+
+- 문장 블록  
+```
+> #include stdio.h는 기본 헤더이다.
+설명을 한다면 standard input output의 줄임말이다.
+헤더파일은 이외에도 많이 있다.
+```
+
+> #include stdio.h는 기본 헤더이다.
+설명을 한다면 standard input output의 줄임말이다.
+헤더파일은 이외에도 많이 있다.
+
+<br><br>
 
 
 ```
@@ -311,7 +316,7 @@ ___기울고&굵어___
 
 `[^1]: This is a footnote.`
 
-Something needs a [^test]footnote.
+Something needs a footnote[^test].
 
 [^test]: footnote의 뜻은 각주이다.
 
