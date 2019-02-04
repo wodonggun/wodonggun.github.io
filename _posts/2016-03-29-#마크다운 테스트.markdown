@@ -197,20 +197,17 @@ __굵어져라__
 - 기울이고 & 굵어져라 `___기울고&굵어___`  
 ___기울고&굵어___
 
-
 - 글 삭제 표시
 1. `~~There is no tree waiting for me.~~`  
 ~~There is no tree wating for me.~~
 2. `<del>There is no tree waiting for me.</del>`  
 <del>There is no tree waiting for me.</del>
 
-
 - 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
 
 - 폰트 크게 `<big>큰 글자들</big>`  
  <big>큰 글자들</big>
-
 
 - 문장 강조
 `<span class="evidence">강조하고 싶어요!</span>`  
