@@ -86,7 +86,7 @@ void main()               <br>
 {                         <br>
   printf("hello world");  <br>
 }                          <br>
-\`\`\`  
+\`\`\`
 
 
 ```
@@ -100,10 +100,10 @@ void main()
 
 
 \`\`\`c++             <br>
-\#include <stdio.h>   <br>
+\#include \<stdio.h\>   <br>
 void main()           <br>
 {                     <br>
-  printf("hello world"); <br>
+  printf\(\"hello world\"\); <br>
 }                        <br>
 \`\`\`                   <br>
 
