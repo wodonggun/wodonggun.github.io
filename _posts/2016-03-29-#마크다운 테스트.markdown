@@ -25,7 +25,7 @@ finished: true
 
 <br><br>
 
-- 구분 하기
+- 구분 하기  
 ```
  + 알흠플
  * 알흠별
@@ -293,7 +293,9 @@ ___기울고&굵어___
 
 - 문단 강조
 ```
+---
     <center><span class="evidence">Hello World, My Name is C</span></center>
+---
 ```
 
 
@@ -314,6 +316,9 @@ ___기울고&굵어___
 <center>==============================================================</center>
 <center><span class="evidence"> Markdown Gramma 정리</span></center>
 <center>==============================================================</center>
+
+
+<br><br><br>
 
 
 ## 각주
