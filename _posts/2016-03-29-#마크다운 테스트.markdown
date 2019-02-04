@@ -354,3 +354,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error quod liber
 This is (HTML) example.
 
 *[HTML] : Hyper Text Markup Language
+
+:smile:
+
+:+1: 
