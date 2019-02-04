@@ -313,8 +313,7 @@ index | left-align      | center-align       | center-align       | right-align
 --- | :--- | :---: | :---: | ---:
 no.1 | a         | b            | c            | d
 no.2 | e         | f            | g            | h
-
-```
+```  
 
 index | left-align      | center-align       | center-align       | right-align
 --- | :--- | :---: | :---: | ---:
