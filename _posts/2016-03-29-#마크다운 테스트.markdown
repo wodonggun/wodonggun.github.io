@@ -310,10 +310,12 @@ Then this footnote will show at the end of this post.
 
 
 - 글 삭제 표시
-`~~There is no tree waiting for me.~~`
+`~~There is no tree waiting for me.~~`  
+`<del>There is no tree waiting for me.</del>`  
 
-<del>There is no tree waiting for me.</del>
-~~There is no tree wating for me.~~
+~~There is no tree wating for me.~~  
+<del>There is no tree waiting for me.</del>  
+
 
 ## Table
 
@@ -323,22 +325,18 @@ Then this footnote will show at the end of this post.
 ```
 A     | B     | C     | D    
 
------ | ----- | ----- | ------
+----- | ----- | ----- | -----
 
 a     | b     | c     | d
 e     | f     | g     | h
 
-          ㅣㅣ
-          ㅣㅣ
-         ＼  /
-          ＼/
 ```
+
 A     | B     | C     | D    
-
------ | ----- | ----- | ------
-
+----- | ----- | ----- | -----
 a     | b     | c     | d
 e     | f     | g     | h
+
 
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)
 ```
@@ -348,11 +346,6 @@ left      | center       | center       | right
 
 a         | b            | c            | d
 e         | f            | g            | h
-
-                    ㅣㅣ
-                    ㅣㅣ
-                    \  /
-                     \/
 ```
 
 left      | center       | center       | right
