@@ -48,6 +48,7 @@ finished: true
 
 <br><br>
 
+- 세분화로 구분 하기
 ```
 - AAA
   - BBB
@@ -88,8 +89,27 @@ finished: true
 
 ## 코드 또는 문장 나타내기 (번역 불가능)
 
-\`\`\`c++ <br>
+\`\`\`  
+\#include <stdio.h>  
+void main()  
+{  
+  printf("hello world");  
+}  
+\`\`\`  
+
+
+```
 #include <stdio.h>
+void main()
+{
+  printf("hello world");
+}
+```
+
+
+
+\`\`\`c++ <br>
+\#include <stdio.h>  
 void main()  
 {  
   printf("hello world");  
@@ -99,10 +119,9 @@ void main()
 
 ```c++
 #include <stdio.h>
-void main(){
-
+void main()
+{
   printf("hello world");
-
 }
 ```
 
