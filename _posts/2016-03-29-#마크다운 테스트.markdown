@@ -14,35 +14,70 @@ finished: true
 
 ## 정리
 
-> 단어랑 word의 줄임말로 정말 좋은 단어이다.  
-니들이 단어를 알긴 알어?  
-단어란 word란 말이다.
+- `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.
+`# 정리`
+`## 정리`
+`### 정리`
 
+
+
+
+```
+> #include stdio.h는 기본 헤더이다.
+설명을 한다면 standard input output의 줄임말이다.
+헤더파일은 이외에도 많이 있다.
+```
+
+> #include stdio.h는 기본 헤더이다.
+설명을 한다면 standard input output의 줄임말이다.
+헤더파일은 이외에도 많이 있다.
+
+
+
+- 구분 하기
+
+```
++ 알흠플
+* 알흠별
+- 알흠마
+```
 
 + 알흠플
 * 알흠별
 - 알흠마
 
 
-
----
-***
-___
-
-
-A Simple Jekyll Blog Theme.
-------------------------------
-
-## 코드를 써보자
-
+- 줄바꿈
+1. `<br>태그를 통한 줄바꿈`
 ```
+동해물과 백두산이<br>
+마르고 닳도록~<br>
+```
+동해물과 백두산이<br>
+마르고 닳도록~<br>
+
+2. `(space space)  `라인 끝에 띄어쓰기 두번 하기.`
+```
+하느님이 보우하사  
+우리나라 만세!!!!!  
+```
+하느님이 보우하사  
+우리나라 만세!!!!!  
+
+
+
+
+
+- 코드 또는 문장 나타내기 (번역 불가능)
+
+\`\`\`
 #include <stdio.h>
 void main(){
 
   printf("hello world");
 
 }
-```
+\`\`\`
 
 
 ```java
@@ -54,66 +89,33 @@ void main(){
 }
 ```
 
-`코드는 code일뿐 code이다.`
+- URL 간단하게 `(https://wodonggun.github.io/)`
 
-[Demo](http://gabriel-chen.github.io/Nice_Blog) <!-- Demo 글자만 표시하고 링크-->
+(https://wodonggun.github.io/)
 
-![index-page](https://i.imgur.com/BrmOMmv.png) <!-- 사진을 표시  -->
+- URL 링크 연결하기 `[Demo](https://wodonggun.github.io/)`
+
+[Demo](https://wodonggun.github.io/)
+
+- 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`
+
+![index-page](https://i.imgur.com/BrmOMmv.png)
 
 <br><br>
 
-## Font
 
-There are three kinds of font in Markdown.
+## 폰트
 
-### Italic：
+- 기울이기 `_기울어라_`
+_기울어라_
 
-`*Italic*`
+- 굵은 글씨 `__굵어져라__`
+__굵어져라__
 
-*Italic*
+- 기울이고 & 굵어져라 `___기울고&굵어___`
+___기울고&굵어___
 
-`_Italic_`
-
-_Italic_
-
-### Bold：
-
-`**Bold**`
-
-**Bold**
-
-`__Bold__`
-
-__Bold__
-
-### Italic & Bold：
-
-`***Italic & Bold***`
-
-***Italic & Bold***
-
-`___Italic & Bold___`
-
-___Italic & Bold___
-
-You can also do this:
-
-`**Markdown is _fun_**`
-
-**Markdown is _fun_**
-
-
-## List
-
-### Ordered list:
-
-`1. 2. 3. `
-
-1. First
-2. Second
-3. Third
-
-### Unordered list:
+##
 
 There are three ways to make an unordered list:
 
@@ -164,50 +166,14 @@ You can also do this:
 
 > * Ignorance is Stength
 
-## Link
 
-### Simple link
 
-`<http://itisbenjamin.github.io>`
 
-<http://itisbenjamin.github.io>
 
-You can also do this when you insert an email address.
 
-### Link
 
-You can add your link just behind your words:
 
-`[Ben](www.itisbenjamin.github.io)`
 
-[Ben](www.itisbenjamin.github.io)
-
-And you can also do it like this:
-
-`[about this link][1]`
-
-Then put this line at anywhere you want in your post:
-
-`[1]: link address`
-
-### Link description
-
-Add the link description behind the link address like this:
-
-`[Ben](www.itisbenjamin.github.io "Ben")`
-
-[Ben](www.itisbenjamin.github.io "Ben")
-
-## Image
-
-`![Codes](/img/code.png)`
-
-![Codes](/img/code.png)
-How to write the images' descriptions are the same way as how you do it in links:
-
-`![Codes](/img/code.png "Codes")`
-
-![Codes](/img/code.png "Codes")
 
 
 
@@ -332,6 +298,6 @@ e         | f            | g            | h
 ```
 
 left      | center       | center       | right
-:-------- | :----------: | :----------: | -----:
+:--- | :---: | :---: | ---:
 a         | b            | c            | d
 e         | f            | g            | h
