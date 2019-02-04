@@ -12,6 +12,11 @@ finished: true
 
 ---
 
+
+==================================================================
+<span class="evidence"> Markdown Gramma 정리</span>
+==================================================================
+
 ## 정리
 
 - `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.  
@@ -25,9 +30,9 @@ finished: true
 - 구분 하기
 
 ```
-+ 알흠플
-* 알흠별
-- 알흠마
+  + 알흠플
+  * 알흠별
+  - 알흠마
 ```
 
 
@@ -40,12 +45,12 @@ finished: true
 - 세분화로 구분 하기
 
 ```
-- AAA
-  - BBB
-  - CCC
-    1. aaa
-    2. bbb
-    3. ccc
+   - AAA
+     - BBB
+     - CCC
+       1. aaa
+       2. bbb
+       3. ccc
 ```  
 
 - AAA
@@ -117,8 +122,8 @@ void main()
 ```
 
 <br><br>
-
-\`\`\`html  
+<pre>
+\`\`\`html
     <div class="post-header-container">
     <div class="scrim {% if page.cover %}has-cover{% endif %}">  
     <header class="post-header">  
@@ -127,15 +132,8 @@ void main()
     </header>  
     </div>  
     </div>  
-\`\`\`  
-
-<hr/>
-
-<hr>  </hr>
-
-======================
-
-----------------------
+\`\`\`
+</pre>
 
 
 
