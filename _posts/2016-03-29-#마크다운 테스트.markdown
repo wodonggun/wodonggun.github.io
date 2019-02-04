@@ -163,7 +163,7 @@ ga('send', 'pageview');
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
 
-- 이미지 크기 조절하기  `![index-page](https://i.imgur.com/BrmOMmv.png){: width="400" height="400"}`  
+- 이미지 크기 조절하기  `![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}`  
 ![index-page](https://i.imgur.com/BrmOMmv.png){: width="200" height="100"}
 
 <br><br>
@@ -183,7 +183,7 @@ __굵어져라__
 ___기울고&굵어___
 
 
-- \ \ \ 글 삭제 표시  
+- 글 삭제 표시  
 1. `~~There is no tree waiting for me.~~`  
 ~~There is no tree wating for me.~~
 2. `<del>There is no tree waiting for me.</del>`  
@@ -275,6 +275,7 @@ ___기울고&굵어___
 
 <br><br>
 - 문단 나누면서 강조하기
+
 ```
 ---
 
@@ -300,16 +301,13 @@ ___기울고&굵어___
 
 `Something needs a footnote[^1].`
 
-`[^1]: This is a footnote.`
+`[^1]: This is a footnote.(이건 맨 하단에 표시됨)`
 
 Something needs a footnote[^test].
 
 [^test]: footnote의 뜻은 각주이다.
 
 
-Something needs a footnote2[^test2].
-
-[^test2]: footnote의 뜻은 각주이다2.
 
 
 
