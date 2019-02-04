@@ -198,9 +198,9 @@ ___기울고&굵어___
 
 - 글 삭제 표시
 1. `~~There is no tree waiting for me.~~`  
-~~There is no tree wating for me.~~
+ ~~There is no tree wating for me.~~
 2. `<del>There is no tree waiting for me.</del>`  
-<del>There is no tree waiting for me.</del>
+ <del>There is no tree waiting for me.</del>
 
 - 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
@@ -210,7 +210,7 @@ ___기울고&굵어___
 
 - 문장 강조
 `<span class="evidence">강조하고 싶어요!</span>`  
-<span class="evidence">강조하고 싶어요!</span>
+ <span class="evidence">강조하고 싶어요!</span>
 
 
 
@@ -282,7 +282,7 @@ ___기울고&굵어___
 
 ## 문단 나누기
 
-- 문단 나누기  
+- 문단 나누기  (헤더로 인식할 수 있기 떄문에 이전 라인은 비워두어야 한다)  
 `---`를 통해서 Line 한줄이 추가된다.
 
 ---  
@@ -291,15 +291,14 @@ ___기울고&굵어___
 - 문단 나누면서 강조하기
 
 ```
----
 
+---
 <center><span class="evidence">Hello World, My Name is C</span></center>
 
 ---
 ```
 
 ---
-
 <center><span class="evidence">Hello World, My Name is C</span></center>
 
 ---
@@ -335,10 +334,10 @@ Something needs a footnote[^test].
 
 - 기본 테이블  
 ```
-| 이름   | C/C++ | Java | Python | Linux | Network |
-| ----- | ------ | ----- | ------- | ------- | -------- |
+| 이름 | C/C++ | Java | Python | Linux | Network |
+| ------- | -------- | ------ | -------- | -------- | --------- |
 | __홍길동__ | A+ | B+ | A0 | B0   | A-  |
-| __이순신__ | A+ | A+ | A+ | A+ | A+ |
+| ~~이순신~~ | A+ | A+ | A+ | A+ | A+ |
 ```
 
 | 이름 | C/C++ | Java | Python | Linux | Network |
@@ -356,16 +355,18 @@ Something needs a footnote[^test].
 
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
 ```
-index | left-align      | center-align       | center-align       | right-align
---- | :--- | :---: | :---: | ---:
-no.1 | a         | b            | c            | d
-no.2 | e         | f            | g            | h
+index | left-align      | center-align | center-align | right-align
+---- | :--------------- | :----------: | :----------: | -----------:
+no.1 | a                | b            | c            | d
+no.2 | e                | f            | g            | h
 ```  
 
-index | left-align      | center-align       | center-align       | right-align
---- | :--- | :---: | :---: | ---:
-no.1 | a         | b            | c            | d
-no.2 | e         | f            | g            | h
+
+index | left-align      | center-align | center-align | right-align
+---- | :--------------- | :----------: | :----------: | -----------:
+no.1 | a                | b            | c            | d
+no.2 | e                | f            | g            | h
+
 
 
 
