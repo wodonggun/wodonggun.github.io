@@ -107,6 +107,17 @@ void main(){
 }
 ```
 
+
+
+- HTML 태그 무시하기 `앞에 스페이스 4번`
+`    <p>A paragraph in <b>HTML</b> displayed as code</p>`
+    <p>A paragraph in <b>HTML</b> displayed as code</p>
+
+
+- 마크다운 무시하기 `\_문자 기울기 무시\_`
+
+ \_문자 기울기 무시\_
+
 - URL 간단하게 `(https://wodonggun.github.io/)`
 
 (https://wodonggun.github.io/)
@@ -249,7 +260,11 @@ ga('send', 'pageview');
 
 
 
-- 라인 나타내기
+
+
+## 문단 나누기
+
+- 문단 나누기
 
 `---`
 
@@ -257,8 +272,13 @@ ga('send', 'pageview');
 
 
 
+- 굵게 문단 나누기
 
-## 각주 ,
+`------`
+
+------
+
+## 각주
 
 - 각주 Footnote
 
@@ -281,7 +301,7 @@ Something needs a footnote[^목차].
 <del>There is no tree waiting for me.</del>  
 
 
-## Table
+## 테이블
 
 
 - 기본 테이블
@@ -298,7 +318,7 @@ Something needs a footnote[^목차].
 | __홍길동__ | A+ | B+ | A0 | B0   | A-  |
 | ~~이순신~~ | A+ | A+ | A+ | A+ | A+ |
 
-`테이블 내부에 `
+`테이블 내부에 폰트도 설정 가능.`
 
 
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
