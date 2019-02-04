@@ -293,9 +293,15 @@ Something needs a footnote[^목차].
 
 
 
-- 글 삭제 표시
-`~~There is no tree waiting for me.~~`  
-`<del>There is no tree waiting for me.</del>`  
+
+
+
+
+
+
+- 글 삭제 표시  
+1. `~~There is no tree waiting for me.~~`  
+2. `<del>There is no tree waiting for me.</del>`  
 
 ~~There is no tree wating for me.~~  
 <del>There is no tree waiting for me.</del>  
@@ -319,6 +325,9 @@ Something needs a footnote[^목차].
 | ~~이순신~~ | A+ | A+ | A+ | A+ | A+ |
 
 `테이블 내부에 폰트도 설정 가능.`
+
+
+
 
 
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
