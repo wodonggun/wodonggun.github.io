@@ -301,10 +301,9 @@ Something needs a footnote[^목차].
 
 - 글 삭제 표시  
 1. `~~There is no tree waiting for me.~~`  
+  - ~~There is no tree wating for me.~~  
 2. `<del>There is no tree waiting for me.</del>`  
-
-~~There is no tree wating for me.~~  
-<del>There is no tree waiting for me.</del>  
+  - <del>There is no tree waiting for me.</del>  
 
 
 ## 테이블
@@ -339,15 +338,16 @@ a         | b            | c            | d
 e         | f            | g            | h
 ```
 
-left      | center       | center       | right
-:--- | :---: | :---: | ---:
-a         | b            | c            | d
-e         | f            | g            | h
+정렬 종류 | left      | center       | center       | right
+--- | :--- | :---: | :---: | ---:
+no.1 | a         | b            | c            | d
+no.2 | e         | f            | g            | h
 
 
 ## 정렬
-
+```
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error quod libero corporis, iste sit nulla similique enim dignissimos asperiores, illo numquam architecto maxime ab tenetur repellendus, dicta sed officia.
+```
 {: .text-right }
 
 
