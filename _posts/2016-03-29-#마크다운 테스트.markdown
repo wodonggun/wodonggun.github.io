@@ -123,7 +123,7 @@ void main()
 
 <br><br>
 ```
-\`\`\`html
+    ```html
 <div class="post-header-container">
   <div class="scrim {% if page.cover %}has-cover{% endif %}">
     <header class="post-header">
@@ -132,7 +132,7 @@ void main()
     </header>
     </div>
 </div>
-\`\`\`
+    ```
 ```
 
 
