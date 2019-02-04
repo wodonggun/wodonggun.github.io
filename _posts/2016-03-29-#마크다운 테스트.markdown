@@ -13,6 +13,11 @@ finished: true
 ---
 
 
+## 깃허브
+
+- 깃허브 이모티콘 시트  
+https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
 
 
 ## 정리
@@ -295,7 +300,7 @@ ___기울고&굵어___
 
 <br><br>
 
-
+- 직접 문단 강조
 ```
     <center>==============================================================</center>
     <center><span class="evidence"> Markdown Gramma 정리</span></center>
@@ -303,7 +308,7 @@ ___기울고&굵어___
 ```
 
 
-- 직접 문단 강조
+
 <center>==============================================================</center>
 <center><span class="evidence"> Markdown Gramma 정리</span></center>
 <center>==============================================================</center>
@@ -312,15 +317,6 @@ ___기울고&굵어___
 <br><br><br>
 
 
-## 각주
-
-- 각주 Footnote(맨 하단에 자동으로 생성된다.)  
-`Something needs a footnote[^1].`  
-`[^1]: This is a footnote.(이건 맨 하단에 표시됨)`  
-
-Something needs a footnote[^test].
-
-[^test]: footnote의 뜻은 각주이다.
 
 
 
@@ -376,7 +372,15 @@ no.2 | e                | f            | g            | h
 
 <br><br><br>
 
-## 깃허브
 
-- 깃허브 이모티콘 시트  
-https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
+
+## 각주
+
+- 각주 Footnote(맨 하단에 자동으로 생성된다.)  
+`Something needs a footnote[^1].`  
+`[^1]: This is a footnote.(이건 맨 하단에 표시됨)`  
+
+Something needs a footnote[^test].
+
+[^test]: footnote의 뜻은 각주이다.
