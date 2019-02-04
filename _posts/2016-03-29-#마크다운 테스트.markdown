@@ -38,7 +38,7 @@ finished: true
 <br><br>
 
 - 세분화로 구분 하기
-- 
+
 ```
 - AAA
   - BBB
@@ -200,8 +200,9 @@ ___기울고&굵어___
  <big>큰 글자들</big>
 
 
--       문장 강조 `<span class="evidence">강조하고 싶어요!</span>`  
-<span class="evidence">강조하고 싶어요!</span>  
+- 문장 강조  
+`<span class="evidence">강조하고 싶어요!</span>`  
+<span class="evidence">강조하고 싶어요!</span>
 
 <br><br>
 
