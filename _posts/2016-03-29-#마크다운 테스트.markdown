@@ -275,7 +275,6 @@ ___기울고&굵어___
 
 <br><br>
 - 문단 나누면서 강조하기
-
 ```
 ---
 
@@ -294,23 +293,10 @@ ___기울고&굵어___
 
 
 
-
-
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.alignright}
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.aligncenter}
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.alignleft}
-
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="400" height="400"}
-
-
-![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){: .left}
-![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){: .alignleft}
-![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){:.alignleft}
-<br><br>
 
 ## 각주
 
-- 각주 Footnote
+- 각주 Footnote(맨 하단에 자동으로 생성된다.)
 
 `Something needs a footnote[^1].`
 
