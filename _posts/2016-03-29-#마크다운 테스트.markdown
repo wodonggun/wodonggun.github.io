@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "#[Markdown Gramma]마크다운 문법 정리"
+title: "#[Markdown]마크다운 문법 정리"
 subtitle: <span class="evidence"> Markdown Gramma 정리</span>
 date: 2016-03-29
 author: NoonGam
@@ -15,9 +15,14 @@ finished: true
 ## 정리
 
 - `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.  
+<br>
 `# 정리`  
 `## 정리`  
 `### 정리`  
+
+<br><br>
+
+- 문장 블록  
 ```
 > #include stdio.h는 기본 헤더이다.
 설명을 한다면 standard input output의 줄임말이다.
@@ -30,8 +35,7 @@ finished: true
 
 <br><br>
 
-- 구분 하기
-
+- 구분 하기  
 ```
 + 알흠플
 * 알흠별
@@ -42,6 +46,7 @@ finished: true
 * 알흠별
 - 알흠마
 
+<br><br>
 
 ```
 - AAA
@@ -50,8 +55,7 @@ finished: true
     1. aaa
     2. bbb
     3. ccc
-```
-
+```  
 - AAA
   - BBB
   - CCC
@@ -70,12 +74,11 @@ finished: true
 ```
 동해물과 백두산이<br>
 마르고 닳도록~<br>
-
-2. `(space space)  `라인 끝에 띄어쓰기 두번 하기.`
+2. `(space space)  `라인 끝에 띄어쓰기 두번 하기.  
 ```
 하느님이 보우하사  
 우리나라 만세!!!!!  
-```
+```  
 하느님이 보우하사  
 우리나라 만세!!!!!  
 
@@ -85,17 +88,16 @@ finished: true
 
 ## 코드 또는 문장 나타내기 (번역 불가능)
 
-\`\`\`java <br>
+\`\`\`c++ <br>
 #include <stdio.h>
-void main(){
-
-  printf("hello world");
-
+void main()  
+{  
+  printf("hello world");  
 }  
-\`\`\`
+\`\`\`  
 
 
-```java
+```c++
 #include <stdio.h>
 void main(){
 
@@ -143,19 +145,15 @@ ga('send', 'pageview');
 
 
 - 마크다운 무시하기 `\_문자 기울기 무시\_`  
-
  \_문자 기울기 무시\_  
 
 - URL 간단하게 `(https://wodonggun.github.io/)`  
-
 (https://wodonggun.github.io/)  
 
 - URL 링크 연결하기 `[Demo](https://wodonggun.github.io/)`  
-
 [Demo](https://wodonggun.github.io/)  
 
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
-
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
 
 <br><br>
@@ -175,9 +173,13 @@ __굵어져라__
 ___기울고&굵어___
 
 
-- 글 삭제 `~~삭제해라~~`  
+- 글 삭제 표시  
+1. `~~There is no tree waiting for me.~~`  
+~~There is no tree wating for me.~~
+2. `<del>There is no tree waiting for me.</del>`  
+<del>There is no tree waiting for me.</del>  
 
-~~삭제해라~~
+<br><br>
 
 - 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
@@ -208,7 +210,7 @@ ___기울고&굵어___
 > * Freedom is Slavery
 
 
-
+<br><br>
 
 
 ```
@@ -238,27 +240,22 @@ ___기울고&굵어___
 
 
 
-
+<br><br><br>
 
 
 ## 문단 나누기
 
-- 문단 나누기
+- 문단 나누기  
+`---`  
+---  
 
-`---`
-
+<br><br>
+- 문단 나누면서 강조하기
+---
+<span class="evidence"> Hello World, My Name is C</span>
 ---
 
-
-
-- 굵게 문단 나누기
-
-`------`
-
-----------------------------
-
-==========================
-
+<br><br><br>
 
 ## 각주
 
@@ -281,11 +278,7 @@ Something needs a [^test]footnote.
 
 
 
-- 글 삭제 표시  
-1. `~~There is no tree waiting for me.~~`  
-~~There is no tree wating for me.~~
-2. `<del>There is no tree waiting for me.</del>`  
-<del>There is no tree waiting for me.</del>  
+
 
 
 ## 테이블
