@@ -264,7 +264,8 @@ ___기울고&굵어___
 ## 문단 나누기
 
 - 문단 나누기  
-`---`  
+`---`
+
 ---  
 
 <br><br>
@@ -282,11 +283,11 @@ ___기울고&굵어___
 
 
 
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png) {:.alignright}
+![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.alignright}
 
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png) {:.aligncenter}
+![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.aligncenter}
 
-![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png) {:.alignleft}
+![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){:.alignleft}
 
 <br><br><br>
 
