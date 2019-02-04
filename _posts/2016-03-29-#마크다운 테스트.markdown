@@ -26,10 +26,11 @@ finished: true
 <br><br>
 
 - 구분 하기  
+
 ```
- + 알흠플
- * 알흠별
- - 알흠마
++ 알흠플
+* 알흠별
+- 알흠마
 ```
 
 + 알흠플
@@ -39,6 +40,7 @@ finished: true
 <br><br>
 
 - 세분화로 구분 하기
+
 ```
    - AAA
      - BBB
@@ -58,18 +60,18 @@ finished: true
 <br><br>
 
 
-- 줄바꿈
-1. `<br>태그를 통한 줄바꿈`
+- `줄바꿈` 방법
+1. `<br>`태그를 통한 줄바꿈
 ```
 동해물과 백두산이<br>
 마르고 닳도록~<br>
 ```
 동해물과 백두산이<br>
 마르고 닳도록~<br>
-2. `(space space)  `라인 끝에 띄어쓰기 두번 하기.  
+2. `  (space space)`라인 끝에 띄어쓰기 두번 하기.  
 ```
-하느님이 보우하사  
-우리나라 만세!!!!!  
+하느님이 보우하사  (space space)
+우리나라 만세!!!!!  (space space)
 ```  
 하느님이 보우하사  
 우리나라 만세!!!!!  
@@ -146,25 +148,12 @@ void main()
 
 <br><br>
 
-```html
-<script>
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-9104131-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-```
 
 
 
 
 - HTML 태그 무시하기 `앞에 스페이스 4번`  
-`\ \ \ <p>A paragraph in <b>HTML</b> displayed as code</p>`  
+`    <p>A paragraph in <b>HTML</b> displayed as code</p>`  
     <p>A paragraph in <b>HTML</b> displayed as code</p>  
 
 
