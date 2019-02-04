@@ -302,9 +302,9 @@ They all show a breaker.
 
 `[^1]: This is a footnote.`
 
-Something needs a footnote[^1].
+Something needs a footnote[^목차].
 
-[^1]: This is a footnote.
+[^목차]: This is a footnote.
 
 Then this footnote will show at the end of this post.
 
