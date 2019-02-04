@@ -345,5 +345,12 @@ a         | b            | c            | d
 e         | f            | g            | h
 
 
-:+1: :sparkles: :camel: :tada:  
-:rocket: :metal: :octocat:  
+## 정렬
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error quod libero corporis, iste sit nulla similique enim dignissimos asperiores, illo numquam architecto maxime ab tenetur repellendus, dicta sed officia.
+{: .text-right }
+
+
+This is (HTML) example.
+
+*[HTML] : Hyper Text Markup Language
