@@ -297,9 +297,9 @@ ___기울고&굵어___
 ![img](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="400" height="400"}
 
 
-![title](/img/myImg.png){: width="300" height="300"){: .left}
-![title](/img/myImg.png){: width="300" height="300"){: .alignleft}
-![title](/img/myImg.png){: width="300" height="300"){:.alignleft}
+![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){: .left}
+![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){: .alignleft}
+![title](https://lh6.googleusercontent.com/-LWf9BMCyZS8/UxXF7xfJ4dI/AAAAAAABj3U/G_RfMpcIi0g/s120/markdown-logo2.png){: width="300" height="300"){:.alignleft}
 <br><br>
 
 ## 각주
