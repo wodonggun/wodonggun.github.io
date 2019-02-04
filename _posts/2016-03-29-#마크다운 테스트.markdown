@@ -332,20 +332,17 @@ Something needs a footnote[^목차].
 - 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
 
 ```
-left      | center       | center       | right
-:-------- | :----------: | :----------: | -----:
-a         | b            | c            | d
-e         | f            | g            | h
-```
-
-정렬 종류 | left      | center       | center       | right
+index | left-align      | center-align       | center-align       | right-align
 --- | :--- | :---: | :---: | ---:
 no.1 | a         | b            | c            | d
 no.2 | e         | f            | g            | h
 
+```
 
-## 정렬
-
+index | left-align      | center-align       | center-align       | right-align
+--- | :--- | :---: | :---: | ---:
+no.1 | a         | b            | c            | d
+no.2 | e         | f            | g            | h
 
 
 
