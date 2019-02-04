@@ -187,21 +187,25 @@ ___기울고&굵어___
 
 
 - 글 삭제 표시  
-1. `~~There is no tree waiting for me.~~`  
+ 1. `~~There is no tree waiting for me.~~`  
 ~~There is no tree wating for me.~~
-2. `<del>There is no tree waiting for me.</del>`  
-<del>There is no tree waiting for me.</del>  
+ 2. `<del>There is no tree waiting for me.</del>`  
+<del>There is no tree waiting for me.</del>
 
 
 - 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
 
- - 폰트 크게 `<big>큰 글자들</big>`  
+- 폰트 크게 `<big>큰 글자들</big>`  
  <big>큰 글자들</big>
 
 
 - 문장 강조  
 `<span class="evidence">강조하고 싶어요!</span>`  
+<span class="evidence">강조하고 싶어요!</span>
+
+
+- 문장 강조 `<span class="evidence">강조하고 싶어요!</span>`  
 <span class="evidence">강조하고 싶어요!</span>
 
 <br><br>
@@ -302,10 +306,8 @@ ___기울고&굵어___
 ## 각주
 
 - 각주 Footnote(맨 하단에 자동으로 생성된다.)
-
-`Something needs a footnote[^1].`
-
-`[^1]: This is a footnote.(이건 맨 하단에 표시됨)`
+`Something needs a footnote[^1].`  
+`[^1]: This is a footnote.(이건 맨 하단에 표시됨)`  
 
 Something needs a footnote[^test].
 
@@ -320,7 +322,7 @@ Something needs a footnote[^test].
 
 
 
-
+<br><br>
 
 ## 테이블
 
@@ -361,7 +363,7 @@ no.2 | e         | f            | g            | h
 
 
 
-
+<br><br><br>
 
 ## 깃허브
 
