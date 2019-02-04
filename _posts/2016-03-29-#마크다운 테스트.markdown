@@ -198,7 +198,6 @@ ___기울고&굵어___
 2. `<del>There is no tree waiting for me.</del>`  
 <del>There is no tree waiting for me.</del>  
 
-<br><br>
 
 - 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
@@ -270,6 +269,7 @@ ___기울고&굵어___
 
 <br><br>
 - 문단 나누면서 강조하기
+
 ---
 
 <span class="evidence"> Hello World, My Name is C</span>  
