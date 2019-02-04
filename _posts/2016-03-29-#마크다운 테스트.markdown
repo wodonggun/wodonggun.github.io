@@ -14,14 +14,10 @@ finished: true
 
 ## 정리
 
-- `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.
-`# 정리`
-`## 정리`
-`### 정리`
-
-
-
-
+- `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.  
+`# 정리`  
+`## 정리`  
+`### 정리`  
 ```
 > #include stdio.h는 기본 헤더이다.
 설명을 한다면 standard input output의 줄임말이다.
@@ -32,7 +28,7 @@ finished: true
 설명을 한다면 standard input output의 줄임말이다.
 헤더파일은 이외에도 많이 있다.
 
-
+<br><br>
 
 - 구분 하기
 
@@ -63,6 +59,7 @@ finished: true
     2. bbb
     3. ccc
 
+<br><br>
 
 
 - 줄바꿈
@@ -84,17 +81,17 @@ finished: true
 
 
 
-
+<br><br>
 
 ## 코드 또는 문장 나타내기 (번역 불가능)
 
-\`\`\`
+\`\`\`java <br>
 #include <stdio.h>
 void main(){
 
   printf("hello world");
 
-}
+}  
 \`\`\`
 
 
@@ -109,26 +106,26 @@ void main(){
 
 
 
-- HTML 태그 무시하기 `앞에 스페이스 4번`
-`    <p>A paragraph in <b>HTML</b> displayed as code</p>`
-    <p>A paragraph in <b>HTML</b> displayed as code</p>
+- HTML 태그 무시하기 `앞에 스페이스 4번`  
+`    <p>A paragraph in <b>HTML</b> displayed as code</p>`  
+    <p>A paragraph in <b>HTML</b> displayed as code</p>  
 
 
-- 마크다운 무시하기 `\_문자 기울기 무시\_`
+- 마크다운 무시하기 `\_문자 기울기 무시\_`  
 
- \_문자 기울기 무시\_
+ \_문자 기울기 무시\_  
 
-- URL 간단하게 `(https://wodonggun.github.io/)`
+- URL 간단하게 `(https://wodonggun.github.io/)`  
 
-(https://wodonggun.github.io/)
+(https://wodonggun.github.io/)  
 
-- URL 링크 연결하기 `[Demo](https://wodonggun.github.io/)`
+- URL 링크 연결하기 `[Demo](https://wodonggun.github.io/)`  
 
-[Demo](https://wodonggun.github.io/)
+[Demo](https://wodonggun.github.io/)  
 
-- 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`
+- 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 
-![index-page](https://i.imgur.com/BrmOMmv.png)
+![index-page](https://i.imgur.com/BrmOMmv.png)  
 
 <br><br>
 
@@ -137,30 +134,30 @@ void main(){
 
 ## 폰트
 
-- 기울이기 `_기울어라_`
+- 기울이기 `_기울어라_`  
 _기울어라_
 
-- 굵은 글씨 `__굵어져라__`
+- 굵은 글씨 `__굵어져라__`  
 __굵어져라__
 
-- 기울이고 & 굵어져라 `___기울고&굵어___`
+- 기울이고 & 굵어져라 `___기울고&굵어___`  
 ___기울고&굵어___
 
 
-- 글 삭제 `~~삭제해라~~`
+- 글 삭제 `~~삭제해라~~`  
 
 ~~삭제해라~~
 
-- 폰트 작게 `<small>작은 문자들</small>`
+- 폰트 작게 `<small>작은 문자들</small>`  
  <small>작은 문자들</small>
 
- - 폰트 크게 ` <big>큰 글자들</big>`
+ - 폰트 크게 `<big>큰 글자들</big>`  
  <big>큰 글자들</big>
 
 
 
 
-
+<br><br>
 
 
 
@@ -188,9 +185,10 @@ ___기울고&굵어___
 - 하이룽
 - 하이룽
 
-> * Freedom is Slavery
-  * Freedom
-> * Ignorance is Stength
+> * AAA
+  * BBB
+    * CCC
+* Ignorance is Stength
 
 
 
