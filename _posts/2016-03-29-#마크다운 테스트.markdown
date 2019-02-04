@@ -1,16 +1,18 @@
 ---
 layout: post
-title: "#Markdown Gramma"
-subtitle: "A brief introduction about Markdown Grammar."
+title: "#[Markdown Gramma]마크다운 문법 정리"
+subtitle: <span class="evidence"> Markdown Gramma 정리</span>
 date: 2016-03-29
-author: Gabriel
+author: NoonGam
 category: Study
 tags: Markdown
 comments: true
 finished: true
 ---
 
-# 단어란?
+---
+
+## 정리
 
 > 단어랑 word의 줄임말로 정말 좋은 단어이다.  
 니들이 단어를 알긴 알어?  
@@ -306,36 +308,56 @@ Something needs a footnote[^1].
 
 Then this footnote will show at the end of this post.
 
-## Delete
 
+- 글 삭제 표시
 `~~There is no tree waiting for me.~~`
 
 <del>There is no tree waiting for me.</del>
+~~There is no tree wating for me.~~
 
 ## Table
 
-### A simple way
 
-`A     | B     | C     | D `
+- 기본 테이블
 
-`----- | ----- | ----- | -----`
+```
+A     | B     | C     | D    
 
-`a     | b     | c     | d`
+----- | ----- | ----- | ------
 
-
-A     | B     | C     | D
------ | ----- | ----- | -----
 a     | b     | c     | d
+e     | f     | g     | h
 
-### Make words at left, center or right
+          ㅣㅣ
+          ㅣㅣ
+          \  /
+           \/
+```
+A     | B     | C     | D    
 
-`left      | center       | center       | right`
+----- | ----- | ----- | ------
 
-`:-------- | :----------: | :----------: | -----:`
+a     | b     | c     | d
+e     | f     | g     | h
 
-`a         | b            | c            | d`
+- 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)
+```
+left      | center       | center       | right
 
+:-------- | :----------: | :----------: | -----:
+
+a         | b            | c            | d
+e         | f            | g            | h
+
+                    ㅣㅣ
+                    ㅣㅣ
+                    \  /
+                     \/
+```
 
 left      | center       | center       | right
+
 :-------- | :----------: | :----------: | -----:
+
 a         | b            | c            | d
+e         | f            | g            | h
