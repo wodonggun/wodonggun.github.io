@@ -327,7 +327,6 @@ Then this footnote will show at the end of this post.
 | ----- | ------ | ----- | ------- | ------- | -------- |
 | 홍길동 | A+ | B+ | A0 | B0   | A-  |
 | 이순신 | A+ | A+ | A+ | A+ | A+ |
-
 ```
 
 |           | C/C++ | Java | Python | Linux | Network |
@@ -336,19 +335,16 @@ Then this footnote will show at the end of this post.
 | 이순신 | A+ | A+ | A+ | A+ | A+ |
 
 
-- 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)
+- 가운데 정렬, 왼쪽 정렬, 우측 정렬(콜론 위치 `:`)  
+
 ```
 left      | center       | center       | right
-
 :-------- | :----------: | :----------: | -----:
-
 a         | b            | c            | d
 e         | f            | g            | h
 ```
 
 left      | center       | center       | right
-
 :-------- | :----------: | :----------: | -----:
-
 a         | b            | c            | d
 e         | f            | g            | h
