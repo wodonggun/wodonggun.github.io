@@ -80,12 +80,12 @@ finished: true
 
 ## 코드 또는 문장 나타내기 (번역 불가능)
 
-\`\`\`  
-\#include <stdio.h>  
-void main()  
-{  
-  printf("hello world");  
-}  
+\`\`\`  <br>
+\#include <stdio.h>       <br>
+void main()               <br>
+{                         <br>
+  printf("hello world");  <br>
+}                          <br>
 \`\`\`  
 
 
@@ -99,13 +99,13 @@ void main()
 
 
 
-\`\`\`c++ <br>
-\#include <stdio.h>  
-void main()  
-{  
-  printf("hello world");  
-}  
-\`\`\`  
+\`\`\`c++             <br>
+\#include <stdio.h>   <br>
+void main()           <br>
+{                     <br>
+  printf("hello world"); <br>
+}                        <br>
+\`\`\`                   <br>
 
 
 ```c++
