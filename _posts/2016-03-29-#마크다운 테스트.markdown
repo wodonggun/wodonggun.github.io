@@ -300,10 +300,10 @@ Something needs a footnote[^목차].
 
 
 - 글 삭제 표시  
-1. `~~There is no tree waiting for me.~~`  
-  - ~~There is no tree wating for me.~~  
-2. `<del>There is no tree waiting for me.</del>`  
-  - <del>There is no tree waiting for me.</del>  
+1. `~~There is no tree waiting for me.~~`
+  - ~~There is no tree wating for me.~~
+2. `<del>There is no tree waiting for me.</del>`
+  - <del>There is no tree waiting for me.</del>
 
 
 ## 테이블
