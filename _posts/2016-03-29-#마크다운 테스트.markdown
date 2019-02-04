@@ -230,14 +230,14 @@ ___기울고&굵어___
 
 - 문장 블록  
 ```
-> #include stdio.h는 기본 헤더이다.
-설명을 한다면 standard input output의 줄임말이다.
-헤더파일은 이외에도 많이 있다.
+> #include stdio.h는 기본 헤더이다.  (space space)
+설명을 한다면 standard input output의 줄임말이다.  (space space)
+헤더파일은 이외에도 많이 있다.  
 ```
 
-> #include stdio.h는 기본 헤더이다.
-설명을 한다면 standard input output의 줄임말이다.
-헤더파일은 이외에도 많이 있다.
+> #include stdio.h는 기본 헤더이다.  
+설명을 한다면 standard input output의 줄임말이다.  
+헤더파일은 이외에도 많이 있다.  
 
 <br><br>
 
@@ -295,8 +295,7 @@ ___기울고&굵어___
 ---  
 
 <br><br>
-- 문단 나누면서 강조하기
-
+- 문단 나누면서 강조하기  
 ```
 
 ---
