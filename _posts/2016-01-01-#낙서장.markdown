@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "#낙서장"
+title: "# 낙서장"
 subtitle: <span class="evidence">잡다한 낙서장</span>
 date: 2016-01-01
 author: NoonGam
@@ -44,22 +44,6 @@ https://nesoy.github.io/articles/2016-12/github-Jekyll - 지킬 블로그 사용
 
 
 https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/ - 구글 검색어 등록
-
-- 유튜브 영상 임베드 시키기.(화면 바로 재생)
-
-```
-<iframe width="560" height="315" src="//www.youtube.com/embed/K64mb5KUhhs"
- frameborder="0" allowfullscreen></iframe>
-```
-
-
-
-
-
-- slideshare PPT 연동하기
-```
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/LfC5wzZtsL775T" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sanjoysanyal/tcpip-basics" title="TCP/IP Basics" target="_blank">TCP/IP Basics</a> </strong> from <strong><a href="https://www.slideshare.net/sanjoysanyal" target="_blank">sanjoysanyal</a></strong> </div>
-```
 
 
 

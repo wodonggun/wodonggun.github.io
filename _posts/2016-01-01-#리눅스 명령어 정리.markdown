@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "#리눅스 명령어 정리 "
+title: "# 리눅스 명령어 정리 "
 subtitle: <span class="evidence">아이디어 낙서장 .</span>
 date: 2016-01-01
 author: NoonGam
