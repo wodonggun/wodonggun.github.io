@@ -18,7 +18,7 @@ finished: true
 - 깃허브 이모티콘 시트  
 https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 
-
+<br><br><br>
 
 ## 정리
 
@@ -372,6 +372,29 @@ no.2 | e                | f            | g            | h
 
 <br><br><br>
 
+
+
+## 유튜브, 슬라이드 삽입
+
+- 유튜브 삽입
+
+```
+    <iframe width="560" height="315" src="//www.youtube.com/embed/B51VLZekuDs" frameborder="0" allowfullscreen></iframe>
+```
+<iframe width="560" height="315" src="//www.youtube.com/embed/B51VLZekuDs" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
+
+- slideshare PPT 연동하기
+
+```
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/LfC5wzZtsL775T" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sanjoysanyal/tcpip-basics" title="TCP/IP Basics" target="_blank">TCP/IP Basics</a> </strong> from <strong><a href="https://www.slideshare.net/sanjoysanyal" target="_blank">sanjoysanyal</a></strong> </div>
+```
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/LfC5wzZtsL775T" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/sanjoysanyal/tcpip-basics" title="TCP/IP Basics" target="_blank">TCP/IP Basics</a> </strong> from <strong><a href="https://www.slideshare.net/sanjoysanyal" target="_blank">sanjoysanyal</a></strong> </div>  
+
+\_
+<br><br>
 
 
 
