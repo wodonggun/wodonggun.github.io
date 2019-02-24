@@ -1,0 +1,74 @@
+---
+layout: post
+title: "[C언어] 입력 버퍼 비우기"
+subtitle: <span class="evidence"> 맨날 까먹으면서 과거에 고생했던 사소한 실수 </span>
+date: 2018-01-01
+author: NoonGam
+category: C/C++
+tags: C/C++
+comments: true
+finished: true
+---
+
+---
+
+## 입력버퍼 ?
+
+```
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	char c;
+
+	scanf("%d", &a);
+	scanf("%c", &c);
+
+	printf("정수는 %d\n", a);
+	printf("문자는 %c\n", c);
+
+}
+```
+
+> 위의 코드를 실행하여 데이터를 넣으려고하면 첫번째 scanf에서 정수를 입력하면 두번째 scanf를 거치지않고 바로 출력이 된다. 그 이유는
+첫번째 scanf에서 정수를 받고 엔터를 누르면 버퍼에 `\n(엔터)`에 대한 버퍼는 남아있게 된다.
+그 후에 두번째 scanf가 실행되면서 버퍼에 있는 `\n(엔터)`를 받아오고 그냥 넘어가게 된다.
+
+![img](/img/1-Everything/123.PNG)
+> 그래서 위와 같이 줄바꿈(엔터)이 실행되어 있다.
+
+<br>
+
+`그래서 해결방법은?`  
+
+1. `getchar()를 통한 해결`
+```
+scanf("%d", &a);
+getchar();
+scanf("%c", &c);
+```
+getchar()를 통해 `\n`를 받아버린다. 그럼 버퍼가 비워지고 새롭게 scanf를 받을 수 있다.
+
+
+2. `fflush(stdin)`  
+비주얼 스튜디오나 GCC에서는 동작되지 않는다. 과거에는 VS에서 지원을 하였지만 여러가지 문제로
+사라짐.  
+
+3. `%c앞에 공백`  
+`scanf(" %c", &c)`를 사용하여 앞에 스페이스를 넣으면
+
+
+4.  `%*c`를 추가하여 데이터 버림.  
+`scanf("%*c%c", &c)`를 사용하면 첫번째 `%*c`에서 버퍼를 받지만 버리고, 다음 `%c`를 통해 데이터를 받음.
+
+
+<fieldset id="gpg-fieldset">
+ 참고로 정수형 데이터를 받을때는 `\n`이 버퍼에 있으면 무시한다.  (당연히 정수가 아니니까;;;)
+</fieldset>
+
+
+<br><br><br>
+
+## 참고 자료
+* [자료창고](https://plustag.tistory.com/1)
