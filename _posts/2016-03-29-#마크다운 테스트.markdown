@@ -385,6 +385,19 @@ no.2 | e                | f            | g            | h
 
 <br><br>
 
+- 중간 재생, 자동 재생
+
+```
+    <iframe width="560" height="315" src="//www.youtube.com/embed/B51VLZekuDs?start=195" frameborder="0" allowfullscreen></iframe>
+```
+
+```
+    <iframe width="560" height="315" src="//www.youtube.com/embed/B51VLZekuDs?start=195&end=295autoplay=1" frameborder="0" allowfullscreen></iframe>
+```
+
+
+<br><br>
+
 - slideshare PPT 연동하기
 
 ```

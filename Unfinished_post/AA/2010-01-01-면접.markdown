@@ -1,0 +1,49 @@
+---
+layout: post
+title: " -------- "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+##
+
+돈 보다는 경험, 수익보다는 지혜, 편법보다는 체계적인 프로세스
+
+
+
+
+# 빅오
+
+O(g(n)) = {f(n): n>=n0 인 모든 n에 대해 0<=f(n)<=cg(n)을 만족하는 양수 상수 c와 n0가 존재.}
+
+- 즉, 아무리 시간이 많이흘러도 g(n)을 넘지않는다.
+점근적 상한(빅오는 항상 최대를 넘지않기때문에)
+
+![img](/img/1-Everything/bigo.PNG)
+
+
+# 기술 정보 블로그
+
+AWS,KT
+
+
+https://brunch.co.kr/magazine/architect
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
+■
+![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
