@@ -1,0 +1,85 @@
+---
+layout: post
+title: "[C언어] Volatile 변수란?"
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-01-01
+author: NoonGam
+category: Study
+tags: Network Linux
+comments: true
+finished: true
+---
+
+---
+
+## Volatile 변수
+
+1. 사용 방법
+- 기본적인 변수 사용 `int a`, `static int a`
+- Volatile 변수 사용 `volatile int a` ,`static volatile int a`  
+
+`사용하는 이유`  
+1. 컴파일러에서 `최적화`를 방지한다.
+2. 후속 프로그램이 변수를 다룰때 `레지스터가 아닌 메모리`에서 읽어오도록 한다. (임베디드일 경우)
+3. 만약 16비트 마이크로 먼트롤러에서 32비트(int, long) 변수를 읽어오려면 두번에 걸쳐서 메모리를 읽어야 한다. 그 변수를 읽는 동안에 갑자기 값이 바뀔 수 있는데 읽히는 동안 비트를 못건드리게 해야한다.
+
+> 기본적으로 C/C++ 컴파일러는 최적화의 기능을 가지고 있습니다. 비효율적이거나
+
+> 변수를 선언할 때 앞에 volatile을 붙이면 컴파일러는 해당 변수를 최적화에서 제외하여 항상 메모리에 접근하도록 만듭니다.
+
+<br><br><br>
+
+
+
+## 코드
+
+> 프로그래머의 의도와는 다르게 컴파일러가 최적화를 진행할 수 있다.
+
+- C 소스 코드  
+
+```
+int i = 0;
+
+while (i < 10)
+    i++;
+
+printf("%d\n", i);
+```
+
+위와 같이 작성된 코드는 컴파일러의 최적화로 인해 어셈블리어로 아래와 같은 구조로 진행한다.
+
+```
+int i = 10;    // 반복문을 없애버리고 10을 할당
+
+printf("%d\n", i);    // 10
+```
+
+<br><br>
+
+> 임베디드 환경에서는 또 다를 수 있다.
+
+- 임베디드 소스 코드
+
+```c++
+static int power;
+void Power_ON_OFF()
+{
+    power = 0;
+
+    while(power!=1);    
+}
+```
+위와 같은 코드는 아래와 같이 무한루프로 최적화 된다.
+
+```c++
+void Power_ON_OFF()
+{
+    power = 0;
+
+    while(true);    
+}
+```
+
+하지만 만약에 power변수가 인터럽트나 `하드웨어 장치의 레지스터`라면 다른 동작에 의해 값이 변환될 수 있다.
+
+<br><br><br>
