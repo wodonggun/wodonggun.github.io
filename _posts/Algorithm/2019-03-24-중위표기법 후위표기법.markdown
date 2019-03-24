@@ -1,8 +1,8 @@
 ---
 layout: post
 title: " 중위표기법을 후위표기법 정리 "
-subtitle: <span class="evidence"> -------- </span>
-date: 2018-03-24
+subtitle: <span class="evidence"> 중위표기법  </span>
+date: 2019-03-24
 author: NoonGam
 category: Algorithm
 tags: C/C++ Algorithm
@@ -16,6 +16,7 @@ finished: true
 
 
 1. 모든 수식을 소괄호로 우선순위가 정해져 있을때 `(((A+(B/C))*D)/E)`  
+
 ![img](/img/1-Everything/0324_1.PNG)
 
 ```c++
@@ -64,8 +65,8 @@ int main()
 }
 ```
 <br><br>
-
 2. 괄호가 있고, 모든 연산자에 대한 우선순위를 괄호로 묶지 않은경우.`A*(A+B)*C`
+
 ![img](/img/1-Everything/0324_3.png)
 
 
@@ -143,13 +144,4 @@ int main()
 ## 후위표기법 값 계산
 ![img](/img/1-Everything/0324_2.PNG)
 
-
 <br><br><br>
-
-## 참고 자료
-*
-*
-*
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
