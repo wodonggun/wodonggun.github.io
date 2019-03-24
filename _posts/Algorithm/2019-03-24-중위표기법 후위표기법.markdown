@@ -15,10 +15,12 @@ finished: true
 ## 중위표기법을 후위표기법으로 변환
 
 
-- 모든 수식을 소괄호로 우선순위가 정해져 있을때  
-`(((A+(B/C))*D)/E)`  
+
 
 ![img](/img/1-Everything/0324_1.PNG)
+
+- 모든 수식을 소괄호로 우선순위가 정해져 있을때  
+`(((A+(B/C))*D)/E)`  
 
 ```c++
 #include <stdio.h>
@@ -68,11 +70,12 @@ int main()
 
 <br><br>
 
--  괄호가 있고, 모든 연산자에 대한 우선순위를 괄호로 묶지 않은경우.  
-`A*(A+B)*C`
+
 
 ![img](/img/1-Everything/0324_3.png)
 
+-  괄호가 있고, 모든 연산자에 대한 우선순위를 괄호로 묶지 않은경우.  
+`A*(A+B)*C`
 
 ```c++
 #include <stdio.h>
@@ -106,9 +109,9 @@ int main()
 		{
 			printf("%c", str[i]);
 		}
-		else if (str[i] == ')')
+		else if (str[i] == ')')     
 		{
-			while (vec.back()!='(')
+			while (vec.back()!='(')    //여는 괄호가 나올때까지 pop
 			{
 				printf("%c", vec.back());
 				vec.pop_back();
@@ -124,14 +127,17 @@ int main()
 				printf("%c", a);
 				vec.pop_back();
 			}
+
+      //스택 위에보다 우선순위가 낮으면 푸쉬
 			vec.push_back(str[i]);
 
-			//스택 위에보다 우선순위가 낮으면 푸쉬
+
 		}
 
 
 	}
-	//나머지 출력
+
+	//스택에 남은연산 출력
 	while (!vec.empty())
 	{
 		printf("%c", vec.back());
@@ -142,7 +148,8 @@ int main()
 }
 
 ```
-/*
+
+
 
 
 ## 후위표기법 값 계산
