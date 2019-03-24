@@ -1,0 +1,155 @@
+---
+layout: post
+title: " 중위표기법을 후위표기법 정리 "
+subtitle: <span class="evidence"> -------- </span>
+date: 2018-03-24
+author: NoonGam
+category: Algorithm
+tags: C/C++ Algorithm
+comments: true
+finished: true
+---
+
+---
+
+## 중위표기법을 후위표기법으로 변환
+
+
+1. 모든 수식을 소괄호로 우선순위가 정해져 있을때 `(((A+(B/C))*D)/E)`  
+![img](/img/1-Everything/0324_1.PNG)
+
+```c++
+#include <stdio.h>
+#include <vector>
+
+using namespace std;
+
+char str[101];
+vector<char> stack;
+
+int main()
+{
+
+	scanf("%s", &str);
+
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '(')
+		{
+			continue;
+		}
+		else if (str[i] == ')')
+		{
+			printf("%c", stack.back());
+			stack.pop_back();
+		}
+		else if (str[i] >= 65 && str[i] <= 90)	//대문자 알파뱃일때
+		{
+			printf("%c", str[i]);
+		}
+		else				 //연산자 기호일때
+		{
+			stack.push_back(str[i]);
+		}
+	}
+
+
+	while (!stack.empty()) // 스택에 남은 연산자 다 출력
+	{
+		printf("%c", stack.back());
+		stack.pop_back();
+	}
+
+	return 0;
+}
+```
+<br><br>
+
+2. 괄호가 있고, 모든 연산자에 대한 우선순위를 괄호로 묶지 않은경우.`A*(A+B)*C`
+![img](/img/1-Everything/0324_3.png)
+
+
+```c++
+#include <stdio.h>
+#include <vector>
+#include <map>
+using namespace std;
+
+char str[101];
+vector<char> vec;
+
+
+
+int main()
+{
+	map<char, int> ma;
+	//기호별 우선순위
+	ma['+'] = 0;
+	ma['-'] = 0;
+	ma['*'] = 1;
+	ma['/'] = 1;
+	ma['('] = -1;
+
+	scanf("%s", &str);
+
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '(') {
+			vec.push_back(str[i]);
+		}
+		else if (str[i] >= 65 && str[i] <= 90)
+		{
+			printf("%c", str[i]);
+		}
+		else if (str[i] == ')')
+		{
+			while (vec.back()!='(')
+			{
+				printf("%c", vec.back());
+				vec.pop_back();
+			}
+			vec.pop_back();
+		}
+		else
+		{
+			//높거나 같으면 계속뽑음
+			while(!vec.empty() && ma[vec.back()] >= ma[str[i]])
+			{
+				char a = vec.back();
+				printf("%c", a);
+				vec.pop_back();
+			}
+			vec.push_back(str[i]);
+
+			//스택 위에보다 우선순위가 낮으면 푸쉬
+		}
+
+
+	}
+	//나머지 출력
+	while (!vec.empty())
+	{
+		printf("%c", vec.back());
+		vec.pop_back();
+	}
+
+	return 0;
+}
+
+```
+/*
+
+
+## 후위표기법 값 계산
+![img](/img/1-Everything/0324_2.PNG)
+
+
+<br><br><br>
+
+## 참고 자료
+*
+*
+*
+<fieldset id="gpg-fieldset">
+ 샘플 파일
+</fieldset>
