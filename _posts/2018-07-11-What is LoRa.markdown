@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LoRa(로라) 란? "
+title: " [IT/통신] LoRa(로라) 란? "
 subtitle: <span class="evidence">IoT 분야에서 떠오르고 있는 로라</span>
 date: 2018-07-12
 author: NoonGam
