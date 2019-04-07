@@ -12,6 +12,12 @@ finished: true
 
 ---
 
+
+## 안드로이드 공부
+
+https://puzzleleaf.tistory.com/176?category=705546
+
+
 ##
 
 돈 보다는 경험, 수익보다는 지혜, 편법보다는 체계적인 프로세스
@@ -37,6 +43,19 @@ AWS,KT
 https://brunch.co.kr/magazine/architect
 
 <br><br><br>
+
+
+# 면접 책
+
+https://books.google.co.kr/books?id=rRF2DwAAQBAJ&pg=PT1&lpg=PT1&dq=career+factory&source=bl&ots=msD2TJnY3M&sig=ACfU3U1oor9rXKQ5J0zA2rCVoAb2XLRkmw&hl=ko&sa=X&ved=2ahUKEwjD8PTwmevgAhUECqYKHV2wB5YQ6AEwA3oECAIQAQ#v=onepage&q=career%20factory&f=false
+
+
+
+## 삼성 면접
+
+https://mark3236.tistory.com/entry/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-17%EB%85%84-%EC%9D%B8%ED%84%B4-%ED%95%A9%EA%B2%A9-%ED%9B%84%EA%B8%B0
+
+
 
 ## 참고 자료
 *
