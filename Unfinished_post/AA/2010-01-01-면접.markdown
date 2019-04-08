@@ -17,13 +17,16 @@ finished: true
 
 https://puzzleleaf.tistory.com/176?category=705546
 
+https://xepushapp.com/page_nBJW34  (앱 개인정보이용정책 정보)
 
 ##
 
 돈 보다는 경험, 수익보다는 지혜, 편법보다는 체계적인 프로세스
 
 
+## SI 개발자의 자세
 
+https://subokim.wordpress.com/2015/01/22/si-developer/
 
 # 빅오
 
