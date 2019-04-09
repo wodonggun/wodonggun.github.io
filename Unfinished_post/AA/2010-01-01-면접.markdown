@@ -13,6 +13,12 @@ finished: true
 ---
 
 
+
+## 개발자 공부
+
+http://blog.naver.com/PostView.nhn?blogId=websearch&logNo=220986809154
+
+
 ## 안드로이드 공부
 
 https://puzzleleaf.tistory.com/176?category=705546

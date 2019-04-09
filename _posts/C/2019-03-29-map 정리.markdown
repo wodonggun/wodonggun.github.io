@@ -1,7 +1,7 @@
 ---
 layout: post
 title: " [C/C++] map container 정리 및 사용법"
-subtitle: <span class="evidence"> -------- </span>
+subtitle: <span class="evidence"> 맵 Map 컨테이너 사용 방법을 알아보자. </span>
 date: 2019-01-01
 author: NoonGam
 category: C/C++
@@ -14,9 +14,7 @@ finished: true
 
 ## map 이란?
 
->> 배열`arr[10]`과 다르게 map은 다른 자료형으로 사용할 수 있는 배열이다.
-
->>
+>> 배열`arr[10]`과 다르게 map은 index를 다른 자료형으로 사용할 수 있는 컨테이너이다.  Map은 Hash와 같이 key값은 중복될 수 없다. Hash와 Map을 통해 다른 자료형으로 구현이 가능 하다.
 
 ## Hash와 Map의 차이점
 
@@ -29,6 +27,8 @@ finished: true
 1. 자료 탐색에 이진 탐색 트리를 사용한다. (Red-Black Tree)
 2. Key와 Value로 Hash보다 조금 느리다. ( 시간복잡도 O(logn) )
 3. 내부 데이터를 자동으로 정렬.
+
+<br><br>
 
 ## map 기본 사용법
 
@@ -49,20 +49,22 @@ finished: true
 - `size()`
 
 
+```c++
+#include <stdio.h>
+#include <map>
+using namespace std;
+
+int main(){
+
+  map<string,int> a;
+
+  //수정중
+
+  return 0;
+}
+
+```
 
 
 
 <br><br><br>
-
-## 참고 자료
-*
-*
-*
-<fieldset id="gpg-fieldset">
- 샘플 파일
-</fieldset>
-■
-
-![img](/img/2017-09-05-VirtualBox 설치하기/2.png)
-
-https://twpower.github.io/91-how-to-use-map-in-cpp
