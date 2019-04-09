@@ -16,6 +16,8 @@ finished: true
 
 > 배열`arr[10]`과 다르게 map은 index를 다른 자료형으로 사용할 수 있는 컨테이너이다. Map은 Hash와 같이 key값은 중복될 수 없다. Hash와 Map을 통해 다른 자료형으로 구현이 가능 하다.
 
+<br><br>
+
 ## Hash와 Map의 차이점
 
 - Hash
@@ -34,16 +36,20 @@ finished: true
 
 <span class="evidence">기본형태</span>  
 - `map<key,value>` : key와 value를 pair 형태로 선언  
+
 <span class="evidence">반복자</span>  
 - `begin()` :  
 - `end()` :  
+
 <span class="evidence">추가 및 삭제</span>  
 - `insert( make_pair(key,value) )` :  
 - `erase(key)` :  
 - `clear()`  
+
 <span class="evidence">기본형태</span>  
 - `find(key)`  
 - `count(key)`  
+
 <span class="evidence">기본형태</span>  
 - `empty()`  
 - `size()`  
@@ -64,10 +70,11 @@ int main() {
 	a["World"] = 5;
 	a["Best"] = 0;
 
-	//전체 순회
-	for (auto iter = a.begin() ; iter != a.end() ; ++iter)		// map 첫번째 주소를 저장하고, 주소+1을 하면서 end(맵 마지막)를 만날때까지 반복
-	{															
-		printf("%s %d\n", iter->first.c_str() ,iter->second);		// c_str()은 string객체를 c 출력에 맞게 캐스팅 해줌.
+	// map 첫번째 주소를 저장하고, 주소+1을 하면서 end(맵 마지막)를 만날때까지 반복
+	for (auto iter = a.begin() ; iter != a.end() ; ++iter)
+	{							
+    // c_str()은 string객체를 c 출력에 맞게 캐스팅 해줌.								
+		printf("%s %d\n", iter->first.c_str() ,iter->second);		
 	}
 
 	return 0;
