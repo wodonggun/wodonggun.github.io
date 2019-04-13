@@ -25,7 +25,10 @@ finished: true
 `Key`->`해시 함수에 Key넣음`->`Hashcode 생성`->`적절한 인덱스 생성`->`해당 인덱스주소에 저장`
 ->`데이터가 이미 존재하면 = 연결리스트로 연결`  
 
+- 아래의 그림은 아스키코드값을 이용해 Hash코드를 생성  
+
 ![img](/img/1-Everything/hash.PNG)
+
 
 <br><br>
 
