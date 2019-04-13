@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " [자료구조] Hash 해쉬테이블"
+title: " [자료구조] Hash 해시 테이블"
 subtitle: <span class="evidence"> 해시, 해시테이블에 대해 알아보자. </span>
 date: 2019-04-12
 author: NoonGam
@@ -25,7 +25,7 @@ finished: true
 `Key`->`해시 함수에 Key넣음`->`Hashcode 생성`->`적절한 인덱스 생성`->`해당 인덱스주소에 저장`
 ->`데이터가 이미 존재하면 = 연결리스트로 연결`  
 
-- 아래의 그림은 아스키코드값을 이용해 Hash코드를 생성  
+
 
 ![img](/img/1-Everything/hash.PNG)
 
@@ -33,7 +33,7 @@ finished: true
 <br><br>
 
 
-
+ㅁ
 ## 해시
 
 - `Hash 알고리즘` = 배열방을 효율적으로 사용하기위한 Hash코드 생성 알고리즘.
