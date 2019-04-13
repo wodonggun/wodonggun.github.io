@@ -15,12 +15,11 @@ finished: true
 
 ## 깃허브
 
-- 깃허브 이모티콘 시트  
-https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+- [깃허브 이모티콘 시트](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) 보러가기
 
 <br><br><br>
 
-## 정리
+## 마크다운 정리
 
 - `#`의 개수의 따라 큰 제목,작은 제목으로 구분된다.  
 <br>
@@ -170,6 +169,10 @@ void main()
 
 - URL 링크 연결하기 `[Demo](https://wodonggun.github.io/)`  
 [Demo](https://wodonggun.github.io/)  
+
+
+
+## 이미지 표시
 
 - 이미지 표시하기 `![index-page](https://i.imgur.com/BrmOMmv.png)`  
 ![index-page](https://i.imgur.com/BrmOMmv.png)  
