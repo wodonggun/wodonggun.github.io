@@ -106,7 +106,7 @@ void Power_ON_OFF()
 using namespace std;
 
 int start, end_t;
-int k;                    //이 부분을 volatile int k로 선언시에 대략 10초 소요.
+int k;                        //이 부분을 volatile int k로 선언시에 대략 10초 소요.
 //volatile int k;         //최적화 제외 변수
 int main()
 {
