@@ -88,4 +88,52 @@ void Power_ON_OFF()
 
 하지만 만약에 power변수가 `인터럽트` 또는 `하드웨어 장치의 레지스터`라면 다른 동작에 의해 값이 변경될 수 있다.
 
-<br><br>
+
+## 비주얼 스튜디오 테스트
+
+- 아래의 소스코드를 VC++에서 돌려보면 동작시간이 대략 0.001초정도 된다.
+- `입력이 10만`이고 시간복잡도는 `O(N^2)`인데 최소 10초가 넘어야하지만 0.001초인 이유
+- k++연산이 어느정도 예상되다보니 `컴파일러`에서 연산을 제외하고 최적화 진행.  
+(일반적으로 알고리즘 문제를 풀때는 1억에 1초로 생각합니다.)  
+(개인 컴퓨터는 처리속도가 빠르기 때문에 대략 10억에 1초 정도 걸립니다.)  
+
+```c++
+#include <stdio.h>
+#include <vector>
+#include <time.h>
+
+using namespace std;
+
+int start, end_t;
+int k;                    //이 부분을 volatile int k로 선언시에 대략 10초 소요.
+//volatile int k;         //최적화 제외 변수
+int main()
+{
+	vector<int> vec;
+
+	for (int i = 0; i < 100000; i++)
+		vec.push_back(1);
+
+
+	start = clock();
+
+	for (int i = 0; i < 100000; i++)
+	{
+		int j;
+		for (j = i + 1; j < 100000; j++)
+		{
+			k ++;
+		}
+	}
+
+	end_t = clock();
+
+
+
+	printf("%.4fsec ", (double)(end_t - start)/1000);
+
+	return 0;
+}
+```
+
+<br><br><br>
