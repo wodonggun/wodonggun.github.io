@@ -38,31 +38,37 @@ finished: true
 
 ## 코드
 
-> 프로그래머의 의도와는 다르게 컴파일러가 최적화를 진행할 수 있다.
+> 프로그래머의 의도와는 다르게 컴파일러가 최적화를 진행할 수 있다. 또한 임베디드 환경이라면 상황이 다를 수 있다.
 
 <br>
 
 <span class="evidence"><big>C 소스코드</big></span>
-```
-int i = 0;
+```c
+int main()
+{
+  int i = 0;
 
-while (i < 10)
-    i++;
+  while (i < 10)
+      i++;
 
-printf("%d\n", i);
+  printf("%d\n", i);
+}
 ```
 
 위와 같이 작성된 코드는 컴파일러의 최적화로 인해 어셈블리어로 아래와 같은 구조로 진행한다.
 
-```
-int i = 10;    // 반복문을 없애버리고 10을 할당
+```c
+int main()
+{
+  int i = 10;    // while문 제거하고 10을 할당
 
-printf("%d\n", i);    // 10
+  printf("%d\n", i);
+}
 ```
 
 <br><br>
 
-> 임베디드 환경에서는 또 다를 수 있다.
+
 
 <span class="evidence"><big>임베디드 소스코드</big></span>
 
@@ -137,5 +143,6 @@ int main()
 	return 0;
 }
 ```
+___정확한 시간복잡도 계산값은 N + ( ( N * (N-1) ) / 2 )___
 
 <br><br><br>
