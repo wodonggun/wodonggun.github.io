@@ -16,11 +16,11 @@ finished: true
 
 > 기본적으로 C/C++ 컴파일러는 최적화의 기능을 가지고 있습니다. 비효율적이거나 불필요한 연산은 생략하고 코드를 최적화 시킵니다.
 
-> 변수를 선언할 때 앞에 volatile을 붙이면 컴파일러는 해당 변수를 최적화에서 제외하여 항상 메모리에 접근하도록 만듭니다.
+>> 변수를 선언할 때 앞에 volatile을 붙이면 컴파일러는 해당 변수를 최적화에서 제외하여 항상 메모리에 접근하도록 만듭니다.
 
 <br><br>
 
-1. 사용 방법
+<span class="evidence"><big>사용 방법</big></span>
 - 기본적인 변수 사용 `int a`, `static int a`
 - Volatile 변수 사용 `volatile int a` ,`static volatile int a`  
 
@@ -40,8 +40,7 @@ finished: true
 
 > 프로그래머의 의도와는 다르게 컴파일러가 최적화를 진행할 수 있다.
 
-- C 소스 코드  
-
+- C 소스 코드
 ```
 int i = 0;
 
@@ -64,7 +63,6 @@ printf("%d\n", i);    // 10
 > 임베디드 환경에서는 또 다를 수 있다.
 
 - 임베디드 소스 코드
-
 ```c++
 static int power;
 
