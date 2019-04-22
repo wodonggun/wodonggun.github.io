@@ -25,18 +25,12 @@ finished: true
 ## 사용방법 및 함수
 
 - `priority_queue<T, Container, Compare>` : T는 비교할 값의 자료형, Container는 vector나 deque과 같은 STL 컨테이너, Compare은 greater<int>나 less<int>와 같은 비교 함수를 넣음.(기본 less<int> 오름차순)
-
 - `최상위에 우선순위가 높은 데이터 배치` : priority_queue<int, vector<int> >
 - `최상위에 우선순위가 낮은 데이터 배치` : priority_queue<int, vector<int> , greater<int> >
-
 - `push(값)` : 우선순위 큐에 데이터 추가.
-
 - `pop()` : 최상단의 데이터 삭제
-
 - `top()` : 최상단의 데이터를 반환
-
 - `empty()` : 비어있는지 여부 반환 (비어있으면 true, 아니면 false)
-
 - `size()` : 우선순위 큐의 데이터 수를 반환
 
 <br><br>
