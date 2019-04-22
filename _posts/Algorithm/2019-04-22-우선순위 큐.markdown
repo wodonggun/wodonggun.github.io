@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " [C/C++] Priority_queue 우선순위 큐란? :: 정리 및 사용법
+title: " [C/C++] Priority_queue 우선순위 큐란? :: 정리 및 사용법"
 subtitle: <span class="evidence"> C++ STL priority_queue에 대해 알아보자. </span>
 date: 2019-04-22
 author: NoonGam
