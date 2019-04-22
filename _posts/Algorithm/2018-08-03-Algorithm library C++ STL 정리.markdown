@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Algorithm library C++ STL 정리"
+title: "[C/C++] STL Vector container 벡터 정리"
 subtitle: <span class="evidence">알고리즘 라이브러리 정리
 date: 2018-08-03
 author: NoonGam
@@ -14,17 +14,13 @@ finished: true
 
 ## Vector 벡터 라이브러리
 
->
-
-<fieldset id="gpg-fieldset">
-vector 컨테이너는 대표적인 시퀀스 컨테이너로 배열과 비슷하여 사용이 쉬우며 자주 사용된다.
+> vector 컨테이너는 대표적인 시퀀스 컨테이너로 배열과 비슷하여 사용이 쉬우며 자주 사용된다.
 vector는 임의 접근 반복자(Random Access Iterator)를 지원하는 배열 기반 컨테이너이다.
 vector의 가장 큰 특징 중 하나는 원소가 하나의 메모리 블록에 연속하게 저장된다는 것이다.
 그렇다 보니 원소가 추가되거나 삽입될 때 메모리 재할당이 발생할 수 있고 상당한 비용을 지불하게 된다.
 그래서 메모리 할당 크기를 알 수 있게 capacity() 함수를 제공하며 한번에 메모리를 할당할 수 있는 reserve() 함수도 제공된다.
 원소가 연속하게 저장되므로 [] 연산자 또는 at 으로 읽기에는 빠르지만  insert(), erase(), push_back() 등은 비효율적으로 동작한다.
 
-</fieldset>
 
 <p><table class="txc-table" width="614" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:돋움;font-size:12px"><tbody><tr><td style="width: 613px; height: 24px; border: 1px solid rgb(204, 204, 204); background-color: rgb(217, 229, 255);" colspan="2" rowspan="1"><p style="text-align: left;"><b>템플릿 형식</b></p></td></tr>
 <tr><td style="width: 340px; height: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204);"><p>&nbsp; template&lt;typename T, typename Allocator = allocator&lt;T&gt;&gt;</p><p>class vector</p></td>
