@@ -26,7 +26,7 @@ finished: true
 
 - `priority_queue<T, Container, Compare>` : T는 비교할 값의 자료형, Container는 vector나 deque과 같은 STL 컨테이너, Compare은 greater< int >나 less< int >와 같은 비교 함수를 넣음.(기본 less<int> 오름차순)
 - `최상위에 우선순위가 높은 데이터 배치` : priority_queue<int, vector< int > >
-- `최상위에 우선순위가 낮은 데이터 배치` : priority_queue<int, vector< int > , greater<int> >
+- `최상위에 우선순위가 낮은 데이터 배치` : priority_queue<int, vector< int > , greater< int > >
 - `push(값)` : 우선순위 큐에 데이터 추가.
 - `pop()` : 최상단의 데이터 삭제
 - `top()` : 최상단의 데이터를 반환
@@ -85,7 +85,7 @@ int main()
 
 - 위의 동작과정과 같이 데이터 확인 결과 잘 들어간것을 확인할 수 있습니다.
 
-
+<br><br>
 
 ## 시간복잡도
 
@@ -107,7 +107,8 @@ int main()
 
 
 
-<br><br><br>
+<br><br>
 
 ## 참고 자료
 * [TW님의 블로그](https://twpower.github.io/93-how-to-use-priority_queue-in-cpp)
+* [Ries님의 블로그](https://m.blog.naver.com/PostView.nhn?blogId=kks227&logNo=220791188929&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
