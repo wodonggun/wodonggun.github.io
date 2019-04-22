@@ -28,19 +28,6 @@ finished: true
 
 <br><br>
 
-## 해시 과정
-
-`Key`->`해시 함수에 Key넣음`->`Hashcode 생성`->`적절한 인덱스 생성`->`해당 인덱스주소에 저장`
-->`데이터가 이미 존재하면 = 연결리스트로 연결`  
-
-
-
-![img](/img/1-Everything/hash.PNG)
-
-
-<br><br>
-
-
 ## 용어 정리
 
 1. `Open Hashing(개방 해싱)` : 주소 밖에 새로운 공간을 할당
@@ -96,12 +83,27 @@ finished: true
 	무작위(Random)법은 난수(Random Number)를 발생시켜 나온 값을 홈 주소로 삼는 방식이다.
 
 
-버킷 = key에 해당하는 value들의 묶음.(해당 슬롯의 묶음)  
-슬롯 = key에 해당하는 value의 값(연결리스트로 연결된 값 하나 하나를 의미)  
-레코드 = 해싱된 주소(물리적인 주소)  
-해시 값 = hash code + 인덱싱 결과 값.  
-홈 주소 : 해당 키값을 해시 함수에 넣어 반환된 주소  
+`버킷(Bucket)` = key에 해당하는 value들의 묶음.(해당 슬롯의 묶음)  
+`슬롯(Slot)` = key에 해당하는 value의 값(연결리스트로 연결된 값 하나 하나를 의미)  
+`레코드(Record)` = 해싱된 주소(물리적인 주소)  
+`해시 값(Hash Value)` = hash code + 인덱싱 결과 값  
+`홈 주소(Home Address)` = 해당 키값을 해시 함수에 넣어 반환된 주소  
 
+
+<br><br>
+
+
+## 해시 과정
+
+`Key`->`해시 함수에 Key넣음`->`Hashcode 생성`->`적절한 인덱스 생성`->`해당 인덱스주소에 저장`
+->`데이터가 이미 존재하면 = 연결리스트로 연결`  
+
+
+
+![img](/img/1-Everything/hash.PNG)
+
+
+<br><br>
 
 
 
@@ -155,5 +157,3 @@ int getHashCode( sun )
 
 ## 참고 자료
 * [썬PE의 IT창고님](http://blog.naver.com/PostView.nhn?blogId=deepb1ue&logNo=221218479008&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
-
-<br><br><br>
