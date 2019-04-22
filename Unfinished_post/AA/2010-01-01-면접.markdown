@@ -68,6 +68,12 @@ https://mark3236.tistory.com/entry/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-17%EB%85
 https://goodgid.github.io/18-Second-Half-Samsung-Electronics-Interview/
 
 
+
+## 현대 IT&E 코딩테스트
+
+문자열, 시뮬레이션, BFS,DFS,DP,다익스트라 나옵니다.
+
+
 ## 참고 자료
 *
 *

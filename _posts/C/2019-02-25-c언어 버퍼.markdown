@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[C언어] 입력 버퍼 비우기 :: scanf 값을 못받고 넘어갈때"
+title: " [C언어] 입력 버퍼 비우기 :: scanf 값을 못받고 넘어갈때"
 subtitle: <span class="evidence"> 맨날 까먹으면서 과거에 고생했던 사소한 실수 </span>
 date: 2019-01-24
 author: NoonGam

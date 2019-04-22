@@ -1,0 +1,119 @@
+---
+layout: post
+title: " [C/C++] Priority_queue 우선순위 큐란? :: 정리 및 사용법
+subtitle: <span class="evidence"> C++ STL priority_queue에 대해 알아보자. </span>
+date: 2019-04-22
+author: NoonGam
+category: C/C++
+tags: C/C++ Algorithm
+comments: true
+finished: true
+---
+
+---
+
+## C++ STL priority_queue
+
+> 우선순위 큐는 힙(heap)과 같이 최댓값 및 최솟값을 찾아내는 연산을 빠르게 하기 위해 고안된 완전이진트리를 기본으로 한 STL 컨테이너 이다.
+
+1. 힙은 오로지 부모노드와 자식노드간의 비교를 통해 우선순위(높거나, 낮은)에 따라 부모에 배치함.
+2. 형제들간(좌,우 노드)의 우선순위는 상관하지 않습니다.
+3. 최상위 노드는 언제나 최대값 혹은 최솟값을 가지고 있습니다.
+
+<br><br>
+
+## 사용방법 및 함수
+
+- `priority_queue<T, Container, Compare>` : T는 비교할 값의 자료형, Container는 vector나 deque과 같은 STL 컨테이너, Compare은 greater<int>나 less<int>와 같은 비교 함수를 넣음.(기본 less<int> 오름차순)
+
+- `최상위에 우선순위가 높은 데이터 배치` : priority_queue<int, vector<int> >
+- `최상위에 우선순위가 낮은 데이터 배치` : priority_queue<int, vector<int> , greater<int> >
+
+- `push(값)` : 우선순위 큐에 데이터 추가.
+
+- `pop()` : 최상단의 데이터 삭제
+
+- `top()` : 최상단의 데이터를 반환
+
+- `empty()` : 비어있는지 여부 반환 (비어있으면 true, 아니면 false)
+
+- `size()` : 우선순위 큐의 데이터 수를 반환
+
+<br><br>
+
+## 소스 코드
+
+```c++
+#include <string>
+#include <queue>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+	priority_queue<int, vector<int>, greater<int>> que;	//내림차순(top은 최소값)
+
+	//데이터(원소) 삽입
+	que.push(5);
+	que.push(7);
+	que.push(2);
+	que.push(18);
+	que.push(13);
+	que.push(10);
+	que.push(1);
+
+	int a = que.top();	//최상위 노드의 데이터
+
+	printf("%d \n", a);
+
+	return 0;
+}
+
+```
+
+<br>
+
+<span class="evidence"><big>원소 동작 과정</big></span>
+
+![img](/img/1-Everything/priority_queue1.PNG)
+
+![img](/img/1-Everything/priority_queue2.PNG)
+
+![img](/img/1-Everything/priority_queue3.PNG)
+
+<br><br>
+
+
+<span class="evidence"><big>데이터 구조 확인</big></span>
+
+![img](/img/1-Everything/4.PNG)
+
+- 위의 동작과정과 같이 데이터 확인 결과 잘 들어간것을 확인할 수 있습니다.
+
+
+
+## 시간복잡도
+
+
+
+- 배열 기반 데이터 삽입의 시간 복잡도 : O(n)  
+- 배열 기반 데이터 삭제의 시간 복잡도 : O(1)  
+
+---
+
+- 연결 리스트 기반 데이터 삽입의 시간 복잡도 : O(n)  
+- 연결 리스트 기반 데이터 삭제의 시간 복잡도 : O(n)  
+
+---
+
+- 힙 기반 데이터 삽입의 시간 복잡도 : O(logn)  
+- 힙 기반 데이터 삭제의 시간 복잡도 : O(logn)  
+
+
+
+
+<br><br><br>
+
+## 참고 자료
+* [TW님의 블로그](https://twpower.github.io/93-how-to-use-priority_queue-in-cpp)

@@ -73,7 +73,7 @@ int main() {
 	// map 첫번째 주소를 저장하고, 주소+1을 하면서 end(맵 마지막)를 만날때까지 반복
 	for (auto iter = a.begin() ; iter != a.end() ; ++iter)
 	{							
-    // c_str()은 string객체를 c 출력에 맞게 캐스팅 해줌.								
+           // c_str()은 string객체를 c 출력에 맞게 캐스팅 해줌.								
 		printf("%s %d\n", iter->first.c_str() ,iter->second);		
 	}
 
