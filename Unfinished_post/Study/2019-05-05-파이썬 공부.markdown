@@ -1,0 +1,192 @@
+---
+layout: post
+title: "[파이썬] 파이썬 정리 "
+subtitle: <span class="evidence"> -------- </span>
+date: 2019-05-04
+author: NoonGam
+category: C/C++
+tags: C/C++
+comments: true
+finished: true
+---
+
+---
+
+## 파이썬 역사
+
+1. 1990년 귀도 반 로섬이 개발한 인터프리터 언어이다.
+2. 자신이 가장 좋아하는 코미디 쇼 `몬티 파이썬의 날아다니는 서커스`에서 따옴.
+3. 사전적 의미는 고대 신화에 나오는 파르나소스 산의 동굴에 살던 큰 뱀  
+
+ex) 인스타그램, 드롭박스
+
+
+- 파이썬 특징
+파이썬은 일부 프로그래밍 영역에서 불가능.  
+`시스템에 밀접한 프로그래밍 영역` :  직접적인 하드웨어 프로그래밍, 리눅스 스케쥴러 처리, 복잡한 알고리즘에서 사용이 힘듬.  
+복잡한 알고리즘에서는 파이썬 자체의 라이브러리와 속도가 느리기 때문에 C언어에 비해 확고한 차이가 느껴짐.  
+
+`모바일 프로그래밍` : 안드로이드에서는 파이썬 프로그램을 사용할 수 있지만, 아직 파이썬에서는 모바일 프로그래밍을 하기엔 역부족이다.  
+
+
+## 파이썬 환경
+
+1. 파이썬 IDEL 환경  
+https://www.python.org/downloads/  
+
+2. Visual Studio Code(VS code)    
+https://code.visualstudio.com/  
+
+3. pycharm 파이참 환경  
+https://www.jetbrains.com/pycharm/  
+
+파이참은 프로그램이 무겁기 떄문에 작은 프로그램 개발은 괜찮지만  
+무거운 프로그램 개발시에 매우 느림.  
+MS사의 visual studio code는 크로스 플랫폼으로 가볍고 쉽게 할 수 있음.  
+
+4. Reference, cheat-sheet  
+https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf
+
+## Visual Code 설치
+
+1. https://code.visualstudio.com/
+
+2. ctrl + shift + p
+
+3. `extensions: Install Extensions`  설치
+
+4. 상단의 Python 설치
+
+5. 왼쪽의 디버깅 모양(벌레사진)
+
+6. 파일명.py
+
+7. F5 + 해당 python 선택
+
+
+# 기본 상식
+
+1. 헤더 추가 `import math`
+
+2. 2.2의 올림 값 `math.ceil(2.2)`
+
+3. 2의 10승 `math.pow(2,10)`
+
+
+## 주석
+
+1. `# 주석 처리합니다`
+
+2. `'''`를 통한 문단 주석
+```
+'''
+이 곳은 주석을
+처리할 수 있다.
+'''
+
+```
+
+
+## 문법
+
+1. 숫자형 : 정수, 실수, 8진수(0o1234), 16진수(0x1234)
+
+2. x^y = x**y
+
+3. 나눗셈 소숫점자리까지 = `/`
+
+4. 나눗셈 소숫점 버리기 = `//`
+
+5. 문자열  = "하이룽"
+
+6. 문자열 가독성  
+a = """  
+안녕하세요  
+저는 Woo입니다.  
+"""
+
+7. 문자열 더하기 = "str"+"abe"
+
+8. 문자열 곱하기 =   `print("str" * 8)`
+
+9. 문자열 맨끝 = `a[-1]`
+
+10. 문자열 맨끝에서 두번째 = `a[-2]`
+
+11. 문자열 슬라이싱 = `a[0:4]` (0번째부터 3번까지 문자열)
+
+12. 3%를 출력하고 싶으면 print("온도는 %d %% 입니다." %3   )
+
+13. %10s  = 앞에 자리에 스페이스로 채움.
+
+14. %-10s = 뒤에 자리에 스페이스로 채움.
+
+15. 문자열 printf("오늘 날씨는 {0} 도 입니다. 오늘 사람은 {1}명 입니다. ")   .format(3,1000)
+
+16. 왼쪽정렬 `:<`
+```
+>>> "{0:<10}".format("hi")
+'hi        '
+```
+
+16. 가운데 정렬 `:^`  
+f'{"hi":^10}'  
+'    hi    '  
+
+17. 내 맘대로 {0}가 아닌 {변수값을 쓰고 싶으면} `f`포매팅을 통해 사용  
+f'나는 내년이면 {age+1}살이 된다.'
+
+18. 포매팅 + 딕셔너리를 통해 해당 변수 찾아 사용.
+```
+d={"name":"홍길동" , "test":"64x"}
+print(f'이름 {d["name"]}이고 나이는 {d["test"]}입니다.' )
+```
+
+19. 특정 문자 삽입
+",".join('abcd')
+'a,b,c,d'
+
+20. 오른쪽 공백 지우기 , 왼쪽 공백 지우기  
+a.rstrip()  
+a.lstrip()  
+
+21. 문자열 나누기
+a.split(":") :로 나누기
+a.split() 공백으로 나누기
+
+
+
+## IF문
+
+1. Tab키를 단위로 하나의 IF문 묶음으로 인식
+```
+if True:
+    print("code1")
+    print("code2")
+print("code3")
+```
+
+2. if, else if, else
+```
+ans = 2
+if ans==1:
+    print("true")
+elif ans==2:
+    print("hi")
+else:
+    print("error")
+```
+
+## 문자열
+
+1. 단어 일치 여부 확인 = `"Life" in "Life is good"`  
+리스트 내부의 단어 일치 여부도 가능
+
+2.
+
+
+https://www.opentutorials.org/course/1750/9702
+
+## 참고 자료
+* [점프 투 파이썬](https://wikidocs.net/book/1)
+* [생활코딩 파이썬](https://www.opentutorials.org/course/1750/9627)
