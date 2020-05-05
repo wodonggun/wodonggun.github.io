@@ -16,7 +16,8 @@ finished: true
 
 - MPTCP는 `Multipath TCP`의 약어
 
-- 기존의 TCP Stream을 여러개 묶어서 하나의 Applicaton 또는 Host에서 데이타를 주고 받을수 있음
+- 기존의 TCP Stream을 여러개 묶어서 하나의 Applicaton 또는 Host에서 데이타를 주고
+받을 수 있다.
 
 - MPTCP (Multi Path TCP)는 IETF에 의해 2013년 표준화된 기술로 TCP 프로토콜을 확장하여 단말과 TCP 서버간에 다수의 TCP 경로를 구성하고 다수의 경로로 동시에 데이터를 송수신하는 방법
 
