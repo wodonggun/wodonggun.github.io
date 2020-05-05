@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "선택 정렬 알고리즘 - Selection Sort"
+title: "[알고리즘] 선택 정렬 알고리즘 - Selection Sort"
 subtitle: <span class="evidence">선택 정렬에 대해서 알아보자.</span>
-date: 2018-09-23
+date: 2020-05-05
 author: NoonGam
 category: Algorithm
-tags: Algorithm C/C++
+tags: Sorting
 comments: true
 finished: true
 ---
@@ -35,12 +35,13 @@ finished: true
 
 
 
-> <a> 8 5 2 6 9 3 1 4 0 7 </a> <br><br>간단하게 8번이 있는 `첫번째 자리`를 선택하고 -> 1~10번째까지 가장 작은 수 전체 탐색 <br>
+> <a> 8 5 2 6 9 3 1 4 0 7 </a> <br><br>간단하게 8번이 있는 `첫번째 자리`를 선택하고
+> 1\~10번째까지 가장 작은 수 전체 탐색 <br>
 0(9번째자리)이 가장 작으므로 첫번째와 9번째자리를 바꿈. (1 싸이클)
-<br><br>
-5번이 있는 `두번째 자리` 선택하고 -> 2~10번째까지 가장 작은 수 전체 탐색<br>
+<br>
+5번이 있는 `두번째 자리` 선택하고 -> 2\~10번째까지 가장 작은 수 전체 탐색<br>
 1(7번째자리)이 가장 작으므로 두번째와 7번째자리를 바꿈. (2 싸이클)<br><br>
-2번이 있는 `세번째 자리`를 선택하고 -> 3~10번째까지 가장 작은 수 전체 탐색<br>
+2번이 있는 `세번째 자리`를 선택하고 -> 3\~10번째까지 가장 작은 수 전체 탐색<br>
 2번이 있는 세번째 자리가 가장 작으므로 그냥 그대로 유지 (3 싸이클)<br><center>.</center><center>.</center><center>.</center><br> <center>마지막 N번째 자리까지 반복</center>
 
 <br><br><br>
@@ -52,7 +53,7 @@ finished: true
 <iframe width="650" height="345" src="//www.youtube.com/embed/Ns4TPTC8whw"
  frameborder="0" allowfullscreen></iframe>
 
-- 유튜브에 보니 선택 알고리즘을 쉽게 보여주는 포크댄스가 있네요...ㅎㅎ
+- 유튜브에 보니 선택 알고리즘을 쉽게 보여주는 포크댄스가 있습니다...
 
 <br><br><br>
 
@@ -65,29 +66,31 @@ finished: true
 
 int main()
 {
-	int n = 10;
-	int arr[10] = { 8,5,2,6,9,3,1,4,0,7 };   //무작위 배열
+	int n = 10;								//배열사이즈
+	int arr[10] = { 8,5,2,6,9,3,1,4,0,7 };  //무작위 배열
 
 	for (int i = 0; i < n; i++)		 	//i번째 자리 선택
 	{
-		int min_pos = i;				
+		int minIndex = i;
 		for (int j = i + 1; j < n; j++)   //i번째 이후 탐색 시작
 		{
-			if (arr[min_pos] > arr[j])	//i번째 자리에 들어갈 최소자리 찾기
+			if (arr[minIndex] > arr[j])	//i번째 자리에 들어갈 최소자리 찾기
 			{
-				min_pos = j;
+				minIndex = j;
 			}
 		}
 
-		//최소자리 찾기 for문 종료후에 i번째 위치에 최소값 자리 스왑
+		//자리 Swap
 		int temp = arr[i];
-		arr[i] = arr[min_pos];
-		arr[min_pos] = temp;
+		arr[i] = arr[minIndex];
+		arr[minIndex] = temp;
 
 	}
 	for (int i = 0; i < n; i++)
 		printf("%d ", arr[i]);
-  printf("\n");
+	printf("\n");
+
+	return 0;
 }
 ```
 <br><br><br>

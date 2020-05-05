@@ -7,23 +7,34 @@ Util
 
 ## category_list
 
-Bin
-Linux
-Study
 C/C++
-AWS
-Conference
-Algorithm
+DataBase
+Java
+C#
 HTML
+
+반도체
+면접
+
+Bin
+Study
+AWS
+Algorithm
+Github
 Android
-Git
-OpenStack
-
-
+Network
 
 
 
 ## tags_list
+
+
+`Algorithm`
+1. Sorting
+2. BaekJoon
+3. SWExpertAcademy
+4. Programmers
+
 
 백준알고리즘
 SW_expert

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[C언어] 이분 탐색 "
+title: "[C언어] include stdio.h란 "
 subtitle: <span class="evidence"> -------- </span>
-date: 2019-04-19
+date: 2019-01-01
 author: NoonGam
 category: C/C++
 tags: C/C++
