@@ -51,10 +51,10 @@ finished: true
 <center>.</center>
 <center>.</center>
 
-<b><font size = '2' face = "Jeju Gothic"><center>마지막 N번째 자리까지 반복</center></font></b>  
+<b><font size = '3' face = "Jeju Gothic"><center>마지막 N번째 자리까지 반복</center></font></b>  
 
 
-<b><font size = '2' face = "Noto Sans"><center>마지막 N번째 자리까지 반복</center></font></b>  
+<b><font size = '3' face = "Noto Sans"><center>마지막 N번째 자리까지 반복</center></font></b>  
 
 
 
