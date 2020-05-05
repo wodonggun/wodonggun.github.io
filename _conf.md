@@ -1,4 +1,19 @@
 
+<b><font size = '3' face = "돋움체"><center>마지막 N번째 자리까지 반복</center></font></b>  
+
+```
+<fieldset id="gpg-fieldset">
+<p>   
+
+1. 쓰고싶은말
+2. 마음대로
+3. 쓰세요
+
+</p>
+</fieldset>
+```
+
+
 
 ## Folder_List
 

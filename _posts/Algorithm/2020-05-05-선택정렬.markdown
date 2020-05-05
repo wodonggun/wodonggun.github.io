@@ -53,7 +53,7 @@ finished: true
 
 <b><font size = '3' face = "돋움체"><center>마지막 N번째 자리까지 반복</center></font></b>  
 
-
+<p><center>마지막 N번째 자리까지 반복</center></p>  
 
 <br><br><br>
 
