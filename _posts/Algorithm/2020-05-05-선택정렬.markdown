@@ -51,11 +51,7 @@ finished: true
 <center>.</center>
 <center>.</center>
 
-<br>
-
-<font size = '5' face = "돋움체" ><center>마지막 N번째 자리까지 반복</center></font>  
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error quod libero corporis, iste sit nulla similique enim dignissimos asperiores, illo numquam architecto maxime ab tenetur repellendus, dicta sed officia.
-{: .text-center }
+<b><font size = '3' face = "돋움체"><center>마지막 N번째 자리까지 반복</center></font></b>  
 
 
 
