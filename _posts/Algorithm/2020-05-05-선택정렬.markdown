@@ -53,8 +53,8 @@ finished: true
 
 <br>
 
-<center>마지막 N번째 자리까지 반복</center>
-　<div style="text-align: Center"> 마지막 N번째 자리까지 반복 </div>
+<center>마지막 N번째 자리까지 반복</center>  
+마지막 N번째 자리까지 반복{: .text-center }
 
 <br><br><br>
 
