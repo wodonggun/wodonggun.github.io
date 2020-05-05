@@ -1,6 +1,19 @@
 
-<b><font size = '3' face = "돋움체"><center>마지막 N번째 자리까지 반복</center></font></b>  
+가운데정렬 + 일반글씨랑 비슷하게
+```
+<b>
+<font size = '3' face = "Noto Sans">
+<center>
+마지막 N번째 자리까지 반복
+</center>
+</font>
+</b>  
+```
 
+---------------------------------------------------
+
+
+박스형태로 일반글씨체로 
 ```
 <fieldset id="gpg-fieldset">
 <p>   
