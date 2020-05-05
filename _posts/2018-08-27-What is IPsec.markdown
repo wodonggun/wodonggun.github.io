@@ -17,7 +17,9 @@ finished: true
 
 ## IPsec - Internet Protocol Security
 
-> IPSec은 Internet Protocol Security의 약어로서 통신중 network layer에서의 보안을 위한 표준이다. IPSec은 인터넷 상에서 VPN(Virtual Private Network)을 구현하는데 사용될 수 있도록 IETF (Internet Engineering Task Force)에서 개발된 protocol set이다. 이는 네트워크상의 IP layer에서의 보안에 중점을 두었으며, 사설 및 공중망을 사용하는 TCP/IP 통신을 보다 안전하게 유지하기 위한 end-to-end encryption과 authentication을 제공한다.
+> IPSec은 Internet Protocol Security의 약어로서 통신중 network layer에서의 보안을 위한 표준이다.  
+ IPSec은 인터넷 상에서 VPN(Virtual Private Network)을 구현하는데 사용될 수 있도록 IETF (Internet Engineering Task Force)에서 개발된 protocol set이다.   
+ 이는 네트워크상의 IP layer에서의 보안에 중점을 두었으며, 사설 및 공중망을 사용하는 TCP/IP 통신을 보다 안전하게 유지하기 위한 end-to-end encryption과 authentication을 제공한다.
 
 1. 네트워크계층(IP 계층) 상에서 IP 패킷 단위로 `인증`,`암호화`,`키관리`를 하는 프로토콜
 
@@ -27,22 +29,7 @@ finished: true
 
 4. 서로 키관리를 통해 캡슐화 및 디캡슐화를 진행
 
-<br>
 
-- SA (Security Association 보안연관)
-
-<fieldset id="gpg-fieldset">
-ㅇ 데이터의 안전한 전달을 위해 통신의 쌍방 간의 약속<br>
-   - 암호 알고리즘, 키 교환 방법, 암호화 키 교환 주기 등에 대한 합의<br>
-       이는 통신 연결 이전에 쌍방 간에 합의가 있어야 함<br><br>
-
-   - 결국, 구체적으로 합의되어야 할 요소들의 결합을 보안연합 이라함<br>
-      하나 이상의 보안서비스를 구현하기 위한 보안 속성들의 연결 집합<br>
-<br>
-ㅇ 특징<br>
-   - 각 SA 마다 단 방향성(Unidirectional)이고, 양 방향성을 이루려면 쌍으로 구성되게 됨<br>
-   - 따라서, 각 SA 마다 이를 구분하는 식별자(SPI)가 있게 됨<br>
-</fieldset>
 
 
 <br><br><br>
@@ -52,19 +39,15 @@ finished: true
 
 
 ![img](/img/2018-08-27-What is IPsec/2.png)
+- 터널 모드 / 전송 모드 간략 설명
+
+
+<br><br>
 
 
 
 ![img](/img/2018-08-27-What is IPsec/1.PNG)
-
-
-- Tunnel Mode
-
-
-
-
-- Transport Mode
-
+- 세부 설명
 
 
 <br><br><br>
